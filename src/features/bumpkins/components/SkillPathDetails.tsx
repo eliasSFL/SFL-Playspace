@@ -81,6 +81,7 @@ export const SkillPathDetails: React.FC<Props> = ({
   skillsInPath,
   readonly,
 }) => {
+  const { t } = useAppTranslation();
   const { gameService } = useContext(Context);
   const [gameState] = useActor(gameService);
   const {

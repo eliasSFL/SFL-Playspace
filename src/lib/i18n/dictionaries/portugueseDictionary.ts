@@ -1,5 +1,6 @@
 import {
   AchievementsDialog,
+  BumpkinTrade,
   ConfirmationTerms,
   Conversations,
   ErrorTerms,
@@ -56,23 +57,27 @@ const generalTerms: Record<GeneralTerms, string> = {
   refreshing: "Refrescante",
   tryAgain: "Tente novamente",
   claim: "Reivindicar",
-  alrClaim: "Already Claimed!", // To translate
-  achievements: "Achievements", // To translate
-  lvl: "Level", // To be translated
-  skills: "Skills", // To be translated
-  viewAll: "View all", // To be translated
+  alrClaim: "Já reivindicado!",
+  achievements: "Conquistas",
+  lvl: "Nível",
+  skills: "Habilidades",
+  viewAll: "Ver tudo",
   reqSkillPts: "Required Skill Points", // To be translated
   reqSkills: "Required Skills:", // To be translated
-  comingSoon: "Coming soon", // To be translated
+  comingSoon: "Em breve",
   claimSkill: "Claim skill", // To be translated
   skillPts: "Skill Points:", // To be translated
   nextSkillPtLvl: "Next skill point: level", // To be translated (context: Next skill point level ___(variable for level)___)
-  list: "List", // To be translated
-  beta: "Beta", // To be translated
+  list: "Lista",
+  beta: "Beta",
+  swapping: "Troca",
+  retry: "Tentar novamente",
 };
 
+// To be translated
 const gameTerms: Record<GameTerms, string> = {
   blockBucks: "Block Bucks",
+  sflDiscord: "Sunflower Land Discord Server",
 };
 
 const confirmationTerms: Record<ConfirmationTerms, string> = {
@@ -384,6 +389,8 @@ const errorTerms: Record<ErrorTerms, string> = {
   "error.toManyRequest.one": "Too many requests!",
   "error.toManyRequest.two":
     "Looks like you have been busy! Please try again later.",
+  "error.blocked.betaTestersOnly": "Beta testers only!",
+  "error.wentWrong": "Something went wrong",
 };
 
 const transactionTerms: Record<TransactionTerms, string> = {

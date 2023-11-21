@@ -69,10 +69,13 @@ const generalTerms: Record<GeneralTerms, string> = {
   nextSkillPtLvl: "Next skill point: level",
   list: "List",
   beta: "Beta",
+  swapping: "Swapping",
+  retry: "Retry",
 };
 
 const gameTerms: Record<GameTerms, string> = {
   blockBucks: "Block Bucks",
+  sflDiscord: "Sunflower Land Discord Server",
 };
 
 const confirmationTerms: Record<ConfirmationTerms, string> = {
@@ -379,6 +382,8 @@ const errorTerms: Record<ErrorTerms, string> = {
   "error.toManyRequest.one": "Too many requests!",
   "error.toManyRequest.two":
     "Looks like you have been busy! Please try again later.",
+  "error.blocked.betaTestersOnly": "Beta testers only!",
+  "error.wentWrong": "Something went wrong!",
 };
 
 const transactionTerms: Record<TransactionTerms, string> = {

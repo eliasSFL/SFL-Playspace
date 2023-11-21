@@ -6,10 +6,11 @@ import humanDeath from "assets/npcs/human_death.gif";
 import * as AuthProvider from "features/auth/lib/Provider";
 import { removeSession } from "../actions/login";
 import { wallet } from "lib/blockchain/wallet";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 export const Blocked: React.FC = () => {
   const { authService } = useContext(AuthProvider.Context);
-
+  const { t } = useAppTranslation();
   const tryAgain = () => {
     removeSession(wallet.myAccount as string);
 
@@ -21,7 +22,7 @@ export const Blocked: React.FC = () => {
       <div className="flex mb-3 items-center ml-8">
         <img src={humanDeath} alt="Warning" className="w-full" />
       </div>
-      <p className="text-center mb-3">Beta testers only!</p>
+      <p className="text-center mb-3">{t("error.blocked.betaTestersOnly")}</p>
 
       <p className="text-center mb-2 text-xs">
         {`You don't have access to the game yet.`}
@@ -34,12 +35,12 @@ export const Blocked: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Sunflower Land Discord server
+          {t("sflDiscord")}
         </a>
         {`, go to the #verify channel and have the "farmer" role.`}
       </p>
       <Button onClick={tryAgain} className="overflow-hidden mb-2">
-        <span>Try again</span>
+        <span>{t("tryAgain")}</span>
       </Button>
     </div>
   );

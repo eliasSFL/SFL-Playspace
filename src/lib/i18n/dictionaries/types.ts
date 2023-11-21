@@ -66,9 +66,11 @@ export type GeneralTerms =
   | "skillPts"
   | "nextSkillPtLvl"
   | "list"
-  | "beta";
+  | "beta"
+  | "swapping"
+  | "retry";
 
-export type GameTerms = "blockBucks";
+export type GameTerms = "blockBucks" | "sflDiscord";
 
 export type ConfirmationTerms = "confirmation.sellCrops";
 
@@ -266,7 +268,9 @@ export type ErrorTerms =
   | "error.multipleWallets.one"
   | "error.multipleWallets.two"
   | "error.toManyRequest.one"
-  | "error.toManyRequest.two";
+  | "error.toManyRequest.two"
+  | "error.blocked.betaTestersOnly"
+  | "error.wentWrong";
 
 export type TransactionTerms =
   | "transaction.t&c.one"
