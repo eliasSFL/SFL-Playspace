@@ -310,7 +310,9 @@ export type Statements =
   | "statements.wrongChain.one"
   | "statements.guide"
   | "statements.switchNetwork"
-  | "statements.lvlUp";
+  | "statements.lvlUp"
+  | "statements.beta.one"
+  | "statements.beta.two";
 
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"
