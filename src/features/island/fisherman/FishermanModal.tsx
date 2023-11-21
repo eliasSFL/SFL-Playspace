@@ -31,6 +31,7 @@ import {
   getDailyFishingCount,
   getDailyFishingLimit,
 } from "features/game/types/fishing";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 import { MachineState } from "features/game/lib/gameMachine";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
