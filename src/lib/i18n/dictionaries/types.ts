@@ -48,7 +48,8 @@ export type GeneralTerms =
   | "maintenance"
   | "back"
   | "forbidden"
-  | "refreshing";
+  | "refreshing"
+  | "tryAgain";
 
 export type GameTerms = "blockBucks";
 
@@ -261,7 +262,9 @@ export type TransactionTerms =
   | "transaction.network"
   | "transaction.estimated.fee"
   | "transaction.pay"
-  | "transaction.creditCard";
+  | "transaction.creditCard"
+  | "transaction.rejected"
+  | "transaction.message";
 
 export type Onboarding =
   | "onboarding.welcome"
