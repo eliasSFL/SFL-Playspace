@@ -309,7 +309,7 @@ const currentWeather = (state: MachineState) =>
 export const FishermanModal: React.FC<Props> = ({ onCast, onClose }) => {
   const { gameService } = useContext(Context);
   const weather = useSelector(gameService, currentWeather);
-
+  const { t } = useAppTranslation();
   const [showIntro, setShowIntro] = React.useState(!hasRead());
 
   const [
@@ -382,7 +382,7 @@ export const FishermanModal: React.FC<Props> = ({ onCast, onClose }) => {
         { icon: SUNNYSIDE.tools.fishing_rod, name: "Fish" },
         {
           icon: SUNNYSIDE.icons.expression_confused,
-          name: "Guide",
+          name: t("guide"),
         },
       ]}
       currentTab={tab}
