@@ -13,6 +13,7 @@ export type TranslationKeys =
   | RewardTerms
   | ConfirmationTerms
   | ErrorTerms
+  | WarningTerms
   | TransactionTerms
   | Onboarding
   | Questions
@@ -319,6 +320,9 @@ export type ErrorTerms =
   | "error.diagnostic.info"
   | "error.Web3NotFound";
 
+  export type WarningTerms =
+  | "warning.noAxe";
+  
 export type TransactionTerms =
   | "transaction.blockBucksFarm"
   | "transaction.blockchain.one"
