@@ -13,6 +13,7 @@ export type GeneralTerms =
   | "claimSkill"
   | "clear"
   | "close"
+  | "craft"
   | "comingSoon"
   | "congrats"
   | "connected"
@@ -300,8 +301,11 @@ export type ErrorTerms =
   | "error.diagnostic.info"
   | "error.Web3NotFound";
 
-export type WarningTerms = "warning.noAxe";
-
+export type WarningTerms =
+  | "warning.noAxe"
+  | "warning.chat.maxCharacters"
+  | "warning.chat.noSpecialCharacters";
+  
 export type TransactionTerms =
   | "transaction.blockBucksFarm"
   | "transaction.blockchain.one"
@@ -421,6 +425,17 @@ export type BumpkinPartRequirements =
   | "part.pants"
   | "part.background";
 
+
+export type RetreatTerms =
+  | "retreatTerms.introTravel.one"
+  | "retreatTerms.introTravel.two"
+  | "retreatTerms.introTravel.three"
+  | "retreatTerms.introTravel.four"  
+  | "retreatTerms.resale.title"
+  | "retreatTerms.resale.one"
+  | "retreatTerms.resale.two"
+  | "retreatTerms.resale.three";
+
 export type CollectiblesDescription =
   // Seeds
   | "seed.sunflower"
@@ -488,6 +503,7 @@ export type TranslationKeys =
   | Intro
   | Onboarding
   | Questions
+  | RetreatTerms
   | RewardTerms
   | RulesTerms
   | SeasonBannerOffer
