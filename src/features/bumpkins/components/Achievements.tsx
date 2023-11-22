@@ -17,6 +17,7 @@ import { setImageWidth } from "lib/images";
 import { ResizableBar } from "components/ui/ProgressBar";
 import { SUNNYSIDE } from "assets/sunnyside";
 import { CloseButtonPanel } from "features/game/components/CloseablePanel";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 const CONTENT_HEIGHT = 350;
 interface Props {
@@ -201,7 +202,7 @@ export const AchievementsModal: React.FC<Props> = ({
   readonly,
 }) => {
   const [tab, setTab] = useState(0);
-
+  const { t } = useAppTranslation();
   return (
     <CloseButtonPanel
       currentTab={tab}
