@@ -53,22 +53,21 @@ export const IslandTravelModal: React.FC<IslandTravelModalProps> = ({
     setShowTutorial(false);
   };
 
-  // TEMP: Disable for conference
-  // if (getBumpkinLevel(bumpkin?.experience ?? 0) < 3) {
-  //   return (
-  //     <CloseButtonPanel onClose={onClose}>
-  //       <div className="flex flex-col items-center">
-  //         <Label className="mt-2" icon={lockIcon} type="danger">
-  //           Level 3 Required
-  //         </Label>
-  //         <img src={worldIcon} className="w-10 mx-auto my-2" />
-  //         <p className="text-sm text-center mb-2">
-  //           Visit the Fire Pit to cook food and feed your Bumpkin.
-  //         </p>
-  //       </div>
-  //     </CloseButtonPanel>
-  //   );
-  // }
+//  if (getBumpkinLevel(bumpkin?.experience ?? 0) < 3) {
+//    return (
+//      <CloseButtonPanel onClose={onClose}>
+//        <div className="flex flex-col items-center">
+//          <Label className="mt-2" icon={lockIcon} type="danger">
+//            {t("warning.level.three.required")}
+//          </Label>
+//          <img src={worldIcon} className="w-10 mx-auto my-2" />
+//          <p className="text-sm text-center mb-2">
+//            {t("statements.visit.firePit")}
+//          </p>
+//        </div>
+//      </CloseButtonPanel>
+//    );
+//  }
 
   if (showTutorial) {
     return (
