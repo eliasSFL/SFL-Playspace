@@ -1,25 +1,26 @@
 import {
+  TranslationKeys,
   AchievementsDialog,
+  BumpkinPartRequirements,
   BumpkinTrade,
+  ConfirmationTerms,
   Conversations,
+  ErrorTerms,
+  GameTerms,
   GeneralTerms,
   GuideTerms,
   HenHouseTerms,
   Intro,
-  RulesTerms,
-  SeasonBannerOffer,
-  TranslationKeys,
-  WelcomeTerms,
-  ShopItems,
-  RewardTerms,
-  ConfirmationTerms,
-  ErrorTerms,
-  WarningTerms,
-  TransactionTerms,
   Onboarding,
   Questions,
+  RewardTerms,
+  RulesTerms,
+  SeasonBannerOffer,
+  ShopItems,
   Statements,
-  GameTerms,
+  TransactionTerms,
+  WarningTerms,
+  WelcomeTerms,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -584,6 +585,15 @@ const bumpkinTrade: Record<BumpkinTrade, string> = {
   "bumpkinTrade.list": "List trade",
 };
 
+const bumpkinPartRequirements: Record<BumpkinPartRequirements, string> = {
+  "part.hair": "Hair is required",
+  "part.body": "Body is required",
+  "part.shoes": "Shoes are required",
+  "part.shirt": "Shirt is required",
+  "part.pants": "Pants are required",
+  "part.background": "Background is required",
+};
+
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...generalTerms,
   ...gameTerms,
@@ -606,4 +616,5 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...statements,
   ...bumpkinTrade,
   ...gameTerms,
+  ...bumpkinPartRequirements,
 };
