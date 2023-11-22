@@ -14,6 +14,7 @@ import {
   RewardTerms,
   ConfirmationTerms,
   ErrorTerms,
+  WarningTerms,
   TransactionTerms,
   Onboarding,
   Questions,
@@ -427,6 +428,10 @@ const errorTerms: Record<ErrorTerms, string> = {
   "error.Web3NotFound": "Web3 Not Found",
 };
 
+const warningTerms: Record<WarningTerms, string> = {
+  "warning.noAxe": "No Axe Selected!",
+};
+
 const transactionTerms: Record<TransactionTerms, string> = {
   "transaction.t&c.one":
     "Accept the terms and conditions to sign in to Sunflower Land.",
@@ -594,6 +599,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...rewardTerms,
   ...confirmationTerms,
   ...errorTerms,
+  ...warningTerms,
   ...transactionTerms,
   ...onboarding,
   ...questions,
