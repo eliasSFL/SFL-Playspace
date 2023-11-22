@@ -856,5 +856,6 @@ export type TranslationKeys =
   | ShopItems
   | Statements
   | ToolName
+  | TransactionTerms
   | WarningTerms
   | WelcomeTerms;
