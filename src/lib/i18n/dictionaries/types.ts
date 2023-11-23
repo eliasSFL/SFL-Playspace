@@ -373,7 +373,6 @@ export type Onboarding =
   | "onboarding.wallet.two"
   | "onboarding.wallet.haveWallet"
   | "onboarding.wallet.createButton"
-  | "onboarding.wallet.createLoading"
   | "onboarding.wallet.titleTwo"
   | "onboarding.wallet.three"
   | "onboarding.wallet.four"

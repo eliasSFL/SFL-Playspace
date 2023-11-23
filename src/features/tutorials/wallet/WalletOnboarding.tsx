@@ -68,7 +68,7 @@ export const WalletOnboarding: React.FC = () => {
         </>
       ),
       buttonText: t("onboarding.wallet.createButton"),
-      loadingText: t("onboarding.wallet.createLoading"),
+      loadingText: t("welcome.signingIn"),
     },
     2: {
       title: t("onboarding.wallet.titleTwo"),

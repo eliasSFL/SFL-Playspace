@@ -524,7 +524,6 @@ const onboarding: Record<Onboarding, string> = {
   "onboarding.wallet.two": "Select a sign-up method in the pop-up window and you're good to go. I'll see you back here in just a minute!",
   "onboarding.wallet.haveWallet": "I already have a wallet",
   "onboarding.wallet.createButton": "Create wallet",
-  "onboarding.wallet.createLoading": "Signing in...",
   "onboarding.wallet.titleTwo": "Accept the terms of service",
   "onboarding.wallet.three": "In order to buy your farm you will need to accept the Sunflower Land terms of service.",
   "onboarding.wallet.four": "This step will take you back to your new sequence wallet to accept the terms of service.",
