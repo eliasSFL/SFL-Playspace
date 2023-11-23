@@ -22,6 +22,7 @@ import {
   WarningTerms,
   WelcomeTerms,
   TransactionTerms,
+  IslandNames,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -637,6 +638,15 @@ const retreatTerms: Record<RetreatTerms, string> = {
     "You can purchase these on secondary marketplaces like OpenSea.",
   "retreatTerms.resale.three": "View items on OpenSea",
 };
+const islandNames: Record<IslandNames, string> = {
+  home: "Home",
+  "pumpkin.plaza": "Pumpkin Plaza",
+  beach: "Beach",
+  woodlands: "Woodlands",
+  helios: "Helios",
+  "goblin.retreat": "Goblin Retreat",
+  "potion.house": "Potion House",
+};
 
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...achievementTerms,
@@ -651,6 +661,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...guideTerms,
   ...henHouseTerms,
   ...introTerms,
+  ...islandNames,
   ...onboarding,
   ...questions,
   ...retreatTerms,
