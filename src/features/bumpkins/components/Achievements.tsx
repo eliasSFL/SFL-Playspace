@@ -207,7 +207,7 @@ export const AchievementsModal: React.FC<Props> = ({
     <CloseButtonPanel
       currentTab={tab}
       setCurrentTab={setTab}
-      tabs={[{ icon: SUNNYSIDE.icons.player, name: "Achievements" }]}
+      tabs={[{ icon: SUNNYSIDE.icons.player, name: t("achievements") }]}
       onClose={onClose}
     >
       {/* @note: There is only one tab, no extra judgment is needed. */}
