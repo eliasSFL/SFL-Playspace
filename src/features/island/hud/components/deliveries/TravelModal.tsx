@@ -18,6 +18,7 @@ import { hasNewChores } from "features/helios/components/hayseedHank/lib/chores"
 import { Label } from "components/ui/Label";
 import { getBumpkinLevel } from "features/game/lib/level";
 import { translate } from "lib/i18n/translate";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 const host = window.location.host.replace(/^www\./, "");
 const LOCAL_STORAGE_KEY = `travel-read.${host}-${window.location.pathname}`;
@@ -53,6 +54,8 @@ export const TravelModal: React.FC<Props> = ({
 
   const delivery = gameState.context.state.delivery;
   const chores = gameState.context.state.chores;
+
+  const { t } = useAppTranslation();
 
   if (isVisiting) {
     return (
@@ -105,7 +108,7 @@ export const TravelModal: React.FC<Props> = ({
           <CloseButtonPanel onClose={onClose}>
             <div className="flex flex-col items-center">
               <Label className="mt-2" icon={lockIcon} type="danger">
-                Level 3 Required
+                {t("warning.level.required")}3
               </Label>
               <img src={world} className="w-10 mx-auto my-2" />
               <p className="text-sm text-center mb-1">
