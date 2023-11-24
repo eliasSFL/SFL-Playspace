@@ -355,7 +355,7 @@ export type WarningTerms =
   | "warning.noAxe"
   | "warning.chat.maxCharacters"
   | "warning.chat.noSpecialCharacters"
-  | "warning.level.three.required"
+  | "warning.level.required"
   | "warning.hoarding.message"
   | "warning.hoarding.one"
   | "warning.hoarding.two";
@@ -530,7 +530,7 @@ export type RetreatTerms =
   | "retreatTerms.resale.two"
   | "retreatTerms.resale.three";
 
-export type CollectibleDescriptions =
+export type GameDescriptions =
   // Mutant Chickens
   | "description.speed.chicken.one"
   | "description.speed.chicken.two"
@@ -673,10 +673,10 @@ export type TranslationKeys =
   | AchievementsDialog
   | BumpkinPartRequirements
   | BumpkinTrade
-  | CollectibleDescriptions
   | ConfirmationTerms
   | Conversations
   | ErrorTerms
+  | GameDescriptions
   | GameTerms
   | GeneralTerms
   | GuideTerms
