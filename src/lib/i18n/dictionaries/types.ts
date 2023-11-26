@@ -66,6 +66,7 @@ export type GeneralTerms =
   | "maintenance"
   | "make.wish"
   | "making.wish"
+  | "mins"
   | "mint"
   | "minting"
   | "minted"
@@ -94,6 +95,7 @@ export type GeneralTerms =
   | "reward.discovered"
   | "save"
   | "saving"
+  | "secs"
   | "seeds"
   | "sell.all"
   | "sell.one"
@@ -532,6 +534,7 @@ export type Statements =
   | "statements.wrongChain.one"
   | "statements.empty.chest"
   | "statements.chest.captcha"
+  | "statements.frankie.plaza"
   | "statements.blacksmith.plaza"
   | "statements.water.well.needed.one"
   | "statements.water.well.needed.two";
@@ -814,7 +817,17 @@ export type GameDescriptions =
   | "description.stable.hand"
   | "description.free.range"
   | "description.horse.whisperer"
-  | "description.buckaroo";
+  | "description.buckaroo"
+
+  // Blacksmith items
+  | "description.basic.scarecrow"
+  | "description.scary.mike"
+  | "description.laurie.chuckle.crow"
+  | "description.immortal.pear"
+  | "description.bale"
+
+  // Landscaping decorations
+  | "description.white.tulips";
 
 export type FishingQuests =
   | "quest.basic.fish"

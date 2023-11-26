@@ -148,7 +148,10 @@ export const ChatText: React.FC<Props> = ({
         {showCooldown && (
           <Label type="warning" className="flex p-1 m-1 mx-2">
             <img src={SUNNYSIDE.icons.timer} className="h-4 pr-1" />
-            <p className="text-xs">{`Cooldown - ${cooldown.minutes} mins ${cooldown.seconds} secs`}</p>
+            <p className="text-xs">
+              {`Cooldown - ${cooldown.minutes}`} {t("mins")}{" "}
+              {`${cooldown.seconds}`} {t("secs")}
+            </p>
           </Label>
         )}
 

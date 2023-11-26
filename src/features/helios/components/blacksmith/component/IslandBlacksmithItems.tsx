@@ -20,6 +20,7 @@ import { PIXEL_SCALE } from "features/game/lib/constants";
 import { gameAnalytics } from "lib/gameAnalytics";
 import { getSeasonalTicket } from "features/game/types/seasons";
 import Decimal from "decimal.js-light";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 const VALID_EQUIPMENT: HeliosBlacksmithItem[] = [
   "Basic Scarecrow",
@@ -30,6 +31,7 @@ const VALID_EQUIPMENT: HeliosBlacksmithItem[] = [
 ];
 
 export const IslandBlacksmithItems: React.FC = () => {
+  const { t } = useAppTranslation();
   const [selectedName, setSelectedName] =
     useState<HeliosBlacksmithItem>("Basic Scarecrow");
   const { gameService, shortcutItem } = useContext(Context);
@@ -150,7 +152,7 @@ export const IslandBlacksmithItems: React.FC = () => {
           </div>
           <div className="flex mt-2">
             <img src={worldIcon} className="h-5 mr-2" />
-            <p className="text-xs">Travel to the Plaza for more rare items.</p>
+            <p className="text-xs">{t("statements.blacksmith.plaza")}</p>
           </div>
         </div>
       }
