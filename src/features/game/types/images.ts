@@ -1796,15 +1796,15 @@ export const ITEM_DETAILS: Items = {
 
   "White Tulips": {
     image: whiteTulips,
-    description: "Keep the smell of goblins away.",
+    description: BASIC_DECORATIONS()["White Tulips"].description,
   },
   "Potted Sunflower": {
     image: pottedSunflower,
-    description: "Brighten up your land.",
+    description: BASIC_DECORATIONS()["Potted Sunflower"].description,
   },
   Cactus: {
     image: cactus,
-    description: "Saves water and makes your farm look stunning!",
+    description: BASIC_DECORATIONS()["Cactus"].description,
   },
   "Jack-o-lantern": {
     image: jackOLanternItem,
@@ -1812,8 +1812,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Victoria Sisters": {
     image: victoriaSisters,
-    description:
-      "A Halloween collectible. Increase Pumpkin yield by 20% and summon the necromancer.",
+    description: translate("description.victoria.sisters"),
   },
   "Basic Bear": {
     image: basicBear,
@@ -1907,7 +1906,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Potted Potato": {
     image: pottedPotato,
-    description: "Potato blood runs through your Bumpkin.",
+    description: BASIC_DECORATIONS()["Potted Potato"].description,
   },
   "Potted Pumpkin": {
     image: pottedPumpkin,
@@ -1963,7 +1962,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Ayam Cemani": {
     image: ayamCemani,
-    description: "The rarest chicken alive!",
+    description: translate("description.ayam.cemani"),
   },
   "Collectible Bear": {
     image: collectibleBear,
@@ -2319,40 +2318,39 @@ export const ITEM_DETAILS: Items = {
   },
   "Dirt Path": {
     image: dirt,
-    description: "Keep your farmer boots clean with a well trodden path.",
+    description: LANDSCAPING_DECORATIONS()["Dirt Path"].description,
   },
   Bush: {
     image: bush,
-    description: "What's lurking in the bushes?",
+    description: LANDSCAPING_DECORATIONS()["Bush"].description,
   },
   Fence: {
     image: fence,
-    description: "Add a touch of rustic charm to your farm.",
+    description: LANDSCAPING_DECORATIONS()["Fence"].description,
   },
   "Stone Fence": {
     image: stoneFence,
-    description: "Embrace the timeless elegance of a stone fence.",
+    description: LANDSCAPING_DECORATIONS()["Stone Fence"].description,
   },
   Shrub: {
     image: shrub,
-    description: "Enhance your in-game landscaping with a beautiful shrub",
+    description: LANDSCAPING_DECORATIONS()["Shrub"].description,
   },
   "Pine Tree": {
     image: pineTree,
-    description: "Standing tall and mighty, a needle-clad dream.",
+    description: LANDSCAPING_DECORATIONS()["Pine Tree"].description,
   },
   "Field Maple": {
     image: fieldMaple,
-    description:
-      "A petite charmer that spreads its leaves like a delicate green canopy.",
+    description: LANDSCAPING_DECORATIONS()["Field Maple"].description,
   },
   "Red Maple": {
     image: redMaple,
-    description: "Fiery foliage and a heart full of autumnal warmth.",
+    description: LANDSCAPING_DECORATIONS()["Red Maple"].description,
   },
   "Golden Maple": {
     image: goldenMaple,
-    description: "Radiating brilliance with its shimmering golden leaves.",
+    description: LANDSCAPING_DECORATIONS()["Golden Maple"].description,
   },
   "Solar Flare Banner": {
     image: solarFlareBanner,
@@ -2530,31 +2528,28 @@ export const ITEM_DETAILS: Items = {
     },
   },
   Candles: {
+    description: translate("description.candles"),
     image: candles,
-    description:
-      "Enchant your farm with flickering spectral flames during Witches' Eve.",
   },
   "Haunted Stump": {
     image: hauntedStump,
-    description: "Summon spirits and add eerie charm to your farm.",
+    description: translate("description.haunted.stump"),
   },
   "Spooky Tree": {
     image: spookyTree,
-    description: "A hauntingly fun addition to your farm's decor!",
+    description: translate("description.spooky.tree"),
   },
   Observer: {
     image: observer,
-    description:
-      "A perpetually roving eyeball, always vigilant and ever-watchful!",
+    description: translate("description.observer"),
   },
   "Crow Rock": {
     image: crowRock,
-    description: "A crow perched atop a mysterious rock.",
+    description: translate("description.crow.rock"),
   },
   "Mini Corn Maze": {
     image: miniCornMaze,
-    description:
-      "A memento of the beloved maze from the 2023 Witches' Eve season.",
+    description: translate("description.mini.corn.maze"),
   },
 
   "Giant Cabbage": {
@@ -2625,7 +2620,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Town Sign": {
     image: sign,
-    description: "Show your farm ID with pride!",
+    description: BASIC_DECORATIONS()["Town Sign"].description,
   },
   "White Crow": {
     image: whiteCrow,

@@ -234,6 +234,7 @@ export const OFFLINE_FARM: GameState = {
     Axe: new Decimal(10),
     "Block Buck": new Decimal(1),
     "Mashed Potato": new Decimal(1),
+    Candles: new Decimal(1),
   },
   wardrobe: {},
 

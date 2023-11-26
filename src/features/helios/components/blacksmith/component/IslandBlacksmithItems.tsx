@@ -113,7 +113,7 @@ export const IslandBlacksmithItems: React.FC = () => {
           }}
           actionView={
             isAlreadyCrafted ? (
-              <p className="text-xxs text-center mb-1">Already crafted!</p>
+              <p className="text-xxs text-center mb-1">{t("alrCrafted")}</p>
             ) : (
               <Button disabled={lessIngredients()} onClick={craft}>
                 Craft
