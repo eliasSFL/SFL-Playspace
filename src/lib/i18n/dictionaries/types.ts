@@ -474,6 +474,7 @@ export type Statements =
   | "statements.dontRefresh"
   | "statements.feed.bumpkin.one"
   | "statements.feed.bumpkin.two"
+  | "statements.gold.pass.required"
   | "statements.guide.one"
   | "statements.guide.two"
   | "statements.jigger.one"
@@ -530,7 +531,10 @@ export type Statements =
   | "statements.wishing.well.luck"
   | "statements.wrongChain.one"
   | "statements.empty.chest"
-  | "statements.chest.captcha";
+  | "statements.chest.captcha"
+  | "statements.blacksmith.plaza"
+  | "statements.water.well.needed.one"
+  | "statements.water.well.needed.two";
 
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"

@@ -749,6 +749,12 @@ const statements: Record<Statements, string> = {
     "You will need to cook food in order to feed your Bumpkin.",
   "statements.empty.chest": "Your chest is empty, discover rare items today!",
   "statements.chest.captcha": "Tap the chest to open it",
+  "statements.gold.pass.required": "A Gold Pass is required to mint rare NFTs.",
+  "statements.blacksmith.plaza":
+    "Travel to the plaza to craft rare decorations!",
+  "statements.water.well.needed.one": "Additional Water Well required.",
+  "statements.water.well.needed.two":
+    "In order to support more crops, build a well.",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {
