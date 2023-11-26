@@ -86,6 +86,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   maintenance: "Maintenance",
   "make.wish": "Make a Wish",
   "making.wish": "Making a wish",
+  mins: "mins", // minutes
   mint: "Mint",
   minting: "minting",
   minted: "Already minted!",
@@ -113,6 +114,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   save: "Save",
   saving: "Saving",
   sell: "Sell",
+  secs: "secs", // seconds
   "sell.all": "Sell All",
   "sell.one": "Sell 1",
   "sell.ten": "Sell 10",
@@ -750,8 +752,8 @@ const statements: Record<Statements, string> = {
   "statements.empty.chest": "Your chest is empty, discover rare items today!",
   "statements.chest.captcha": "Tap the chest to open it",
   "statements.gold.pass.required": "A Gold Pass is required to mint rare NFTs.",
-  "statements.blacksmith.plaza":
-    "Travel to the plaza to craft rare decorations!",
+  "statements.frankie.plaza": "Travel to the plaza to craft rare decorations!",
+  "statements.blacksmith.plaza": "Travel to the Plaza for more rare items.",
   "statements.water.well.needed.one": "Additional Water Well required.",
   "statements.water.well.needed.two":
     "In order to support more crops, build a well.",
@@ -1089,6 +1091,18 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.free.range": "Animals produce 10% more",
   "description.horse.whisperer": "Increase chance of mutants",
   "description.buckaroo": "Chance of double drops",
+
+  // Blacksmith Items
+  "description.basic.scarecrow":
+    "Choosy defender of your farm's VIP (Very Important Plants)",
+  "description.scary.mike":
+    "The veggie whisperer and champion of frightfully good harvests!",
+  "description.laurie.chuckle.crow":
+    "With her disconcerting chuckle, she shooes peckers away from your crops!",
+  "description.immortal.pear": "",
+  "description.bale":
+    "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+  "description.white.tulips": "",
 };
 
 const fishingQuests: Record<FishingQuests, string> = {
