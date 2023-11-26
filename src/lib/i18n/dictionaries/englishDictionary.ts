@@ -33,6 +33,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   achievements: "Achievements",
   "add.liquidity": "Add Liquidity",
   alrClaim: "Already Claimed!",
+  alrCrafted: "Already Crafted!",
   auctions: "Auctions",
   back: "Back",
   basket: "Basket",
@@ -811,6 +812,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "Give me those eggs, fast! 4 hour speed boost on egg laying.",
   "description.banana.chicken":
     "A chicken that boosts bananas. What a world we live in.",
+
   // Crops
   "description.sunflower": "A sunny flower",
   "description.potato": "Healthier than you might think.",
@@ -826,11 +828,13 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.radish": "Takes time but is worth the wait!",
   "description.wheat": "The most harvested crop in the world.",
   "description.kale": "A Bumpkin Power Food!",
+
   // Fruits
   "description.blueberry": "A Goblin's weakness",
   "description.orange": "Vitamin C to keep your Bumpkin Healthy",
   "description.apple": "Perfect for homemade Apple Pie",
   "description.banana": "Oh banana!",
+
   // Exotic Crops
   "description.white.carrot": "A pale carrot with pale roots",
   "description.warty.goblin.pumpkin": "A whimsical, wart-covered pumpkin",
@@ -839,6 +843,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.chiogga": "A rainbow beet!",
   "description.golden.helios": "Sun-kissed grandeur!",
   "description.black.magic": "A dark and mysterious flower!",
+
   // Fire Pit
   "description.pumpkin.soup": "A creamy soup that goblins love",
   "description.mashed.potato": "My life is potato.",
@@ -852,6 +857,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.popcorn": "Classic homegrown crunchy snack.",
   "description.gumbo":
     "A pot full of magic! Every spoonful's a Mardi Gras parade!",
+
   // Kitchen
   "description.roast.veggies": "Even Goblins need to eat their veggies!",
   "description.bumpkin.salad": "Gotta keep your Bumpkin healthy!",
@@ -868,6 +874,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.chowder":
     "Sailor's delight in a bowl! Dive in, there's treasure inside!",
   "description.pancakes": "A great start to a Bumpkins day",
+
   // Bakery
   "description.apple.pie": "Bumpkin Betty's famous recipe",
   "description.kale.mushroom.pie": "A traditional Sapphiron recipe",
@@ -885,6 +892,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.eggplant.cake": "Sweet farm-fresh dessert surprise.",
   "description.orange.cake": "Orange you glad we aren't cooking apples",
   "description.pirate.cake": "Great for Pirate themed birthday parties.",
+
   // Deli
   "description.blueberry.jam": "Goblins will do anything for this jam",
   "description.fermented.carrots": "Got a surplus of carrots?",
@@ -892,6 +900,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.fancy.fries": "Cabbages and Mashed Potatoes",
   "description.fermented.fish":
     "Daring delicacy! Unleash the Viking within with every bite!",
+
   // Smoothie Shack
   "description.apple.juice": "A crisp refreshing beverage",
   "description.orange.juice": "OJ matches perfectly with a Club Sandwich",
@@ -901,9 +910,11 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.bumpkin.detox": "Wash away the sins of last night",
   "description.banana.blast":
     "The ultimate fruity fuel for those with a peel for power!",
+
   // Unused foods
   "description.roasted.cauliflower": "A Goblin's favourite",
   "description.radish.pie": "Despised by humans, loved by goblins",
+
   // Tools
   "description.axe": "Used to collect wood",
   "description.pickaxe": "Used to collect stone",
@@ -915,33 +926,95 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.shovel": "Plant and harvest crops.",
   "description.sand.shovel": "Used for digging treasure",
   "description.sand.drill": "Drill deep for uncommon or rare treasure",
+
   // Quest Items
   "description.goblin.key": "The Goblin Key",
   "description.sunflower.key": "The Sunflower Key",
   "description.ancient.goblin.sword": "An Ancient Goblin Sword",
   "description.ancient.human.warhammer": "An Ancient Human Warhammer",
+
   // Decorations
   "description.wicker.man":
     "Join hands and make a chain, the shadow of the Wicker Man will rise up again",
   "description.golden bonsai": "Goblins love bonsai too",
-  "description.victoria.sisters": "The pumpkin loving sisters",
   "description.christmas.bear": "Santa's favorite",
   "description.war.skull": "Decorate the land with the bones of your enemies.",
   "description.war.tombstone": "R.I.P",
+  "description.time.warp.totem":
+    "2x speed for crops, trees, cooking & minerals. Only lasts for 2 hours",
+  "description.white.tulips": "Keep the smell of goblins away.",
+  "description.potted.sunflower": "Brighten up your land.",
+  "description.potted.potato": "Potato blood runs through your Bumpkin.",
+  "description.potted.pumpkin": "Pumpkins for Bumpkins",
+  "description.cactus": "Saves water and makes your farm look stunning!",
+  "description.basic.bear":
+    "A basic bear. Use this at Goblin Retreat to build a bear!",
+  "description.bonnies.tombstone":
+    "A spooky addition to any farm, Bonnie's Human Tombstone will send shivers down your spine.",
+  "description.grubnashs.tombstone":
+    "Add some mischievous charm with Grubnash's Goblin Tombstone.",
+  "description.town.sign": "Show your farm ID with pride!",
+  "description.dirt.path":
+    "Keep your farmer boots clean with a well trodden path.",
+  "description.bush": "What's lurking in the bushes?",
+  "description.fence": "Add a touch of rustic charm to your farm.",
+  "description.stone.fence": "Embrace the timeless elegance of a stone fence.",
+  "description.pine.tree": "Standing tall and mighty, a needle-clad dream.",
+  "description.shrub":
+    "Enhance your in-game landscaping with a beautiful shrub",
+  "description.field.maple":
+    "A petite charmer that spreads its leaves like a delicate green canopy.",
+  "description.red.maple": "Fiery foliage and a heart full of autumnal warmth.",
+  "description.golden.maple":
+    "Radiating brilliance with its shimmering golden leaves.",
+  "description.crimson.cap":
+    "A towering and vibrant mushroom, the Crimson Cap Giant Mushroom will bring life to your farm.",
+  "description.toadstool.seat":
+    "Sit back and relax on the whimsical Toadstool Mushroom Seat.",
+  "description.chestnut.fungi.stool":
+    "The Chestnut Fungi Stool is a sturdy and rustic addition to any farm.",
+  "description.mahogany.cap":
+    "Add a touch of sophistication with the Mahogany Cap Giant Mushroom.",
+  "description.candles":
+    "Enchant your farm with flickering spectral flames during Witches' Eve.",
+  "description.haunted.stump":
+    "Summon spirits and add eerie charm to your farm.",
+  "description.spooky.tree": "A hauntingly fun addition to your farm's decor!",
+  "description.observer":
+    "A perpetually roving eyeball, always vigilant and ever-watchful!",
+  "description.crow.rock": "A crow perched atop a mysterious rock.",
+  "description.mini.corn.maze":
+    "A memento of the beloved maze from the 2023 Witches' Eve season.",
+  "description.lifeguard.ring": "Stay afloat with style, your seaside savior!",
+  "description.surfboard": "Ride the waves of wonder, beach bliss on board!",
+  "description.hideaway.herman":
+    "Herman's here to hide, but always peeks for a party!",
+  "description.shifty.sheldon":
+    "Sheldon's sly, always scuttling to the next sandy surprise!",
+  "description.tiki.torch": "Light the night, tropical vibes burning bright!",
+  "description.beach.umbrella":
+    "Shade, shelter, and seaside chic in one sunny setup!",
+  "description.magic.bean": "What will grow?",
+  "description.giant.potato": "A giant potato.",
+  "description.giant.pumpkin": "A giant pumpkin.",
+  "description.giant.cabbage": "A giant cabbage.",
+  // Boosts
+  "description.victoria.sisters": "The pumpkin loving sisters",
   "description.undead.rooster":
     "An unfortunate casualty of the war. 10% increased egg yield.",
   "description.observatory":
     "Explore the stars and improve scientific development",
-  "description.time.warp.totem":
-    "2x speed for crops, trees, cooking & minerals. Only lasts for 2 hours",
+
   // Banners
   "description.goblin.war.banner":
     "A display of allegiance to the Goblin cause",
   "description.human.war.banner": "A display of allegiance to the Human cause",
+
   // Coupons
   "description.block.buck": "A valuable token in Sunflower Land!",
   "description.beta.pass": "Gain early access to features for testing.",
   "description.war.bond": "A mark of a true warrior",
+
   // Fish
   "description.anchovy.one":
     "The ocean's pocket-sized darting acrobat, always in a hurry!",
@@ -1032,6 +1105,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "Dive into deep-sea mystery! This tentacle teases tales of ancient ocean legends and watery wonders.",
   "description.kraken.head":
     "Dive into deep-sea mystery! This head teases tales of ancient ocean legends and watery wonders.",
+
   // Marine Marvels
   "description.twilight.anglerfish":
     "A deep-sea angler with a built-in nightlight, guiding its way through darkness.",
@@ -1043,6 +1117,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "An elusive and ghostly fish of the deep, hiding in the shadows.",
   "description.gilded.swordfish":
     "A swordfish with scales that sparkle like gold, the ultimate catch!",
+
   // Buildings
   "description.water.well": "Crops need water!",
   "description.kitchen": "Step up your cooking game",
@@ -1064,6 +1139,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "Roast your Sunflowers, feed and level up your Bumpkin",
   "description.workbench": "Craft tools to collect resources",
   "description.tent": "(Discontinued)",
+
   // Bumpkin Skills
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -1102,7 +1178,6 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.immortal.pear": "",
   "description.bale":
     "A poultry's favorite neighbor, providing a cozy retreat for chickens",
-  "description.white.tulips": "",
 };
 
 const fishingQuests: Record<FishingQuests, string> = {
