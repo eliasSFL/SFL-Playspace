@@ -118,7 +118,7 @@ export const AuctioneerModal: React.FC<Props> = ({
                     className="h-4 mr-1"
                   />
                   <span className="text-xs">
-                    A Gold Pass is required to mint rare NFTs.
+                    {t("statements.gold.pass.required")}
                   </span>
                 </div>
                 <Button

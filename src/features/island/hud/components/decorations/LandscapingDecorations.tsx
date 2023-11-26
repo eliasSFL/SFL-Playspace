@@ -118,7 +118,7 @@ export const LandscapingDecorations: React.FC<Props> = ({ onClose }) => {
             />
           ))}
           <span className="text-xxs mt-2">
-            Travel to the plaza to craft rare decorations!
+            {t("statements.blacksmith.plaza")}
           </span>
         </>
       }
