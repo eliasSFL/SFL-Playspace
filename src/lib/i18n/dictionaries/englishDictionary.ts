@@ -472,6 +472,7 @@ const conversations: Record<Conversations, string> = {
     "At the plaza you can deliver your resources for rewards, craft magical items & trade with other players.",
   "pete.levelthree.four":
     "You can travel by clicking on the world icon in the bottom left.",
+  "pete.help.zero": "Visit the fire pit, cook food and eat to level up.",
   "pete.help.one":
     "As you level up, you will unlock new areas to explore. First up is the Pumpkin Plaza....my home!",
   "pete.help.two":

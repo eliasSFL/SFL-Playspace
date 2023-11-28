@@ -333,6 +333,7 @@ export type Conversations =
   | "pete.levelthree.two"
   | "pete.levelthree.three"
   | "pete.levelthree.four"
+  | "pete.help.zero"
   | "pete.help.one"
   | "pete.help.two"
   | "grimbly.expansion.one"
