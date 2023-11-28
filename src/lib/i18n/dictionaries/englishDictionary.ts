@@ -856,8 +856,17 @@ const boostDescriptions: Record<BoostDescriptions, string> = {
     "The beckoning cat. Pull its arm and good luck will come",
   "description.easter.bunny": "A rare Easter item",
   "description.pablo.bunny": "A magical Easter bunny",
-
-  // Blacksmith Items
+  "description.foliant": "A book of spells.",
+  "description.tiki.totem":
+    "The Tiki Totem adds 0.1 wood to every tree you chop.",
+  "description.lunar.calendar":
+    "Crops now follow the lunar cycle! 10% increase to crop growth speed.",
+  "description.heart.davy.jones":
+    "Whoever possesses it holds immense power over the seven seas, can dig for treasure without tiring.",
+  "description.treasure.map":
+    "An enchanted map that leads the holder to valuable treasure. +20% profit from beach bounty items.",
+  "description.genie.lamp":
+    "A magical lamp that contains a genie who will grant you three wishes.",
   "description.basic.scarecrow":
     "Choosy defender of your farm's VIP (Very Important Plants)",
   "description.scary.mike":
@@ -868,6 +877,12 @@ const boostDescriptions: Record<BoostDescriptions, string> = {
     "A long-lived pear that makes fruit trees last longer.",
   "description.bale":
     "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+  "description.sir.goldensnout":
+    "A royal member, Sir Goldensnout infuses your farm with sovereign prosperity through its golden manure.",
+  "description.freya.fox":
+    "Enchanting guardian, boosts pumpkin growth with her mystical charm. Harvest abundant pumpkins under her watchful gaze.",
+  "description.queen.cornelia":
+    "Command the regal power of Queen Cornelia and experience a magnificent Area of Effect boost to your corn production. +1 Corn.",
 };
 
 const cropFruitDescriptions: Record<CropFruitDescriptions, string> = {
@@ -1062,7 +1077,34 @@ const decorationDescriptions: Record<DecorationDescriptions, string> = {
     "Dive into deep-sea mystery! This tentacle teases tales of ancient ocean legends and watery wonders.",
   "description.kraken.head":
     "Dive into deep-sea mystery! This head teases tales of ancient ocean legends and watery wonders.",
-
+  "description.abandoned.bear": "A bear that was left behind on the island.",
+  "description.turtle.bear": "Turtley enough for the turtle club.",
+  "description.trex.skull": "A skull from a T-Rex! Amazing!",
+  "description.sunflower.coin": "A coin made of sunflowers.",
+  "description.skeleton.king.staff": "All hail the Skeleton King!",
+  "description.lifeguard.bear": "Lifeguard Bear is here to save the day!",
+  "description.snorkel.bear": "Snorkel Bear loves to swim.",
+  "description.parasaur.skull": "A skull from a parasaur!",
+  "description.goblin.bear": "A goblin bear. It's a bit scary.",
+  "description.golden.bear.head": "Spooky, but cool.",
+  "description.pirate.bear": "Argh, matey! Hug me!",
+  "description.galleon": "A toy ship, still in pretty good nick.",
+  "description.dinosaur.bone":
+    "A Dinosaur Bone! What kind of creature was this?",
+  "description.human.bear": "A human bear. Even scarier than a goblin bear.",
+  "description.flamingo":
+    "Represents a symbol of love's beauty standing tall and confident.",
+  "description.blossom.tree":
+    "Its delicate petals symbolizes the beauty and fragility of love.",
+  "description.heart.balloons":
+    "Use them as decorations for romantic occasions.",
+  "description.whale.bear":
+    "It has a round, furry body like a bear, but with the fins, tail, and blowhole of a whale.",
+  "description.valentine.bear": "For those who love.",
+  "description.easter.bear": "How can a Bunny lay eggs?",
+  "description.easter.bush": "What is inside?",
+  "description.giant.carrot":
+    "A giant carrot stood, casting fun shadows, as rabbits gazed in wonder.",
   // Banners
   "description.goblin.war.banner":
     "A display of allegiance to the Goblin cause",
@@ -1223,6 +1265,16 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.golden.crop": "A shiny golden crop",
   "description.red.envelope": "Wow, you are lucky!",
   "description.love.letter": "Convey feelings of love",
+  "description.solar.flare.ticket":
+    "A ticket used during the Solar Flare Season",
+  "description.dawn.breaker.ticket":
+    "A ticket used during the Dawn Breaker Season",
+  "description.crow.feather":
+    "A ticket used during the Witches' Eve Ticket Season",
+  "description.mermaid.scale":
+    "A ticket used during the Catch the Kraken Season",
+  "description.sunflower.supporter":
+    "The mark of a true supporter of the game!",
 
   // Easter Items
   "description.egg.basket": "Easter Event",
@@ -1371,6 +1423,17 @@ const bountyDescription: Record<BountyDescription, string> = {
   "description.starfish": "The star of the sea.",
   "description.pirate.bounty":
     "A bounty for a pirate. It's worth a lot of money.",
+  "description.wooden.compass":
+    "It may not be high-tech, but it will always steer you in the right direction, wood you believe it?",
+  "description.iron.compass":
+    "Iron out your path to treasure! This compass is 'attract'-ive, and not just to the magnetic North!",
+  "description.emerald.compass":
+    "Guide your way through the lush mysteries of life! This compass doesn't just point North, it points towards opulence and grandeur!",
+  "description.old.bottle":
+    "Antique pirate bottle, echoing tales of high seas adventure.",
+  "description.pearl": "Shimmers in the sun.",
+  "description.pipi": "Plebidonax deltoides, found in the Pacific Ocean.",
+  "description.seaweed": "Seaweed.",
 };
 
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
