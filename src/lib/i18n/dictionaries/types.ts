@@ -554,7 +554,8 @@ export type LandscapeTerms =
   | "landscape.intro.four"
   | "landscape.expansion.one"
   | "landscape.expansion.two"
-  | "landscape.timerPopover";
+  | "landscape.timerPopover"
+  | "landscape.dragMe";
 
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"
