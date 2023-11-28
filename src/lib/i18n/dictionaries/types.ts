@@ -40,6 +40,7 @@ export type GeneralTerms =
   | "equip"
   | "error"
   | "exotics"
+  | "expand"
   | "explore"
   | "farm"
   | "featured"
@@ -545,7 +546,9 @@ export type LandscapeTerms =
   | "landscape.intro.one"
   | "landscape.intro.two"
   | "landscape.intro.three"
-  | "landscape.intro.four";
+  | "landscape.intro.four"
+  | "landscape.expansion.one"
+  | "landscape.expansion.two";
 
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"

@@ -65,6 +65,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   equip: "Equip",
   error: "Error",
   exotics: "Exotics",
+  expand: "Expand",
   explore: "Explore",
   farm: "Farm",
   featured: "Featured",
@@ -781,6 +782,9 @@ const landscapeTerms: Record<LandscapeTerms, string> = {
     "In design mode you can hold, drag & move items around.",
   "landscape.intro.three": "Craft rare decorations",
   "landscape.intro.four": "Place collectibles from your chest",
+  "landscape.expansion.one":
+    "Each piece of land comes with unique resources to help build your farming empire!",
+  "landscape.expansion.two": "More expansions will be available soon...",
 };
 
 const bumpkinPartRequirements: Record<BumpkinPartRequirements, string> = {
