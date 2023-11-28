@@ -26,6 +26,7 @@ import {
   FishingQuests,
   IslandName,
   LevelUpMessages,
+  LandscapeTerms,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -774,6 +775,14 @@ const bumpkinTrade: Record<BumpkinTrade, string> = {
   "bumpkinTrade.list": "List trade",
 };
 
+const landscapeTerms: Record<LandscapeTerms, string> = {
+  "landscape.intro.one": "Design your dream island!",
+  "landscape.intro.two":
+    "In design mode you can hold, drag & move items around.",
+  "landscape.intro.three": "Craft rare decorations",
+  "landscape.intro.four": "Place collectibles from your chest",
+};
+
 const bumpkinPartRequirements: Record<BumpkinPartRequirements, string> = {
   "part.hair": "Hair is required",
   "part.body": "Body is required",
@@ -1298,6 +1307,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...henHouseTerms,
   ...introTerms,
   ...islandName,
+  ...landscapeTerms,
   ...levelUpMessages,
   ...onboarding,
   ...questions,

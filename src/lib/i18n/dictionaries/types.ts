@@ -541,6 +541,12 @@ export type Statements =
   | "statements.water.well.needed.one"
   | "statements.water.well.needed.two";
 
+export type LandscapeTerms =
+  | "landscape.intro.one"
+  | "landscape.intro.two"
+  | "landscape.intro.three"
+  | "landscape.intro.four";
+
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"
   | "bumpkinTrade.purchased"
@@ -960,6 +966,7 @@ export type TranslationKeys =
   | HenHouseTerms
   | Intro
   | IslandName
+  | LandscapeTerms
   | LevelUpMessages
   | Onboarding
   | Questions
