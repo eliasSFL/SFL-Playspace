@@ -23,6 +23,7 @@ import { CraftingRequirements } from "components/ui/layouts/CraftingRequirements
 import { GameState } from "features/game/types/game";
 import { gameAnalytics } from "lib/gameAnalytics";
 import { getSeasonalTicket } from "features/game/types/seasons";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 function isNotReady(name: BumpkinItem, state: GameState) {
   const wearable = STYLIST_WEARABLES(state)[name] as StylistWearable;
@@ -45,6 +46,7 @@ interface Props {
   wearables: ShopWearables;
 }
 export const StylistWearables: React.FC<Props> = ({ wearables }) => {
+  const { t } = useAppTranslation();
   const [selected, setSelected] = useState<BumpkinItem>(getKeys(wearables)[0]);
   const { gameService } = useContext(Context);
   const [
@@ -130,7 +132,7 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
         }
         onClick={buy}
       >
-        Craft
+        {t("craft")}
       </Button>
     );
   };
@@ -190,7 +192,7 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
             rel="noopener noreferrer"
             className="underline text-white text-xs"
           >
-            View sold out wearables
+            {t("statements.soldOutWearables")}
           </a>
         </>
       }

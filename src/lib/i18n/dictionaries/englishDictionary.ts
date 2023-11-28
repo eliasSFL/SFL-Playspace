@@ -772,6 +772,9 @@ const statements: Record<Statements, string> = {
   "statements.water.well.needed.one": "Additional Water Well required.",
   "statements.water.well.needed.two":
     "In order to support more crops, build a well.",
+  "statements.soldOut": "Sold out",
+  "statements.inStock": "in stock",
+  "statements.soldOutWearables": "View sold out wearables",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {

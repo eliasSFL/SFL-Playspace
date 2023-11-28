@@ -548,7 +548,10 @@ export type Statements =
   | "statements.frankie.plaza"
   | "statements.blacksmith.plaza"
   | "statements.water.well.needed.one"
-  | "statements.water.well.needed.two";
+  | "statements.water.well.needed.two"
+  | "statements.soldOut"
+  | "statements.inStock"
+  | "statements.soldOutWearables";
 
 export type LandscapeTerms =
   | "landscape.intro.one"
