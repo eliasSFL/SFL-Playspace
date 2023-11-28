@@ -196,6 +196,8 @@ const welcomeTerms: Record<WelcomeTerms, string> = {
     "Accept the signature request in your browser wallet to login.",
   "welcome.takeover":
     "It looks like you are new to Sunflower Land and have claimed ownership of another player's account.",
+  "welcome.metamask": "Metamask",
+  "welcome.promo": "Add Promo Code",
 };
 
 const rulesTerms: Record<RulesTerms, string> = {

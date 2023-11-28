@@ -160,7 +160,9 @@ export type WelcomeTerms =
   | "welcome.signingIn"
   | "welcome.signInMessage"
   | "welcome.email"
-  | "welcome.takeover";
+  | "welcome.takeover"
+  | "welcome.metamask"
+  | "welcome.promo";
 
 export type RulesTerms =
   | "rules"
