@@ -165,6 +165,7 @@ const generalTerms: Record<GeneralTerms, string> = {
 };
 
 const gameTerms: Record<GameTerms, string> = {
+  sfl: "SFL",
   bumpkinLvl: "Bumpkin level",
   dailyLim: "Daily SFL Limit",
   gobSwarm: "Goblin Swarm!",
@@ -505,6 +506,8 @@ const rewardTerms: Record<RewardTerms, string> = {
   "reward.revealing": "What could it be?",
   "reward.streakBonus": "3x streak bonus",
   "reward.found": "You found",
+  "reward.spendWisely": "Spend it wisely.",
+  "reward.wearable": "A wearable for your Bumpkin",
 };
 
 const errorTerms: Record<ErrorTerms, string> = {

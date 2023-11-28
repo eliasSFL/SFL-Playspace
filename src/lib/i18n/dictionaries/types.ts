@@ -135,6 +135,7 @@ export type GeneralTerms =
   | "you.are.here";
 
 export type GameTerms =
+  | "sfl"
   | "dailyLim"
   | "gobSwarm"
   | "potions"
@@ -359,7 +360,9 @@ export type RewardTerms =
   | "reward.lvlRequirement"
   | "reward.revealing"
   | "reward.streakBonus"
-  | "reward.found";
+  | "reward.found"
+  | "reward.spendWisely"
+  | "reward.wearable";
 
 export type ErrorTerms =
   | "error.congestion.one"

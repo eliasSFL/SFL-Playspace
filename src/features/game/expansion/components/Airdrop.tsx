@@ -53,8 +53,10 @@ export const ClaimReward: React.FC<ClaimRewardProps> = ({
             <div className="flex items-center">
               <Box image={token} />
               <div>
-                <Label type="warning">{airdrop.sfl} SFL</Label>
-                <p className="text-xs">Spend it wisely.</p>
+                <Label type="warning">
+                  {airdrop.sfl} {t("sfl")}
+                </Label>
+                <p className="text-xs">{t("reward.spendWisely")}</p>
               </div>
             </div>
           )}
@@ -91,7 +93,7 @@ export const ClaimReward: React.FC<ClaimRewardProps> = ({
                   <Label type="default">{`${
                     airdrop.wearables[name] ?? 1
                   } x ${name}`}</Label>
-                  <p className="text-xs">A wearable for your Bumpkin</p>
+                  <p className="text-xs">{t("reward.wearable")}</p>
                 </div>
               </div>
             ))}
@@ -104,7 +106,7 @@ export const ClaimReward: React.FC<ClaimRewardProps> = ({
             {t("close")}
           </Button>
         )}
-        <Button onClick={onClaim}>Claim</Button>
+        <Button onClick={onClaim}>{t("claim")}</Button>
       </div>
     </>
   );
