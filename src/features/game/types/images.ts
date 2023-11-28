@@ -1905,35 +1905,32 @@ export const ITEM_DETAILS: Items = {
   },
   "Golden Crop": {
     image: goldenCrop,
-    description: "A shiny golden crop",
+    description: translate("description.golden.crop"),
   },
   "Christmas Snow Globe": {
     image: snowglobe,
-    description: "Swirl the snow and watch it come to life",
+    description: translate("description.christmas.snow.globe"),
   },
 
   "Immortal Pear": {
     image: immortalPear,
-    description: "A long-lived pear that makes fruit trees last longer.",
+    description: translate("description.immortal.pear"),
   },
   "Lady Bug": {
     image: ladybug,
-    description:
-      "An incredible bug that feeds on aphids. Improves Apple quality.",
+    description: translate("description.lady.bug"),
   },
   "Squirrel Monkey": {
     image: squirrelMonkey,
-    description:
-      "A natural orange predator. Orange Trees are scared when a Squirrel Monkey is around.",
+    description: translate("description.squirrel.monkey"),
   },
   "Black Bearry": {
     image: blackBear,
-    description:
-      "His favorite treat - plump, juicy blueberries. Gobbles them up by the handful!",
+    description: translate("description.black.bearry"),
   },
   "Devil Bear": {
     image: devilBear,
-    description: "Better the Devil you know than the Devil you don't",
+    description: translate("description.devil.bear"),
   },
   "Orange Squeeze": {
     image: orangeSqueeze,
@@ -1957,23 +1954,23 @@ export const ITEM_DETAILS: Items = {
   },
   "Collectible Bear": {
     image: collectibleBear,
-    description: "A prized bear, still in mint condition!",
+    description: translate("description.collectible.bear"),
   },
   "Cyborg Bear": {
     image: cyborgBear,
-    description: "Hasta la vista, bear",
+    description: translate("description.cyborg.bear"),
   },
   "Maneki Neko": {
     image: manekiNeko,
-    description: "The beckoning cat. Pull its arm and good luck will come",
+    description: translate("description.maneki.neko"),
   },
   "Red Envelope": {
     image: redEnvelope,
-    description: "Wow, you are lucky!",
+    description: translate("description.red.envelope"),
   },
   "Love Letter": {
     image: loveLetter,
-    description: "Convey feelings of love",
+    description: translate("description.love.letter"),
   },
 
   // Treasure Island

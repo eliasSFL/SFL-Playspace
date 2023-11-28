@@ -26,6 +26,7 @@ import {
   FishingQuests,
   IslandName,
   LevelUpMessages,
+  BumpkinSkillsDescription,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -1012,6 +1013,12 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.sunflower.bear": "A Bear's cherished crop",
   "description.beta.bear": "A bear found through special testing events",
   "description.rainbow.artist.bear": "The owner is a beautiful bear artist!",
+  "description.devil.bear":
+    "Better the Devil you know than the Devil you don't",
+  "description.collectible.bear": "A prized bear, still in mint condition!",
+  "description.cyborg.bear": "Hasta la vista, bear",
+  "description.christmas.snow.globe":
+    "Swirl the snow and watch it come to life",
 
   // Boosts
   "description.victoria.sisters": "The pumpkin loving sisters",
@@ -1033,6 +1040,15 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "Radical! Grants a 3% chance to get +10 radishes on harvest.",
   "description.stellar.sunflower":
     "Stellar! Grants a 3% chance to get +10 sunflowers on harvest.",
+  "description.lady.bug":
+    "An incredible bug that feeds on aphids. Improves Apple quality.",
+  "description.squirrel.monkey":
+    "A natural orange predator. Orange Trees are scared when a Squirrel Monkey is around.",
+  "description.black.bearry":
+    "His favorite treat - plump, juicy blueberries. Gobbles them up by the handful!",
+  "description.maneki.neko":
+    "The beckoning cat. Pull its arm and good luck will come",
+
   // Banners
   "description.goblin.war.banner":
     "A display of allegiance to the Goblin cause",
@@ -1043,6 +1059,9 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.beta.pass": "Gain early access to features for testing.",
   "description.war.bond": "A mark of a true warrior",
   "description.jack.o.lantern": "A Halloween special event item",
+  "description.golden.crop": "A shiny golden crop",
+  "description.red.envelope": "Wow, you are lucky!",
+  "description.love.letter": "Convey feelings of love",
 
   // Fish
   "description.anchovy.one":
@@ -1169,34 +1188,6 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.workbench": "Craft tools to collect resources",
   "description.tent": "(Discontinued)",
 
-  // Bumpkin Skills
-  // Crops
-  "description.green.thumb": "Crops yield 5% more",
-  "description.cultivator": "Crops grow 5% quicker",
-  "description.master.farmer": "Crops yield 10% more",
-  "description.golden.flowers": "Chance for Sunflowers to Drop Gold ",
-  "description.happy.crop": "Chance to get 2x crops",
-  // Trees
-  "description.lumberjack": "Trees drop 10% more",
-  "description.tree.hugger": "Trees regrow 20% quicker",
-  "description.tough.tree": "Chance to get 3x wood drops",
-  "description.money.tree": "Chance for SFL drops",
-  // Rocks
-  "description.digger": "Stone Drops 10% more",
-  "description.coal.face": "Stones recover 20% quicker",
-  "description.seeker": "Attract Rock Monsters",
-  "description.gold.rush": "Chance to get 2.5x gold drops",
-  // Cooking
-  "description.rush.hour": "Cook meals 10% faster",
-  "description.kitchen.hand": "Meals yield an extra 5% experience",
-  "description.michelin.stars": "High quality food, earn additional 5% SFL",
-  "description.curer": "Consuming deli goods adds extra 15% exp",
-  // Animals
-  "description.stable.hand": "Animals produce 10% quicker",
-  "description.free.range": "Animals produce 10% more",
-  "description.horse.whisperer": "Increase chance of mutants",
-  "description.buckaroo": "Chance of double drops",
-
   // Blacksmith Items
   "description.basic.scarecrow":
     "Choosy defender of your farm's VIP (Very Important Plants)",
@@ -1204,7 +1195,8 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "The veggie whisperer and champion of frightfully good harvests!",
   "description.laurie.chuckle.crow":
     "With her disconcerting chuckle, she shooes peckers away from your crops!",
-  "description.immortal.pear": "",
+  "description.immortal.pear":
+    "A long-lived pear that makes fruit trees last longer.",
   "description.bale":
     "A poultry's favorite neighbor, providing a cozy retreat for chickens",
 
@@ -1320,8 +1312,38 @@ const levelUpMessages: Record<LevelUpMessages, string> = {
   "levelUp.60": "Level 60, you're a true farming superstar!",
 };
 
+const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
+  // Crops
+  "description.green.thumb": "Crops yield 5% more",
+  "description.cultivator": "Crops grow 5% quicker",
+  "description.master.farmer": "Crops yield 10% more",
+  "description.golden.flowers": "Chance for Sunflowers to Drop Gold ",
+  "description.happy.crop": "Chance to get 2x crops",
+  // Trees
+  "description.lumberjack": "Trees drop 10% more",
+  "description.tree.hugger": "Trees regrow 20% quicker",
+  "description.tough.tree": "Chance to get 3x wood drops",
+  "description.money.tree": "Chance for SFL drops",
+  // Rocks
+  "description.digger": "Stone Drops 10% more",
+  "description.coal.face": "Stones recover 20% quicker",
+  "description.seeker": "Attract Rock Monsters",
+  "description.gold.rush": "Chance to get 2.5x gold drops",
+  // Cooking
+  "description.rush.hour": "Cook meals 10% faster",
+  "description.kitchen.hand": "Meals yield an extra 5% experience",
+  "description.michelin.stars": "High quality food, earn additional 5% SFL",
+  "description.curer": "Consuming deli goods adds extra 15% exp",
+  // Animals
+  "description.stable.hand": "Animals produce 10% quicker",
+  "description.free.range": "Animals produce 10% more",
+  "description.horse.whisperer": "Increase chance of mutants",
+  "description.buckaroo": "Chance of double drops",
+};
+
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...achievementTerms,
+  ...bumpkinSkillsDescription,
   ...bumpkinPartRequirements,
   ...bumpkinTrade,
   ...confirmationTerms,

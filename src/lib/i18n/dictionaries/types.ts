@@ -747,6 +747,10 @@ export type GameDescriptions =
   | "description.christmas.bear"
   | "description.beta.bear"
   | "description.rainbow.artist.bear"
+  | "description.devil.bear"
+  | "description.collectible.bear"
+  | "description.cyborg.bear"
+  | "description.christmas.snow.globe"
 
   // Boosts
   | "description.victoria.sisters"
@@ -760,6 +764,10 @@ export type GameDescriptions =
   | "description.potent.potato"
   | "description.radical.radish"
   | "description.stellar.sunflower"
+  | "description.lady.bug"
+  | "description.squirrel.monkey"
+  | "description.black.bearry"
+  | "description.maneki.neko"
 
   // Banners
   | "description.goblin.war.banner"
@@ -770,6 +778,9 @@ export type GameDescriptions =
   | "description.beta.pass"
   | "description.war.bond"
   | "description.jack.o.lantern"
+  | "description.golden.crop"
+  | "description.red.envelope"
+  | "description.love.letter"
 
   // Fish
   | "description.anchovy.one"
@@ -854,7 +865,26 @@ export type GameDescriptions =
   | "description.workbench"
   | "description.tent"
 
-  // Bumpkin Skills
+  // Blacksmith items
+  | "description.basic.scarecrow"
+  | "description.scary.mike"
+  | "description.laurie.chuckle.crow"
+  | "description.immortal.pear"
+  | "description.bale"
+
+  // Easter Items
+  | "description.egg.basket"
+  | "description.easter.bunny"
+  | "description.pablo.bunny"
+  | "description.blue.egg"
+  | "description.orange.egg"
+  | "description.green.egg"
+  | "description.yellow.egg"
+  | "description.red.egg"
+  | "description.pink.egg"
+  | "description.purple.egg";
+
+export type BumpkinSkillsDescription =
   // Crops
   | "description.green.thumb"
   | "description.cultivator"
@@ -880,26 +910,7 @@ export type GameDescriptions =
   | "description.stable.hand"
   | "description.free.range"
   | "description.horse.whisperer"
-  | "description.buckaroo"
-
-  // Blacksmith items
-  | "description.basic.scarecrow"
-  | "description.scary.mike"
-  | "description.laurie.chuckle.crow"
-  | "description.immortal.pear"
-  | "description.bale"
-
-  // Easter Items
-  | "description.egg.basket"
-  | "description.easter.bunny"
-  | "description.pablo.bunny"
-  | "description.blue.egg"
-  | "description.orange.egg"
-  | "description.green.egg"
-  | "description.yellow.egg"
-  | "description.red.egg"
-  | "description.pink.egg"
-  | "description.purple.egg";
+  | "description.buckaroo";
 
 export type FishingQuests =
   | "quest.basic.fish"
@@ -981,6 +992,7 @@ export type LevelUpMessages =
 export type TranslationKeys =
   | AchievementsDialog
   | BumpkinPartRequirements
+  | BumpkinSkillsDescription
   | BumpkinTrade
   | ConfirmationTerms
   | Conversations
