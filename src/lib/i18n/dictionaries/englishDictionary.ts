@@ -1002,6 +1002,18 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.giant.potato": "A giant potato.",
   "description.giant.pumpkin": "A giant pumpkin.",
   "description.giant.cabbage": "A giant cabbage.",
+  "description.chef.bear": "Every chef needs a helping hand",
+  "description.construction.bear": "Always build in a bear market",
+  "description.angel.bear": "Time to transcend peasant farming",
+  "description.badass.bear": "Nothing stands in your way.",
+  "description.bear.trap": "It's a trap!",
+  "description.brilliant.bear": "Pure brilliance!",
+  "description.classy.bear": "More SFL than you know what to do with it!",
+  "description.farmer.bear": "Nothing quite like a hard day's work!",
+  "description.rich.bear": "A prized possession",
+  "description.sunflower.bear": "A Bear's cherished crop",
+  "description.beta.bear": "A bear found through special testing events",
+  "description.rainbow.artist.bear": "The owner is a beautiful bear artist!",
   // Boosts
   "description.victoria.sisters": "The pumpkin loving sisters",
   "description.undead.rooster":
@@ -1018,6 +1030,7 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.block.buck": "A valuable token in Sunflower Land!",
   "description.beta.pass": "Gain early access to features for testing.",
   "description.war.bond": "A mark of a true warrior",
+  "description.jack.o.lantern": "A Halloween special event item",
 
   // Fish
   "description.anchovy.one":

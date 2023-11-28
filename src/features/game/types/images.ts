@@ -1508,32 +1508,26 @@ export const ITEM_DETAILS: Items = {
 
   "Sunflower Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "10% increased Sunflower yield",
   },
   "Carrot Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Carrots grow 20% faster",
   },
   "Beetroot Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "20% increased Beetroot yield",
   },
   "Green Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Chance for 10x crop yield",
   },
   "Warrior Shirt": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A mark of a true warrior",
   },
   "Warrior Pants": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Protect your thighs!",
   },
   "Warrior Helmet": {
@@ -1542,12 +1536,10 @@ export const ITEM_DETAILS: Items = {
   },
   "Sunflower Shield": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A hero of Sunflower Land. Free Sunflower Seeds!",
   },
   "Skull Hat": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A reward for your war efforts",
   },
   "War Skull": {
@@ -1560,7 +1552,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Undead Rooster": {
     image: undeadChicken,
-    description: "A fallen soldier during the war",
+    description: translate("description.undead.rooster"),
   },
 
   "Boiled Eggs": {
@@ -1808,7 +1800,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Jack-o-lantern": {
     image: jackOLanternItem,
-    description: "A Halloween special event item",
+    description: translate("description.jack.o.lantern"),
   },
   "Victoria Sisters": {
     image: victoriaSisters,
@@ -1820,43 +1812,43 @@ export const ITEM_DETAILS: Items = {
   },
   "Chef Bear": {
     image: chefBear,
-    description: "Every chef needs a helping hand",
+    description: translate("description.chef.bear"),
   },
   "Construction Bear": {
     image: constructionBear,
-    description: "Always build in a bear market",
+    description: translate("description.construction.bear"),
   },
   "Angel Bear": {
     image: angelBear,
-    description: "Time to transcend peasant farming",
+    description: translate("description.angel.bear"),
   },
   "Badass Bear": {
     image: badassBear,
-    description: "Nothing stands in your way.",
+    description: translate("description.badass.bear"),
   },
   "Bear Trap": {
     image: bearTrap,
-    description: "It's a trap!",
+    description: translate("description.bear.trap"),
   },
   "Brilliant Bear": {
     image: brilliantBear,
-    description: "Pure brilliance!",
+    description: translate("description.brilliant.bear"),
   },
   "Classy Bear": {
     image: classyBear,
-    description: "More SFL than you know what to do with it!",
+    description: translate("description.classy.bear"),
   },
   "Farmer Bear": {
     image: farmerBear,
-    description: "Nothing quite like a hard day's work!",
+    description: translate("description.farmer.bear"),
   },
   "Rich Bear": {
     image: richBear,
-    description: "A prized possession",
+    description: translate("description.rich.bear"),
   },
   "Sunflower Bear": {
     image: sunflowerBear,
-    description: "A Bear's cherished crop",
+    description: translate("description.sunflower.bear"),
   },
   "Christmas Bear": {
     ...SALESMAN_ITEMS["Christmas Bear"],
@@ -1864,11 +1856,11 @@ export const ITEM_DETAILS: Items = {
   },
   "Beta Bear": {
     image: betaBear,
-    description: "A bear found through special testing events",
+    description: translate("description.beta.bear"),
   },
   "Rainbow Artist Bear": {
     image: rainbowArtistBear,
-    description: "The owner is a beautiful bear artist!",
+    description: translate("description.rainbow.artist.bear"),
   },
 
   "Cabbage Boy": {

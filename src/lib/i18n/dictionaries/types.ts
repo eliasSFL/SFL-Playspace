@@ -734,6 +734,19 @@ export type GameDescriptions =
   | "description.giant.potato"
   | "description.giant.pumpkin"
   | "description.giant.cabbage"
+  | "description.chef.bear"
+  | "description.construction.bear"
+  | "description.angel.bear"
+  | "description.badass.bear"
+  | "description.bear.trap"
+  | "description.brilliant.bear"
+  | "description.classy.bear"
+  | "description.farmer.bear"
+  | "description.rich.bear"
+  | "description.sunflower.bear"
+  | "description.christmas.bear"
+  | "description.beta.bear"
+  | "description.rainbow.artist.bear"
 
   // Boosts
   | "description.victoria.sisters"
@@ -749,6 +762,7 @@ export type GameDescriptions =
   | "description.block.buck"
   | "description.beta.pass"
   | "description.war.bond"
+  | "description.jack.o.lantern"
 
   // Fish
   | "description.anchovy.one"
