@@ -1366,43 +1366,43 @@ export const ITEM_DETAILS: Items = {
   },
 
   "Egg Basket": {
-    description: "Easter Event",
+    description: translate("description.egg.basket"),
     image: easterBasket,
   },
   "Easter Bunny": {
-    description: "A rare Easter item",
+    description: translate("description.easter.bunny"),
     image: easterBunny,
   },
   "Pablo The Bunny": {
-    description: "A magical Easter bunny",
+    description: translate("description.pablo.bunny"),
     image: pabloBunny,
   },
   "Blue Egg": {
-    description: "A blue easter egg",
+    description: translate("description.blue.egg"),
     image: blueEgg,
   },
   "Orange Egg": {
-    description: "An orange easter egg",
+    description: translate("description.orange.egg"),
     image: orangeEgg,
   },
   "Green Egg": {
-    description: "A green easter egg",
+    description: translate("description.green.egg"),
     image: greenEgg,
   },
   "Yellow Egg": {
-    description: "A yellow easter egg",
+    description: translate("description.yellow.egg"),
     image: yellowEgg,
   },
   "Red Egg": {
-    description: "A red easter egg",
+    description: translate("description.red.egg"),
     image: redEgg,
   },
   "Pink Egg": {
-    description: "A pink easter egg",
+    description: translate("description.pink.egg"),
     image: pinkEgg,
   },
   "Purple Egg": {
-    description: "A purple easter egg",
+    description: translate("description.purple.egg"),
     image: purpleEgg,
   },
   "Engine Core": {
@@ -1508,32 +1508,26 @@ export const ITEM_DETAILS: Items = {
 
   "Sunflower Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "10% increased Sunflower yield",
   },
   "Carrot Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Carrots grow 20% faster",
   },
   "Beetroot Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "20% increased Beetroot yield",
   },
   "Green Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Chance for 10x crop yield",
   },
   "Warrior Shirt": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A mark of a true warrior",
   },
   "Warrior Pants": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Protect your thighs!",
   },
   "Warrior Helmet": {
@@ -1542,12 +1536,10 @@ export const ITEM_DETAILS: Items = {
   },
   "Sunflower Shield": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A hero of Sunflower Land. Free Sunflower Seeds!",
   },
   "Skull Hat": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A reward for your war efforts",
   },
   "War Skull": {
@@ -1560,7 +1552,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Undead Rooster": {
     image: undeadChicken,
-    description: "A fallen soldier during the war",
+    description: translate("description.undead.rooster"),
   },
 
   "Boiled Eggs": {
@@ -1808,7 +1800,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Jack-o-lantern": {
     image: jackOLanternItem,
-    description: "A Halloween special event item",
+    description: translate("description.jack.o.lantern"),
   },
   "Victoria Sisters": {
     image: victoriaSisters,
@@ -1820,43 +1812,43 @@ export const ITEM_DETAILS: Items = {
   },
   "Chef Bear": {
     image: chefBear,
-    description: "Every chef needs a helping hand",
+    description: translate("description.chef.bear"),
   },
   "Construction Bear": {
     image: constructionBear,
-    description: "Always build in a bear market",
+    description: translate("description.construction.bear"),
   },
   "Angel Bear": {
     image: angelBear,
-    description: "Time to transcend peasant farming",
+    description: translate("description.angel.bear"),
   },
   "Badass Bear": {
     image: badassBear,
-    description: "Nothing stands in your way.",
+    description: translate("description.badass.bear"),
   },
   "Bear Trap": {
     image: bearTrap,
-    description: "It's a trap!",
+    description: translate("description.bear.trap"),
   },
   "Brilliant Bear": {
     image: brilliantBear,
-    description: "Pure brilliance!",
+    description: translate("description.brilliant.bear"),
   },
   "Classy Bear": {
     image: classyBear,
-    description: "More SFL than you know what to do with it!",
+    description: translate("description.classy.bear"),
   },
   "Farmer Bear": {
     image: farmerBear,
-    description: "Nothing quite like a hard day's work!",
+    description: translate("description.farmer.bear"),
   },
   "Rich Bear": {
     image: richBear,
-    description: "A prized possession",
+    description: translate("description.rich.bear"),
   },
   "Sunflower Bear": {
     image: sunflowerBear,
-    description: "A Bear's cherished crop",
+    description: translate("description.sunflower.bear"),
   },
   "Christmas Bear": {
     ...SALESMAN_ITEMS["Christmas Bear"],
@@ -1864,45 +1856,44 @@ export const ITEM_DETAILS: Items = {
   },
   "Beta Bear": {
     image: betaBear,
-    description: "A bear found through special testing events",
+    description: translate("description.beta.bear"),
   },
   "Rainbow Artist Bear": {
     image: rainbowArtistBear,
-    description: "The owner is a beautiful bear artist!",
+    description: translate("description.rainbow.artist.bear"),
   },
 
   "Cabbage Boy": {
     image: cabbageBoy,
-    description: "Don't wake the baby!",
+    description: translate("description.cabbage.boy"),
   },
 
   "Cabbage Girl": {
     image: cabbageGirl,
-    description: "Shhh it's sleeping",
+    description: translate("description.cabbage.girl"),
   },
 
   "Wood Nymph Wendy": {
     image: wendy,
-    description: "Cast an enchantment to entice the wood fairies.",
+    description: translate("description.wood.nymph.wendy"),
   },
 
   "Peeled Potato": {
     image: prizedPotato,
-    description: "A precious potato, encourages bonus potatoes on harvest.",
+    description: translate("description.peeled.potato"),
   },
 
   "Potent Potato": {
     image: potatoMutant,
-    description: "Potent! Grants a 3% chance to get +10 potatoes on harvest.",
+    description: translate("description.potent.potato"),
   },
   "Radical Radish": {
     image: radishMutant,
-    description: "Radical! Grants a 3% chance to get +10 radishes on harvest.",
+    description: translate("description.radical.radish"),
   },
   "Stellar Sunflower": {
     image: sunflowerMutant,
-    description:
-      "Stellar! Grants a 3% chance to get +10 sunflowers on harvest.",
+    description: translate("description.stellar.sunflower"),
   },
   "Potted Potato": {
     image: pottedPotato,
@@ -1914,35 +1905,32 @@ export const ITEM_DETAILS: Items = {
   },
   "Golden Crop": {
     image: goldenCrop,
-    description: "A shiny golden crop",
+    description: translate("description.golden.crop"),
   },
   "Christmas Snow Globe": {
     image: snowglobe,
-    description: "Swirl the snow and watch it come to life",
+    description: translate("description.christmas.snow.globe"),
   },
 
   "Immortal Pear": {
     image: immortalPear,
-    description: "A long-lived pear that makes fruit trees last longer.",
+    description: translate("description.immortal.pear"),
   },
   "Lady Bug": {
     image: ladybug,
-    description:
-      "An incredible bug that feeds on aphids. Improves Apple quality.",
+    description: translate("description.lady.bug"),
   },
   "Squirrel Monkey": {
     image: squirrelMonkey,
-    description:
-      "A natural orange predator. Orange Trees are scared when a Squirrel Monkey is around.",
+    description: translate("description.squirrel.monkey"),
   },
   "Black Bearry": {
     image: blackBear,
-    description:
-      "His favorite treat - plump, juicy blueberries. Gobbles them up by the handful!",
+    description: translate("description.black.bearry"),
   },
   "Devil Bear": {
     image: devilBear,
-    description: "Better the Devil you know than the Devil you don't",
+    description: translate("description.devil.bear"),
   },
   "Orange Squeeze": {
     image: orangeSqueeze,
@@ -1966,23 +1954,23 @@ export const ITEM_DETAILS: Items = {
   },
   "Collectible Bear": {
     image: collectibleBear,
-    description: "A prized bear, still in mint condition!",
+    description: translate("description.collectible.bear"),
   },
   "Cyborg Bear": {
     image: cyborgBear,
-    description: "Hasta la vista, bear",
+    description: translate("description.cyborg.bear"),
   },
   "Maneki Neko": {
     image: manekiNeko,
-    description: "The beckoning cat. Pull its arm and good luck will come",
+    description: translate("description.maneki.neko"),
   },
   "Red Envelope": {
     image: redEnvelope,
-    description: "Wow, you are lucky!",
+    description: translate("description.red.envelope"),
   },
   "Love Letter": {
     image: loveLetter,
-    description: "Convey feelings of love",
+    description: translate("description.love.letter"),
   },
 
   // Treasure Island
@@ -2180,12 +2168,11 @@ export const ITEM_DETAILS: Items = {
     description: GOBLIN_PIRATE_ITEMS["Tin Turtle"].description,
   },
   "Basic Scarecrow": {
-    description: "Choosy defender of your farm's VIP (Very Important Plants)",
+    description: translate("description.basic.scarecrow"),
     image: basicScarecrow,
   },
   Bale: {
-    description:
-      "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+    description: translate("description.bale"),
     image: bale,
   },
   "Sir Goldensnout": {
