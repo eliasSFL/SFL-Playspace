@@ -19,7 +19,6 @@ import { Label } from "components/ui/Label";
 import { getBumpkinLevel } from "features/game/lib/level";
 import { translate } from "lib/i18n/translate";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
-// import { getBumpkinLevel } from "features/game/lib/level";
 
 const host = window.location.host.replace(/^www\./, "");
 const LOCAL_STORAGE_KEY = `travel-read.${host}-${window.location.pathname}`;
