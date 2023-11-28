@@ -787,6 +787,7 @@ const landscapeTerms: Record<LandscapeTerms, string> = {
   "landscape.expansion.one":
     "Each piece of land comes with unique resources to help build your farming empire!",
   "landscape.expansion.two": "More expansions will be available soon...",
+  "landscape.timerPopover": "Next Expansion",
 };
 
 const bumpkinPartRequirements: Record<BumpkinPartRequirements, string> = {

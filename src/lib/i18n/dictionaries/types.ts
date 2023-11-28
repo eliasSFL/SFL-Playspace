@@ -550,7 +550,8 @@ export type LandscapeTerms =
   | "landscape.intro.three"
   | "landscape.intro.four"
   | "landscape.expansion.one"
-  | "landscape.expansion.two";
+  | "landscape.expansion.two"
+  | "landscape.timerPopover";
 
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"
