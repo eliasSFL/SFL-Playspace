@@ -568,7 +568,7 @@ export type RetreatTerms =
   | "retreatTerms.resale.two"
   | "retreatTerms.resale.three";
 
-export type GameDescriptions =
+export type BoostDescriptions =
   // Mutant Chickens
   | "description.speed.chicken.one"
   | "description.speed.chicken.two"
@@ -581,6 +581,35 @@ export type GameDescriptions =
   | "description.el.pollo.veloz.two"
   | "description.banana.chicken"
 
+  // Boosts
+  | "description.victoria.sisters"
+  | "description.undead.rooster"
+  | "description.observatory"
+  | "description.time.warp.totem"
+  | "description.cabbage.boy"
+  | "description.cabbage.girl"
+  | "description.wood.nymph.wendy"
+  | "description.peeled.potato"
+  | "description.potent.potato"
+  | "description.radical.radish"
+  | "description.stellar.sunflower"
+  | "description.lady.bug"
+  | "description.squirrel.monkey"
+  | "description.black.bearry"
+  | "description.maneki.neko"
+  | "description.easter.bunny"
+  | "description.pablo.bunny"
+
+  // Blacksmith items
+  | "description.basic.scarecrow"
+  | "description.scary.mike"
+  | "description.laurie.chuckle.crow"
+  | "description.immortal.pear"
+  | "description.bale";
+
+// export type BoostEffectDescriptions = "";
+
+export type CropFruitDescriptions =
   // Crops
   | "description.sunflower"
   | "description.potato"
@@ -609,9 +638,9 @@ export type GameDescriptions =
   | "description.purple.cauliflower"
   | "description.chiogga"
   | "description.golden.helios"
-  | "description.black.magic"
+  | "description.black.magic";
 
-  // Food
+export type FoodDescriptions =
   // Fire Pit
   | "description.pumpkin.soup"
   | "description.mashed.potato"
@@ -670,26 +699,9 @@ export type GameDescriptions =
   | "description.banana.blast"
   // Unused foods
   | "description.roasted.cauliflower"
-  | "description.radish.pie"
+  | "description.radish.pie";
 
-  // Tools
-  | "description.axe"
-  | "description.pickaxe"
-  | "description.stone.pickaxe"
-  | "description.iron.pickaxe"
-  | "description.hammer"
-  | "description.rod"
-  | "description.rusty.shovel"
-  | "description.shovel"
-  | "description.sand.shovel"
-  | "description.sand.drill"
-
-  // Quest Items
-  | "description.goblin.key"
-  | "description.sunflower.key"
-  | "description.ancient.goblin.sword"
-  | "description.ancient.human.warhammer"
-
+export type DecorationDescriptions =
   // Decorations
   | "description.wicker.man"
   | "description.golden bonsai"
@@ -751,37 +763,13 @@ export type GameDescriptions =
   | "description.collectible.bear"
   | "description.cyborg.bear"
   | "description.christmas.snow.globe"
-
-  // Boosts
-  | "description.victoria.sisters"
-  | "description.undead.rooster"
-  | "description.observatory"
-  | "description.time.warp.totem"
-  | "description.cabbage.boy"
-  | "description.cabbage.girl"
-  | "description.wood.nymph.wendy"
-  | "description.peeled.potato"
-  | "description.potent.potato"
-  | "description.radical.radish"
-  | "description.stellar.sunflower"
-  | "description.lady.bug"
-  | "description.squirrel.monkey"
-  | "description.black.bearry"
-  | "description.maneki.neko"
-
+  | "description.kraken.tentacle"
+  | "description.kraken.head"
   // Banners
   | "description.goblin.war.banner"
-  | "description.human.war.banner"
+  | "description.human.war.banner";
 
-  // Coupons
-  | "description.block.buck"
-  | "description.beta.pass"
-  | "description.war.bond"
-  | "description.jack.o.lantern"
-  | "description.golden.crop"
-  | "description.red.envelope"
-  | "description.love.letter"
-
+export type FishDescriptions =
   // Fish
   | "description.anchovy.one"
   | "description.anchovy.two"
@@ -843,10 +831,9 @@ export type GameDescriptions =
   | "description.starlight.tuna"
   | "description.radiant.ray"
   | "description.phantom.barracuda"
-  | "description.gilded.swordfish"
-  | "description.kraken.tentacle"
-  | "description.kraken.head"
+  | "description.gilded.swordfish";
 
+export type BuildingDescriptions =
   // Buildings
   | "description.water.well"
   | "description.kitchen"
@@ -863,19 +850,38 @@ export type GameDescriptions =
   | "description.market"
   | "description.fire.pit"
   | "description.workbench"
-  | "description.tent"
+  | "description.tent";
+export type ToolDescriptions =
+  // Tools
+  | "description.axe"
+  | "description.pickaxe"
+  | "description.stone.pickaxe"
+  | "description.iron.pickaxe"
+  | "description.hammer"
+  | "description.rod"
+  | "description.rusty.shovel"
+  | "description.shovel"
+  | "description.sand.shovel"
+  | "description.sand.drill";
 
-  // Blacksmith items
-  | "description.basic.scarecrow"
-  | "description.scary.mike"
-  | "description.laurie.chuckle.crow"
-  | "description.immortal.pear"
-  | "description.bale"
+export type GameDescriptions =
+  // Quest Items
+  | "description.goblin.key"
+  | "description.sunflower.key"
+  | "description.ancient.goblin.sword"
+  | "description.ancient.human.warhammer"
+
+  // Coupons
+  | "description.block.buck"
+  | "description.beta.pass"
+  | "description.war.bond"
+  | "description.jack.o.lantern"
+  | "description.golden.crop"
+  | "description.red.envelope"
+  | "description.love.letter"
 
   // Easter Items
   | "description.egg.basket"
-  | "description.easter.bunny"
-  | "description.pablo.bunny"
   | "description.blue.egg"
   | "description.orange.egg"
   | "description.green.egg"
@@ -991,13 +997,19 @@ export type LevelUpMessages =
 
 export type TranslationKeys =
   | AchievementsDialog
+  | BoostDescriptions
+  | BuildingDescriptions
   | BumpkinPartRequirements
   | BumpkinSkillsDescription
   | BumpkinTrade
   | ConfirmationTerms
   | Conversations
+  | CropFruitDescriptions
+  | DecorationDescriptions
   | ErrorTerms
+  | FishDescriptions
   | FishingQuests
+  | FoodDescriptions
   | GameDescriptions
   | GameTerms
   | GeneralTerms
@@ -1014,6 +1026,7 @@ export type TranslationKeys =
   | SeasonTerms
   | ShopItems
   | Statements
+  | ToolDescriptions
   | TransactionTerms
   | WarningTerms
   | WelcomeTerms;
