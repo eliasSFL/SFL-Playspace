@@ -161,6 +161,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   resources: "Resources",
   seeds: "Seeds",
   cook: "Cook",
+  egg: "Egg",
 };
 
 const gameTerms: Record<GameTerms, string> = {

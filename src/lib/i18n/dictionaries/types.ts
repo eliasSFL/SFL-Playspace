@@ -36,6 +36,7 @@ export type GeneralTerms =
   | "delivery"
   | "deliveries"
   | "details"
+  | "egg"
   | "easter.eggs"
   | "equip"
   | "error"
