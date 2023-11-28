@@ -146,7 +146,8 @@ export type GameTerms =
   | "proof.of.humanity"
   | "no.sfl"
   | "granting.wish"
-  | "new.delivery.in";
+  | "new.delivery.in"
+  | "bumpkinBuzz";
 
 export type ConfirmationTerms = "confirmation.sellCrops";
 

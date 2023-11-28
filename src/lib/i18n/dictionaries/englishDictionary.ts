@@ -177,6 +177,7 @@ const gameTerms: Record<GameTerms, string> = {
   "no.sfl": "No SFL tokens found",
   "granting.wish": "Granting your wish",
   "new.delivery.in": "New deliveries available in: ",
+  bumpkinBuzz: "Bumpkin Buzz",
 };
 
 const confirmationTerms: Record<ConfirmationTerms, string> = {
