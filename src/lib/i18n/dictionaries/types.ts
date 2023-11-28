@@ -653,6 +653,7 @@ export type FoodDescriptions =
   | "description.cabbers.mash"
   | "description.popcorn"
   | "description.gumbo"
+
   // Kitchen
   | "description.roast.veggies"
   | "description.bumpkin.salad"
@@ -667,6 +668,7 @@ export type FoodDescriptions =
   | "description.bumpkin.ganoush"
   | "description.chowder"
   | "description.pancakes"
+
   // Bakery
   | "description.apple.pie"
   | "description.kale.mushroom.pie"
@@ -684,12 +686,14 @@ export type FoodDescriptions =
   | "description.eggplant.cake"
   | "description.orange.cake"
   | "description.pirate.cake"
+
   // Deli
   | "description.blueberry.jam"
   | "description.fermented.carrots"
   | "description.sauerkraut"
   | "description.fancy.fries"
   | "description.fermented.fish"
+
   // Smoothie Shack
   | "description.apple.juice"
   | "description.orange.juice"
@@ -697,6 +701,7 @@ export type FoodDescriptions =
   | "description.power.smoothie"
   | "description.bumpkin.detox"
   | "description.banana.blast"
+
   // Unused foods
   | "description.roasted.cauliflower"
   | "description.radish.pie";
@@ -765,6 +770,7 @@ export type DecorationDescriptions =
   | "description.christmas.snow.globe"
   | "description.kraken.tentacle"
   | "description.kraken.head"
+
   // Banners
   | "description.goblin.war.banner"
   | "description.human.war.banner";
@@ -851,6 +857,7 @@ export type BuildingDescriptions =
   | "description.fire.pit"
   | "description.workbench"
   | "description.tent";
+
 export type ToolDescriptions =
   // Tools
   | "description.axe"
@@ -897,26 +904,38 @@ export type BumpkinSkillsDescription =
   | "description.master.farmer"
   | "description.golden.flowers"
   | "description.happy.crop"
+
   // Trees
   | "description.lumberjack"
   | "description.tree.hugger"
   | "description.tough.tree"
   | "description.money.tree"
+
   // Rocks
   | "description.digger"
   | "description.coal.face"
   | "description.seeker"
   | "description.gold.rush"
+
   // Cooking
   | "description.rush.hour"
   | "description.kitchen.hand"
   | "description.michelin.stars"
   | "description.curer"
+
   // Animals
   | "description.stable.hand"
   | "description.free.range"
   | "description.horse.whisperer"
   | "description.buckaroo";
+
+export type BountyDescription =
+  | "description.clam.shell"
+  | "description.sea.cucumber"
+  | "description.coral"
+  | "description.crab"
+  | "description.starfish"
+  | "description.pirate.bounty";
 
 export type FishingQuests =
   | "quest.basic.fish"
@@ -998,6 +1017,7 @@ export type LevelUpMessages =
 export type TranslationKeys =
   | AchievementsDialog
   | BoostDescriptions
+  | BountyDescription
   | BuildingDescriptions
   | BumpkinPartRequirements
   | BumpkinSkillsDescription

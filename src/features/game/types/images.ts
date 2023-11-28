@@ -1976,26 +1976,26 @@ export const ITEM_DETAILS: Items = {
   // Treasure Island
   "Clam Shell": {
     image: clamShell,
-    description: "A clam shell.",
+    description: translate("description.clam.shell"),
   },
   "Sea Cucumber": {
     image: SUNNYSIDE.resource.sea_cucumber,
-    description: "A sea cucumber.",
+    description: translate("description.sea.cucumber"),
   },
   Coral: {
     image: SUNNYSIDE.resource.coral,
-    description: "A piece of coral, it's pretty",
+    description: translate("description.coral"),
   },
   Crab: {
     image: SUNNYSIDE.resource.crab,
-    description: "A crab, watch out for its claws!",
+    description: translate("description.crab"),
   },
   Starfish: {
     image: SUNNYSIDE.resource.starfish,
-    description: "The star of the sea.",
+    description: translate("description.starfish"),
   },
   "Pirate Bounty": {
-    description: "A bounty for a pirate. It's worth a lot of money.",
+    description: translate("description.pirate.bounty"),
     image: SUNNYSIDE.resource.pirate_bounty,
   },
   "Pirate Cake": {

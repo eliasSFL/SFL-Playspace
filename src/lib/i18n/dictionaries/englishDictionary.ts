@@ -34,6 +34,7 @@ import {
   FishDescriptions,
   BuildingDescriptions,
   ToolDescriptions,
+  BountyDescription,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -1362,8 +1363,19 @@ const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   "description.buckaroo": "Chance of double drops",
 };
 
+const bountyDescription: Record<BountyDescription, string> = {
+  "description.clam.shell": "A clam shell.",
+  "description.sea.cucumber": "A sea cucumber.",
+  "description.coral": "A piece of coral, it's pretty",
+  "description.crab": "A crab, watch out for its claws!",
+  "description.starfish": "The star of the sea.",
+  "description.pirate.bounty":
+    "A bounty for a pirate. It's worth a lot of money.",
+};
+
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...achievementTerms,
+  ...bountyDescription,
   ...boostDescriptions,
   ...buildingDescriptions,
   ...bumpkinSkillsDescription,
