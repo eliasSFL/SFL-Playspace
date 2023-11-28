@@ -358,10 +358,10 @@ export const UpcomingExpansion: React.FC = () => {
           <SpeakingModal
             message={[
               {
-                text: "Greetings, budding farmer! I am Grimbly, a seasoned Goblin Builder.",
+                text: translate("grimbly.expansion.one"),
               },
               {
-                text: "With the right materials and my ancient crafting skills, we can turn your island into a masterpiece.",
+                text: translate("grimbly.expansion.two"),
               },
             ]}
             onClose={() => {

@@ -474,6 +474,10 @@ const conversations: Record<Conversations, string> = {
     "As you level up, you will unlock new areas to explore. First up is the Pumpkin Plaza....my home!",
   "pete.help.two":
     "Here you can complete deliveries for rewards, craft magical items & trade with other players.",
+  "grimbly.expansion.one":
+    "Greetings, budding farmer! I am Grimbly, a seasoned Goblin Builder.",
+  "grimbly.expansion.two":
+    "With the right materials and my ancient crafting skills, we can turn your island into a masterpiece.",
 };
 
 const henHouseTerms: Record<HenHouseTerms, string> = {
