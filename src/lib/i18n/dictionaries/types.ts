@@ -866,7 +866,19 @@ export type GameDescriptions =
   | "description.scary.mike"
   | "description.laurie.chuckle.crow"
   | "description.immortal.pear"
-  | "description.bale";
+  | "description.bale"
+
+  // Easter Items
+  | "description.egg.basket"
+  | "description.easter.bunny"
+  | "description.pablo.bunny"
+  | "description.blue.egg"
+  | "description.orange.egg"
+  | "description.green.egg"
+  | "description.yellow.egg"
+  | "description.red.egg"
+  | "description.pink.egg"
+  | "description.purple.egg";
 
 export type FishingQuests =
   | "quest.basic.fish"

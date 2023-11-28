@@ -1366,43 +1366,43 @@ export const ITEM_DETAILS: Items = {
   },
 
   "Egg Basket": {
-    description: "Easter Event",
+    description: translate("description.egg.basket"),
     image: easterBasket,
   },
   "Easter Bunny": {
-    description: "A rare Easter item",
+    description: translate("description.easter.bunny"),
     image: easterBunny,
   },
   "Pablo The Bunny": {
-    description: "A magical Easter bunny",
+    description: translate("description.pablo.bunny"),
     image: pabloBunny,
   },
   "Blue Egg": {
-    description: "A blue easter egg",
+    description: translate("description.blue.egg"),
     image: blueEgg,
   },
   "Orange Egg": {
-    description: "An orange easter egg",
+    description: translate("description.orange.egg"),
     image: orangeEgg,
   },
   "Green Egg": {
-    description: "A green easter egg",
+    description: translate("description.green.egg"),
     image: greenEgg,
   },
   "Yellow Egg": {
-    description: "A yellow easter egg",
+    description: translate("description.yellow.egg"),
     image: yellowEgg,
   },
   "Red Egg": {
-    description: "A red easter egg",
+    description: translate("description.red.egg"),
     image: redEgg,
   },
   "Pink Egg": {
-    description: "A pink easter egg",
+    description: translate("description.pink.egg"),
     image: pinkEgg,
   },
   "Purple Egg": {
-    description: "A purple easter egg",
+    description: translate("description.purple.egg"),
     image: purpleEgg,
   },
   "Engine Core": {
@@ -2180,12 +2180,11 @@ export const ITEM_DETAILS: Items = {
     description: GOBLIN_PIRATE_ITEMS["Tin Turtle"].description,
   },
   "Basic Scarecrow": {
-    description: "Choosy defender of your farm's VIP (Very Important Plants)",
+    description: translate("description.basic.scarecrow"),
     image: basicScarecrow,
   },
   Bale: {
-    description:
-      "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+    description: translate("description.bale"),
     image: bale,
   },
   "Sir Goldensnout": {

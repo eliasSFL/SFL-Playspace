@@ -1182,6 +1182,18 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.immortal.pear": "",
   "description.bale":
     "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+
+  // Easter Items
+  "description.egg.basket": "Easter Event",
+  "description.easter.bunny": "A rare Easter item",
+  "description.pablo.bunny": "A magical Easter bunny",
+  "description.blue.egg": "A blue easter egg",
+  "description.orange.egg": "An orange easter egg",
+  "description.green.egg": "A green easter egg",
+  "description.yellow.egg": "A yellow easter egg",
+  "description.red.egg": "A red easter egg",
+  "description.pink.egg": "A pink easter egg",
+  "description.purple.egg": "A purple easter egg",
 };
 
 const fishingQuests: Record<FishingQuests, string> = {
