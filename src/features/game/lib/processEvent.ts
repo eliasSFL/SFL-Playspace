@@ -5,6 +5,12 @@ import { GameState, Inventory, InventoryItemName } from "../types/game";
 import { SKILL_TREE } from "../types/skills";
 import { Announcements } from "../types/conversations";
 import { EXOTIC_CROPS } from "../types/beans";
+import { BASIC_DECORATIONS, BasicDecorationName } from "../types/decorations";
+import { FISH, FishName, MarineMarvelName } from "../types/fishing";
+import {
+  LANDSCAPING_DECORATIONS,
+  LandscapingDecorationName,
+} from "../types/decorations";
 
 export const maxItems: Inventory = {
   Sunflower: new Decimal("15000"),
@@ -130,6 +136,30 @@ export const maxItems: Inventory = {
   "Sea Cucumber": new Decimal(50),
   Crab: new Decimal(100),
 
+  // Seasonal decorations - Dawnbreaker
+  Clementine: new Decimal(1),
+  Cobalt: new Decimal(1),
+  "Eggplant Grill": new Decimal(1),
+  "Giant Dawn Mushroom": new Decimal(5),
+  "Dawn Umbrella Seat": new Decimal(100),
+  "Shroom Glow": new Decimal(100),
+
+  // Seasonal decorations - Witches" Eve
+  Candles: new Decimal(100),
+  "Haunted Stump": new Decimal(100),
+  "Spooky Tree": new Decimal(100),
+  Observer: new Decimal(100),
+  "Crow Rock": new Decimal(100),
+  "Mini Corn Maze": new Decimal(100),
+
+  // Seasonal decorations - Catch the Kraken
+  "Lifeguard Ring": new Decimal(100),
+  Surfboard: new Decimal(100),
+  "Hideaway Herman": new Decimal(100),
+  "Shifty Sheldon": new Decimal(100),
+  "Tiki Torch": new Decimal(100),
+  "Beach Umbrella": new Decimal(100),
+
   ...(Object.keys(EXOTIC_CROPS) as InventoryItemName[]).reduce(
     (acc, name) => ({
       ...acc,
@@ -155,6 +185,56 @@ export const maxItems: Inventory = {
     }),
     {}
   ),
+
+  ...(Object.keys(EXOTIC_CROPS) as InventoryItemName[]).reduce(
+    (acc, name) => ({
+      ...acc,
+      [name]: new Decimal(50),
+    }),
+    {}
+  ),
+
+  // Max of 100 basic decoration
+  ...(Object.keys(BASIC_DECORATIONS()) as BasicDecorationName[]).reduce(
+    (acc, name) => ({
+      ...acc,
+      [name]: new Decimal(100),
+    }),
+    {}
+  ),
+
+  // Max of 100 fish
+  ...(Object.keys(FISH) as (FishName | MarineMarvelName)[]).reduce(
+    (acc, name) => ({
+      ...acc,
+      [name]: new Decimal(100),
+    }),
+    {}
+  ),
+
+  // Max of 1000 landscaping decoration, but only 100 for mushrooms
+  ...(Object.keys(LANDSCAPING_DECORATIONS()) as LandscapingDecorationName[])
+    .filter(
+      (name) => !LANDSCAPING_DECORATIONS()[name].ingredients["Wild Mushroom"]
+    )
+    .reduce(
+      (acc, name) => ({
+        ...acc,
+        [name]: new Decimal(1000),
+      }),
+      {}
+    ),
+  ...(Object.keys(LANDSCAPING_DECORATIONS()) as LandscapingDecorationName[])
+    .filter(
+      (name) => LANDSCAPING_DECORATIONS()[name].ingredients["Wild Mushroom"]
+    )
+    .reduce(
+      (acc, name) => ({
+        ...acc,
+        [name]: new Decimal(100),
+      }),
+      {}
+    ),
 };
 
 /**
