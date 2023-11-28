@@ -1865,36 +1865,35 @@ export const ITEM_DETAILS: Items = {
 
   "Cabbage Boy": {
     image: cabbageBoy,
-    description: "Don't wake the baby!",
+    description: translate("description.cabbage.boy"),
   },
 
   "Cabbage Girl": {
     image: cabbageGirl,
-    description: "Shhh it's sleeping",
+    description: translate("description.cabbage.girl"),
   },
 
   "Wood Nymph Wendy": {
     image: wendy,
-    description: "Cast an enchantment to entice the wood fairies.",
+    description: translate("description.wood.nymph.wendy"),
   },
 
   "Peeled Potato": {
     image: prizedPotato,
-    description: "A precious potato, encourages bonus potatoes on harvest.",
+    description: translate("description.peeled.potato"),
   },
 
   "Potent Potato": {
     image: potatoMutant,
-    description: "Potent! Grants a 3% chance to get +10 potatoes on harvest.",
+    description: translate("description.potent.potato"),
   },
   "Radical Radish": {
     image: radishMutant,
-    description: "Radical! Grants a 3% chance to get +10 radishes on harvest.",
+    description: translate("description.radical.radish"),
   },
   "Stellar Sunflower": {
     image: sunflowerMutant,
-    description:
-      "Stellar! Grants a 3% chance to get +10 sunflowers on harvest.",
+    description: translate("description.stellar.sunflower"),
   },
   "Potted Potato": {
     image: pottedPotato,

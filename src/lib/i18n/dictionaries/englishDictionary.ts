@@ -944,8 +944,6 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.christmas.bear": "Santa's favorite",
   "description.war.skull": "Decorate the land with the bones of your enemies.",
   "description.war.tombstone": "R.I.P",
-  "description.time.warp.totem":
-    "2x speed for crops, trees, cooking & minerals. Only lasts for 2 hours",
   "description.white.tulips": "Keep the smell of goblins away.",
   "description.potted.sunflower": "Brighten up your land.",
   "description.potted.potato": "Potato blood runs through your Bumpkin.",
@@ -1014,13 +1012,27 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.sunflower.bear": "A Bear's cherished crop",
   "description.beta.bear": "A bear found through special testing events",
   "description.rainbow.artist.bear": "The owner is a beautiful bear artist!",
+
   // Boosts
   "description.victoria.sisters": "The pumpkin loving sisters",
   "description.undead.rooster":
     "An unfortunate casualty of the war. 10% increased egg yield.",
   "description.observatory":
     "Explore the stars and improve scientific development",
-
+  "description.time.warp.totem":
+    "2x speed for crops, trees, cooking & minerals. Only lasts for 2 hours",
+  "description.cabbage.boy": "Don't wake the baby!",
+  "description.cabbage.girl": "Shhh it's sleeping",
+  "description.wood.nymph.wendy":
+    "Cast an enchantment to entice the wood fairies.",
+  "description.peeled.potato":
+    "A precious potato, encourages bonus potatoes on harvest.",
+  "description.potent.potato":
+    "Potent! Grants a 3% chance to get +10 potatoes on harvest.",
+  "description.radical.radish":
+    "Radical! Grants a 3% chance to get +10 radishes on harvest.",
+  "description.stellar.sunflower":
+    "Stellar! Grants a 3% chance to get +10 sunflowers on harvest.",
   // Banners
   "description.goblin.war.banner":
     "A display of allegiance to the Goblin cause",

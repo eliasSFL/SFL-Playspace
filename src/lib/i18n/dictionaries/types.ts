@@ -753,6 +753,13 @@ export type GameDescriptions =
   | "description.undead.rooster"
   | "description.observatory"
   | "description.time.warp.totem"
+  | "description.cabbage.boy"
+  | "description.cabbage.girl"
+  | "description.wood.nymph.wendy"
+  | "description.peeled.potato"
+  | "description.potent.potato"
+  | "description.radical.radish"
+  | "description.stellar.sunflower"
 
   // Banners
   | "description.goblin.war.banner"
