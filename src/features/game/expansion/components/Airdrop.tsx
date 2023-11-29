@@ -53,9 +53,7 @@ export const ClaimReward: React.FC<ClaimRewardProps> = ({
             <div className="flex items-center">
               <Box image={token} />
               <div>
-                <Label type="warning">
-                  {airdrop.sfl} {t("sfl")}
-                </Label>
+                <Label type="warning">{airdrop.sfl} SFL</Label>
                 <p className="text-xs">{t("reward.spendWisely")}</p>
               </div>
             </div>
