@@ -220,7 +220,6 @@ export const COOKABLE_CAKES: Record<CakeName, Cookable> = {
     name: "Orange Cake",
     description: translate("description.orange.cake"),
     building: "Bakery",
-    experience: 730,
     cookingSeconds: 240 * 60,
     experience: 730,
     ingredients: {
