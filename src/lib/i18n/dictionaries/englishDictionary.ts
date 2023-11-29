@@ -1130,6 +1130,10 @@ const decorationDescriptions: Record<DecorationDescriptions, string> = {
   "description.easter.bush": "What is inside?",
   "description.giant.carrot":
     "A giant carrot stood, casting fun shadows, as rabbits gazed in wonder.",
+  "description.beach.ball":
+    "Bouncy ball brings beachy vibes, blows boredom away.",
+  "description.palm.tree":
+    "Tall, beachy, shady and chic, palm trees make waves sashay.",
   // Banners
   "description.goblin.war.banner":
     "A display of allegiance to the Goblin cause",

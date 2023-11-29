@@ -2237,11 +2237,11 @@ export const ITEM_DETAILS: Items = {
   // Solar Flare Season
   "Beach Ball": {
     image: beachBall,
-    description: "Bouncy ball brings beachy vibes, blows boredom away.",
+    description: translate("description.beach.ball"),
   },
   "Palm Tree": {
     image: palmTree,
-    description: "Tall, beachy, shady and chic, palm trees make waves sashay.",
+    description: translate("description.palm.tree"),
   },
   Karkinos: {
     image: karkinos,

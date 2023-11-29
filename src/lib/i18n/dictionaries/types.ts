@@ -822,6 +822,8 @@ export type DecorationDescriptions =
   | "description.easter.bear"
   | "description.easter.bush"
   | "description.giant.carrot"
+  | "description.beach.ball"
+  | "description.palm.tree"
 
   // Banners
   | "description.goblin.war.banner"
