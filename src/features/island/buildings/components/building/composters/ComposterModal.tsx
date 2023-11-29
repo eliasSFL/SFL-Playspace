@@ -20,7 +20,7 @@ import expertComposting from "assets/composters/composter_expert_closed.png";
 import expertReady from "assets/composters/composter_expert_ready.png";
 
 import {
-  BAIT,
+  WORM,
   ComposterName,
   composterDetails,
 } from "features/game/types/composters";
@@ -34,6 +34,8 @@ import { GameState, Inventory } from "features/game/types/game";
 import { getKeys } from "features/game/types/craftables";
 import { RequirementLabel } from "components/ui/RequirementsLabel";
 import { SquareIcon } from "components/ui/SquareIcon";
+import { OuterPanel } from "components/ui/Panel";
+import { hasFeatureAccess } from "lib/flags";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 const WORM_OUTPUT: Record<ComposterName, string> = {
@@ -113,6 +115,7 @@ interface Props {
   composterName: ComposterName;
   onCollect: () => void;
   readyAt?: number;
+  onBoost: () => void;
 }
 
 export const ComposterModal: React.FC<Props> = ({
@@ -122,6 +125,7 @@ export const ComposterModal: React.FC<Props> = ({
   startComposter,
   readyAt,
   onCollect,
+  onBoost,
 }) => {
   const { gameService } = useContext(Context);
   const [gameState] = useActor(gameService);
@@ -139,6 +143,8 @@ export const ComposterModal: React.FC<Props> = ({
 
   const produces = state.buildings[composterName]?.[0].producing?.items ?? {};
   const requires = state.buildings[composterName]?.[0].requires ?? {};
+  const boost = state.buildings[composterName]?.[0].boost;
+
   const hasRequirements = getKeys(requires).every((name) => {
     const amount = requires[name] || new Decimal(0);
 
@@ -154,6 +160,13 @@ export const ComposterModal: React.FC<Props> = ({
       setTab(1);
     }
   }, [showModal]);
+
+  const accelerate = () => {
+    gameService.send("compost.accelerated", {
+      building: composterName,
+    });
+    onBoost();
+  };
 
   const Content = () => {
     if (isReady) {
@@ -193,6 +206,8 @@ export const ComposterModal: React.FC<Props> = ({
       );
     }
 
+    const canBoost = hasFeatureAccess(state, "COMPOST_BOOST");
+
     if (composting) {
       return (
         <>
@@ -211,7 +226,7 @@ export const ComposterModal: React.FC<Props> = ({
                   >
                     <img src={ITEM_DETAILS[name].image} className="h-5" />
                     <Label type="default">
-                      {name in BAIT
+                      {name in WORM
                         ? `? ${name}s`
                         : `${produces[name]} ${name}`}
                     </Label>
@@ -220,6 +235,56 @@ export const ComposterModal: React.FC<Props> = ({
               </div>
             </div>
           </div>
+          {canBoost && !boost && (
+            <OuterPanel className="p-1">
+              <div className="flex justify-between mb-1">
+                <Label type="info" icon={SUNNYSIDE.icons.stopwatch}>
+                  {`${secondsToString(
+                    composterInfo.eggBoostMilliseconds / 1000,
+                    {
+                      length: "short",
+                    }
+                  )} Boost`}
+                </Label>
+                <RequirementLabel
+                  type="item"
+                  item="Egg"
+                  requirement={new Decimal(composterInfo.eggBoostRequirements)}
+                  balance={state.inventory.Egg ?? new Decimal(0)}
+                />
+              </div>
+              <p className="text-xs mb-2">Add eggs to speed up production.</p>
+              <Button
+                disabled={
+                  !state.inventory.Egg?.gte(composterInfo.eggBoostRequirements)
+                }
+                onClick={accelerate}
+              >
+                Add Eggs
+              </Button>
+            </OuterPanel>
+          )}
+          {canBoost && boost && (
+            <OuterPanel className="p-1">
+              <div className="flex justify-between">
+                <Label
+                  type="info"
+                  icon={SUNNYSIDE.icons.stopwatch}
+                  secondaryIcon={SUNNYSIDE.icons.confirm}
+                >
+                  {`${secondsToString(
+                    composterInfo.eggBoostMilliseconds / 1000,
+                    {
+                      length: "short",
+                    }
+                  )} Boosted`}
+                </Label>
+                <Label type="default" icon={ITEM_DETAILS.Egg.image}>
+                  {composterInfo.eggBoostRequirements} Eggs
+                </Label>
+              </div>
+            </OuterPanel>
+          )}
         </>
       );
     }
@@ -305,13 +370,13 @@ export const ComposterModal: React.FC<Props> = ({
               <div className="flex space-x-1 justify-start">
                 <SquareIcon
                   icon={
-                    ITEM_DETAILS[composterDetails[composterName].bait].image
+                    ITEM_DETAILS[composterDetails[composterName].worm].image
                   }
                   width={14}
                 />
                 <div className="block">
                   <p className="text-xs mb-1">
-                    {`${WORM_OUTPUT[composterName]} ${composterDetails[composterName].bait}s`}
+                    {`${WORM_OUTPUT[composterName]} ${composterDetails[composterName].worm}s`}
                   </p>
                   <Label
                     icon={SUNNYSIDE.tools.fishing_rod}
@@ -408,6 +473,17 @@ export const ComposterModal: React.FC<Props> = ({
                 <p className="text-xs flex-1">
                   Each compost yields worms that can be used as bait for
                   fishing.
+                </p>
+              </div>
+              <div className="flex mb-2">
+                <div className="w-12 flex justify-center">
+                  <img
+                    src={ITEM_DETAILS.Egg.image}
+                    className="h-6 mr-2 object-contain"
+                  />
+                </div>
+                <p className="text-xs flex-1">
+                  Tired of waiting? Use Eggs to speed up the compost production.
                 </p>
               </div>
             </div>

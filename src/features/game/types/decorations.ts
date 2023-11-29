@@ -451,64 +451,64 @@ export const BASIC_DECORATIONS: () => Record<
   },
   "Potted Sunflower": {
     name: "Potted Sunflower",
+    description: translate("description.potted.sunflower"),
     sfl: new Decimal(0.25),
     ingredients: {
       Sunflower: new Decimal(100),
     },
-    description: translate("description.potted.sunflower"),
   },
   "Potted Potato": {
     name: "Potted Potato",
+    description: translate("description.potted.potato"),
     sfl: new Decimal(0.625),
     ingredients: {
       Potato: new Decimal(200),
     },
-    description: translate("description.potted.potato"),
   },
   "Potted Pumpkin": {
     name: "Potted Pumpkin",
+    description: translate("description.potted.pumpkin"),
     sfl: new Decimal(2.5),
     ingredients: {
       Pumpkin: new Decimal(200),
     },
-    description: translate("description.potted.pumpkin"),
   },
   Cactus: {
     name: "Cactus",
+    description: translate("description.cactus"),
     sfl: new Decimal(0.25),
     ingredients: {},
-    description: translate("description.cactus"),
   },
   "Basic Bear": {
     name: "Basic Bear",
+    description: translate("description.basic.bear"),
     sfl: new Decimal(0.625),
     ingredients: {},
-    description: translate("description.basic.bear"),
   },
 
   "Bonnie's Tombstone": {
     name: "Bonnie's Tombstone",
+    description: translate("description.bonnies.tombstone"),
     sfl: marketRate(0),
     ingredients: {
       Stone: new Decimal(10),
     },
-    description: translate("description.bonnies.tombstone"),
   },
 
   "Grubnash's Tombstone": {
     name: "Grubnash's Tombstone",
+    description: translate("description.grubnashs.tombstone"),
     sfl: marketRate(0),
     ingredients: {
       Stone: new Decimal(20),
       Iron: new Decimal(10),
     },
-    description: translate("description.grubnashs.tombstone"),
   },
   "Town Sign": {
     name: "Town Sign",
+    description: translate("description.town.sign"),
     sfl: marketRate(0),
     ingredients: {},
-    description: translate("description.town.sign"),
     limit: 1,
   },
 });
@@ -519,109 +519,109 @@ export const LANDSCAPING_DECORATIONS: () => Record<
 > = () => ({
   "Dirt Path": {
     name: "Dirt Path",
+    description: translate("description.dirt.path"),
     sfl: new Decimal(0.625),
     ingredients: {},
-    description: translate("description.dirt.path"),
   },
   Bush: {
     name: "Bush",
+    description: translate("description.bush"),
     sfl: new Decimal(1.25),
     ingredients: {
       Wood: new Decimal(5),
     },
-    description: translate("description.bush"),
   },
   Fence: {
     name: "Fence",
+    description: translate("description.fence"),
     sfl: new Decimal(0.125),
     ingredients: {
       Wood: new Decimal(5),
     },
-    description: translate("description.fence"),
   },
   "Stone Fence": {
     name: "Stone Fence",
+    description: translate("description.stone.fence"),
     sfl: new Decimal(0.25),
     ingredients: {
       Stone: new Decimal(5),
     },
-    description: translate("description.stone.fence"),
   },
   "Pine Tree": {
     name: "Pine Tree",
+    description: translate("description.pine.tree"),
     sfl: new Decimal(1.25),
     ingredients: {
       Wood: new Decimal(7),
     },
-    description: translate("description.pine.tree"),
   },
   Shrub: {
     name: "Shrub",
+    description: translate("description.shrub"),
     sfl: new Decimal(0.625),
     ingredients: {
       Wood: new Decimal(3),
     },
-    description: translate("description.shrub"),
   },
   "Field Maple": {
     name: "Field Maple",
+    description: translate("description.field.maple"),
     sfl: new Decimal(0.625),
     ingredients: {
       Wood: new Decimal(20),
     },
-    description: translate("description.field.maple"),
   },
   "Red Maple": {
     name: "Red Maple",
+    description: translate("description.red.maple"),
     sfl: new Decimal(0.625),
     ingredients: {
       Wood: new Decimal(3),
       "Block Buck": new Decimal(1),
     },
-    description: translate("description.red.maple"),
   },
   "Golden Maple": {
     name: "Golden Maple",
+    description: translate("description.golden.maple"),
     sfl: new Decimal(0.625),
     ingredients: {
       Wood: new Decimal(3),
       "Block Buck": new Decimal(1),
     },
-    description: translate("description.golden.maple"),
   },
   "Crimson Cap": {
     name: "Crimson Cap",
+    description: translate("description.crimson.cap"),
     sfl: new Decimal(50),
     ingredients: {
       "Wild Mushroom": new Decimal(20),
     },
-    description: translate("description.crimson.cap"),
   },
   "Toadstool Seat": {
     name: "Toadstool Seat",
+    description: translate("description.toadstool.seat"),
     sfl: new Decimal(0),
     ingredients: {
       "Wild Mushroom": new Decimal(5),
     },
-    description: translate("description.toadstool.seat"),
   },
   "Chestnut Fungi Stool": {
     name: "Chestnut Fungi Stool",
+    description: translate("description.chestnut.fungi.stool"),
     sfl: new Decimal(5),
     ingredients: {
       "Toadstool Seat": new Decimal(1),
       Wood: new Decimal(10),
     },
-    description: translate("description.chestnut.fungi.stool"),
   },
   "Mahogany Cap": {
     name: "Mahogany Cap",
+    description: translate("description.mahogany.cap"),
     sfl: new Decimal(5),
     ingredients: {
       "Crimson Cap": new Decimal(1),
       Wood: new Decimal(100),
     },
-    description: translate("description.mahogany.cap"),
   },
 });
 
