@@ -114,7 +114,6 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
     showConfirmBuyModal(false);
   };
 
-  const { t } = useAppTranslation();
   const Action = () => {
     if (state.wardrobe[selected])
       return (

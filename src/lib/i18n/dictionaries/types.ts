@@ -61,6 +61,7 @@ export type GeneralTerms =
   | "info"
   | "item"
   | "lastUpdated"
+  | "left"
   | "letsGo"
   | "list"
   | "loading"
@@ -135,7 +136,6 @@ export type GeneralTerms =
   | "you.are.here";
 
 export type GameTerms =
-  | "sfl"
   | "dailyLim"
   | "gobSwarm"
   | "potions"
@@ -161,7 +161,6 @@ export type WelcomeTerms =
   | "welcome.signInMessage"
   | "welcome.email"
   | "welcome.takeover"
-  | "welcome.metamask"
   | "welcome.promo";
 
 export type RulesTerms =

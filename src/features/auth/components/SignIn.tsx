@@ -177,7 +177,7 @@ export const SignIn = () => {
               src={metamaskIcon}
               className="h-7 mobile:h-6 ml-2.5 mr-6 absolute left-0 top-1"
             />
-            {t("welcome.metamask")}
+            Metamask
           </div>
         </Button>
         <Button

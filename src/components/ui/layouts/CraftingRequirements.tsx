@@ -162,7 +162,9 @@ export const CraftingRequirements: React.FC<Props> = ({
     return (
       <div className="flex justify-center mt-0 sm:mb-1">
         <Label type={isInventoryFull ? "danger" : "info"}>
-          {`${stock} ${isLimitedItem ? "left" : t("statements.inStock")}`}
+          {`${stock} ${
+            isLimitedItem ? t("left").toLowerCase : t("statements.inStock")
+          }`}
         </Label>
       </div>
     );

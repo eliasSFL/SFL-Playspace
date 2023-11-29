@@ -91,6 +91,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   info: "Info",
   item: "Item:",
   lastUpdated: "Last updated: ",
+  left: "Left",
   letsGo: "Let's Go!",
   list: "List",
   loading: "Loading",
@@ -174,7 +175,6 @@ const generalTerms: Record<GeneralTerms, string> = {
 };
 
 const gameTerms: Record<GameTerms, string> = {
-  sfl: "SFL",
   bumpkinLvl: "Bumpkin level",
   dailyLim: "Daily SFL Limit",
   gobSwarm: "Goblin Swarm!",
@@ -205,7 +205,6 @@ const welcomeTerms: Record<WelcomeTerms, string> = {
     "Accept the signature request in your browser wallet to login.",
   "welcome.takeover":
     "It looks like you are new to Sunflower Land and have claimed ownership of another player's account.",
-  "welcome.metamask": "Metamask",
   "welcome.promo": "Add Promo Code",
 };
 
