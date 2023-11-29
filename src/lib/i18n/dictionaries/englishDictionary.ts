@@ -27,6 +27,15 @@ import {
   IslandName,
   LevelUpMessages,
   LandscapeTerms,
+  BumpkinSkillsDescription,
+  BoostDescriptions,
+  CropFruitDescriptions,
+  FoodDescriptions,
+  DecorationDescriptions,
+  FishDescriptions,
+  BuildingDescriptions,
+  ToolDescriptions,
+  BountyDescription,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -825,7 +834,7 @@ const retreatTerms: Record<RetreatTerms, string> = {
   "retreatTerms.resale.three": "View items on OpenSea",
 };
 
-const gameDescriptions: Record<GameDescriptions, string> = {
+const boostDescriptions: Record<BoostDescriptions, string> = {
   // Mutant Chickens
   "description.speed.chicken.one":
     "Your chickens will now produce eggs 10% faster.",
@@ -843,6 +852,66 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.banana.chicken":
     "A chicken that boosts bananas. What a world we live in.",
 
+  // Boosts
+  "description.victoria.sisters": "The pumpkin loving sisters",
+  "description.undead.rooster":
+    "An unfortunate casualty of the war. 10% increased egg yield.",
+  "description.observatory":
+    "Explore the stars and improve scientific development",
+  "description.time.warp.totem":
+    "2x speed for crops, trees, cooking & minerals. Only lasts for 2 hours",
+  "description.cabbage.boy": "Don't wake the baby!",
+  "description.cabbage.girl": "Shhh it's sleeping",
+  "description.wood.nymph.wendy":
+    "Cast an enchantment to entice the wood fairies.",
+  "description.peeled.potato":
+    "A precious potato, encourages bonus potatoes on harvest.",
+  "description.potent.potato":
+    "Potent! Grants a 3% chance to get +10 potatoes on harvest.",
+  "description.radical.radish":
+    "Radical! Grants a 3% chance to get +10 radishes on harvest.",
+  "description.stellar.sunflower":
+    "Stellar! Grants a 3% chance to get +10 sunflowers on harvest.",
+  "description.lady.bug":
+    "An incredible bug that feeds on aphids. Improves Apple quality.",
+  "description.squirrel.monkey":
+    "A natural orange predator. Orange Trees are scared when a Squirrel Monkey is around.",
+  "description.black.bearry":
+    "His favorite treat - plump, juicy blueberries. Gobbles them up by the handful!",
+  "description.maneki.neko":
+    "The beckoning cat. Pull its arm and good luck will come",
+  "description.easter.bunny": "A rare Easter item",
+  "description.pablo.bunny": "A magical Easter bunny",
+  "description.foliant": "A book of spells.",
+  "description.tiki.totem":
+    "The Tiki Totem adds 0.1 wood to every tree you chop.",
+  "description.lunar.calendar":
+    "Crops now follow the lunar cycle! 10% increase to crop growth speed.",
+  "description.heart.davy.jones":
+    "Whoever possesses it holds immense power over the seven seas, can dig for treasure without tiring.",
+  "description.treasure.map":
+    "An enchanted map that leads the holder to valuable treasure. +20% profit from beach bounty items.",
+  "description.genie.lamp":
+    "A magical lamp that contains a genie who will grant you three wishes.",
+  "description.basic.scarecrow":
+    "Choosy defender of your farm's VIP (Very Important Plants)",
+  "description.scary.mike":
+    "The veggie whisperer and champion of frightfully good harvests!",
+  "description.laurie.chuckle.crow":
+    "With her disconcerting chuckle, she shooes peckers away from your crops!",
+  "description.immortal.pear":
+    "A long-lived pear that makes fruit trees last longer.",
+  "description.bale":
+    "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+  "description.sir.goldensnout":
+    "A royal member, Sir Goldensnout infuses your farm with sovereign prosperity through its golden manure.",
+  "description.freya.fox":
+    "Enchanting guardian, boosts pumpkin growth with her mystical charm. Harvest abundant pumpkins under her watchful gaze.",
+  "description.queen.cornelia":
+    "Command the regal power of Queen Cornelia and experience a magnificent Area of Effect boost to your corn production. +1 Corn.",
+};
+
+const cropFruitDescriptions: Record<CropFruitDescriptions, string> = {
   // Crops
   "description.sunflower": "A sunny flower",
   "description.potato": "Healthier than you might think.",
@@ -873,7 +942,9 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.chiogga": "A rainbow beet!",
   "description.golden.helios": "Sun-kissed grandeur!",
   "description.black.magic": "A dark and mysterious flower!",
+};
 
+const foodDescriptions: Record<FoodDescriptions, string> = {
   // Fire Pit
   "description.pumpkin.soup": "A creamy soup that goblins love",
   "description.mashed.potato": "My life is potato.",
@@ -944,25 +1015,9 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   // Unused foods
   "description.roasted.cauliflower": "A Goblin's favourite",
   "description.radish.pie": "Despised by humans, loved by goblins",
+};
 
-  // Tools
-  "description.axe": "Used to collect wood",
-  "description.pickaxe": "Used to collect stone",
-  "description.stone.pickaxe": "Used to collect iron",
-  "description.iron.pickaxe": "Used to collect gold",
-  "description.hammer": "Coming soon",
-  "description.rod": "Used to catch fish",
-  "description.rusty.shovel": "Used to remove buildings and collectibles",
-  "description.shovel": "Plant and harvest crops.",
-  "description.sand.shovel": "Used for digging treasure",
-  "description.sand.drill": "Drill deep for uncommon or rare treasure",
-
-  // Quest Items
-  "description.goblin.key": "The Goblin Key",
-  "description.sunflower.key": "The Sunflower Key",
-  "description.ancient.goblin.sword": "An Ancient Goblin Sword",
-  "description.ancient.human.warhammer": "An Ancient Human Warhammer",
-
+const decorationDescriptions: Record<DecorationDescriptions, string> = {
   // Decorations
   "description.wicker.man":
     "Join hands and make a chain, the shadow of the Wicker Man will rise up again",
@@ -970,8 +1025,6 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.christmas.bear": "Santa's favorite",
   "description.war.skull": "Decorate the land with the bones of your enemies.",
   "description.war.tombstone": "R.I.P",
-  "description.time.warp.totem":
-    "2x speed for crops, trees, cooking & minerals. Only lasts for 2 hours",
   "description.white.tulips": "Keep the smell of goblins away.",
   "description.potted.sunflower": "Brighten up your land.",
   "description.potted.potato": "Potato blood runs through your Bumpkin.",
@@ -1028,23 +1081,63 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.giant.potato": "A giant potato.",
   "description.giant.pumpkin": "A giant pumpkin.",
   "description.giant.cabbage": "A giant cabbage.",
-  // Boosts
-  "description.victoria.sisters": "The pumpkin loving sisters",
-  "description.undead.rooster":
-    "An unfortunate casualty of the war. 10% increased egg yield.",
-  "description.observatory":
-    "Explore the stars and improve scientific development",
-
+  "description.chef.bear": "Every chef needs a helping hand",
+  "description.construction.bear": "Always build in a bear market",
+  "description.angel.bear": "Time to transcend peasant farming",
+  "description.badass.bear": "Nothing stands in your way.",
+  "description.bear.trap": "It's a trap!",
+  "description.brilliant.bear": "Pure brilliance!",
+  "description.classy.bear": "More SFL than you know what to do with it!",
+  "description.farmer.bear": "Nothing quite like a hard day's work!",
+  "description.rich.bear": "A prized possession",
+  "description.sunflower.bear": "A Bear's cherished crop",
+  "description.beta.bear": "A bear found through special testing events",
+  "description.rainbow.artist.bear": "The owner is a beautiful bear artist!",
+  "description.devil.bear":
+    "Better the Devil you know than the Devil you don't",
+  "description.collectible.bear": "A prized bear, still in mint condition!",
+  "description.cyborg.bear": "Hasta la vista, bear",
+  "description.christmas.snow.globe":
+    "Swirl the snow and watch it come to life",
+  "description.kraken.tentacle":
+    "Dive into deep-sea mystery! This tentacle teases tales of ancient ocean legends and watery wonders.",
+  "description.kraken.head":
+    "Dive into deep-sea mystery! This head teases tales of ancient ocean legends and watery wonders.",
+  "description.abandoned.bear": "A bear that was left behind on the island.",
+  "description.turtle.bear": "Turtley enough for the turtle club.",
+  "description.trex.skull": "A skull from a T-Rex! Amazing!",
+  "description.sunflower.coin": "A coin made of sunflowers.",
+  "description.skeleton.king.staff": "All hail the Skeleton King!",
+  "description.lifeguard.bear": "Lifeguard Bear is here to save the day!",
+  "description.snorkel.bear": "Snorkel Bear loves to swim.",
+  "description.parasaur.skull": "A skull from a parasaur!",
+  "description.goblin.bear": "A goblin bear. It's a bit scary.",
+  "description.golden.bear.head": "Spooky, but cool.",
+  "description.pirate.bear": "Argh, matey! Hug me!",
+  "description.galleon": "A toy ship, still in pretty good nick.",
+  "description.dinosaur.bone":
+    "A Dinosaur Bone! What kind of creature was this?",
+  "description.human.bear": "A human bear. Even scarier than a goblin bear.",
+  "description.flamingo":
+    "Represents a symbol of love's beauty standing tall and confident.",
+  "description.blossom.tree":
+    "Its delicate petals symbolizes the beauty and fragility of love.",
+  "description.heart.balloons":
+    "Use them as decorations for romantic occasions.",
+  "description.whale.bear":
+    "It has a round, furry body like a bear, but with the fins, tail, and blowhole of a whale.",
+  "description.valentine.bear": "For those who love.",
+  "description.easter.bear": "How can a Bunny lay eggs?",
+  "description.easter.bush": "What is inside?",
+  "description.giant.carrot":
+    "A giant carrot stood, casting fun shadows, as rabbits gazed in wonder.",
   // Banners
   "description.goblin.war.banner":
     "A display of allegiance to the Goblin cause",
   "description.human.war.banner": "A display of allegiance to the Human cause",
+};
 
-  // Coupons
-  "description.block.buck": "A valuable token in Sunflower Land!",
-  "description.beta.pass": "Gain early access to features for testing.",
-  "description.war.bond": "A mark of a true warrior",
-
+const fishDescriptions: Record<FishDescriptions, string> = {
   // Fish
   "description.anchovy.one":
     "The ocean's pocket-sized darting acrobat, always in a hurry!",
@@ -1131,10 +1224,6 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.whiteshark.one":
     "The shark with a killer smile, ruling the seas with fin-tensity!",
   "description.whiteshark.two": "Dive into an ocean of thrilling taste!",
-  "description.kraken.tentacle":
-    "Dive into deep-sea mystery! This tentacle teases tales of ancient ocean legends and watery wonders.",
-  "description.kraken.head":
-    "Dive into deep-sea mystery! This head teases tales of ancient ocean legends and watery wonders.",
 
   // Marine Marvels
   "description.twilight.anglerfish":
@@ -1147,7 +1236,9 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "An elusive and ghostly fish of the deep, hiding in the shadows.",
   "description.gilded.swordfish":
     "A swordfish with scales that sparkle like gold, the ultimate catch!",
+};
 
+const buildingDescriptions: Record<BuildingDescriptions, string> = {
   // Buildings
   "description.water.well": "Crops need water!",
   "description.kitchen": "Step up your cooking game",
@@ -1169,45 +1260,57 @@ const gameDescriptions: Record<GameDescriptions, string> = {
     "Roast your Sunflowers, feed and level up your Bumpkin",
   "description.workbench": "Craft tools to collect resources",
   "description.tent": "(Discontinued)",
+};
 
-  // Bumpkin Skills
-  // Crops
-  "description.green.thumb": "Crops yield 5% more",
-  "description.cultivator": "Crops grow 5% quicker",
-  "description.master.farmer": "Crops yield 10% more",
-  "description.golden.flowers": "Chance for Sunflowers to Drop Gold ",
-  "description.happy.crop": "Chance to get 2x crops",
-  // Trees
-  "description.lumberjack": "Trees drop 10% more",
-  "description.tree.hugger": "Trees regrow 20% quicker",
-  "description.tough.tree": "Chance to get 3x wood drops",
-  "description.money.tree": "Chance for SFL drops",
-  // Rocks
-  "description.digger": "Stone Drops 10% more",
-  "description.coal.face": "Stones recover 20% quicker",
-  "description.seeker": "Attract Rock Monsters",
-  "description.gold.rush": "Chance to get 2.5x gold drops",
-  // Cooking
-  "description.rush.hour": "Cook meals 10% faster",
-  "description.kitchen.hand": "Meals yield an extra 5% experience",
-  "description.michelin.stars": "High quality food, earn additional 5% SFL",
-  "description.curer": "Consuming deli goods adds extra 15% exp",
-  // Animals
-  "description.stable.hand": "Animals produce 10% quicker",
-  "description.free.range": "Animals produce 10% more",
-  "description.horse.whisperer": "Increase chance of mutants",
-  "description.buckaroo": "Chance of double drops",
+const toolDescriptions: Record<ToolDescriptions, string> = {
+  // Tools
+  "description.axe": "Used to collect wood",
+  "description.pickaxe": "Used to collect stone",
+  "description.stone.pickaxe": "Used to collect iron",
+  "description.iron.pickaxe": "Used to collect gold",
+  "description.hammer": "Coming soon",
+  "description.rod": "Used to catch fish",
+  "description.rusty.shovel": "Used to remove buildings and collectibles",
+  "description.shovel": "Plant and harvest crops.",
+  "description.sand.shovel": "Used for digging treasure",
+  "description.sand.drill": "Drill deep for uncommon or rare treasure",
+};
 
-  // Blacksmith Items
-  "description.basic.scarecrow":
-    "Choosy defender of your farm's VIP (Very Important Plants)",
-  "description.scary.mike":
-    "The veggie whisperer and champion of frightfully good harvests!",
-  "description.laurie.chuckle.crow":
-    "With her disconcerting chuckle, she shooes peckers away from your crops!",
-  "description.immortal.pear": "",
-  "description.bale":
-    "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+const gameDescriptions: Record<GameDescriptions, string> = {
+  // Quest Items
+  "description.goblin.key": "The Goblin Key",
+  "description.sunflower.key": "The Sunflower Key",
+  "description.ancient.goblin.sword": "An Ancient Goblin Sword",
+  "description.ancient.human.warhammer": "An Ancient Human Warhammer",
+
+  // Coupons
+  "description.block.buck": "A valuable token in Sunflower Land!",
+  "description.beta.pass": "Gain early access to features for testing.",
+  "description.war.bond": "A mark of a true warrior",
+  "description.jack.o.lantern": "A Halloween special event item",
+  "description.golden.crop": "A shiny golden crop",
+  "description.red.envelope": "Wow, you are lucky!",
+  "description.love.letter": "Convey feelings of love",
+  "description.solar.flare.ticket":
+    "A ticket used during the Solar Flare Season",
+  "description.dawn.breaker.ticket":
+    "A ticket used during the Dawn Breaker Season",
+  "description.crow.feather":
+    "A ticket used during the Witches' Eve Ticket Season",
+  "description.mermaid.scale":
+    "A ticket used during the Catch the Kraken Season",
+  "description.sunflower.supporter":
+    "The mark of a true supporter of the game!",
+
+  // Easter Items
+  "description.egg.basket": "Easter Event",
+  "description.blue.egg": "A blue easter egg",
+  "description.orange.egg": "An orange easter egg",
+  "description.green.egg": "A green easter egg",
+  "description.yellow.egg": "A yellow easter egg",
+  "description.red.egg": "A red easter egg",
+  "description.pink.egg": "A pink easter egg",
+  "description.purple.egg": "A purple easter egg",
 };
 
 const fishingQuests: Record<FishingQuests, string> = {
@@ -1309,14 +1412,72 @@ const levelUpMessages: Record<LevelUpMessages, string> = {
   "levelUp.60": "Level 60, you're a true farming superstar!",
 };
 
+const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
+  // Crops
+  "description.green.thumb": "Crops yield 5% more",
+  "description.cultivator": "Crops grow 5% quicker",
+  "description.master.farmer": "Crops yield 10% more",
+  "description.golden.flowers": "Chance for Sunflowers to Drop Gold ",
+  "description.happy.crop": "Chance to get 2x crops",
+  // Trees
+  "description.lumberjack": "Trees drop 10% more",
+  "description.tree.hugger": "Trees regrow 20% quicker",
+  "description.tough.tree": "Chance to get 3x wood drops",
+  "description.money.tree": "Chance for SFL drops",
+  // Rocks
+  "description.digger": "Stone Drops 10% more",
+  "description.coal.face": "Stones recover 20% quicker",
+  "description.seeker": "Attract Rock Monsters",
+  "description.gold.rush": "Chance to get 2.5x gold drops",
+  // Cooking
+  "description.rush.hour": "Cook meals 10% faster",
+  "description.kitchen.hand": "Meals yield an extra 5% experience",
+  "description.michelin.stars": "High quality food, earn additional 5% SFL",
+  "description.curer": "Consuming deli goods adds extra 15% exp",
+  // Animals
+  "description.stable.hand": "Animals produce 10% quicker",
+  "description.free.range": "Animals produce 10% more",
+  "description.horse.whisperer": "Increase chance of mutants",
+  "description.buckaroo": "Chance of double drops",
+};
+
+const bountyDescription: Record<BountyDescription, string> = {
+  "description.clam.shell": "A clam shell.",
+  "description.sea.cucumber": "A sea cucumber.",
+  "description.coral": "A piece of coral, it's pretty",
+  "description.crab": "A crab, watch out for its claws!",
+  "description.starfish": "The star of the sea.",
+  "description.pirate.bounty":
+    "A bounty for a pirate. It's worth a lot of money.",
+  "description.wooden.compass":
+    "It may not be high-tech, but it will always steer you in the right direction, wood you believe it?",
+  "description.iron.compass":
+    "Iron out your path to treasure! This compass is 'attract'-ive, and not just to the magnetic North!",
+  "description.emerald.compass":
+    "Guide your way through the lush mysteries of life! This compass doesn't just point North, it points towards opulence and grandeur!",
+  "description.old.bottle":
+    "Antique pirate bottle, echoing tales of high seas adventure.",
+  "description.pearl": "Shimmers in the sun.",
+  "description.pipi": "Plebidonax deltoides, found in the Pacific Ocean.",
+  "description.seaweed": "Seaweed.",
+};
+
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...achievementTerms,
+  ...bountyDescription,
+  ...boostDescriptions,
+  ...buildingDescriptions,
+  ...bumpkinSkillsDescription,
   ...bumpkinPartRequirements,
   ...bumpkinTrade,
   ...confirmationTerms,
   ...conversations,
+  ...cropFruitDescriptions,
+  ...decorationDescriptions,
   ...errorTerms,
+  ...fishDescriptions,
   ...fishingQuests,
+  ...foodDescriptions,
   ...gameDescriptions,
   ...gameTerms,
   ...generalTerms,
@@ -1334,6 +1495,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...seasonTerms,
   ...shopItems,
   ...statements,
+  ...toolDescriptions,
   ...transactionTerms,
   ...warningTerms,
   ...welcomeTerms,

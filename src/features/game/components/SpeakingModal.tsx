@@ -38,22 +38,26 @@ export const SpeakingModal: React.FC<Props> = ({
     if (!currentTextEnded) {
       setCurrentTextEnded(true);
       setForceShowFullMessage(true);
-    } else {
-      const isLast = currentMessage === message.length - 1;
-      const hasActions = message[currentMessage].actions?.length;
-
-      if (isLast && hasActions) {
-        return;
-      }
-      setCurrentTextEnded(false);
-      setForceShowFullMessage(false);
-      if (!isLast) {
-        setCurrentMessage(currentMessage + 1);
-      } else {
-        setCurrentMessage(0);
-        onClose();
-      }
+      return;
     }
+
+    const isLast = currentMessage === message.length - 1;
+    const hasActions = message[currentMessage].actions?.length;
+
+    if (isLast && hasActions) {
+      return;
+    }
+
+    setCurrentTextEnded(false);
+    setForceShowFullMessage(false);
+
+    if (!isLast) {
+      setCurrentMessage(currentMessage + 1);
+      return;
+    }
+
+    setCurrentMessage(0);
+    onClose();
   }, [currentTextEnded, currentMessage, message.length]);
 
   useEffect(() => {
@@ -84,7 +88,7 @@ export const SpeakingModal: React.FC<Props> = ({
     >
       <div style={{ minHeight: `${lines * 25}px` }} className="flex flex-col">
         <div
-          className={classNames("flex-1 p-1 flex flex-col  mb-1", {
+          className={classNames("flex-1 p-1 flex flex-col mb-1", {
             "cursor-pointer": !currentTextEnded || !showActions,
           })}
           onClick={handleClick}
@@ -136,25 +140,30 @@ export const SpeakingText: React.FC<Pick<Props, "message" | "onClose">> = ({
   const lines = maxLength / 30;
 
   const handleClick = useCallback(() => {
-    // Cannot accidentally click through last message
-    if (currentTextEnded && currentMessage === message.length - 1) {
-      onClose();
+    if (!currentTextEnded) {
+      setCurrentTextEnded(true);
+      setForceShowFullMessage(true);
       return;
     }
 
-    if (currentTextEnded) {
-      setCurrentTextEnded(false);
-      setForceShowFullMessage(false);
+    const isLast = currentMessage === message.length - 1;
+    const hasActions = message[currentMessage].actions?.length;
 
-      if (currentMessage < message.length - 1) {
-        setCurrentMessage(currentMessage + 1);
-      } else {
-        setCurrentMessage(0);
-      }
-    } else {
-      setCurrentTextEnded(true);
-      setForceShowFullMessage(true);
+    if (isLast && hasActions) {
+      return;
     }
+
+    setCurrentTextEnded(false);
+    setForceShowFullMessage(false);
+
+    if (!isLast) {
+      setCurrentMessage(currentMessage + 1);
+      return;
+    }
+
+    setCurrentMessage(0);
+    onClose();
+    return;
   }, [currentTextEnded, currentMessage, message.length]);
 
   useEffect(() => {
@@ -175,9 +184,11 @@ export const SpeakingText: React.FC<Pick<Props, "message" | "onClose">> = ({
   return (
     <>
       <div
-        className="p-1 flex flex-col cursor-pointer"
-        style={{ minHeight: `${lines * 25}px` }}
+        className={classNames("flex-1 p-1 flex flex-col mb-1", {
+          "cursor-pointer": !currentTextEnded || !showActions,
+        })}
         onClick={handleClick}
+        style={{ minHeight: `${lines * 25}px` }}
       >
         <div className="flex-1 pb-2">
           <TypingMessage

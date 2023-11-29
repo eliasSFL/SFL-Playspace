@@ -554,8 +554,9 @@ import { GOBLIN_PIRATE_ITEMS, POTION_HOUSE_ITEMS } from "./collectibles";
 
 import { SUNNYSIDE } from "assets/sunnyside";
 import { CROP_LIFECYCLE } from "features/island/plots/lib/plant";
-import { BAIT, CROP_COMPOST, FRUIT_COMPOST } from "./composters";
+import { WORM, CROP_COMPOST, FRUIT_COMPOST } from "./composters";
 import { BuffLabel } from ".";
+import { PURCHASEABLE_BAIT } from "./fishing";
 import { translate } from "lib/i18n/translate";
 
 export interface ItemDetails extends Omit<LimitedItem, "name" | "description"> {
@@ -1366,43 +1367,43 @@ export const ITEM_DETAILS: Items = {
   },
 
   "Egg Basket": {
-    description: "Easter Event",
+    description: translate("description.egg.basket"),
     image: easterBasket,
   },
   "Easter Bunny": {
-    description: "A rare Easter item",
+    description: translate("description.easter.bunny"),
     image: easterBunny,
   },
   "Pablo The Bunny": {
-    description: "A magical Easter bunny",
+    description: translate("description.pablo.bunny"),
     image: pabloBunny,
   },
   "Blue Egg": {
-    description: "A blue easter egg",
+    description: translate("description.blue.egg"),
     image: blueEgg,
   },
   "Orange Egg": {
-    description: "An orange easter egg",
+    description: translate("description.orange.egg"),
     image: orangeEgg,
   },
   "Green Egg": {
-    description: "A green easter egg",
+    description: translate("description.green.egg"),
     image: greenEgg,
   },
   "Yellow Egg": {
-    description: "A yellow easter egg",
+    description: translate("description.yellow.egg"),
     image: yellowEgg,
   },
   "Red Egg": {
-    description: "A red easter egg",
+    description: translate("description.red.egg"),
     image: redEgg,
   },
   "Pink Egg": {
-    description: "A pink easter egg",
+    description: translate("description.pink.egg"),
     image: pinkEgg,
   },
   "Purple Egg": {
-    description: "A purple easter egg",
+    description: translate("description.purple.egg"),
     image: purpleEgg,
   },
   "Engine Core": {
@@ -1508,32 +1509,26 @@ export const ITEM_DETAILS: Items = {
 
   "Sunflower Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "10% increased Sunflower yield",
   },
   "Carrot Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Carrots grow 20% faster",
   },
   "Beetroot Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "20% increased Beetroot yield",
   },
   "Green Amulet": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Chance for 10x crop yield",
   },
   "Warrior Shirt": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A mark of a true warrior",
   },
   "Warrior Pants": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "Protect your thighs!",
   },
   "Warrior Helmet": {
@@ -1542,12 +1537,10 @@ export const ITEM_DETAILS: Items = {
   },
   "Sunflower Shield": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A hero of Sunflower Land. Free Sunflower Seeds!",
   },
   "Skull Hat": {
     image: SUNNYSIDE.icons.expression_confused,
-
     description: "A reward for your war efforts",
   },
   "War Skull": {
@@ -1560,7 +1553,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Undead Rooster": {
     image: undeadChicken,
-    description: "A fallen soldier during the war",
+    description: translate("description.undead.rooster"),
   },
 
   "Boiled Eggs": {
@@ -1808,7 +1801,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Jack-o-lantern": {
     image: jackOLanternItem,
-    description: "A Halloween special event item",
+    description: translate("description.jack.o.lantern"),
   },
   "Victoria Sisters": {
     image: victoriaSisters,
@@ -1820,43 +1813,43 @@ export const ITEM_DETAILS: Items = {
   },
   "Chef Bear": {
     image: chefBear,
-    description: "Every chef needs a helping hand",
+    description: translate("description.chef.bear"),
   },
   "Construction Bear": {
     image: constructionBear,
-    description: "Always build in a bear market",
+    description: translate("description.construction.bear"),
   },
   "Angel Bear": {
     image: angelBear,
-    description: "Time to transcend peasant farming",
+    description: translate("description.angel.bear"),
   },
   "Badass Bear": {
     image: badassBear,
-    description: "Nothing stands in your way.",
+    description: translate("description.badass.bear"),
   },
   "Bear Trap": {
     image: bearTrap,
-    description: "It's a trap!",
+    description: translate("description.bear.trap"),
   },
   "Brilliant Bear": {
     image: brilliantBear,
-    description: "Pure brilliance!",
+    description: translate("description.brilliant.bear"),
   },
   "Classy Bear": {
     image: classyBear,
-    description: "More SFL than you know what to do with it!",
+    description: translate("description.classy.bear"),
   },
   "Farmer Bear": {
     image: farmerBear,
-    description: "Nothing quite like a hard day's work!",
+    description: translate("description.farmer.bear"),
   },
   "Rich Bear": {
     image: richBear,
-    description: "A prized possession",
+    description: translate("description.rich.bear"),
   },
   "Sunflower Bear": {
     image: sunflowerBear,
-    description: "A Bear's cherished crop",
+    description: translate("description.sunflower.bear"),
   },
   "Christmas Bear": {
     ...SALESMAN_ITEMS["Christmas Bear"],
@@ -1864,45 +1857,44 @@ export const ITEM_DETAILS: Items = {
   },
   "Beta Bear": {
     image: betaBear,
-    description: "A bear found through special testing events",
+    description: translate("description.beta.bear"),
   },
   "Rainbow Artist Bear": {
     image: rainbowArtistBear,
-    description: "The owner is a beautiful bear artist!",
+    description: translate("description.rainbow.artist.bear"),
   },
 
   "Cabbage Boy": {
     image: cabbageBoy,
-    description: "Don't wake the baby!",
+    description: translate("description.cabbage.boy"),
   },
 
   "Cabbage Girl": {
     image: cabbageGirl,
-    description: "Shhh it's sleeping",
+    description: translate("description.cabbage.girl"),
   },
 
   "Wood Nymph Wendy": {
     image: wendy,
-    description: "Cast an enchantment to entice the wood fairies.",
+    description: translate("description.wood.nymph.wendy"),
   },
 
   "Peeled Potato": {
     image: prizedPotato,
-    description: "A precious potato, encourages bonus potatoes on harvest.",
+    description: translate("description.peeled.potato"),
   },
 
   "Potent Potato": {
     image: potatoMutant,
-    description: "Potent! Grants a 3% chance to get +10 potatoes on harvest.",
+    description: translate("description.potent.potato"),
   },
   "Radical Radish": {
     image: radishMutant,
-    description: "Radical! Grants a 3% chance to get +10 radishes on harvest.",
+    description: translate("description.radical.radish"),
   },
   "Stellar Sunflower": {
     image: sunflowerMutant,
-    description:
-      "Stellar! Grants a 3% chance to get +10 sunflowers on harvest.",
+    description: translate("description.stellar.sunflower"),
   },
   "Potted Potato": {
     image: pottedPotato,
@@ -1914,35 +1906,32 @@ export const ITEM_DETAILS: Items = {
   },
   "Golden Crop": {
     image: goldenCrop,
-    description: "A shiny golden crop",
+    description: translate("description.golden.crop"),
   },
   "Christmas Snow Globe": {
     image: snowglobe,
-    description: "Swirl the snow and watch it come to life",
+    description: translate("description.christmas.snow.globe"),
   },
 
   "Immortal Pear": {
     image: immortalPear,
-    description: "A long-lived pear that makes fruit trees last longer.",
+    description: translate("description.immortal.pear"),
   },
   "Lady Bug": {
     image: ladybug,
-    description:
-      "An incredible bug that feeds on aphids. Improves Apple quality.",
+    description: translate("description.lady.bug"),
   },
   "Squirrel Monkey": {
     image: squirrelMonkey,
-    description:
-      "A natural orange predator. Orange Trees are scared when a Squirrel Monkey is around.",
+    description: translate("description.squirrel.monkey"),
   },
   "Black Bearry": {
     image: blackBear,
-    description:
-      "His favorite treat - plump, juicy blueberries. Gobbles them up by the handful!",
+    description: translate("description.black.bearry"),
   },
   "Devil Bear": {
     image: devilBear,
-    description: "Better the Devil you know than the Devil you don't",
+    description: translate("description.devil.bear"),
   },
   "Orange Squeeze": {
     image: orangeSqueeze,
@@ -1966,48 +1955,48 @@ export const ITEM_DETAILS: Items = {
   },
   "Collectible Bear": {
     image: collectibleBear,
-    description: "A prized bear, still in mint condition!",
+    description: translate("description.collectible.bear"),
   },
   "Cyborg Bear": {
     image: cyborgBear,
-    description: "Hasta la vista, bear",
+    description: translate("description.cyborg.bear"),
   },
   "Maneki Neko": {
     image: manekiNeko,
-    description: "The beckoning cat. Pull its arm and good luck will come",
+    description: translate("description.maneki.neko"),
   },
   "Red Envelope": {
     image: redEnvelope,
-    description: "Wow, you are lucky!",
+    description: translate("description.red.envelope"),
   },
   "Love Letter": {
     image: loveLetter,
-    description: "Convey feelings of love",
+    description: translate("description.love.letter"),
   },
 
   // Treasure Island
   "Clam Shell": {
     image: clamShell,
-    description: "A clam shell.",
+    description: translate("description.clam.shell"),
   },
   "Sea Cucumber": {
     image: SUNNYSIDE.resource.sea_cucumber,
-    description: "A sea cucumber.",
+    description: translate("description.sea.cucumber"),
   },
   Coral: {
     image: SUNNYSIDE.resource.coral,
-    description: "A piece of coral, it's pretty",
+    description: translate("description.coral"),
   },
   Crab: {
     image: SUNNYSIDE.resource.crab,
-    description: "A crab, watch out for its claws!",
+    description: translate("description.crab"),
   },
   Starfish: {
     image: SUNNYSIDE.resource.starfish,
-    description: "The star of the sea.",
+    description: translate("description.starfish"),
   },
   "Pirate Bounty": {
-    description: "A bounty for a pirate. It's worth a lot of money.",
+    description: translate("description.pirate.bounty"),
     image: SUNNYSIDE.resource.pirate_bounty,
   },
   "Pirate Cake": {
@@ -2015,149 +2004,139 @@ export const ITEM_DETAILS: Items = {
     image: pirateCake,
   },
   "Abandoned Bear": {
-    description: "A bear that was left behind on the island.",
+    description: translate("description.abandoned.bear"),
     image: abandonedBear,
   },
   "Turtle Bear": {
-    description: "Turtley enough for the turtle club.",
+    description: translate("description.turtle.bear"),
     image: turtleBear,
   },
   "T-Rex Skull": {
-    description: "A skull from a T-Rex! Amazing!",
+    description: translate("description.trex.skull"),
     image: tRexSkull,
   },
   "Sunflower Coin": {
-    description: "A coin made of sunflowers.",
+    description: translate("description.sunflower.coin"),
     image: sunflowerCoin,
   },
   Foliant: {
-    description: "A book of spells.",
+    description: translate("description.foliant"),
     image: foliant,
   },
   "Skeleton King Staff": {
-    description: "All hail the Skeleton King!",
+    description: translate("description.skeleton.king.staff"),
     image: skeletonKingStaff,
   },
   "Lifeguard Bear": {
-    description: "Lifeguard Bear is here to save the day!",
+    description: translate("description.lifeguard.bear"),
     image: lifeguardBear,
   },
   "Snorkel Bear": {
-    description: "Snorkel Bear loves to swim.",
+    description: translate("description.snorkel.bear"),
     image: snorkelBear,
   },
   "Parasaur Skull": {
-    description: "A skull from a parasaur!",
+    description: translate("description.parasaur.skull"),
     image: parasaurSkull,
   },
   "Goblin Bear": {
-    description: "A goblin bear. It's a bit scary.",
+    description: translate("description.goblin.bear"),
     image: goblinBear,
   },
   "Golden Bear Head": {
-    description: "Spooky, but cool.",
+    description: translate("description.golden.bear.head"),
     image: goldenBearHead,
   },
   "Pirate Bear": {
-    description: "Argh, matey! Hug me!",
+    description: translate("description.pirate.bear"),
     image: pirateBear,
   },
   Galleon: {
-    description: "A toy ship, still in pretty good nick.",
+    description: translate("description.galleon"),
     image: galleon,
   },
   "Dinosaur Bone": {
-    description: "A Dinosaur Bone! What kind of creature was this?",
+    description: translate("description.dinosaur.bone"),
     image: dinosaurBone,
   },
   "Human Bear": {
-    description: "A human bear. Even scarier than a goblin bear.",
+    description: translate("description.human.bear"),
     image: humanBear,
   },
   "Wooden Compass": {
-    description:
-      "It may not be high-tech, but it will always steer you in the right direction, wood you believe it?",
+    description: translate("description.wooden.compass"),
     image: woodenCompass,
   },
   "Iron Compass": {
-    description:
-      "Iron out your path to treasure! This compass is 'attract'-ive, and not just to the magnetic North!",
+    description: translate("description.iron.compass"),
     image: ironCompass,
   },
   "Emerald Compass": {
-    description:
-      "Guide your way through the lush mysteries of life! This compass doesn't just point North, it points towards opulence and grandeur!",
+    description: translate("description.emerald.compass"),
     image: emeraldCompass,
   },
   "Old Bottle": {
-    description: "Antique pirate bottle, echoing tales of high seas adventure.",
+    description: translate("description.old.bottle"),
     image: oldBottle,
   },
   "Tiki Totem": {
-    description: "The Tiki Totem adds 0.1 wood to every tree you chop.",
+    description: translate("description.tiki.totem"),
     image: tikiTotem,
   },
   "Lunar Calendar": {
-    description:
-      "Crops now follow the lunar cycle! 10% increase to crop growth speed.",
+    description: translate("description.lunar.calendar"),
     image: lunarCalendar,
   },
   "Heart of Davy Jones": {
-    description:
-      "Whoever possesses it holds immense power over the seven seas, can dig for treasure without tiring.",
+    description: translate("description.heart.davy.jones"),
     image: heartOfDavyJones,
   },
   "Treasure Map": {
-    description:
-      "An enchanted map that leads the holder to valuable treasure. +20% profit from beach bounty items.",
+    description: translate("description.treasure.map"),
     image: treasureMap,
   },
   "Heart Balloons": {
-    description: "Use them as decorations for romantic occasions.",
+    description: translate("description.heart.balloons"),
     image: heartBalloons,
   },
   Flamingo: {
-    description:
-      "Represents a symbol of love's beauty standing tall and confident.",
+    description: translate("description.flamingo"),
     image: flamingo,
   },
   "Blossom Tree": {
-    description:
-      "Its delicate petals symbolizes the beauty and fragility of love.",
+    description: translate("description.blossom.tree"),
     image: blossomTree,
   },
   Pearl: {
-    description: "Shimmers in the sun.",
+    description: translate("description.pearl"),
     image: pearl,
   },
   Pipi: {
-    description: "Plebidonax deltoides, found in the Pacific Ocean.",
+    description: translate("description.pipi"),
     image: pipi,
   },
   Seaweed: {
-    description: "Seaweed.",
+    description: translate("description.seaweed"),
     image: seaweed,
   },
   "Whale Bear": {
-    description:
-      "It has a round, furry body like a bear, but with the fins, tail, and blowhole of a whale.",
+    description: translate("description.whale.bear"),
     image: whaleBear,
   },
   "Valentine Bear": {
-    description: "For those who love.",
+    description: translate("description.valentine.bear"),
     image: valentineBear,
   },
   "Easter Bear": {
-    description: "How can a Bunny lay eggs?",
+    description: translate("description.easter.bear"),
     image: easterBear,
   },
   "Easter Bush": {
-    description: "What is inside?",
+    description: translate("description.easter.bush"),
     image: easterBush,
   },
   "Giant Carrot": {
-    description:
-      "A giant carrot stood, casting fun shadows, as rabbits gazed in wonder.",
+    description: translate("description.giant.carrot"),
     image: giantCarrot,
   },
   "Iron Idol": {
@@ -2166,8 +2145,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Genie Lamp": {
     image: genieLamp,
-    description:
-      "A magical lamp that contains a genie who will grant you three wishes.",
+    description: translate("description.genie.lamp"),
   },
 
   // AoE items
@@ -2180,18 +2158,16 @@ export const ITEM_DETAILS: Items = {
     description: GOBLIN_PIRATE_ITEMS["Tin Turtle"].description,
   },
   "Basic Scarecrow": {
-    description: "Choosy defender of your farm's VIP (Very Important Plants)",
+    description: translate("description.basic.scarecrow"),
     image: basicScarecrow,
   },
   Bale: {
-    description:
-      "A poultry's favorite neighbor, providing a cozy retreat for chickens",
+    description: translate("description.bale"),
     image: bale,
   },
   "Sir Goldensnout": {
     image: sirGoldenSnout,
-    description:
-      "A royal member, Sir GoldenSnout infuses your farm with sovereign prosperity through its golden manure.",
+    description: translate("description.sir.goldensnout"),
     buff: {
       shortDescription: "+0.5 Crops AoE",
       labelType: "success",
@@ -2199,19 +2175,16 @@ export const ITEM_DETAILS: Items = {
     },
   },
   "Scary Mike": {
-    description:
-      "The veggie whisperer and champion of frightfully good harvests!",
+    description: translate("description.scary.mike"),
     image: scaryMike,
   },
   "Laurie the Chuckle Crow": {
-    description:
-      "With her disconcerting chuckle, she shooes peckers away from your crops!",
+    description: translate("description.laurie.chuckle.crow"),
     image: laurie,
   },
   "Freya Fox": {
     image: freyaFox,
-    description:
-      "Enchanting guardian, boosts pumpkin growth with her mystical charm. Harvest abundant pumpkins under her watchful gaze.",
+    description: translate("description.freya.fox"),
     buff: {
       shortDescription: "+0.5 Pumpkin",
       labelType: "success",
@@ -2221,8 +2194,7 @@ export const ITEM_DETAILS: Items = {
   },
   "Queen Cornelia": {
     image: queenCornelia,
-    description:
-      "Command the regal power of Queen Cornelia and experience a magnificent Area of Effect boost to your corn production. +1 Corn.",
+    description: translate("description.queen.cornelia"),
   },
 
   // Composters
@@ -2242,24 +2214,24 @@ export const ITEM_DETAILS: Items = {
   // Season tickets
   "Solar Flare Ticket": {
     image: solarFlareTicket,
-    description: "A ticket used during the Solar Flare Season",
+    description: translate("description.solar.flare.ticket"),
   },
   "Dawn Breaker Ticket": {
     image: dawnBreakerTicket,
-    description: "A ticket used during the Dawn Breaker Season",
+    description: translate("description.dawn.breaker.ticket"),
   },
   "Crow Feather": {
     image: crowFeather,
-    description: "A ticket used during the Witches' Eve Ticket Season",
+    description: translate("description.crow.feather"),
   },
   "Mermaid Scale": {
     image: mermaidScale,
-    description: "A ticket used during the Catch the Kraken Season",
+    description: translate("description.mermaid.scale"),
   },
 
   "Sunflower Supporter": {
     image: supporterTicket,
-    description: "The mark of a true supporter of the game!",
+    description: translate("description.sunflower.supporter"),
   },
 
   // Solar Flare Season
@@ -2630,19 +2602,19 @@ export const ITEM_DETAILS: Items = {
   // Bait
   Earthworm: {
     image: earthworm,
-    description: BAIT.Earthworm.description,
+    description: WORM.Earthworm.description,
   },
   Grub: {
     image: grub,
-    description: BAIT.Grub.description,
+    description: WORM.Grub.description,
   },
   "Red Wiggler": {
     image: redWiggler,
-    description: BAIT["Red Wiggler"].description,
+    description: WORM["Red Wiggler"].description,
   },
   "Fishing Lure": {
     image: fishingLure,
-    description: "Great for catching rare fish!",
+    description: PURCHASEABLE_BAIT["Fishing Lure"].description,
   },
   // Compost
   "Sprout Mix": {
