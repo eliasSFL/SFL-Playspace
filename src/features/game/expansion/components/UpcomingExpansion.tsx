@@ -35,6 +35,7 @@ import {
   Inventory,
 } from "features/game/types/game";
 import { translate } from "lib/i18n/translate";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 const host = window.location.host.replace(/^www\./, "");
 const LOCAL_STORAGE_KEY = `expansion-read.${host}-${window.location.pathname}`;
@@ -256,6 +257,7 @@ export const UpcomingExpansion: React.FC = () => {
   const state = gameState.context.state;
 
   const playing = gameState.matches("playing");
+  const { t } = useAppTranslation();
 
   useEffect(() => {
     if (isRevealing && playing) {
@@ -375,7 +377,7 @@ export const UpcomingExpansion: React.FC = () => {
         {!showIntro && (
           <CloseButtonPanel
             bumpkinParts={NPC_WEARABLES.grimbly}
-            title="Expand your land"
+            title={t("explorer.description")}
             onClose={() => setShowBumpkinModal(false)}
           >
             <UpcomingExpansionModal

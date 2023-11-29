@@ -36,10 +36,12 @@ export type GeneralTerms =
   | "delivery"
   | "deliveries"
   | "details"
+  | "egg"
   | "easter.eggs"
   | "equip"
   | "error"
   | "exotics"
+  | "expand"
   | "explore"
   | "farm"
   | "featured"
@@ -133,6 +135,7 @@ export type GeneralTerms =
   | "you.are.here";
 
 export type GameTerms =
+  | "sfl"
   | "dailyLim"
   | "gobSwarm"
   | "potions"
@@ -143,7 +146,8 @@ export type GameTerms =
   | "proof.of.humanity"
   | "no.sfl"
   | "granting.wish"
-  | "new.delivery.in";
+  | "new.delivery.in"
+  | "bumpkinBuzz";
 
 export type ConfirmationTerms = "confirmation.sellCrops";
 
@@ -156,7 +160,9 @@ export type WelcomeTerms =
   | "welcome.signingIn"
   | "welcome.signInMessage"
   | "welcome.email"
-  | "welcome.takeover";
+  | "welcome.takeover"
+  | "welcome.metamask"
+  | "welcome.promo";
 
 export type RulesTerms =
   | "rules"
@@ -332,6 +338,7 @@ export type Conversations =
   | "pete.levelthree.two"
   | "pete.levelthree.three"
   | "pete.levelthree.four"
+  | "pete.help.zero"
   | "pete.help.one"
   | "pete.help.two"
   | "grimbly.expansion.one"
@@ -356,7 +363,9 @@ export type RewardTerms =
   | "reward.lvlRequirement"
   | "reward.revealing"
   | "reward.streakBonus"
-  | "reward.found";
+  | "reward.found"
+  | "reward.spendWisely"
+  | "reward.wearable";
 
 export type ErrorTerms =
   | "error.congestion.one"
@@ -539,7 +548,20 @@ export type Statements =
   | "statements.frankie.plaza"
   | "statements.blacksmith.plaza"
   | "statements.water.well.needed.one"
-  | "statements.water.well.needed.two";
+  | "statements.water.well.needed.two"
+  | "statements.soldOut"
+  | "statements.inStock"
+  | "statements.soldOutWearables";
+
+export type LandscapeTerms =
+  | "landscape.intro.one"
+  | "landscape.intro.two"
+  | "landscape.intro.three"
+  | "landscape.intro.four"
+  | "landscape.expansion.one"
+  | "landscape.expansion.two"
+  | "landscape.timerPopover"
+  | "landscape.dragMe";
 
 export type BumpkinTrade =
   | "bumpkinTrade.askPrice"
@@ -1080,6 +1102,7 @@ export type TranslationKeys =
   | HenHouseTerms
   | Intro
   | IslandName
+  | LandscapeTerms
   | LevelUpMessages
   | Onboarding
   | Questions

@@ -48,6 +48,7 @@ interface Props {
   wearables: ShopWearables;
 }
 export const StylistWearables: React.FC<Props> = ({ wearables }) => {
+  const { t } = useAppTranslation();
   const [selected, setSelected] = useState<BumpkinItem>(getKeys(wearables)[0]);
   const { gameService } = useContext(Context);
   const [
@@ -143,7 +144,7 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
           }
           onClick={openConfirmationModal}
         >
-          Buy
+          {t("buy")}
         </Button>
         <Modal
           centered
@@ -165,7 +166,7 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
                 }
                 onClick={buy}
               >
-                Buy
+                {t("buy")}
               </Button>
               <Button onClick={closeConfirmationModal}>{t("cancel")}</Button>
             </div>
@@ -230,7 +231,7 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
             rel="noopener noreferrer"
             className="underline text-white text-xs"
           >
-            View sold out wearables
+            {t("statements.soldOutWearables")}
           </a>
         </>
       }

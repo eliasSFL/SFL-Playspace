@@ -30,9 +30,7 @@ export const PeteHelp: React.FC = () => {
       <img src={plaza} className="w-full mx-auto rounded-lg my-2" />
       {locked && (
         <>
-          <p className="text-xs mb-2">
-            Visit the fire pit, cook food and eat to level up.
-          </p>
+          <p className="text-xs mb-2">{t("pete.help.zero")}</p>
           <Label type="danger" className="mb-2 ml-1" icon={lockIcon}>
             {t("warning.level.required")}3
           </Label>

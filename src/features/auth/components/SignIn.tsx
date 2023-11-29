@@ -177,7 +177,7 @@ export const SignIn = () => {
               src={metamaskIcon}
               className="h-7 mobile:h-6 ml-2.5 mr-6 absolute left-0 top-1"
             />
-            Metamask
+            {t("welcome.metamask")}
           </div>
         </Button>
         <Button
@@ -357,7 +357,7 @@ export const SignUp = () => {
         <div className="absolute top-3 right-5 flex items-center">
           <Button onClick={() => setShowPromoCode(true)} className="h-6">
             <div className="flex">
-              <span className="text-xxs">Add Promo Code</span>
+              <span className="text-xxs">{t("welcome.promo")}</span>
             </div>
           </Button>
           <img src={SUNNYSIDE.icons.expression_confused} className="h-4 ml-1" />

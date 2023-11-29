@@ -26,6 +26,7 @@ import {
   FishingQuests,
   IslandName,
   LevelUpMessages,
+  LandscapeTerms,
   BumpkinSkillsDescription,
   BoostDescriptions,
   CropFruitDescriptions,
@@ -73,6 +74,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   equip: "Equip",
   error: "Error",
   exotics: "Exotics",
+  expand: "Expand",
   explore: "Explore",
   farm: "Farm",
   featured: "Featured",
@@ -168,9 +170,11 @@ const generalTerms: Record<GeneralTerms, string> = {
   resources: "Resources",
   seeds: "Seeds",
   cook: "Cook",
+  egg: "Egg",
 };
 
 const gameTerms: Record<GameTerms, string> = {
+  sfl: "SFL",
   bumpkinLvl: "Bumpkin level",
   dailyLim: "Daily SFL Limit",
   gobSwarm: "Goblin Swarm!",
@@ -182,6 +186,7 @@ const gameTerms: Record<GameTerms, string> = {
   "no.sfl": "No SFL tokens found",
   "granting.wish": "Granting your wish",
   "new.delivery.in": "New deliveries available in: ",
+  bumpkinBuzz: "Bumpkin Buzz",
 };
 
 const confirmationTerms: Record<ConfirmationTerms, string> = {
@@ -200,6 +205,8 @@ const welcomeTerms: Record<WelcomeTerms, string> = {
     "Accept the signature request in your browser wallet to login.",
   "welcome.takeover":
     "It looks like you are new to Sunflower Land and have claimed ownership of another player's account.",
+  "welcome.metamask": "Metamask",
+  "welcome.promo": "Add Promo Code",
 };
 
 const rulesTerms: Record<RulesTerms, string> = {
@@ -479,6 +486,7 @@ const conversations: Record<Conversations, string> = {
     "At the plaza you can deliver your resources for rewards, craft magical items & trade with other players.",
   "pete.levelthree.four":
     "You can travel by clicking on the world icon in the bottom left.",
+  "pete.help.zero": "Visit the fire pit, cook food and eat to level up.",
   "pete.help.one":
     "As you level up, you will unlock new areas to explore. First up is the Pumpkin Plaza....my home!",
   "pete.help.two":
@@ -510,6 +518,8 @@ const rewardTerms: Record<RewardTerms, string> = {
   "reward.revealing": "What could it be?",
   "reward.streakBonus": "3x streak bonus",
   "reward.found": "You found",
+  "reward.spendWisely": "Spend it wisely.",
+  "reward.wearable": "A wearable for your Bumpkin",
 };
 
 const errorTerms: Record<ErrorTerms, string> = {
@@ -771,6 +781,9 @@ const statements: Record<Statements, string> = {
   "statements.water.well.needed.one": "Additional Water Well required.",
   "statements.water.well.needed.two":
     "In order to support more crops, build a well.",
+  "statements.soldOut": "Sold out",
+  "statements.inStock": "in stock",
+  "statements.soldOutWearables": "View sold out wearables",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {
@@ -781,6 +794,19 @@ const bumpkinTrade: Record<BumpkinTrade, string> = {
   "bumpkinTrade.noTradeLs": "You have no trades listed.",
   "bumpkinTrade.sell": "Sell your resources to other players for SFL.",
   "bumpkinTrade.list": "List trade",
+};
+
+const landscapeTerms: Record<LandscapeTerms, string> = {
+  "landscape.intro.one": "Design your dream island!",
+  "landscape.intro.two":
+    "In design mode you can hold, drag & move items around.",
+  "landscape.intro.three": "Craft rare decorations",
+  "landscape.intro.four": "Place collectibles from your chest",
+  "landscape.expansion.one":
+    "Each piece of land comes with unique resources to help build your farming empire!",
+  "landscape.expansion.two": "More expansions will be available soon...",
+  "landscape.timerPopover": "Next Expansion",
+  "landscape.dragMe": "Drag me",
 };
 
 const bumpkinPartRequirements: Record<BumpkinPartRequirements, string> = {
@@ -1459,6 +1485,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...henHouseTerms,
   ...introTerms,
   ...islandName,
+  ...landscapeTerms,
   ...levelUpMessages,
   ...onboarding,
   ...questions,
