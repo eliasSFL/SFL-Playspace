@@ -308,7 +308,14 @@ export type GuideTerms =
   | "fruit.description.three"
   | "seasons.description.one"
   | "seasons.description.two"
-  | "pete.teaser.one";
+  | "pete.teaser.one"
+  | "pete.teaser.two"
+  | "pete.teaser.three"
+  | "pete.teaser.four"
+  | "pete.teaser.five"
+  | "pete.teaser.six"
+  | "pete.teaser.seven"
+  | "pete.teaser.eight";
 
 export type Conversations =
   | "hank-intro.headline"

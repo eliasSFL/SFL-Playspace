@@ -42,7 +42,7 @@ const hint = (state: MachineState) => {
   }
 
   if (inventory["Basic Land"]?.lte(3)) {
-    return "Expand your land";
+    return translate("pete.teaser.two");
   }
 
   const harvestedCrops = getKeys(CROPS()).reduce(
@@ -51,7 +51,7 @@ const hint = (state: MachineState) => {
   );
 
   if (inventory.Shovel && harvestedCrops < 3) {
-    return "Harvest the Sunflowers";
+    return translate("pete.teaser.three");
   }
 
   const soldCrops = getKeys(CROPS()).reduce(
@@ -60,7 +60,7 @@ const hint = (state: MachineState) => {
   );
 
   if (inventory.Sunflower && soldCrops < 3) {
-    return "Sell the Sunflowers";
+    return translate("pete.teaser.four");
   }
 
   const boughtCrops = getKeys(CROPS()).reduce(
@@ -69,7 +69,7 @@ const hint = (state: MachineState) => {
   );
 
   if (soldCrops > 0 && boughtCrops === 0) {
-    return "Buy Seeds";
+    return translate("pete.teaser.five");
   }
 
   const plantedCrops = getKeys(CROPS()).reduce(
@@ -78,7 +78,7 @@ const hint = (state: MachineState) => {
   );
 
   if (inventory["Sunflower Seed"] && plantedCrops === 0) {
-    return "Plant Seeds";
+    return translate("pete.teaser.six");
   }
 
   if (
@@ -86,11 +86,11 @@ const hint = (state: MachineState) => {
     !inventory["Sunflower Seed"]?.gt(0) &&
     !inventory["Basic Scarecrow"]
   ) {
-    return "Craft a Scarecrow";
+    return translate("pete.teaser.seven");
   }
 
   if (inventory["Basic Scarecrow"] && level === 1) {
-    return "Cook food and level up";
+    return translate("pete.teaser.eight");
   }
 
   return null;

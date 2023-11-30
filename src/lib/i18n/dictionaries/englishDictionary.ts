@@ -437,6 +437,13 @@ const guideTerms: Record<GuideTerms, string> = {
   "seasons.description.two":
     "The availability of seasonal items at the Goblin Blacksmith adds another layer of excitement. Players must gather the required resources and seasonal tickets to craft these limited-supply items, creating a sense of competition and urgency. Planning ahead and strategizing become crucial as players aim to secure their desired items before the supply runs out. Moreover, the option to swap seasonal tickets for SFL provides flexibility and allows players to make choices that align with their specific gameplay goals. With each season's unique offerings and the anticipation of surprise events, Sunflower Land keeps players engaged and entertained throughout the year, fostering a vibrant and ever-evolving farming experience.",
   "pete.teaser.one": "Chop the trees",
+  "pete.teaser.two": "Expand your land",
+  "pete.teaser.three": "Harvest the Sunflowers",
+  "pete.teaser.four": "Sell the Sunflowers",
+  "pete.teaser.five": "Buy Seeds",
+  "pete.teaser.six": "Plant Seeds",
+  "pete.teaser.seven": "Craft a Scarecrow",
+  "pete.teaser.eight": "Cook food and level up",
 };
 
 const conversations: Record<Conversations, string> = {
