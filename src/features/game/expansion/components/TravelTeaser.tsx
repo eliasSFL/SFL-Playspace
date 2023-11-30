@@ -19,6 +19,7 @@ import { useAppTranslation } from "lib/i18n/useAppTranslations";
 import speechBubble from "assets/ui/speech_border.png";
 import { getKeys } from "features/game/types/craftables";
 import { CROPS } from "features/game/types/crops";
+import { translate } from "lib/i18n/translate";
 
 const isNoob = (state: MachineState) =>
   getBumpkinLevel(state.context.state.bumpkin?.experience ?? 0) < 3;
@@ -37,7 +38,7 @@ const hint = (state: MachineState) => {
 
   const choppedTrees = activity?.["Tree Chopped"] ?? 0;
   if (choppedTrees < 3) {
-    return "Chop the trees";
+    return translate("pete.teaser.one");
   }
 
   if (inventory["Basic Land"]?.lte(3)) {

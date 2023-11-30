@@ -307,7 +307,8 @@ export type GuideTerms =
   | "fruit.description.two"
   | "fruit.description.three"
   | "seasons.description.one"
-  | "seasons.description.two";
+  | "seasons.description.two"
+  | "pete.teaser.one";
 
 export type Conversations =
   | "hank-intro.headline"
