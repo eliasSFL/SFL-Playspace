@@ -18,6 +18,7 @@ import {
   VALID_NUMBER,
 } from "features/island/hud/components/AddSFL";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 /**
  * If they have enough resources, default the bid to 5 tickets
@@ -152,7 +153,7 @@ export const DraftBid: React.FC<Props> = ({
               onBid(tickets);
             }}
           >
-            Confirm
+            {translate("confirm")}
           </Button>
         </div>
       </div>

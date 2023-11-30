@@ -43,6 +43,7 @@ import { Revealed } from "features/game/components/Revealed";
 import { Label } from "components/ui/Label";
 import { getSeasonChangeover } from "lib/utils/getSeasonWeek";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 // Bumpkins
 export const BEACH_BUMPKINS: NPCName[] = [
@@ -506,7 +507,9 @@ export const DeliveryOrders: React.FC<Props> = ({ selectedId, onSelect }) => {
                 </>
               )}
               {!canSkip && (
-                <Button onClick={() => setShowSkipDialog(false)}>Back</Button>
+                <Button onClick={() => setShowSkipDialog(false)}>
+                  {translate("back")}
+                </Button>
               )}
             </>
           )}

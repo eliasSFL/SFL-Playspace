@@ -7,6 +7,7 @@ import { wallet } from "lib/blockchain/wallet";
 import { signTransaction } from "../actions/createAccount";
 import { CharityAddress } from "./CreateFarm";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface PokoConfig {
   url: string;
@@ -140,6 +141,6 @@ export const BuyWithPoko: React.FC = () => {
       onSuccess={() => authService.send("CONTINUE")}
     />
   ) : (
-    <div className="h-32">{t("error.wentWrong")}</div>
+    <div className="h-32">{translate("error.wentWrong")}</div>
   );
 };

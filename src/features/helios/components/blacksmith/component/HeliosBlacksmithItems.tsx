@@ -22,6 +22,7 @@ import { getSeasonalTicket } from "features/game/types/seasons";
 import { Modal } from "react-bootstrap";
 import { CloseButtonPanel } from "features/game/components/CloseablePanel";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 function isNotReady(collectible: CraftableCollectible) {
   return (
@@ -117,7 +118,9 @@ export const HeliosBlacksmithItems: React.FC = () => {
           }}
           actionView={
             isAlreadyCrafted ? (
-              <p className="text-xxs text-center mb-1">Already crafted!</p>
+              <p className="text-xxs text-center mb-1">
+                {translate("alr.crafted")}
+              </p>
             ) : (
               <>
                 <Button

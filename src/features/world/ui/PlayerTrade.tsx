@@ -17,6 +17,7 @@ import { hasMaxItems } from "features/game/lib/processEvent";
 import { Label } from "components/ui/Label";
 import { getBumpkinLevel } from "features/game/lib/level";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   farmId: number;
@@ -65,7 +66,7 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
     return (
       <div className="relative">
         <Label type="info" className="absolute top-2 right-2">
-          Beta
+          {translate("beta")}
         </Label>
         <div className="p-1 flex flex-col items-center">
           <img src={lock} className="w-1/5 mx-auto my-2 img-highlight-heavy" />
@@ -174,7 +175,7 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
         >
           <div className="flex items-center">
             <img src={SUNNYSIDE.icons.confirm} className="h-4 mr-1" />
-            <span className="text-xs">Confirm</span>
+            <span className="text-xs">{translate("confirm")}</span>
           </div>
         </Button>
       );
@@ -199,7 +200,7 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
     <div>
       <div className="flex justify-between items-center mb-1">
         <p className="text-xs mb-1 ml-0.5">For sale:</p>
-        <Label type="info">Beta</Label>
+        <Label type="info">{t("beta")}</Label>
       </div>
       <OuterPanel>
         <div className="flex justify-between">

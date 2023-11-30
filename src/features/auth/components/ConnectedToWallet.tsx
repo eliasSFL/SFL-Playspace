@@ -5,6 +5,7 @@ import * as Auth from "features/auth/lib/Provider";
 import { Button } from "components/ui/Button";
 import { SUNNYSIDE } from "assets/sunnyside";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 export const ConnectedToWallet: React.FC = () => {
   const { authService } = useContext(Auth.Context);
@@ -16,11 +17,13 @@ export const ConnectedToWallet: React.FC = () => {
   return (
     <>
       <div className="flex flex-col items-center p-2">
-        <span>{t("connected")}!</span>
+        <span>{translate("connected")}!</span>
         <img src={SUNNYSIDE.npcs.idle} alt="Warning" className="w-8 m-2" />
-        <span className="text-sm mb-2 w-full">{t("transaction.t&c.one")}</span>
+        <span className="text-sm mb-2 w-full">
+          {translate("transaction.t&c.one")}
+        </span>
       </div>
-      <Button onClick={signIn}>{t("transaction.t&c.two")}</Button>
+      <Button onClick={signIn}>{translate("transaction.t&c.two")}</Button>
     </>
   );
 };

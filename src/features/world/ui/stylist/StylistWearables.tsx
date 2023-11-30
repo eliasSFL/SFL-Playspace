@@ -26,6 +26,7 @@ import { getSeasonalTicket } from "features/game/types/seasons";
 import { Modal } from "react-bootstrap";
 import { CloseButtonPanel } from "features/game/components/CloseablePanel";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 function isNotReady(name: BumpkinItem, state: GameState) {
   const wearable = STYLIST_WEARABLES(state)[name] as StylistWearable;
@@ -118,7 +119,7 @@ export const StylistWearables: React.FC<Props> = ({ wearables }) => {
     if (state.wardrobe[selected])
       return (
         <div className="flex justify-center items-center">
-          <span className="text-xs">Already bought!</span>
+          <span className="text-xs">{translate("alr.bought")}!</span>
           <img src={SUNNYSIDE.icons.confirm} className="h-4 ml-1" />
         </div>
       );

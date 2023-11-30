@@ -117,11 +117,13 @@ export const GoblinBlacksmithItems: React.FC<Props> = ({ onClose }) => {
 
     if (selectedItem.disabled)
       return (
-        <span className="text-xxs text-center my-1">{t("comingSoon")}</span>
+        <span className="text-xxs text-center my-1">{t("coming.soon")}</span>
       );
 
     if (inventory[selectedName] && !ALLOW_MULTIPLE_MINTS.includes(selectedName))
-      return <span className="text-xxs text-center my-1">{t("minted")}</span>;
+      return (
+        <span className="text-xxs text-center my-1">{t("alr.minted")}</span>
+      );
 
     return (
       <Button disabled={disabled} onClick={craft}>

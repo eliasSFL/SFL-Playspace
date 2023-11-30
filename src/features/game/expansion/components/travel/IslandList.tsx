@@ -27,6 +27,7 @@ import { ModalContext } from "features/game/components/modal/ModalProvider";
 import { GoblinState } from "features/game/lib/goblinMachine";
 import { Context } from "features/game/GameProvider";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Island {
   name: string;
@@ -127,8 +128,10 @@ const IslandListItem: React.FC<IslandProps> = ({
             </Label>
           )}
           {/* Coming soon */}
-          {comingSoon && <Label type="warning">Coming soon</Label>}
-          {beta && <Label type="info">Beta</Label>}
+          {comingSoon && (
+            <Label type="warning">{translate("comingSoon")}</Label>
+          )}
+          {beta && <Label type="info">{translate("beta")}</Label>}
           {passRequired && (
             <Label type="danger" icon={ITEM_DETAILS["Gold Pass"].image}>
               {t("pass.required")}

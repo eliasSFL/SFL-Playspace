@@ -18,6 +18,7 @@ import { Button } from "components/ui/Button";
 import { secondsToString } from "lib/utils/time";
 import { getSeasonalTicket } from "features/game/types/seasons";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   onClose: () => void;
@@ -81,7 +82,7 @@ export const Bert: React.FC<Props> = ({ onClose }) => {
       obsessionCompletedAt >= currentObsession.startDate &&
       obsessionCompletedAt <= currentObsession.endDate
     ) {
-      return <Label type="info">Already completed</Label>;
+      return <Label type="info">{translate("alr.completed")}</Label>;
     }
 
     return (

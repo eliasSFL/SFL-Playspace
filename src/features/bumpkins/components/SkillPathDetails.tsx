@@ -178,7 +178,7 @@ export const SkillPathDetails: React.FC<Props> = ({
               <span className="text-center mt-1 text-xxs sm:text-xs mb-1">
                 {BUMPKIN_SKILL_TREE[selectedSkill].boosts}
               </span>
-              {comingSoon && <p className="text-xs mt-1">{t("comingSoon")}</p>}
+              {comingSoon && <p className="text-xs mt-1">{t("coming.soon")}</p>}
 
               {!hasSelectedSkill && !readonly && !comingSoon && (
                 <>
@@ -202,7 +202,7 @@ export const SkillPathDetails: React.FC<Props> = ({
                     }
                     className="text-xxs sm:text-xs mt-1 whitespace-nowrap"
                   >
-                    {t("claimSkill")}
+                    {t("claim.skill")}
                   </Button>
                 </>
               )}
