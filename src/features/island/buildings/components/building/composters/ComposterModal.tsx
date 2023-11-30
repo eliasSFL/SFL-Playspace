@@ -206,8 +206,6 @@ export const ComposterModal: React.FC<Props> = ({
       );
     }
 
-    const canBoost = hasFeatureAccess(state, "COMPOST_BOOST");
-
     if (composting) {
       return (
         <>
@@ -235,7 +233,7 @@ export const ComposterModal: React.FC<Props> = ({
               </div>
             </div>
           </div>
-          {canBoost && !boost && (
+          {!boost && (
             <OuterPanel className="p-1">
               <div className="flex justify-between mb-1">
                 <Label type="info" icon={SUNNYSIDE.icons.stopwatch}>
@@ -264,7 +262,7 @@ export const ComposterModal: React.FC<Props> = ({
               </Button>
             </OuterPanel>
           )}
-          {canBoost && boost && (
+          {boost && (
             <OuterPanel className="p-1">
               <div className="flex justify-between">
                 <Label
