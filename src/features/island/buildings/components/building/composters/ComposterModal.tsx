@@ -35,7 +35,6 @@ import { getKeys } from "features/game/types/craftables";
 import { RequirementLabel } from "components/ui/RequirementsLabel";
 import { SquareIcon } from "components/ui/SquareIcon";
 import { OuterPanel } from "components/ui/Panel";
-import { hasFeatureAccess } from "lib/flags";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 const WORM_OUTPUT: Record<ComposterName, string> = {
