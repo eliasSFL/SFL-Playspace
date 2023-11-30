@@ -46,6 +46,8 @@ const generalTerms: Record<GeneralTerms, string> = {
   "alr.completed": "Already Completed",
   "alr.crafted": "Already Crafted!",
   "alr.minted": "Already minted!",
+  "available.all.year": "Available all year round",
+  "beach.bounty": "Beach Bounty",
   "card.cash": "Card/Cash",
   "claim.skill": "Claim skill",
   "coming.soon": "Coming soon",
@@ -67,6 +69,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   "providing.liquidity": "Providing Liquidity",
   "read.more": "Read more",
   "reward.discovered": "Reward Discovered",
+  "seasonal.treasure": "Seasonal Treasure",
   "select.resource": "Select your resource:",
   "sell.all": "Sell All",
   "sell.one": "Sell 1",
@@ -96,6 +99,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   claim: "Claim",
   clear: "Clear",
   close: "Close",
+  common: "Common",
   completed: "Completed",
   confirm: "Confirm",
   congrats: "Congratulations!",
@@ -108,6 +112,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   crafting: "Crafting",
   crops: "Crops",
   date: "Date",
+  decoration: "Decoration",
   deliveries: "Deliveries",
   delivery: "Delivery",
   details: "Details",
@@ -145,6 +150,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   print: "Print",
   purchasing: "Purchasing",
   rank: "Rank",
+  rare: "Rare",
   refresh: "Refresh",
   refreshing: "Refreshing",
   reqSkillPts: "Required Skill Points",
@@ -169,6 +175,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   trades: "Trades",
   trading: "Trading",
   travel: "Travel",
+  uncommon: "Uncommon",
   uhOh: "Uh oh!",
   unlocking: "Unlocking",
   verify: "Verify",
@@ -555,6 +562,7 @@ const errorTerms: Record<ErrorTerms, string> = {
   "error.wentWrong": "Something went wrong!",
   "error.noBumpkin": "Bumpkin is not defined",
   "error.clock.not.synced": "Clock not in sync",
+  "error.polygon.cant.connect": "Can't connect to Polygon",
 };
 
 const warningTerms: Record<WarningTerms, string> = {
@@ -789,6 +797,8 @@ const statements: Record<Statements, string> = {
   "statements.inStock": "in stock",
   "statements.soldOutWearables": "View sold out wearables",
   "statements.craft.composter": "Craft at Composter",
+  "statements.join.discord":
+    "Make sure you have joined the Sunflower Land Discord, go to the #rules channel and be assigned the 'Bumpkin' role.",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {

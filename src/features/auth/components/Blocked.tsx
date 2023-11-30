@@ -29,7 +29,7 @@ export const Blocked: React.FC = () => {
         {`You don't have access to the game yet.`}
       </p>
       <p className="text-center mb-4 text-xs">
-        Make sure you have joined the{" "}
+        {translate("statements.join.discord")}
         <a
           className="underline hover:text-white"
           href="https://discord.gg/sunflowerland"
@@ -38,7 +38,6 @@ export const Blocked: React.FC = () => {
         >
           {translate("sflDiscord")}
         </a>
-        {`, go to the #verify channel and have the "farmer" role.`}
       </p>
       <Button onClick={tryAgain} className="overflow-hidden mb-2">
         <span>{translate("try.again")}</span>

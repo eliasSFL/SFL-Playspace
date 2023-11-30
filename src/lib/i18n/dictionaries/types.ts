@@ -7,10 +7,12 @@ export type GeneralTerms =
   | "alr.completed"
   | "alr.crafted"
   | "alr.minted"
+  | "available.all.year"
   | "auctions"
   | "back"
   | "bait"
   | "basket"
+  | "beach.bounty"
   | "beta"
   | "bounty"
   | "build"
@@ -24,6 +26,7 @@ export type GeneralTerms =
   | "clear"
   | "close"
   | "coming.soon"
+  | "common"
   | "completed"
   | "confirm"
   | "congrats"
@@ -36,6 +39,7 @@ export type GeneralTerms =
   | "crafting"
   | "crops"
   | "date"
+  | "decoration"
   | "deliveries"
   | "delivery"
   | "details"
@@ -89,6 +93,7 @@ export type GeneralTerms =
   | "providing.liquidity"
   | "purchasing"
   | "rank"
+  | "rare"
   | "read.more"
   | "refresh"
   | "refreshing"
@@ -101,6 +106,7 @@ export type GeneralTerms =
   | "reward.discovered"
   | "save"
   | "saving"
+  | "seasonal.treasure"
   | "secs"
   | "seeds"
   | "select.resource"
@@ -127,6 +133,7 @@ export type GeneralTerms =
   | "travel"
   | "try.again"
   | "uhOh"
+  | "uncommon"
   | "unlock.land"
   | "unlocking"
   | "verify"
@@ -390,7 +397,8 @@ export type ErrorTerms =
   | "error.diagnostic.info"
   | "error.Web3NotFound"
   | "error.noBumpkin"
-  | "error.clock.not.synced";
+  | "error.clock.not.synced"
+  | "error.polygon.cant.connect";
 
 export type WarningTerms =
   | "warning.noAxe"
@@ -555,7 +563,8 @@ export type Statements =
   | "statements.water.well.needed.two"
   | "statements.soldOut"
   | "statements.inStock"
-  | "statements.soldOutWearables";
+  | "statements.soldOutWearables"
+  | "statements.join.discord";
 
 export type LandscapeTerms =
   | "landscape.intro.one"
