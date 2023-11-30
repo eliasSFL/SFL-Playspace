@@ -329,7 +329,7 @@ export const BlockBucksModal: React.FC<Props> = ({
             target="_blank"
             rel="noreferrer"
           >
-            {t("readMore")}
+            {t("read.more")}
           </a>
         </div>
       </>

@@ -113,7 +113,7 @@ export const BUMPKIN_SKILL_TREE: Record<BumpkinSkillName, BumpkinSkill> = {
       points: 1,
       skill: "Master Farmer",
     },
-    boosts: translate("comingSoon"),
+    boosts: translate("coming.soon"),
     image: CROP_LIFECYCLE.Radish.crop,
     disabled: true,
   },

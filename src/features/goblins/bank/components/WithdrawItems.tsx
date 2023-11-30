@@ -222,7 +222,7 @@ export const WithdrawItems: React.FC<Props> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            {t("readMore")}
+            {t("read.more")}
           </a>
           .
         </span>

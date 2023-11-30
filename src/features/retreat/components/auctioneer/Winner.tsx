@@ -42,7 +42,7 @@ export const Winner: React.FC<Props> = ({ onMint, bid, farmId, results }) => {
         target="_blank"
         rel="noreferrer"
       >
-        {t("readMore")}
+        {t("read.more")}
       </a>
 
       <Button className="mt-2" onClick={() => onMint(bid.auctionId)}>

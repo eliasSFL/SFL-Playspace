@@ -104,7 +104,7 @@ export const GenieLamp: React.FC<Props> = ({ id }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {t("readMore")}
+                  {t("read.more")}
                 </a>
               </span>
             )}

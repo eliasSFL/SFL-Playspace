@@ -41,7 +41,7 @@ export const Blocked: React.FC = () => {
         {`, go to the #verify channel and have the "farmer" role.`}
       </p>
       <Button onClick={tryAgain} className="overflow-hidden mb-2">
-        <span>{translate("tryAgain")}</span>
+        <span>{translate("try.again")}</span>
       </Button>
     </div>
   );

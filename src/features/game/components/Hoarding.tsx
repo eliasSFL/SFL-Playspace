@@ -66,7 +66,7 @@ export const Hoarding: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {t("readMore")}
+            {t("read.more")}
           </a>
         </div>
       </div>

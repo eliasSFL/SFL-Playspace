@@ -145,7 +145,7 @@ export const AudioMenu: React.FC<Props> = ({
 
           {/* Sound effects controls */}
           <p className="mb-2">
-            {t("sound")}
+            {t("sound.effects")}
             {audioMuted ? "Off" : "On"}
           </p>
           <img

@@ -102,7 +102,7 @@ export const WithdrawBuds: React.FC<Props> = ({ onWithdraw }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {t("readMore")}
+            {t("read.more")}
           </a>
           .
         </span>

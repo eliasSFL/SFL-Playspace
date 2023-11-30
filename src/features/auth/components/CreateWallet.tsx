@@ -39,7 +39,7 @@ export const CreateWallet: React.FC = () => {
           authService.send("CONTINUE");
         }}
       >
-        {t("letsGo")}
+        {t("lets.go")}
       </Button>
     </>
   );

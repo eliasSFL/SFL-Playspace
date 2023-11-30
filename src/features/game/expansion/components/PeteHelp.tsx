@@ -43,7 +43,7 @@ export const PeteHelp: React.FC = () => {
           navigate(`/world/plaza`);
         }}
       >
-        {t("letsGo")}
+        {t("lets.go")}
       </Button>
     </div>
   );

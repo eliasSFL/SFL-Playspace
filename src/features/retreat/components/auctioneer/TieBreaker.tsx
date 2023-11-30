@@ -61,7 +61,7 @@ export const TieBreaker: React.FC<Props> = ({
         target="_blank"
         rel="noreferrer"
       >
-        {t("readMore")}
+        {t("read.more")}
       </a>
       <Button className="mt-2" onClick={refund}>
         Refund resources

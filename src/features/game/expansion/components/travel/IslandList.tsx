@@ -129,7 +129,7 @@ const IslandListItem: React.FC<IslandProps> = ({
           )}
           {/* Coming soon */}
           {comingSoon && (
-            <Label type="warning">{translate("comingSoon")}</Label>
+            <Label type="warning">{translate("coming.soon")}</Label>
           )}
           {beta && <Label type="info">{translate("beta")}</Label>}
           {passRequired && (

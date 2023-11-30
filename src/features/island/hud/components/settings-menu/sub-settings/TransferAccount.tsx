@@ -129,7 +129,7 @@ export const TransferAccount: React.FC<Props> = ({ isOpen, onClose }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t("readMore")}
+          {t("read.more")}
         </a>
         <img
           src={SUNNYSIDE.icons.close}

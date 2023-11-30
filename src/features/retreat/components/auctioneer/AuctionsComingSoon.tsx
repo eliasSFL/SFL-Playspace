@@ -15,7 +15,7 @@ export const AuctionsComingSoon: React.FC = () => {
         rel="noopener noreferrer"
         className="text-xs underline"
       >
-        {t("readMore")}
+        {t("read.more")}
       </a>
     </div>
   );

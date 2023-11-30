@@ -50,7 +50,7 @@ export const DeliveryHelp: React.FC = () => {
         rel="noopener noreferrer"
         className="underline text-xxs ml-[10px] pb-1 pt-0.5 hover:text-blue-500"
       >
-        {t("readMore")}
+        {t("read.more")}
       </a>
     </div>
   );

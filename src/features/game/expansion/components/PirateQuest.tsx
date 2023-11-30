@@ -27,7 +27,7 @@ const ModalDescription = () => {
         target="_blank"
         rel="noreferrer"
       >
-        {t("readMore")}
+        {t("read.more")}
       </a>
     </>
   );
