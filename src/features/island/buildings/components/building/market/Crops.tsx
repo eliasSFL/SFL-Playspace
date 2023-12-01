@@ -261,10 +261,8 @@ export const Crops: React.FC<{ cropShortage: boolean }> = ({
         <CloseButtonPanel className="sm:w-4/5 m-auto">
           <div className="flex flex-col p-2">
             <span className="text-sm text-center">
-              {t("confirmation.sellCrops")} <br className="hidden sm:block" />
-              {`${t("sell").toLowerCase()} ${cropAmount} ${selected.name} ${t(
-                "for"
-              )} `}
+              {`Are you sure you want to`} <br className="hidden sm:block" />
+              {`sell ${cropAmount} ${selected.name} ${t("for")} `}
               <br className="hidden sm:block" />
               {`${setPrecision(
                 displaySellPrice(selected).mul(cropAmount)
