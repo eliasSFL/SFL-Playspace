@@ -23,6 +23,7 @@ import { PokoOnRamp } from "../PokoOnRamp";
 import { createPortal } from "react-dom";
 import { DEV_TimeMachine } from "./DEV_TimeMachine";
 import { PlazaSettings } from "./PlazaSettingsModal";
+import { DEV_HoardingCheck } from "components/dev/DEV_HoardingCheck";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
 
 enum MENU_LEVELS {
@@ -139,6 +140,9 @@ export const SettingsMenu: React.FC<Props> = ({ show, onClose, isFarming }) => {
                     </li>
                     <li className="p-1">
                       <DEV_GenerateLandButton />
+                    </li>
+                    <li className="p-1">
+                      <DEV_HoardingCheck />
                     </li>
                   </>
                 )}
