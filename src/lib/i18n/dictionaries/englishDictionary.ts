@@ -66,6 +66,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   "open.gift": "Open Gift",
   "pass.required": "Pass Required",
   "placing.bid": "Placing bid",
+  "promo.code": "Promo Code",
   "providing.liquidity": "Providing Liquidity",
   "read.more": "Read more",
   "reward.discovered": "Reward Discovered",
@@ -74,6 +75,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   "sell.all": "Sell All",
   "sell.one": "Sell 1",
   "sell.ten": "Sell 10",
+  "session.expired": "Session expired!",
   "skip.order": "Skip Order",
   "sound.effects": "Sound Effects: ",
   "support.team": "Support Team",
@@ -531,6 +533,7 @@ const rewardTerms: Record<RewardTerms, string> = {
   "reward.found": "You found",
   "reward.spendWisely": "Spend it wisely.",
   "reward.wearable": "A wearable for your Bumpkin",
+  "reward.promo.code": "Enter your promo code:",
 };
 
 const errorTerms: Record<ErrorTerms, string> = {
@@ -799,6 +802,8 @@ const statements: Record<Statements, string> = {
   "statements.craft.composter": "Craft at Composter",
   "statements.join.discord":
     "Make sure you have joined the Sunflower Land Discord, go to the #rules channel and be assigned the 'Bumpkin' role.",
+  "statements.session.expired":
+    "It looks like your session has expired. Please refresh the page to continue playing.",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {

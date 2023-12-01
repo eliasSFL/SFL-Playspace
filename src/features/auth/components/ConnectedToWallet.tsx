@@ -4,12 +4,10 @@ import * as Auth from "features/auth/lib/Provider";
 
 import { Button } from "components/ui/Button";
 import { SUNNYSIDE } from "assets/sunnyside";
-import { useAppTranslation } from "lib/i18n/useAppTranslations";
 import { translate } from "lib/i18n/translate";
 
 export const ConnectedToWallet: React.FC = () => {
   const { authService } = useContext(Auth.Context);
-  const { t } = useAppTranslation();
   const signIn = () => {
     authService.send("SIGN");
   };

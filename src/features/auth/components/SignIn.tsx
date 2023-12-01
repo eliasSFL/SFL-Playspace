@@ -306,7 +306,7 @@ export const SignUp = () => {
     return (
       <>
         <div className="p-2">
-          <p className="text-xs mb-1">Enter your promo code:</p>
+          <p className="text-xs mb-1">{t("reward.promo.code")}</p>
           <input
             style={{
               boxShadow: "#b96e50 0px 1px 1px 1px inset",
@@ -349,7 +349,7 @@ export const SignUp = () => {
       {promoCode && (
         <div className="absolute top-3 right-5">
           <Label type="formula" icon={SUNNYSIDE.icons.search}>
-            {`Promo Code: ${getPromoCode()}`}
+            {t("promo.code")}: {`${getPromoCode()}`}
           </Label>
         </div>
       )}

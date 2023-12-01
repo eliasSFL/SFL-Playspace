@@ -90,6 +90,7 @@ export type GeneralTerms =
   | "pass.required"
   | "placing.bid"
   | "print"
+  | "promo.code"
   | "providing.liquidity"
   | "purchasing"
   | "rank"
@@ -114,6 +115,7 @@ export type GeneralTerms =
   | "sell.one"
   | "sell.ten"
   | "sell"
+  | "session.expired"
   | "shopping"
   | "skillPts"
   | "skills"
@@ -375,7 +377,8 @@ export type RewardTerms =
   | "reward.streakBonus"
   | "reward.found"
   | "reward.spendWisely"
-  | "reward.wearable";
+  | "reward.wearable"
+  | "reward.promo.code";
 
 export type ErrorTerms =
   | "error.congestion.one"
@@ -564,7 +567,8 @@ export type Statements =
   | "statements.soldOut"
   | "statements.inStock"
   | "statements.soldOutWearables"
-  | "statements.join.discord";
+  | "statements.join.discord"
+  | "statements.session.expired";
 
 export type LandscapeTerms =
   | "landscape.intro.one"
