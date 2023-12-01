@@ -1032,6 +1032,18 @@ export type IslandName =
   | "island.helios"
   | "island.goblin.retreat";
 
+export type DiscordBonus =
+  | "discord.bonus.niceHat"
+  | "discord.bonus.attentionEvents"
+  | "discord.bonus.bonusReward"
+  | "discord.bonus.enjoyCommunity"
+  | "discord.bonus.claimGift"
+  | "discord.bonus.title"
+  | "discord.bonus.communityInfo"
+  | "discord.bonus.farmingTips"
+  | "discord.bonus.freeGift"
+  | "discord.bonus.connect";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1105,6 +1117,7 @@ export type TranslationKeys =
   | Conversations
   | CropFruitDescriptions
   | DecorationDescriptions
+  | DiscordBonus
   | ErrorTerms
   | FishDescriptions
   | FishingQuests

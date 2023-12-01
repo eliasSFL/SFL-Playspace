@@ -5,6 +5,7 @@ import {
   BumpkinTrade,
   ConfirmationTerms,
   Conversations,
+  DiscordBonus,
   ErrorTerms,
   GameTerms,
   GeneralTerms,
@@ -1429,6 +1430,24 @@ const levelUpMessages: Record<LevelUpMessages, string> = {
   "levelUp.60": "Level 60, you're a true farming superstar!",
 };
 
+const discordBonus: Record<DiscordBonus, string> = {
+  "discord.bonus.niceHat": "Wow, nice hat!",
+  "discord.bonus.attentionEvents":
+    "Don't forget to pay attention to special events and giveaways on Discord so you don't miss out.",
+  "discord.bonus.bonusReward": "Bonus Reward",
+  "discord.bonus.enjoyCommunity":
+    "We hope you are enjoying being a part of our community!",
+  "discord.bonus.claimGift": "Claim Gift",
+  "discord.bonus.title": "Reward Title",
+  "discord.bonus.communityInfo":
+    "Did you know there are over 100,000 players in our vibrant Discord community?",
+  "discord.bonus.farmingTips":
+    "If you are looking for farming tips & tricks, it is the place to be.",
+  "discord.bonus.freeGift":
+    "The best part...everyone who joins gets a free gift!",
+  "discord.bonus.connect": "Connect to Discord",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -1491,6 +1510,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...conversations,
   ...cropFruitDescriptions,
   ...decorationDescriptions,
+  ...discordBonus,
   ...errorTerms,
   ...fishDescriptions,
   ...fishingQuests,

@@ -5,6 +5,7 @@ import {
   BumpkinTrade,
   ConfirmationTerms,
   Conversations,
+  DiscordBonus,
   ErrorTerms,
   GameTerms,
   GeneralTerms,
@@ -1513,6 +1514,24 @@ const levelUpMessages: Record<LevelUpMessages, string> = {
     "Niveau 60, vous êtes maintenant une véritable superstar de l'agriculture !",
 };
 
+const discordBonus: Record<DiscordBonus, string> = {
+  "discord.bonus.niceHat": "Wow, joli chapeau !",
+  "discord.bonus.attentionEvents":
+    "N'oubliez pas de prêter attention aux événements spéciaux et aux cadeaux sur Discord pour ne rien manquer.",
+  "discord.bonus.bonusReward": "Récompense bonus",
+  "discord.bonus.enjoyCommunity":
+    "Nous espérons que vous appréciez faire partie de notre communauté !",
+  "discord.bonus.claimGift": "Réclamer le cadeau",
+  "discord.bonus.title": "Titre de la récompense",
+  "discord.bonus.communityInfo":
+    "Saviez-vous qu'il y a plus de 100 000 joueurs dans notre communauté Discord vibrante ?",
+  "discord.bonus.farmingTips":
+    "Si vous cherchez des astuces et conseils pour l'agriculture, c'est l'endroit idéal.",
+  "discord.bonus.freeGift":
+    "Le meilleur... tout le monde qui rejoint reçoit un cadeau gratuit !",
+  "discord.bonus.connect": "Se connecter à Discord",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Les cultures produisent 5% de plus",
@@ -1581,6 +1600,7 @@ export const FRENCH_TERMS: Record<TranslationKeys, string> = {
   ...conversations,
   ...cropFruitDescriptions,
   ...decorationDescriptions,
+  ...discordBonus,
   ...errorTerms,
   ...fishDescriptions,
   ...fishingQuests,
