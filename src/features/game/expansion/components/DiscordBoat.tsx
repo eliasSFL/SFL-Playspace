@@ -101,7 +101,7 @@ export const DiscordBonus: React.FC<{ onClose: () => void }> = ({
             {t("discord.bonus.bonusReward")}
           </Label>
           <p className="text-xs mb-2">{t("discord.bonus.enjoyCommunity")}</p>
-          <p className="text-xs mb-2">{t("discord.bonus.attentionEvents")}</p>
+          <p className="text-xs mb-2">{t("discord.bonus.payAttention")}</p>
         </div>
         <Button onClick={acknowledge}>{t("discord.bonus.claimGift")}</Button>
       </>

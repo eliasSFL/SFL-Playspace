@@ -1435,10 +1435,11 @@ const discordBonus: Record<DiscordBonus, string> = {
   "discord.bonus.attentionEvents":
     "Don't forget to pay attention to special events and giveaways on Discord so you don't miss out.",
   "discord.bonus.bonusReward": "Bonus Reward",
+  "discord.bonus.payAttention":
+    "Pay attention to special events and giveaways on Discord so you don't miss out.",
   "discord.bonus.enjoyCommunity":
     "We hope you are enjoying being a part of our community!",
   "discord.bonus.claimGift": "Claim Gift",
-  "discord.bonus.title": "Reward Title",
   "discord.bonus.communityInfo":
     "Did you know there are over 100,000 players in our vibrant Discord community?",
   "discord.bonus.farmingTips":
