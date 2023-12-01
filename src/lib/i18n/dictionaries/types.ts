@@ -1044,6 +1044,39 @@ export type DiscordBonus =
   | "discord.bonus.freeGift"
   | "discord.bonus.connect";
 
+//How To Play
+export type HowToFarm =
+  // Page 1
+  | "howToFarm.title"
+  | "howToFarm.stepOne"
+  | "howToFarm.stepTwo"
+  | "howToFarm.stepThree"
+  | "howToFarm.stepFour"
+  | "howToFarm.stepFive";
+
+export type HowToUpgrade =
+  // Page 2
+  | "howToUpgrade.title"
+  | "howToUpgrade.stepOne"
+  | "howToUpgrade.stepTwo"
+  | "howToUpgrade.stepThree"
+  | "howToUpgrade.stepFour";
+
+export type HowToSync =
+  //Page 3
+  | "howToSync.title"
+  | "howToSync.description"
+  | "howToSync.stepOne"
+  | "howToSync.stepTwo";
+
+export type LetsGo =
+  //Page 4
+  | "letsGo.title"
+  | "letsGo.description"
+  | "letsGo.readMore"
+  | "letsGo.officialDocs"
+  | "letsGo.officialDocsLink";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1127,10 +1160,14 @@ export type TranslationKeys =
   | GeneralTerms
   | GuideTerms
   | HenHouseTerms
+  | HowToUpgrade
+  | HowToFarm
+  | HowToSync
   | Intro
   | IslandName
   | LandscapeTerms
   | LevelUpMessages
+  | LetsGo
   | Onboarding
   | Questions
   | RetreatTerms

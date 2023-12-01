@@ -11,6 +11,9 @@ import {
   GeneralTerms,
   GuideTerms,
   HenHouseTerms,
+  HowToUpgrade,
+  HowToFarm,
+  HowToSync,
   Intro,
   Onboarding,
   Questions,
@@ -28,6 +31,7 @@ import {
   IslandName,
   LevelUpMessages,
   LandscapeTerms,
+  LetsGo,
   BumpkinSkillsDescription,
   BoostDescriptions,
   CropFruitDescriptions,
@@ -1449,6 +1453,45 @@ const discordBonus: Record<DiscordBonus, string> = {
   "discord.bonus.connect": "Connect to Discord",
 };
 
+// How To Play
+const howToFarm: Record<HowToFarm, string> = {
+  // Page 1
+  "howToFarm.title": "How to Farm?",
+  "howToFarm.stepOne": "1.Harvest crops when they are ready",
+  "howToFarm.stepTwo": "2.Visit the town & click on the shop",
+  "howToFarm.stepThree": "3.Sell crops at the shop for SFL",
+  "howToFarm.stepFour": "4.Buy seeds using your SFL",
+  "howToFarm.stepFive": "5. Plant seeds and wait",
+};
+
+const howToUpgrade: Record<HowToUpgrade, string> = {
+  // Page 2
+  "howToUpgrade.title": "How to upgrade?",
+  "howToUpgrade.stepOne": "1. Talk to a Goblin blocking the fields",
+  "howToUpgrade.stepTwo": "2.Visit the town & click on the kitchen",
+  "howToUpgrade.stepThree": "3. Craft the food that the goblin wants",
+  "howToUpgrade.stepFour": "4. Voila! Enjoy your new fields and crops",
+};
+
+const howToSync: Record<HowToSync, string> = {
+  // Page 3
+  "howToSync.title": "How to sync?",
+  "howToSync.description":
+    "All of your progress is saved on our game server. You will need to sync on chain when you want to move your tokens, NFTs and resources onto Polygon.",
+  "howToSync.stepOne": "1. Open the menu",
+  "howToSync.stepTwo": `2. Click "Sync on chain"`,
+};
+
+const letsGo: Record<LetsGo, string> = {
+  //Page 4
+  "letsGo.title": "Time to play!",
+  "letsGo.description":
+    "Thanks for playing beta! We are still working on the game and appreciate your support during the early stages!",
+  "letsGo.readMore": "You can read more about the game in the ",
+  "letsGo.officialDocs": "official docs",
+  "letsGo.officialDocsLink": "https://docs.sunflower-land.com",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -1521,9 +1564,13 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...generalTerms,
   ...guideTerms,
   ...henHouseTerms,
+  ...howToUpgrade,
+  ...howToFarm,
+  ...howToSync,
   ...introTerms,
   ...islandName,
   ...landscapeTerms,
+  ...letsGo,
   ...levelUpMessages,
   ...onboarding,
   ...questions,

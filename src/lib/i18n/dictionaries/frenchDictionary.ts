@@ -11,6 +11,9 @@ import {
   GeneralTerms,
   GuideTerms,
   HenHouseTerms,
+  HowToUpgrade,
+  HowToFarm,
+  HowToSync,
   Intro,
   Onboarding,
   Questions,
@@ -27,6 +30,7 @@ import {
   FishingQuests,
   IslandName,
   LevelUpMessages,
+  LetsGo,
   LandscapeTerms,
   BumpkinSkillsDescription,
   BoostDescriptions,
@@ -1532,6 +1536,45 @@ const discordBonus: Record<DiscordBonus, string> = {
     "Le meilleur... tout le monde qui rejoint reçoit un cadeau gratuit !",
   "discord.bonus.connect": "Se connecter à Discord",
 };
+// How To Play
+const howToFarm: Record<HowToFarm, string> = {
+  // Page 1
+  "howToFarm.title": "Comment cultiver ?",
+  "howToFarm.stepOne": "1. Récoltez les cultures lorsqu'elles sont prêtes",
+  "howToFarm.stepTwo": "2. Visitez la ville et cliquez sur le magasin",
+  "howToFarm.stepThree": "3. Vendez les cultures au magasin contre des SFL",
+  "howToFarm.stepFour": "4. Achetez des graines avec vos SFL",
+  "howToFarm.stepFive": "5. Plantez les graines et attendez",
+};
+
+const howToUpgrade: Record<HowToUpgrade, string> = {
+  // Page 2
+  "howToUpgrade.title": "Comment améliorer ?",
+  "howToUpgrade.stepOne": "1. Parlez à un gobelin bloquant les champs",
+  "howToUpgrade.stepTwo": "2. Visitez la ville et cliquez sur la cuisine",
+  "howToUpgrade.stepThree": "3. Préparez la nourriture que le gobelin veut",
+  "howToUpgrade.stepFour":
+    "4. Voilà ! Profitez de vos nouveaux champs et récoltes",
+};
+
+const howToSync: Record<HowToSync, string> = {
+  // Page 3
+  "howToSync.title": "Comment synchroniser ?",
+  "howToSync.description":
+    "Tous vos progrès sont sauvegardés sur notre serveur de jeu. Vous devrez synchroniser sur la chaîne lorsque vous voudrez déplacer vos jetons, NFTs et ressources sur Polygon.",
+  "howToSync.stepOne": "1. Ouvrez le menu",
+  "howToSync.stepTwo": `2. Cliquez sur "Synchroniser sur la chaîne"`,
+};
+
+const letsGo: Record<LetsGo, string> = {
+  //Page 4
+  "letsGo.title": "C'est l'heure de jouer !",
+  "letsGo.description":
+    "Merci de jouer à la version bêta ! Nous travaillons encore sur le jeu et apprécions votre soutien durant ces premières étapes !",
+  "letsGo.readMore": "Vous pouvez en savoir plus sur le jeu dans les ",
+  "letsGo.officialDocs": "documents officiels",
+  "letsGo.officialDocsLink": "https://docs.sunflower-land.com",
+};
 
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
@@ -1609,11 +1652,15 @@ export const FRENCH_TERMS: Record<TranslationKeys, string> = {
   ...gameDescriptions,
   ...gameTerms,
   ...generalTerms,
+  ...howToUpgrade,
+  ...howToFarm,
+  ...howToSync,
   ...guideTerms,
   ...henHouseTerms,
   ...introTerms,
   ...islandName,
   ...landscapeTerms,
+  ...letsGo,
   ...levelUpMessages,
   ...onboarding,
   ...questions,
