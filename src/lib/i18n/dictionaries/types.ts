@@ -593,6 +593,7 @@ export type BumpkinPartRequirements =
   | "part.background";
 
 export type RetreatTerms =
+  | "retreatTerms.introTravel.zero"
   | "retreatTerms.introTravel.one"
   | "retreatTerms.introTravel.two"
   | "retreatTerms.introTravel.three"
@@ -1077,6 +1078,148 @@ export type LetsGo =
   | "letsGo.officialDocs"
   | "letsGo.officialDocsLink";
 
+export type SettingsMenu =
+  | "settingsMenu.timeMachine"
+  | "settingsMenu.storeOnChain"
+  | "settingsMenu.howToPlay"
+  | "settingsMenu.community"
+  | "settingsMenu.swapMaticForSFL"
+  | "settingsMenu.plazaSettings"
+  | "settingsMenu.settings"
+  | "settingsMenu.communityGarden"
+  | "settingsMenu.share";
+
+// Delivery NPC
+export type GOBLIN_MESSAGES =
+  | "goblinMessages.msg1"
+  | "goblinMessages.msg2"
+  | "goblinMessages.msg3"
+  | "goblinMessages.msg4"
+  | "goblinMessages.msg5"
+  | "goblinMessages.msg6"
+  | "goblinMessages.msg7"
+  | "goblinMessages.msg8"
+  | "goblinMessages.msg9"
+  | "goblinMessages.msg10";
+
+export type NPC_MESSAGE =
+  // Betty
+  | "npcMessages.betty.msg1"
+  | "npcMessages.betty.msg2"
+  | "npcMessages.betty.msg3"
+  | "npcMessages.betty.msg4"
+  | "npcMessages.betty.msg5"
+  | "npcMessages.betty.msg6"
+  | "npcMessages.betty.msg7"
+  // Blacksmith
+  | "npcMessages.blacksmith.msg1"
+  | "npcMessages.blacksmith.msg2"
+  | "npcMessages.blacksmith.msg3"
+  | "npcMessages.blacksmith.msg4"
+  | "npcMessages.blacksmith.msg5"
+  | "npcMessages.blacksmith.msg6"
+  | "npcMessages.blacksmith.msg7"
+  // pumpkin' pete
+  | "npcMessages.pumpkinpete.msg1"
+  | "npcMessages.pumpkinpete.msg2"
+  | "npcMessages.pumpkinpete.msg3"
+  | "npcMessages.pumpkinpete.msg4"
+  | "npcMessages.pumpkinpete.msg5"
+  | "npcMessages.pumpkinpete.msg6"
+  | "npcMessages.pumpkinpete.msg7"
+  // Cornwell
+  | "npcMessages.cornwell.msg1"
+  | "npcMessages.cornwell.msg2"
+  | "npcMessages.cornwell.msg3"
+  | "npcMessages.cornwell.msg4"
+  | "npcMessages.cornwell.msg5"
+  | "npcMessages.cornwell.msg6"
+  | "npcMessages.cornwell.msg7"
+  // Raven
+  | "npcMessages.raven.msg1"
+  | "npcMessages.raven.msg2"
+  | "npcMessages.raven.msg3"
+  | "npcMessages.raven.msg4"
+  | "npcMessages.raven.msg5"
+  | "npcMessages.raven.msg6"
+  | "npcMessages.raven.msg7"
+  // Bert
+  | "npcMessages.bert.msg1"
+  | "npcMessages.bert.msg2"
+  | "npcMessages.bert.msg3"
+  | "npcMessages.bert.msg4"
+  | "npcMessages.bert.msg5"
+  | "npcMessages.bert.msg6"
+  | "npcMessages.bert.msg7"
+  // Timmy
+  | "npcMessages.timmy.msg1"
+  | "npcMessages.timmy.msg2"
+  | "npcMessages.timmy.msg3"
+  | "npcMessages.timmy.msg4"
+  | "npcMessages.timmy.msg5"
+  | "npcMessages.timmy.msg6"
+  | "npcMessages.timmy.msg7"
+  // Tywin
+  | "npcMessages.tywin.msg1"
+  | "npcMessages.tywin.msg2"
+  | "npcMessages.tywin.msg3"
+  | "npcMessages.tywin.msg4"
+  | "npcMessages.tywin.msg5"
+  | "npcMessages.tywin.msg6"
+  | "npcMessages.tywin.msg7"
+  // Tango
+  | "npcMessages.tango.msg1"
+  | "npcMessages.tango.msg2"
+  | "npcMessages.tango.msg3"
+  | "npcMessages.tango.msg4"
+  | "npcMessages.tango.msg5"
+  | "npcMessages.tango.msg6"
+  | "npcMessages.tango.msg7"
+  // Miranda
+  | "npcMessages.miranda.msg1"
+  | "npcMessages.miranda.msg2"
+  | "npcMessages.miranda.msg3"
+  | "npcMessages.miranda.msg4"
+  | "npcMessages.miranda.msg5"
+  | "npcMessages.miranda.msg6"
+  | "npcMessages.miranda.msg7"
+  // Finn
+  | "npcMessages.finn.msg1"
+  | "npcMessages.finn.msg2"
+  | "npcMessages.finn.msg3"
+  | "npcMessages.finn.msg4"
+  | "npcMessages.finn.msg5"
+  | "npcMessages.finn.msg6"
+  | "npcMessages.finn.msg7"
+  | "npcMessages.finn.msg8"
+  //Findley
+  | "npcMessages.findley.msg1"
+  | "npcMessages.findley.msg2"
+  | "npcMessages.findley.msg3"
+  | "npcMessages.findley.msg4"
+  | "npcMessages.findley.msg5"
+  | "npcMessages.findley.msg6"
+  | "npcMessages.findley.msg7"
+  | "npcMessages.findley.msg8"
+  | "npcMessages.findley.msg9"
+  // Corale
+  | "npcMessages.corale.msg1"
+  | "npcMessages.corale.msg2"
+  | "npcMessages.corale.msg3"
+  | "npcMessages.corale.msg4"
+  | "npcMessages.corale.msg5"
+  | "npcMessages.corale.msg6"
+  | "npcMessages.corale.msg7"
+  //Shelly
+  | "npcMessages.shelly.msg1"
+  | "npcMessages.shelly.msg2"
+  | "npcMessages.shelly.msg3"
+  | "npcMessages.shelly.msg4"
+  | "npcMessages.shelly.msg5"
+  | "npcMessages.shelly.msg6"
+  | "npcMessages.shelly.msg7"
+  | "npcMessages.shelly.msg8";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1159,6 +1302,7 @@ export type TranslationKeys =
   | GameTerms
   | GeneralTerms
   | GuideTerms
+  | GOBLIN_MESSAGES
   | HenHouseTerms
   | HowToUpgrade
   | HowToFarm
@@ -1168,12 +1312,14 @@ export type TranslationKeys =
   | LandscapeTerms
   | LevelUpMessages
   | LetsGo
+  | NPC_MESSAGE
   | Onboarding
   | Questions
   | RetreatTerms
   | RewardTerms
   | RulesTerms
   | SeasonTerms
+  | SettingsMenu
   | ShopItems
   | Statements
   | ToolDescriptions

@@ -112,7 +112,7 @@ export const TravelModal: React.FC<Props> = ({
               </Label>
               <img src={world} className="w-10 mx-auto my-2" />
               <p className="text-sm text-center mb-1">
-                Before travelling, you must level up.
+                {t("retreatTerms.introTravel.zero")}
               </p>
               <p className="text-xs text-center mb-2">
                 {translate("statements.visit.firePit")}
@@ -125,16 +125,16 @@ export const TravelModal: React.FC<Props> = ({
             <SpeakingText
               message={[
                 {
-                  text: "Hey Traveller! Ready to explore?",
+                  text: t("retreatTerms.introTravel.one"),
                 },
                 {
-                  text: "Sunflower Land is filled with exciting islands where you can complete deliveries, craft rare NFTs and even dig for treasure!",
+                  text: t("retreatTerms.introTravel.two"),
                 },
                 {
-                  text: "Different locations bring different opportunities to spend your hard earned resources.",
+                  text: t("retreatTerms.introTravel.three"),
                 },
                 {
-                  text: "At any time click the travel button to return home.",
+                  text: t("retreatTerms.introTravel.four"),
                 },
               ]}
               onClose={() => {

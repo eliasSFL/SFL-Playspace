@@ -134,7 +134,7 @@ export const SettingsMenu: React.FC<Props> = ({ show, onClose, isFarming }) => {
                       <Button
                         onClick={() => setShowTimeMachine(!showTimeMachine)}
                       >
-                        Time Machine
+                        {t("settingsMenu.timeMachine")}
                       </Button>
                     </li>
                     <li className="p-1">
@@ -152,7 +152,7 @@ export const SettingsMenu: React.FC<Props> = ({ show, onClose, isFarming }) => {
                 <li className="p-1">
                   <Button onClick={handleHowToPlay}>
                     <div className="flex items-center justify-center">
-                      <span>How to play</span>
+                      <span>{t("settingsMenu.howToPlay")}</span>
                       <img
                         src={SUNNYSIDE.icons.expression_confused}
                         className="w-3 ml-2"
@@ -167,7 +167,7 @@ export const SettingsMenu: React.FC<Props> = ({ show, onClose, isFarming }) => {
                       <Button
                         onClick={() => setMenuLevel(MENU_LEVELS.COMMUNITY)}
                       >
-                        <span>Community</span>
+                        <span>{t("settingsMenu.community")}</span>
                       </Button>
                     </li>
 
@@ -178,19 +178,19 @@ export const SettingsMenu: React.FC<Props> = ({ show, onClose, isFarming }) => {
                     </li>
                     <li className="p-1">
                       <Button onClick={handleSwapSFL}>
-                        <span>Swap MATIC for SFL</span>
+                        <span>{t("settingsMenu.swapMaticForSFL")}</span>
                       </Button>
                     </li>
                   </>
                 )}
                 <li className="p-1">
                   <Button onClick={handlePlazaSettingsClick}>
-                    <span>Plaza Settings</span>
+                    <span>{t("settingsMenu.plazaSettings")}</span>
                   </Button>
                 </li>
                 <li className="p-1">
                   <Button onClick={handleSettingsClick}>
-                    <span>Settings</span>
+                    <span>{t("settingsMenu.settings")}</span>
                   </Button>
                 </li>
               </>
@@ -210,12 +210,12 @@ export const SettingsMenu: React.FC<Props> = ({ show, onClose, isFarming }) => {
                 </li>
                 <li className="p-1">
                   <Button onClick={handleCommunityGardenClick}>
-                    <span>Community Garden</span>
+                    <span>{t("settingsMenu.communityGarden")}</span>
                   </Button>
                 </li>
                 <li className="p-1">
                   <Button onClick={handleShareClick}>
-                    <span>Share</span>
+                    <span>{t("settingsMenu.share")}</span>
                   </Button>
                 </li>
               </>
