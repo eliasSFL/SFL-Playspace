@@ -46,6 +46,7 @@ import { Sniped } from "../components/Sniped";
 import { NewMail } from "./components/NewMail";
 import { Blacklisted } from "../components/Blacklisted";
 import { AirdropPopup } from "./components/Airdrop";
+import { translate } from "lib/i18n/translate";
 
 export const AUTO_SAVE_INTERVAL = 1000 * 30; // autosave every 30 seconds
 const SHOW_MODAL: Record<StateValues, boolean> = {
@@ -165,7 +166,9 @@ const GameContent = () => {
               }}
             >
               <div className="flex flex-col items-center">
-                <h2 className="text-center">Island Not Found!</h2>
+                <h2 className="text-center">
+                  {translate("visitislandNotFound.title")}
+                </h2>
                 <img src={land} className="h-9 my-3" />
               </div>
               <VisitLandExpansionForm />

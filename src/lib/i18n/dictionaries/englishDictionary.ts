@@ -11,6 +11,8 @@ import {
   GeneralTerms,
   GuideTerms,
   GOBLIN_MESSAGES,
+  GoldPassModal,
+  HayseedHankV2,
   HenHouseTerms,
   HowToUpgrade,
   HowToFarm,
@@ -24,14 +26,19 @@ import {
   RulesTerms,
   SeasonTerms,
   SettingsMenu,
+  SharkBumpkinDialogues,
   ShopItems,
+  SnorklerDialogues,
   Statements,
+  VisitislandEnter,
+  VisitislandNotFound,
   WarningTerms,
   WelcomeTerms,
   TransactionTerms,
   GameDescriptions,
   FishingQuests,
   IslandName,
+  IslandNotFound,
   LevelUpMessages,
   LandscapeTerms,
   LetsGo,
@@ -1744,6 +1751,55 @@ const npc_message: Record<NPC_MESSAGE, string> = {
   "npcMessages.shelly.msg8":
     "Bumpkins' safety's my top priority, and I'm afraid the Kraken's involved. Tentacles can make a difference!",
 };
+
+const hayseedHankV2: Record<HayseedHankV2, string> = {
+  "hayseedHankv2.dialog1":
+    "Well, howdy there, young whippersnappers! I'm Hayseed Hank, a seasoned ol' Bumpkin farmer, tending to the land like in the good ol' days.",
+  "hayseedHankv2.dialog2":
+    "However, my bones ain't what they used to be. If you can help me with my daily chores, I will reward you with {{ticket}}s.",
+  "hayseedHankv2.action": "Let's do it",
+  "hayseedHankv2.title": "Daily Chores",
+  "hayseedHankv2.newChoresAvailable": "New chores available in {{time}}.",
+  "hayseedHankv2.skipChores": "You can skip chores each new day.",
+};
+
+const snorklerDialogues: Record<SnorklerDialogues, string> = {
+  "snorkler.vastOcean": "It is a vast ocean!",
+  "snorkler.goldBeneath": "There must be gold somewhere beneath the surface.",
+};
+
+const sharkBumpkinDialogues: Record<SharkBumpkinDialogues, string> = {
+  "sharkBumpkin.dialogue.shhhh": "Shhhh!",
+  "sharkBumpkin.dialogue.scareGoblins": "I'm trying to scare the Goblins.",
+};
+
+const islandNotFound: Record<IslandNotFound, string> = {
+  "islandNotFound.message": "You have landed in the middle of nowhere!",
+  "islandNotFound.takeMeHome": "Take me home",
+};
+
+const visitislandNotFound: Record<VisitislandNotFound, string> = {
+  "visitislandNotFound.title": "Island Not Found!",
+};
+
+const visitislandEnter: Record<VisitislandEnter, string> = {
+  "visitIsland.enterIslandId": "Enter Island ID: ",
+  "visitIsland.visit": "Visit",
+};
+
+const goldpassModal: Record<GoldPassModal, string> = {
+  "goldPass.unlockPower": "Unlock the power of the Gold Pass:",
+  "goldPass.craftNFTs": "Craft rare NFTs",
+  "goldPass.trade": "Trade with other players",
+  "goldPass.participateAuction": "Participate in Auction Drops",
+  "goldPass.withdrawTransferNFTs": "Withdraw & Transfer NFTs",
+  "goldPass.accessRestrictedAreas": "Access to restricted areas",
+  "goldPass.readMore": "Read more",
+  "common.noThanks": "No, thanks",
+  "goldPass.buyNow": "Buy now $",
+  "goldPass.priceInMatic": "Price is paid in $MATIC equivalent of $",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -1816,12 +1872,15 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...generalTerms,
   ...guideTerms,
   ...goblin_messages,
+  ...goldpassModal,
+  ...hayseedHankV2,
   ...henHouseTerms,
   ...howToUpgrade,
   ...howToFarm,
   ...howToSync,
   ...introTerms,
   ...islandName,
+  ...islandNotFound,
   ...landscapeTerms,
   ...letsGo,
   ...levelUpMessages,
@@ -1833,10 +1892,14 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...rulesTerms,
   ...seasonTerms,
   ...settingsMenu,
+  ...sharkBumpkinDialogues,
   ...shopItems,
   ...statements,
+  ...snorklerDialogues,
   ...toolDescriptions,
   ...transactionTerms,
+  ...visitislandEnter,
+  ...visitislandNotFound,
   ...warningTerms,
   ...welcomeTerms,
 };

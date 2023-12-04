@@ -1220,6 +1220,42 @@ export type NPC_MESSAGE =
   | "npcMessages.shelly.msg7"
   | "npcMessages.shelly.msg8";
 
+export type HayseedHankV2 =
+  | "hayseedHankv2.dialog1"
+  | "hayseedHankv2.dialog2"
+  | "hayseedHankv2.action"
+  | "hayseedHankv2.title"
+  | "hayseedHankv2.newChoresAvailable"
+  | "hayseedHankv2.skipChores";
+
+export type SnorklerDialogues = "snorkler.vastOcean" | "snorkler.goldBeneath";
+
+export type SharkBumpkinDialogues =
+  | "sharkBumpkin.dialogue.shhhh"
+  | "sharkBumpkin.dialogue.scareGoblins";
+
+export type IslandNotFound =
+  | "islandNotFound.message"
+  | "islandNotFound.takeMeHome";
+
+export type VisitislandNotFound = "visitislandNotFound.title";
+
+export type VisitislandEnter =
+  | "visitIsland.enterIslandId"
+  | "visitIsland.visit";
+
+export type GoldPassModal =
+  | "goldPass.unlockPower"
+  | "goldPass.craftNFTs"
+  | "goldPass.trade"
+  | "goldPass.participateAuction"
+  | "goldPass.withdrawTransferNFTs"
+  | "goldPass.accessRestrictedAreas"
+  | "goldPass.readMore"
+  | "common.noThanks"
+  | "goldPass.buyNow"
+  | "goldPass.priceInMatic";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1303,12 +1339,15 @@ export type TranslationKeys =
   | GeneralTerms
   | GuideTerms
   | GOBLIN_MESSAGES
+  | GoldPassModal
+  | HayseedHankV2
   | HenHouseTerms
   | HowToUpgrade
   | HowToFarm
   | HowToSync
   | Intro
   | IslandName
+  | IslandNotFound
   | LandscapeTerms
   | LevelUpMessages
   | LetsGo
@@ -1320,9 +1359,13 @@ export type TranslationKeys =
   | RulesTerms
   | SeasonTerms
   | SettingsMenu
+  | SharkBumpkinDialogues
   | ShopItems
+  | SnorklerDialogues
   | Statements
   | ToolDescriptions
   | TransactionTerms
+  | VisitislandEnter
+  | VisitislandNotFound
   | WarningTerms
   | WelcomeTerms;

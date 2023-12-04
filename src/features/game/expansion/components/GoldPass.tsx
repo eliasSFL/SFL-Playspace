@@ -6,6 +6,7 @@ import { Context } from "features/game/GameProvider";
 import goldPass from "assets/announcements/gold_pass.png";
 import { Panel } from "components/ui/Panel";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 interface Props {
   onClose: () => void;
 }
@@ -22,13 +23,19 @@ export const GoldPassModal: React.FC<Props> = ({ onClose }) => {
             src={goldPass}
             className="w-full rounded-md my-2 img-highlight mr-2"
           />
-          <p className="text-sm mb-1">Unlock the power of the Gold Pass:</p>
+          <p className="text-sm mb-1">{translate("goldPass.unlockPower")}</p>
           <ul className="list-disc">
-            <li className="text-xs ml-4">Craft rare NFTs</li>
-            <li className="text-xs ml-4">Trade with other players</li>
-            <li className="text-xs ml-4">Participate in Auction Drops</li>
-            <li className="text-xs ml-4">Withdraw & Transfer NFTs</li>
-            <li className="text-xs ml-4">Access to restricted areas</li>
+            <li className="text-xs ml-4">{translate("goldPass.craftNFTs")}</li>
+            <li className="text-xs ml-4">{translate("goldPass.trade")}</li>
+            <li className="text-xs ml-4">
+              {translate("goldPass.participateAuction")}
+            </li>
+            <li className="text-xs ml-4">
+              {translate("goldPass.withdrawTransferNFTs")}
+            </li>
+            <li className="text-xs ml-4">
+              {translate("goldPass.accessRestrictedAreas")}
+            </li>
           </ul>
 
           <a
@@ -52,11 +59,15 @@ export const GoldPassModal: React.FC<Props> = ({ onClose }) => {
               onClose();
             }}
           >
-            {`Buy now $${price}`}
+            {t("goldPass.buyNow")}
+            {price}USD
           </Button>
         </div>
         <div className="flex justify-center my-0.5">
-          <span className="text-xxs italic">{`Price is paid in $MATIC equivalent of $${price} USD`}</span>
+          <span className="text-xxs italic">
+            {t("goldPass.priceInMatic")}
+            {price}USD
+          </span>
         </div>
       </>
     );
