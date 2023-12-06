@@ -257,7 +257,7 @@ const BaitSelection: React.FC<{
               className="h-4 mr-1"
             />
             <p className="text-xs mb-1">
-              Attract fish by throwing chum into the water.
+              {translate("fishermanModal.attractFish")}
             </p>
           </div>
           <Button
@@ -274,13 +274,13 @@ const BaitSelection: React.FC<{
 
       {fishingLimitReached && (
         <Label className="mb-1" type="danger">
-          You have reached your daily fishing limit of {dailyFishingMax}.
+          {translate("fishermanModal.dailyLimitReached")} {dailyFishingMax}
         </Label>
       )}
 
       {!fishingLimitReached && missingRod && (
         <Label className="mb-1" type="danger">
-          You must first craft a rod.
+          {translate("fishermanModal.needCraftRod")}
         </Label>
       )}
 
@@ -336,13 +336,13 @@ export const FishermanModal: React.FC<Props> = ({ onCast, onClose }) => {
         <SpeakingText
           message={[
             {
-              text: "Ahoy, fellow islanders! I'm Reelin' Roy, your trusty island fisherman, and I've set my sights on a grand challenge – collecting every fish under the sun!",
+              text: translate("fishermanModal.royChallenge"),
             },
             {
-              text: "Fish are great for eating, delivering and claiming rewards!",
+              text: translate("fishermanModal.fishBenefits"),
             },
             {
-              text: "Bring me bait and resources and we'll reel in the rarest prizes that the ocean has to offer!",
+              text: translate("fishermanModal.baitAndResources"),
             },
           ]}
           onClose={() => {
@@ -363,10 +363,10 @@ export const FishermanModal: React.FC<Props> = ({ onCast, onClose }) => {
         <SpeakingText
           message={[
             {
-              text: "Wow, something crazy is happening......It is a fish frenzy!",
+              text: translate("fishermanModal.crazyHappening"),
             },
             {
-              text: "Hurry, you will get a bonus fish for each catch!",
+              text: translate("fishermanModal.bonusFish"),
             },
           ]}
           onClose={() => {
