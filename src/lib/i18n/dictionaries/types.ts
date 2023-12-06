@@ -1256,6 +1256,234 @@ export type GoldPassModal =
   | "goldPass.buyNow"
   | "goldPass.priceInMatic";
 
+export type FishermanModal =
+  | "fishermanModal.attractFish"
+  | "fishermanModal.royChallenge"
+  | "fishermanModal.fishBenefits"
+  | "fishermanModal.baitAndResources"
+  | "fishermanModal.crazyHappening"
+  | "fishermanModal.bonusFish"
+  | "fishermanModal.dailyLimitReached"
+  | "fishermanModal.needCraftRod";
+
+export type NpcDialogues =
+  // Blacksmith Intro
+  | "npcDialogues.blacksmith.intro1"
+  | "npcDialogues.blacksmith.intro2"
+  | "npcDialogues.blacksmith.intro3"
+  | "npcDialogues.blacksmith.intro4"
+  // Blacksmith Positive Delivery
+  | "npcDialogues.blacksmith.positiveDelivery1"
+  | "npcDialogues.blacksmith.positiveDelivery2"
+  | "npcDialogues.blacksmith.positiveDelivery3"
+  | "npcDialogues.blacksmith.positiveDelivery4"
+  | "npcDialogues.blacksmith.positiveDelivery5"
+  // Blacksmith Negative Delivery
+  | "npcDialogues.blacksmith.negativeDelivery1"
+  | "npcDialogues.blacksmith.negativeDelivery2"
+  | "npcDialogues.blacksmith.negativeDelivery3"
+  | "npcDialogues.blacksmith.negativeDelivery4"
+  | "npcDialogues.blacksmith.negativeDelivery5"
+  // Blacksmith NoOrder
+  | "npcDialogues.blacksmith.noOrder1"
+  | "npcDialogues.blacksmith.noOrder2"
+  // Betty Intro
+  | "npcDialogues.betty.intro1"
+  | "npcDialogues.betty.intro2"
+  | "npcDialogues.betty.intro3"
+  | "npcDialogues.betty.intro4"
+  | "npcDialogues.betty.intro5"
+  // Betty Positive Delivery
+  | "npcDialogues.betty.positiveDelivery1"
+  | "npcDialogues.betty.positiveDelivery2"
+  | "npcDialogues.betty.positiveDelivery3"
+  | "npcDialogues.betty.positiveDelivery4"
+  | "npcDialogues.betty.positiveDelivery5"
+  // Betty Negative Delivery
+  | "npcDialogues.betty.negativeDelivery1"
+  | "npcDialogues.betty.negativeDelivery2"
+  | "npcDialogues.betty.negativeDelivery3"
+  | "npcDialogues.betty.negativeDelivery4"
+  | "npcDialogues.betty.negativeDelivery5"
+  // Betty NoOrder
+  | "npcDialogues.betty.noOrder1"
+  | "npcDialogues.betty.noOrder2"
+  // Grimbly Intro
+  | "npcDialogues.grimbly.intro1"
+  | "npcDialogues.grimbly.intro2"
+  | "npcDialogues.grimbly.intro3"
+  | "npcDialogues.grimbly.intro4"
+  // Grimbly Positive Delivery
+  | "npcDialogues.grimbly.positiveDelivery1"
+  | "npcDialogues.grimbly.positiveDelivery2"
+  | "npcDialogues.grimbly.positiveDelivery3"
+  | "npcDialogues.grimbly.positiveDelivery4"
+  // Grimbly Negative Delivery
+  | "npcDialogues.grimbly.negativeDelivery1"
+  | "npcDialogues.grimbly.negativeDelivery2"
+  | "npcDialogues.grimbly.negativeDelivery3"
+  | "npcDialogues.grimbly.negativeDelivery4"
+  // Grimbly NoOrder
+  | "npcDialogues.grimbly.noOrder1"
+  | "npcDialogues.grimbly.noOrder2"
+  // Grimtootk Intro
+  | "npcDialogues.grimtooth.intro1"
+  | "npcDialogues.grimtooth.intro2"
+  | "npcDialogues.grimtooth.intro3"
+  | "npcDialogues.grimtooth.intro4"
+  // Grimtootk Positive Delivery
+  | "npcDialogues.grimtooth.positiveDelivery1"
+  | "npcDialogues.grimtooth.positiveDelivery2"
+  | "npcDialogues.grimtooth.positiveDelivery3"
+  | "npcDialogues.grimtooth.positiveDelivery4"
+  // Grimtootk Negative Delivery
+  | "npcDialogues.grimtooth.negativeDelivery1"
+  | "npcDialogues.grimtooth.negativeDelivery2"
+  | "npcDialogues.grimtooth.negativeDelivery3"
+  | "npcDialogues.grimtooth.negativeDelivery4"
+  // Grimtootk NoOrder
+  | "npcDialogues.grimtooth.noOrder1"
+  | "npcDialogues.grimtooth.noOrder2"
+  // Old Salty Intro
+  | "npcDialogues.oldSalty.intro1"
+  | "npcDialogues.oldSalty.intro2"
+  | "npcDialogues.oldSalty.intro3"
+  // Old Salty Positive
+  | "npcDialogues.oldSalty.positiveDelivery1"
+  | "npcDialogues.oldSalty.positiveDelivery2"
+  | "npcDialogues.oldSalty.positiveDelivery3"
+  // Old Salty Negative
+  | "npcDialogues.oldSalty.negativeDelivery1"
+  | "npcDialogues.oldSalty.negativeDelivery2"
+  | "npcDialogues.oldSalty.negativeDelivery3"
+  // Old Salty NoOrder
+  | "npcDialogues.oldSalty.noOrder1"
+  | "npcDialogues.oldSalty.noOrder2"
+  // Raven Intro
+  | "npcDialogues.raven.intro1"
+  | "npcDialogues.raven.intro2"
+  | "npcDialogues.raven.intro3"
+  | "npcDialogues.raven.intro4"
+  // Raven Positive Delivery
+  | "npcDialogues.raven.positiveDelivery1"
+  | "npcDialogues.raven.positiveDelivery2"
+  | "npcDialogues.raven.positiveDelivery3"
+  | "npcDialogues.raven.positiveDelivery4"
+  // Raven Negative Delivery
+  | "npcDialogues.raven.negativeDelivery1"
+  | "npcDialogues.raven.negativeDelivery2"
+  | "npcDialogues.raven.negativeDelivery3"
+  // Raven NoOrder
+  | "npcDialogues.raven.noOrder1"
+  | "npcDialogues.raven.noOrder2"
+  // Tywin Intro
+  | "npcDialogues.tywin.intro1"
+  | "npcDialogues.tywin.intro2"
+  | "npcDialogues.tywin.intro3"
+  | "npcDialogues.tywin.intro4"
+  // Tywin Positive Delivery
+  | "npcDialogues.tywin.positiveDelivery1"
+  | "npcDialogues.tywin.positiveDelivery2"
+  | "npcDialogues.tywin.positiveDelivery3"
+  | "npcDialogues.tywin.positiveDelivery4"
+  // Tywin Negative Delivery
+  | "npcDialogues.tywin.negativeDelivery1"
+  | "npcDialogues.tywin.negativeDelivery2"
+  | "npcDialogues.tywin.negativeDelivery3"
+  | "npcDialogues.tywin.negativeDelivery4"
+  // Tywin NoOrder
+  | "npcDialogues.tywin.noOrder1"
+  | "npcDialogues.tywin.noOrder2"
+  //Bert Intro
+  | "npcDialogues.bert.intro1"
+  | "npcDialogues.bert.intro2"
+  | "npcDialogues.bert.intro3"
+  | "npcDialogues.bert.intro4"
+  //Bert Positive Delivery
+  | "npcDialogues.bert.positiveDelivery1"
+  | "npcDialogues.bert.positiveDelivery2"
+  | "npcDialogues.bert.positiveDelivery3"
+  | "npcDialogues.bert.positiveDelivery4"
+  //Bert Negative Delivery
+  | "npcDialogues.bert.negativeDelivery1"
+  | "npcDialogues.bert.negativeDelivery2"
+  | "npcDialogues.bert.negativeDelivery3"
+  | "npcDialogues.bert.negativeDelivery4"
+  //Bert NoOrder
+  | "npcDialogues.bert.noOrder1"
+  | "npcDialogues.bert.noOrder2"
+  // Timmy Intro
+  | "npcDialogues.timmy.intro1"
+  | "npcDialogues.timmy.intro2"
+  | "npcDialogues.timmy.intro3"
+  | "npcDialogues.timmy.intro4"
+  | "npcDialogues.timmy.intro5"
+  // Timmy Positive Delivery
+  | "npcDialogues.timmy.positiveDelivery1"
+  | "npcDialogues.timmy.positiveDelivery2"
+  | "npcDialogues.timmy.positiveDelivery3"
+  | "npcDialogues.timmy.positiveDelivery4"
+  | "npcDialogues.timmy.positiveDelivery5"
+  // Timmy Negative Delivery
+  | "npcDialogues.timmy.negativeDelivery1"
+  | "npcDialogues.timmy.negativeDelivery2"
+  | "npcDialogues.timmy.negativeDelivery3"
+  | "npcDialogues.timmy.negativeDelivery4"
+  | "npcDialogues.timmy.negativeDelivery5"
+  // Timmy NoOrder
+  | "npcDialogues.timmy.noOrder1"
+  | "npcDialogues.timmy.noOrder2"
+  // Cornwell Intro
+  | "npcDialogues.cornwell.intro1"
+  | "npcDialogues.cornwell.intro2"
+  | "npcDialogues.cornwell.intro3"
+  | "npcDialogues.cornwell.intro4"
+  | "npcDialogues.cornwell.intro5"
+  // Cornwell Positive Delivery
+  | "npcDialogues.cornwell.positiveDelivery1"
+  | "npcDialogues.cornwell.positiveDelivery2"
+  | "npcDialogues.cornwell.positiveDelivery3"
+  | "npcDialogues.cornwell.positiveDelivery4"
+  | "npcDialogues.cornwell.positiveDelivery5"
+  // Cornwell Negative Delivery
+  | "npcDialogues.cornwell.negativeDelivery1"
+  | "npcDialogues.cornwell.negativeDelivery2"
+  | "npcDialogues.cornwell.negativeDelivery3"
+  | "npcDialogues.cornwell.negativeDelivery4"
+  | "npcDialogues.cornwell.negativeDelivery5"
+  // Cornwell No Order
+  | "npcDialogues.cornwell.noOrder1"
+  | "npcDialogues.cornwell.noOrder2"
+  | "npcDialogues.cornwell.noOrder3"
+  | "npcDialogues.cornwell.noOrder4"
+  // Pumpkin Pete Intor
+  | "npcDialogues.pumpkinPete.intro1"
+  | "npcDialogues.pumpkinPete.intro2"
+  | "npcDialogues.pumpkinPete.intro3"
+  | "npcDialogues.pumpkinPete.intro4"
+  | "npcDialogues.pumpkinPete.intro5"
+  // Pumpkin Pete Positive Delivery
+  | "npcDialogues.pumpkinPete.positiveDelivery1"
+  | "npcDialogues.pumpkinPete.positiveDelivery2"
+  | "npcDialogues.pumpkinPete.positiveDelivery3"
+  | "npcDialogues.pumpkinPete.positiveDelivery4"
+  | "npcDialogues.pumpkinPete.positiveDelivery5"
+  // Pumpkin Pete Negative Delivery
+  | "npcDialogues.pumpkinPete.negativeDelivery1"
+  | "npcDialogues.pumpkinPete.negativeDelivery2"
+  | "npcDialogues.pumpkinPete.negativeDelivery3"
+  | "npcDialogues.pumpkinPete.negativeDelivery4"
+  | "npcDialogues.pumpkinPete.negativeDelivery5"
+  // Pumpkin Pete NoOrder
+  | "npcDialogues.pumpkinPete.noOrder1"
+  | "npcDialogues.pumpkinPete.noOrder2";
+
+export type DefaultDialogue =
+  | "defaultDialogue.intro"
+  | "defaultDialogue.positiveDelivery"
+  | "defaultDialogue.negativeDelivery"
+  | "defaultDialogue.noOrder";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1329,10 +1557,12 @@ export type TranslationKeys =
   | Conversations
   | CropFruitDescriptions
   | DecorationDescriptions
+  | DefaultDialogue
   | DiscordBonus
   | ErrorTerms
   | FishDescriptions
   | FishingQuests
+  | FishermanModal
   | FoodDescriptions
   | GameDescriptions
   | GameTerms
@@ -1351,6 +1581,7 @@ export type TranslationKeys =
   | LandscapeTerms
   | LevelUpMessages
   | LetsGo
+  | NpcDialogues
   | NPC_MESSAGE
   | Onboarding
   | Questions

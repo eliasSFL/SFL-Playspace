@@ -6,6 +6,7 @@ import {
   ConfirmationTerms,
   Conversations,
   DiscordBonus,
+  DefaultDialogue,
   ErrorTerms,
   GameTerms,
   GeneralTerms,
@@ -18,6 +19,7 @@ import {
   HowToFarm,
   HowToSync,
   Intro,
+  NpcDialogues,
   Onboarding,
   NPC_MESSAGE,
   Questions,
@@ -37,6 +39,7 @@ import {
   TransactionTerms,
   GameDescriptions,
   FishingQuests,
+  FishermanModal,
   IslandName,
   IslandNotFound,
   LevelUpMessages,
@@ -1800,6 +1803,411 @@ const goldpassModal: Record<GoldPassModal, string> = {
   "goldPass.priceInMatic": "Price is paid in $MATIC equivalent of $",
 };
 
+const fishermanModal: Record<FishermanModal, string> = {
+  "fishermanModal.attractFish": "Attract fish by throwing chum into the water.",
+  "fishermanModal.royChallenge":
+    "Ahoy, fellow islanders! I'm Reelin' Roy, your trusty island fisherman, and I've set my sights on a grand challenge – collecting every fish under the sun!",
+  "fishermanModal.fishBenefits":
+    "Fish are great for eating, delivering and claiming rewards!",
+  "fishermanModal.baitAndResources":
+    "Bring me bait and resources and we'll reel in the rarest prizes that the ocean has to offer!",
+  "fishermanModal.crazyHappening":
+    "Wow, something crazy is happening......It is a fish frenzy!",
+  "fishermanModal.bonusFish":
+    "Hurry, you will get a bonus fish for each catch!",
+  "fishermanModal.dailyLimitReached":
+    "You have reached your daily fishing limit of {dailyFishingMax}.",
+  "fishermanModal.needCraftRod": "You must first craft a rod.",
+};
+
+const npcDialogues: Record<NpcDialogues, string> = {
+  // Blacksmith Intro
+  "npcDialogues.blacksmith.intro1":
+    "What do you want? Speak quickly; time is money.",
+  "npcDialogues.blacksmith.intro2":
+    "What brings you to my workshop? I'm busy, so make it quick.",
+  "npcDialogues.blacksmith.intro3":
+    "Welcome to my humble abode. What brings you here?",
+  "npcDialogues.blacksmith.intro4":
+    "State your purpose. I'm busy, and I don't have time for idle chatter. What brings you to my workshop?",
+  // Blacksmith Positive Delivery
+  "npcDialogues.blacksmith.positiveDelivery1":
+    "Finally! You brought the materials I need. Step aside; let me work my magic.",
+  "npcDialogues.blacksmith.positiveDelivery2":
+    "Ah, about time! You've acquired the exact items I sought. Prepare for equipment crafted with precision.",
+  "npcDialogues.blacksmith.positiveDelivery3":
+    "Good. You've delivered the materials I need. I shall not disappoint; my creations will be remarkable.",
+  "npcDialogues.blacksmith.positiveDelivery4":
+    "Impressive! You've acquired the necessary components. I will transform them into farming marvels!",
+  "npcDialogues.blacksmith.positiveDelivery5":
+    "Hmm, you actually managed to find what I wanted. Well done.",
+  // Blacksmith Negative Delivery
+  "npcDialogues.blacksmith.negativeDelivery1":
+    "You don't have what I require? Time is wasted. Come back when you have what's necessary.",
+  "npcDialogues.blacksmith.negativeDelivery2":
+    "No, no, no. You lack the essential materials. Don't waste my time. Return when you're prepared.",
+  "npcDialogues.blacksmith.negativeDelivery3":
+    "Unacceptable. You don't possess what I require. I have no time for incompetence. Return when you're capable.",
+  "npcDialogues.blacksmith.negativeDelivery4":
+    "Unsatisfactory. You don't possess what I need. Come back when you're ready to fulfill your end of the bargain.",
+  "npcDialogues.blacksmith.negativeDelivery5":
+    "Incompetence. You lack the materials required. Don't waste my time; return when you're prepared.",
+  // Blacksmith NoOrder
+  "npcDialogues.blacksmith.noOrder1":
+    "No active order for me to fulfill at the moment, but if you're in need of tools or have materials for crafting, I am always here to assist you. Speak up, and we'll get to work.",
+  "npcDialogues.blacksmith.noOrder2":
+    "No active order from me, but if you require sturdy equipment or have materials in need of shaping, I am your craftsman.",
+  // Betty Into
+  "npcDialogues.betty.intro1":
+    "Hey there, sunshine! It's been a busy day at the market. I'm here to see if you've got the ingredients I ordered. Do you have them with you?",
+  "npcDialogues.betty.intro2":
+    "Hello, hello! I've been waiting to see if you've got the ingredients I ordered. Have you brought them?",
+  "npcDialogues.betty.intro3":
+    "Welcome to Betty's market! Ready to check if you've got the ingredients I need? Let's see what you've got in store for me!",
+  "npcDialogues.betty.intro4":
+    "Hey, hey! I'm eager to know if you've brought the ingredients I ordered. Show me what you've got!",
+  "npcDialogues.betty.intro5":
+    "Greetings, my green-thumbed friend! I'm excited to see if you've got the ingredients I asked for. What's in your basket?",
+  // Betty Positive Delivery
+  "npcDialogues.betty.positiveDelivery1":
+    "Hooray! You've brought the ingredients I ordered. They're as fresh and vibrant as can be. Thank you, my gardening genius!",
+  "npcDialogues.betty.positiveDelivery2":
+    "That's what I'm talking about! You've got the exact ingredients I needed. You've made my day with your prompt delivery. Thank you!",
+  "npcDialogues.betty.positiveDelivery3":
+    "Oh, fantastic! These are the exact ingredients I asked for. The market will be buzzing with excitement. Thanks for your hard work!",
+  "npcDialogues.betty.positiveDelivery4":
+    "Oh, my garden! These ingredients are absolutely perfect. You've got a talent for finding the finest produce. Thank you, my green-thumbed hero!",
+  "npcDialogues.betty.positiveDelivery5":
+    "Bravo! You've brought the exact ingredients I needed. I can't wait to use them to create something extraordinary. Thanks for your swift delivery!",
+  // Betty Negative Delivery
+  "npcDialogues.betty.negativeDelivery1":
+    "Oopsie-daisy! It seems you don't have the ingredients I ordered. No worries, though. Keep searching, and we'll find another opportunity.",
+  "npcDialogues.betty.negativeDelivery2":
+    "Oh, no! It looks like you don't have the ingredients I need at the moment. Don't worry, though. I believe in your resourcefulness. Come back when you have what I'm after!",
+  "npcDialogues.betty.negativeDelivery3":
+    "Aw, shucks! It seems you don't have the ingredients I'm looking for right now. Keep foraging, though! Maybe next time we'll have better luck.",
+  "npcDialogues.betty.negativeDelivery4":
+    "Oh, bummer! It seems the ingredients you brought don't match what I need. But don't lose heart; keep working, and return soon.",
+  "npcDialogues.betty.negativeDelivery5":
+    "Oh, snapdragons! It seems you don't have the exact ingredients I'm searching for. But don't worry, my friend. Keep working hard, and we'll celebrate when you find them!",
+  // Betty NoOrder
+  "npcDialogues.betty.noOrder1":
+    "No active order for me to fulfill right now, but that won't stop me from offering you the finest seeds and crops. Step right up and let's see what you're in the market for!",
+  "npcDialogues.betty.noOrder2":
+    "No specific order from me today, but that's not a problem. I'm here with a bounce in my step, ready to provide you with the best seeds and buy your delightful crops!",
+  // Grimbly Intro
+  "npcDialogues.grimbly.intro1":
+    "Hungry. Need food. Have anything tasty for a hungry goblin?",
+  "npcDialogues.grimbly.intro2":
+    "Hungry goblin needs sustenance. Have what I need?",
+  "npcDialogues.grimbly.intro3":
+    "Starving goblin here. Got anything scrumptious for me to munch on?",
+  "npcDialogues.grimbly.intro4":
+    "Grimbly's hungry. Did you bring something tasty for me?",
+  // Grimbly Positive Delivery
+  "npcDialogues.grimbly.positiveDelivery1":
+    "Ah, finally! Something delicious to satisfy my hunger. You're a lifesaver, my friend!",
+  "npcDialogues.grimbly.positiveDelivery2":
+    "You've brought food! Grimbly's hunger is appeased. Thank you, thank you!",
+  "npcDialogues.grimbly.positiveDelivery3":
+    "Hooray! You've brought me food to fill my hungry belly. Grimbly appreciates your generosity!",
+  "npcDialogues.grimbly.positiveDelivery4":
+    "A feast for Grimbly! You've brought me exactly what I needed. Your kindness won't be forgotten!",
+  // Grimbly Negative Delivery
+  "npcDialogues.grimbly.negativeDelivery1":
+    "No food? Grimbly still hungry. Find food, bring food. Grimbly grateful.",
+  "npcDialogues.grimbly.negativeDelivery2":
+    "No food for Grimbly? Grimbly's tummy growls. Come back when you find something tasty.",
+  "npcDialogues.grimbly.negativeDelivery3":
+    "Grimbly still hungry. No food? Keep searching, and maybe next time you'll satisfy my goblin appetite.",
+  "npcDialogues.grimbly.negativeDelivery4":
+    "Empty-handed? Grimbly's stomach rumbles. Keep searching, and don't forget about a goblin's hunger!",
+  // Grimbly NoOrder
+  "npcDialogues.grimbly.noOrder1":
+    "Grimbly doesn't have an active order for you, but that doesn't mean I'm not hungry!",
+  "npcDialogues.grimbly.noOrder2":
+    "No active order from Grimbly today, but fear not! I'm always on the lookout for tasty treats. If you find anything delicious, you know who to bring it to!",
+  // Grimtootk Intro
+  "npcDialogues.grimtooth.intro1":
+    "Greetings, weary traveler. Looking for me, are you?",
+  "npcDialogues.grimtooth.intro2":
+    "Step into the realm of shadows. Have you fulfilled my order?",
+  "npcDialogues.grimtooth.intro3":
+    "Welcome, wanderer, to my mystical realm. Do you have what I need?",
+  "npcDialogues.grimtooth.intro4":
+    "Step inside, dear traveler, and uncover the secrets I've amassed. Did you find what I requested?",
+  // Grimtooth Positive Delivery
+  "npcDialogues.grimtooth.positiveDelivery1":
+    "Incredible! You've found the ingredients I require. The magic of Sunflorea is at your fingertips!",
+  "npcDialogues.grimtooth.positiveDelivery2":
+    "Marvelous! You've acquired what I sought. Together, we shall delve into the deepest depths of magic!",
+  "npcDialogues.grimtooth.positiveDelivery3":
+    "Incredible! You've gathered the mystical components I required. Your journey in the realm of magic begins!",
+  "npcDialogues.grimtooth.positiveDelivery4":
+    "Ah, splendid! You've obtained the elusive ingredients I sought. Your journey in the realm of magic begins!",
+  // Grimtooth Negative Delivery
+  "npcDialogues.grimtooth.negativeDelivery1":
+    "Alas, the required ingredients elude you. Fear not, though. Keep searching, and the mysteries shall reveal themselves!",
+  "npcDialogues.grimtooth.negativeDelivery2":
+    "Oh, darkness and dismay. You don't possess what I need. But fret not; keep working and the shadows will continue to guide you.",
+  "npcDialogues.grimtooth.negativeDelivery3":
+    "Fear not, though. Continue your work, and the magic shall manifest.",
+  "npcDialogues.grimtooth.negativeDelivery4":
+    "Oh, alas. You don't possess what I need. Return when you do.",
+  // Grimtooth NoOrder
+  "npcDialogues.grimtooth.noOrder1":
+    "No active order from GrimTooth at the moment, but don't worry. If you're in need of exquisite craftsmanship or have materials for me to work with, I'll be here, ready to create.",
+  "npcDialogues.grimtooth.noOrder2":
+    "No active order for you to fulfill with GrimTooth, but should you require the master craftsman's touch or have materials that need transforming, I'm at your service.",
+  // Old Salty Intro
+  "npcDialogues.oldSalty.intro1":
+    "Arghhhh, welcome, me heartie! Old Salty's the name, and treasure's me game. Do ye have what I seek?",
+  "npcDialogues.oldSalty.intro2":
+    "Ahoy, landlubber! Old Salty's the treasure enthusiast ye be lookin' for. Show me what ye've found on yer quest?",
+  "npcDialogues.oldSalty.intro3": "",
+  // Old Salrty Positive Delivery
+  "npcDialogues.oldSalty.positiveDelivery1":
+    "Arghhhh, ye've found the treasure I be seekin'. Ye've got the heart of a true adventurer, me matey!",
+  "npcDialogues.oldSalty.positiveDelivery2":
+    "Avast! Ye've brought the very treasure Old Salty desires. Ye be earnin' me respect, me hearty!",
+  "npcDialogues.oldSalty.positiveDelivery3":
+    "Ahoy, ye've found the treasure Old Salty's been huntin'. Ye be a true legend in these waters, me hearty!",
+  //  Olkd Salty Negative Delivery
+  "npcDialogues.oldSalty.negativeDelivery1":
+    "Arrrr, no treasure for Old Salty? Keep yer eyes peeled, me heartie. The hidden gems await yer discovery!",
+  "npcDialogues.oldSalty.negativeDelivery2":
+    "Ah, scallywag! No treasure for Old Salty? Keep searchin', and ye'll find the riches ye seek!",
+  "npcDialogues.oldSalty.negativeDelivery3":
+    "Shiver me timbers! No treasure for Old Salty? Keep sailin', me matey. The loot be out there, waitin' fer ye!",
+  // Old Salty NoOrder
+  "npcDialogues.oldSalty.noOrder1":
+    "No active order for Old Salty's treasure cove, me heartie, but that doesn't mean there's no adventure to be had. Keep your eyes peeled for hidden treasures and uncharted waters!",
+  "npcDialogues.oldSalty.noOrder2":
+    "No specific treasure for you to seek with Old Salty at the moment, but don't fret, my hearty sailor! The high seas hold countless riches waiting to be discovered.",
+  // Raven Intro
+  "npcDialogues.raven.intro1":
+    "Welcome to my humble abode. Careful where you step; there are potions brewing. Did you get what I ordered?",
+  "npcDialogues.raven.intro2":
+    "Step into the realm of shadows. Seek wisdom, find enchantment. Do you have what I need?",
+  "npcDialogues.raven.intro3":
+    "Welcome, wanderer, to my mystical realm. Seeking something magical, are you? Or do you have what I need?",
+  "npcDialogues.raven.intro4":
+    "Step inside, dear traveler. The shadows will guide you. Did you find what I seek?",
+  // Raven Positive Delivery
+  "npcDialogues.raven.positiveDelivery1":
+    "Incredible! You've found the ingredients I require. The magic of Sunflorea is at your fingertips!",
+  "npcDialogues.raven.positiveDelivery2":
+    "Marvelous! You've acquired what I sought. Together, we shall delve into the deepest depths of magic!",
+  "npcDialogues.raven.positiveDelivery3":
+    "Incredible! You've gathered the mystical components I required. Your journey in the realm of magic begins!",
+  "npcDialogues.raven.positiveDelivery4":
+    "Ah, splendid! You've obtained the elusive ingredients I sought. Your journey in the realm of magic begins!",
+  // Raven Negative Delivery
+  "npcDialogues.raven.negativeDelivery1":
+    "Alas, the required ingredients elude you. Fear not, though. Keep searching, and the mysteries shall reveal themselves!",
+  "npcDialogues.raven.negativeDelivery2":
+    "Oh, darkness and dismay. You don't possess what I need. But fret not; the shadows will guide you to it.",
+  "npcDialogues.raven.negativeDelivery3":
+    "Fear not, though. Continue your quest, and the magic shall manifest.",
+  // Raven NoOrder
+  "npcDialogues.raven.noOrder1":
+    "It seems there's no active order awaiting your arrival in my dark domain. However, should you seek guidance or have questions about the mystical arts, don't hesitate to ask.",
+  "npcDialogues.raven.noOrder2":
+    "No active order from me, traveler. But fret not! The shadows are ever-watchful, and when the time is right, we'll delve into the depths of magic together.",
+  // Tywin Intro
+  "npcDialogues.tywin.intro1":
+    "Ah, another commoner gracing my presence. Do you have what I want? Speak quickly.",
+  "npcDialogues.tywin.intro2":
+    "Oh, great, another one from the peasantry. What's your business with someone of my stature? Do you have what I need?",
+  "npcDialogues.tywin.intro3":
+    "Greetings, commoner. Seeking wisdom, are you? Do you have everything I asked for?",
+  "npcDialogues.tywin.intro4":
+    "What do you want? Speak quickly; time is money. You have what I need, I assume?",
+  // Tywin Positive Delivery
+  "npcDialogues.tywin.positiveDelivery1":
+    "Hmm, it seems you're not entirely useless. You've managed to bring what I wanted. Carry on, peasant!",
+  "npcDialogues.tywin.positiveDelivery2":
+    "Surprisingly, you've actually delivered what I desired. Perhaps you're not as useless as I presumed.",
+  "npcDialogues.tywin.positiveDelivery3":
+    "Ah, marvelous work! You've brought the materials I require. Together, we shall create masterpieces!",
+  "npcDialogues.tywin.positiveDelivery4":
+    "Good. You've delivered the materials I need. Igor shall not disappoint; the tools will be remarkable.",
+  // Tywin Negative Delivery
+  "npcDialogues.tywin.negativeDelivery1":
+    "Pathetic. You don't have what I asked for. Don't waste my time with your incompetence. Leave!",
+  "npcDialogues.tywin.negativeDelivery2":
+    "What a disappointment. You don't have what I requested. Typical of your kind. Now begone!",
+  "npcDialogues.tywin.negativeDelivery3":
+    "Unsatisfactory. You don't possess what I require. I have no time for incompetence. Return when you're capable.",
+  "npcDialogues.tywin.negativeDelivery4":
+    "Incompetence. You lack the materials required. Don't waste my time; return when you're prepared.",
+  // Tywin NoOrder
+  "npcDialogues.tywin.noOrder1":
+    "Ah, it appears I don't have an active order for you, commoner. But if you require my esteemed presence or have a request, state it quickly. Time is money, after all.",
+  "npcDialogues.tywin.noOrder2":
+    "No active order for you today, peasant. However, should you stumble upon something worthy of my attention or require my expertise, you know where to find me.",
+  //Bert Intro
+  "npcDialogues.bert.intro1":
+    "Psst! Explorer of the arcane! Sunflorea's vast secrets are manifold...",
+  "npcDialogues.bert.intro2":
+    "Ah, kindred spirit! Sunflorea is home to countless treasures...",
+  "npcDialogues.bert.intro3":
+    "Greetings, bearer of the mysterious! In Sunflorea, some items demand Delivery...",
+  "npcDialogues.bert.intro4":
+    "Hello, seeker of the concealed! Sunflorea's enchantments can be categorized into two...",
+  //Bert Positive Delivery
+  "npcDialogues.bert.positiveDelivery1":
+    "Incredible! You've brought me everything I need...",
+  "npcDialogues.bert.positiveDelivery2":
+    "Oh, fascinating find! You have brought me the exact items I sought...",
+  "npcDialogues.bert.positiveDelivery3":
+    "Ah, about time! You've acquired the exact items I sought. Excellent!",
+  "npcDialogues.bert.positiveDelivery4":
+    "Impressive! You've brought me exactly what I need to uncover the secrets of Sunflorea.",
+  //Bert Negative Delivery
+  "npcDialogues.bert.negativeDelivery1":
+    "Oh, alas. You don't possess what I seek. Keep exploring, I will see you when you have what I need!",
+  "npcDialogues.bert.negativeDelivery2":
+    "Drat! What you have isn't quite what I need. Keep working on my order, and together, we'll unravel the mysteries!",
+  "npcDialogues.bert.negativeDelivery3":
+    "Hmm, not quite what I expected. But fear not! There is still time to get me what I need.",
+  "npcDialogues.bert.negativeDelivery4":
+    "Oh, not quite what I sought. Return when you have it. But keep your eyes open; the pages of history have more to reveal.",
+  //Bert NoOrder
+  "npcDialogues.bert.noOrder1":
+    "No active order for me to fulfill today, but that doesn't mean I don't have any intriguing secrets to share.",
+  "npcDialogues.bert.noOrder2":
+    "No enigmatic artifact for you to discover with Bert at the moment, but that doesn't mean I'm short on peculiar facts and hidden truths.",
+  // Timmy Intro
+  "npcDialogues.timmy.intro1":
+    "Hey there, friend! It's Timmy, and I'm eager to see if you have what I asked for.",
+  "npcDialogues.timmy.intro2":
+    "Greetings, fellow adventurer! Timmy here, wondering if you've found what I requested.",
+  "npcDialogues.timmy.intro3":
+    "Welcome, welcome! I'm Timmy, the friendliest face in the plaza. Can you help me out by checking if you have what I need?",
+  "npcDialogues.timmy.intro4":
+    "Hey, hey! Ready for some fun in the sun? It's Timmy, and I can't wait to see if you've got what I asked for.",
+  "npcDialogues.timmy.intro5":
+    "Hello, sunshine! Timmy's here, hoping you have what I requested. Let's see?",
+  // Timmy Positive Delivery
+  "npcDialogues.timmy.positiveDelivery1":
+    "Woohoo! You've got just what I needed. Your generosity fills my heart with joy. Thank you!",
+  "npcDialogues.timmy.positiveDelivery2":
+    "That's what I'm talking about! You've brought exactly what I was looking for. You're a superstar!",
+  "npcDialogues.timmy.positiveDelivery3":
+    "Oh, fantastic! Your timing couldn't be better. You've made my day with your thoughtful offering. Thank you!",
+  "npcDialogues.timmy.positiveDelivery4":
+    "Hooray! You've delivered the goods. Sunflorea is lucky to have someone as amazing as you!",
+  "npcDialogues.timmy.positiveDelivery5":
+    "You've done it again! Your kindness and generosity never cease to amaze me. Thank you for brightening up the plaza!",
+  // Timmy Negative Delivery
+  "npcDialogues.timmy.negativeDelivery1":
+    "Oopsie-daisy! It seems you don't have what I'm searching for right now. No worries, though. Keep exploring, and we'll find another opportunity.",
+  "npcDialogues.timmy.negativeDelivery2":
+    "Oh, no! It looks like you don't have what I need at the moment. Don't worry, though. I believe in you. Come back when you find it!",
+  "npcDialogues.timmy.negativeDelivery3":
+    "Aw, shucks! You don't have what I'm looking for right now. Keep exploring, though! Maybe next time you'll stumble upon what I need.",
+  "npcDialogues.timmy.negativeDelivery4":
+    "Oh, bummer! It seems you don't have the item I'm seeking. But don't give up; new opportunities await just around the corner.",
+  "npcDialogues.timmy.negativeDelivery5":
+    "Oh, snapdragons! You don't have what I'm searching for. But don't worry, my friend. Keep exploring, and we'll celebrate when you find it!",
+  // Timmy NoOrder
+  "npcDialogues.timmy.noOrder1":
+    "Oh, hi there! I don't have any active orders for you right now, but I'm always eager to learn and hear stories. Have any exciting tales of your adventures in Sunflorea? Or perhaps you've come across a new bear friend? Share it with me!",
+  "npcDialogues.timmy.noOrder2":
+    "No specific order for me to fulfill at the moment, but that won't stop me from being curious! Do you have any interesting stories about your travels? Maybe you've encountered a rare bear or discovered a hidden gem in Sunflorea? Let's chat!",
+  // Cornwell Intro
+  "npcDialogues.cornwell.intro1":
+    "Greetings, young adventurer! Have you come bearing the items I seek?",
+  "npcDialogues.cornwell.intro2":
+    "Ah, welcome, seeker of knowledge and relics! Do you have the items I requested? Show me what you've got.",
+  "npcDialogues.cornwell.intro3":
+    "Step into the realm of ancient secrets and wisdom. Have you acquired the items I desire? Share your discoveries with me, young one.",
+  "npcDialogues.cornwell.intro4":
+    "Ah, it's you! The one on a noble quest. Have you found the items I seek? Come, show me what you've uncovered in Sunflower Land's vast lands.",
+  "npcDialogues.cornwell.intro5":
+    "Greetings, young traveler! The winds of curiosity have brought you here. Do you have the items I require to enrich my collection?",
+  // Cornwell Positive Delivery
+  "npcDialogues.cornwell.positiveDelivery1":
+    "Marvelous! You've brought the very relics I desired. Your efforts in preserving Sunflower Land's history will be remembered.",
+  "npcDialogues.cornwell.positiveDelivery2":
+    "Ah, splendid! Your findings align perfectly with the relics I sought. These treasures shall add great wisdom to my collection.",
+  "npcDialogues.cornwell.positiveDelivery3":
+    "Impressive! The items you've acquired are just what I was looking for. Sunflower Land's history will shine through them.",
+  "npcDialogues.cornwell.positiveDelivery4":
+    "Ah, young adventurer, you've surpassed my expectations! The items you've brought will be invaluable to my research.",
+  "npcDialogues.cornwell.positiveDelivery5":
+    "Ah, well done, my keen-eyed friend! The items you've delivered will find a place of honor in my windmill's collection.",
+  // Cornwell Negative Delivery
+  "npcDialogues.cornwell.negativeDelivery1":
+    "Oh, it seems you haven't found the items I seek. Fear not; the journey of discovery continues. Keep exploring Sunflower Land's mysteries.",
+  "npcDialogues.cornwell.negativeDelivery2":
+    "Hmm, not quite the relics I was expecting. But do not despair! Keep searching, and the treasures of Sunflower Land will reveal themselves to you.",
+  "npcDialogues.cornwell.negativeDelivery3":
+    "Oh, it appears the items I desired elude you. No matter; your curiosity will lead you to the right discoveries eventually.",
+  "npcDialogues.cornwell.negativeDelivery4":
+    "Ah, I see you haven't found the specific items I need. Fret not; the history of Sunflower Land holds many secrets waiting to be unearthed.",
+  "npcDialogues.cornwell.negativeDelivery5":
+    "Oh, my dear traveler, it seems you didn't bring the exact items I sought. But your dedication to Sunflower Land's history is commendable.",
+  // Cornwell NoOrder
+  "npcDialogues.cornwell.noOrder1":
+    "Ah, it appears there are no quest items for you to deliver at the moment. But do not be disheartened! Your journey in Sunflower Land is filled with untold adventures waiting to be discovered.",
+  "npcDialogues.cornwell.noOrder2":
+    "Oh, it seems I have no need for your services at the moment. But don't fret; the pages of Sunflower Land's history turn endlessly, and new quests will surely present themselves.",
+  "npcDialogues.cornwell.noOrder3":
+    "Ah, my apologies, but I have nothing for you to fulfill right now. Fear not, though; your path as a seeker of knowledge is bound to lead you to new quests in due time.",
+  "npcDialogues.cornwell.noOrder4":
+    "Ah, it seems you haven't received any quest orders from me at the moment. But do not lose hope; your inquisitive nature will soon guide you to exciting new quests in Sunflower Land.",
+  // Pumpkin Pete Intor
+  "npcDialogues.pumpkinPete.intro1":
+    "I have been waiting for you, my friend! Do you have my order ready?",
+  "npcDialogues.pumpkinPete.intro2":
+    "Hey there, pumpkin! I have been busy guiding Bumpkins around the plaza? Did you get my order?",
+  "npcDialogues.pumpkinPete.intro3":
+    "Greetings, friend! The plaza is bursting with excitement today. Did you get manage to get my order?",
+  "npcDialogues.pumpkinPete.intro4":
+    "Hello there, fellow adventurer! What brings you to my humble abode? Did you get my order?",
+  "npcDialogues.pumpkinPete.intro5":
+    "Hey, hey! Welcome to the plaza? Did you manage to find what I needed?",
+  // Pumpkin Pete Positive Delivery
+  "npcDialogues.pumpkinPete.positiveDelivery1":
+    "Hooray! You've brought exactly what I need. You're a true hero of the plaza!",
+  "npcDialogues.pumpkinPete.positiveDelivery2":
+    "Pumpkin-tastic! You've got just what I needed. You're making our little community brighter!",
+  "npcDialogues.pumpkinPete.positiveDelivery3":
+    "Great seeds of joy! You've brought exactly what I need. The plaza is lucky to have you!",
+  "npcDialogues.pumpkinPete.positiveDelivery4":
+    "Fantastic! You've arrived bearing exactly what I desired. Your kindness spreads sunshine in our plaza!",
+  "npcDialogues.pumpkinPete.positiveDelivery5":
+    "Oh, pumpkin seeds of joy! You've brought me exactly what I needed. The plaza is grateful for your help!",
+  // Pumpkin Pete Negative Delivery
+  "npcDialogues.pumpkinPete.negativeDelivery1":
+    "Oh, no. It seems you don't have what I'm looking for. Don't worry, though. I believe in you. Come back when you find it!",
+  "npcDialogues.pumpkinPete.negativeDelivery2":
+    "Aw, shucks! You don't have what I'm looking for right now. Keep exploring, though! Maybe next time.",
+  "npcDialogues.pumpkinPete.negativeDelivery3":
+    "Oh, seeds of sorrow! You don't have what I'm searching for. But don't give up; new opportunities bloom every day!",
+  "npcDialogues.pumpkinPete.negativeDelivery4":
+    "Oh, snapdragons! You don't have what I'm seeking right now. Keep exploring, though! I'm confident you'll find it.",
+  "npcDialogues.pumpkinPete.negativeDelivery5":
+    "Oopsie-daisy! You don't have what I'm searching for. But don't worry, my friend. Keep exploring, and we'll celebrate when you find it.",
+  // Pumpkin Pete NoOrder
+  "npcDialogues.pumpkinPete.noOrder1":
+    "Ah, my friend, it seems I don't have an active order for you at the moment. But fear not! I'm always here to offer guidance and a friendly pumpkin smile.",
+  "npcDialogues.pumpkinPete.noOrder2":
+    "Oh, no active order for you today, my friend. But don't worry! Feel free to explore the plaza, and if you need any assistance, I'm your trusty Bumpkin.",
+};
+
+const defaultDialogue: Record<DefaultDialogue, string> = {
+  "defaultDialogue.intro":
+    "Hello, friend! I'm here to see if you have what I need.",
+  "defaultDialogue.positiveDelivery":
+    "Oh, fantastic! You've brought exactly what I need. Thank you!",
+  "defaultDialogue.negativeDelivery":
+    "Oh no! It seems you don't have what I need. No worries, though. Keep exploring, and we'll find another opportunity.",
+  "defaultDialogue.noOrder": "No active order for me to fulfill right now.",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -1863,9 +2271,11 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...cropFruitDescriptions,
   ...decorationDescriptions,
   ...discordBonus,
+  ...defaultDialogue,
   ...errorTerms,
   ...fishDescriptions,
   ...fishingQuests,
+  ...fishermanModal,
   ...foodDescriptions,
   ...gameDescriptions,
   ...gameTerms,
@@ -1884,6 +2294,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...landscapeTerms,
   ...letsGo,
   ...levelUpMessages,
+  ...npcDialogues,
   ...npc_message,
   ...onboarding,
   ...questions,
