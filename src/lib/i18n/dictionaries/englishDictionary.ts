@@ -26,6 +26,7 @@ import {
   RetreatTerms,
   RewardTerms,
   RulesTerms,
+  SceneDialogueKey,
   SeasonTerms,
   SettingsMenu,
   SharkBumpkinDialogues,
@@ -2208,6 +2209,10 @@ const defaultDialogue: Record<DefaultDialogue, string> = {
   "defaultDialogue.noOrder": "No active order for me to fulfill right now.",
 };
 
+const sceneDialogueKey: Record<SceneDialogueKey, string> = {
+  "sceneDialogues.chefIsBusy": "Chef is busy",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -2301,6 +2306,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...retreatTerms,
   ...rewardTerms,
   ...rulesTerms,
+  ...sceneDialogueKey,
   ...seasonTerms,
   ...settingsMenu,
   ...sharkBumpkinDialogues,

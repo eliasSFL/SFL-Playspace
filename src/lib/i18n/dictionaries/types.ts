@@ -1484,6 +1484,8 @@ export type DefaultDialogue =
   | "defaultDialogue.negativeDelivery"
   | "defaultDialogue.noOrder";
 
+export type SceneDialogueKey = "sceneDialogues.chefIsBusy";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1588,6 +1590,7 @@ export type TranslationKeys =
   | RetreatTerms
   | RewardTerms
   | RulesTerms
+  | SceneDialogueKey
   | SeasonTerms
   | SettingsMenu
   | SharkBumpkinDialogues
