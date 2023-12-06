@@ -1,5 +1,3 @@
-import { InteractableModals } from "features/world/ui/InteractableModals";
-
 export type GeneralTerms =
   | "2x.sale"
   | "achievements"
