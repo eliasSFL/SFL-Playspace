@@ -19,8 +19,10 @@ import {
   HowToFarm,
   HowToSync,
   Intro,
+  InteractableModals,
   NpcDialogues,
   Onboarding,
+  PurchaseableBaitTranslation,
   NPC_MESSAGE,
   Questions,
   RetreatTerms,
@@ -30,6 +32,7 @@ import {
   SeasonTerms,
   SettingsMenu,
   SharkBumpkinDialogues,
+  ShellyDialogue,
   ShopItems,
   SnorklerDialogues,
   Statements,
@@ -2213,6 +2216,129 @@ const sceneDialogueKey: Record<SceneDialogueKey, string> = {
   "sceneDialogues.chefIsBusy": "Chef is busy",
 };
 
+const shellyDialogue: Record<ShellyDialogue, string> = {
+  "shellyPanelContent.tasksFrozen":
+    "I am waiting for the new season to start. Come back to me then!",
+  "shellyPanelContent.canTrade":
+    "Oh my, you've got a Kraken Tentacle! I'll swap it for some mermaid scales.",
+  "shellyPanelContent.cannotTrade":
+    "Looks like you don't have any Kraken Tentacles at hand! Come back when you do.",
+  "shellyPanelContent.swap": "Swap",
+  "shellyPanelContent.close": "Close",
+  "krakenIntro.congrats":
+    "Well done! The Kraken has stopped terrorising Bumpkins.",
+  "krakenIntro.noMoreTentacles":
+    "You have collected all the tentacles for the week. Let's keep a close eye on it, I'm sure the hunger will return.",
+  "krakenIntro.gotIt": "Got it!",
+  "krakenIntro.appetiteChanges":
+    "The Kraken's appetite is constantly changing.",
+  "krakenIntro.currentHunger": `Right now it has a hunger for ${state.catchTheKraken.hunger}....Phew, that's better than Bumpkins.`,
+  "krakenIntro.catchInstruction":
+    "Head to your fishing spot and try catch the beast!",
+};
+
+const purchaseableBaitTranslation: Record<PurchaseableBaitTranslation, string> =
+  {
+    "purchaseableBait.fishingLure.description": "Great for catching rare fish!",
+  };
+
+const interactableModals: Record<InteractableModals, string> = {
+  "interactableModals.fatChicken.message":
+    "Why won't these Bumpkins leave me alone, I just want to relax.",
+  "interactableModals.lazyBud.message": "Eeeep! So tired.....",
+  "interactableModals.bud.message":
+    "Hmmm, I better leave that bud alone. I'm sure it's owner is looking for it",
+  "interactableModals.walrus.message":
+    "Arrr arr arrr! The fish shop ain't open 'til I get my fish.",
+  "interactableModals.plazaBlueBook.message1":
+    "To summon the seekers, we must gather the essence of the land - pumpkins, nurtured by the earth, and eggs, the promise of new beginnings. ",
+  "interactableModals.plazaBlueBook.message2":
+    "As dusk falls and the moon casts its silvery glow, we offer our humble gifts, hoping to awaken their watchful eyes once more.",
+  "interactableModals.plazaOrangeBook.message1":
+    "Our brave defenders fought valiantly, but alas, we lost the great war, and the Moonseekers drove us from our homeland. Yet, we hold onto hope, for one day we shall reclaim what was once ours.",
+  "interactableModals.plazaOrangeBook.message2":
+    "Until then, we will keep Sunflower Land alive in our hearts and dreams, waiting for the day of our triumphant return",
+  "interactableModals.beachGreenBook.message1":
+    "When you're after those coveted Red Snappers, try an unexpected twist",
+  "interactableModals.beachGreenBook.message2":
+    "Use Apples with Red Wiggler Bait, and watch those crimson beauties practically leap into your net.",
+  "interactableModals.beachBlueBook.message1":
+    "Don't tell Shelly, but I've been trying to bring Saw Sharks to the beach!",
+  "interactableModals.beachBlueBook.message2":
+    "I've been experimenting with different chums lately, but the only one that seems to work is Red Snapper.",
+  "interactableModals.beachBlueBook.message3":
+    "These oceanic hunters can smell a Red Snapper feast from miles away, so don't be surprised if they come charging. ",
+  "interactableModals.beachOrangeBook.message1":
+    "A radiant fin appeared on the surface, I couldn't believe my eyes!",
+  "interactableModals.beachOrangeBook.message2":
+    "Luckily Tango was with me, he must be my good luck charm.",
+  "interactableModals.plazaGreenBook.message1":
+    "The Bumpkins control these islands, leaving us goblins with scarce work and even scarcer food.",
+  "interactableModals.plazaGreenBook.message2":
+    "We strive for equality, a place to call our own, where we can live and thrive",
+  "interactableModals.fanArt1.message":
+    "Congratulations Palisman, the winner of the first Fan Art competition",
+  "interactableModals.fanArt2.message":
+    "Congratulations Vergelsxtn, the winner of the Dawn Breaker Party Fan Art competition",
+  "interactableModals.fanArt2.linkLabel": "View more",
+  "interactableModals.fanArt3.message":
+    "The perfect place to for a beautiful painting. I wonder what they will put here next...",
+  "interactableModals.clubhouseReward.message1":
+    "Patience buddy, rewards are coming...",
+  "interactableModals.clubhouseReward.message2":
+    "Join #bud-clubhouse on Discord for latest updates.",
+  "interactableModals.plazaStatue.message":
+    "In honor of Bumpkin Braveheart, the steadfast farmer who rallied our town against the Goblin horde during the dark days of the ancient war.",
+  "interactableModals.dawnBook1.message1":
+    "For centuries our family has protected Dawn Breaker Island. As the island's bell ringer, we've warned of dangers from the North, even as shadowy creatures threaten our home.",
+  "interactableModals.dawnBook1.message2":
+    "Our family stands as the first line of defence against the darkness spreading from the North, but alas, our sacrifices go unnoticed.",
+  "interactableModals.dawnBook1.message3":
+    "Will the day come when our devotion is acknowledged?",
+  "interactableModals.dawnBook2.message1":
+    "Eggplants, they're more than they appear. Despite their dark exterior that attracts shadowy creatures, they bring light to our dishes.",
+  "interactableModals.dawnBook2.message2":
+    "Grilled or mashed into a Bumpkin ganoush, their versatility is unmatched. The nightshade vegetables are a symbol of our resilience in the face of adversity.",
+  "interactableModals.dawnBook3.message1":
+    "Dear diary, the Bumpkins' arrival has brought a ray of hope.",
+  "interactableModals.dawnBook3.message2":
+    "I dream of the day I can steer my own boat to Sunfloria, the land where adventurers and travelers congregate.",
+  "interactableModals.dawnBook3.message3":
+    "I've heard whispers about the Bumpkins' special preparations there - a beacon of promise in these challenging times.",
+  "interactableModals.dawnBook4.message1":
+    "The gnomes, their allure was too potent to resist.",
+  "interactableModals.dawnBook4.message2":
+    "The Witch's instructions echoed in my mind - 'Align the three, and power shall be yours.'",
+  "interactableModals.dawnBook4.message3":
+    "Alas, even the eggplant soldiers couldn't guard against the temptation. But I will not falter. One day, I will claim the power I rightfully deserve​.",
+  "interactableModals.timmyHome.message":
+    "Oh, gee, I really want you to explore my house, but Mom told me not to talk to strangers, maybe it's for the best.",
+  "interactableModals.windmill.message":
+    "Ah, my windmill is under repair, can't have anyone snooping around while I fix it up, come back later.",
+  "interactableModals.igorHome.message":
+    "Get lost! I'm in no mood for visitors, especially nosy ones like you!",
+  "interactableModals.potionHouse.message1":
+    "Watch out friend, the crazy scientist lives in there!",
+  "interactableModals.potionHouse.message2":
+    "Rumour has it they are searching for Bumpkin apprentices to grow mutant crops with them.",
+  "interactableModals.guildHouse.message":
+    "Hold on Bumpkin! You need a Bud if you want to enter the Guild House.",
+  "interactableModals.guildHouse.readMore": "Read more",
+  "interactableModals.guildHouse.budsCollection": "Buds Collection on Opensea",
+  "interactableModals.bettyHome.message":
+    "Oh, sweetie, as much as I love my crops, my house is a private space, not open to visitors right now.",
+  "interactableModals.bertHome.message":
+    "Intruders! They must be after my collection of rare items and secrets, I can't let them in!",
+  "interactableModals.beach.message1": "Have you been to the beach?",
+  "interactableModals.beach.message2":
+    "Rumour has that it is filled with luxurious treasures! Unfortunately it is under construction.",
+  "interactableModals.castle.message":
+    "Hold it there peasant! There is no way I'm letting you visit the castle",
+  "interactableModals.woodlands.message":
+    "Are you travelling to the woodlands? Make sure you pick up some delicious mushrooms!",
+  "interactableModals.port.message":
+    "Hold it there! The Goblin's are still building the port. It will be ready for travel and fishing soon.",
+};
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -2293,6 +2419,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...howToUpgrade,
   ...howToFarm,
   ...howToSync,
+  ...interactableModals,
   ...introTerms,
   ...islandName,
   ...islandNotFound,
@@ -2302,6 +2429,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...npcDialogues,
   ...npc_message,
   ...onboarding,
+  ...purchaseableBaitTranslation,
   ...questions,
   ...retreatTerms,
   ...rewardTerms,
@@ -2310,6 +2438,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...seasonTerms,
   ...settingsMenu,
   ...sharkBumpkinDialogues,
+  ...shellyDialogue,
   ...shopItems,
   ...statements,
   ...snorklerDialogues,

@@ -1,3 +1,5 @@
+import { InteractableModals } from "features/world/ui/InteractableModals";
+
 export type GeneralTerms =
   | "2x.sale"
   | "achievements"
@@ -1486,6 +1488,74 @@ export type DefaultDialogue =
 
 export type SceneDialogueKey = "sceneDialogues.chefIsBusy";
 
+export type ShellyDialogue =
+  | "shellyPanelContent.tasksFrozen"
+  | "shellyPanelContent.canTrade"
+  | "shellyPanelContent.cannotTrade"
+  | "shellyPanelContent.swap"
+  | "shellyPanelContent.close"
+  | "krakenIntro.congrats"
+  | "krakenIntro.noMoreTentacles"
+  | "krakenIntro.gotIt"
+  | "krakenIntro.appetiteChanges"
+  | "krakenIntro.currentHunger"
+  | "krakenIntro.catchInstruction";
+
+export type PurchaseableBaitTranslation =
+  | "purchaseableBait.fishingLure.description";
+
+export type InteractableModals =
+  | "interactableModals.fatChicken.message"
+  | "interactableModals.lazyBud.message"
+  | "interactableModals.bud.message"
+  | "interactableModals.walrus.message"
+  | "interactableModals.plazaBlueBook.message1"
+  | "interactableModals.plazaBlueBook.message2"
+  | "interactableModals.plazaOrangeBook.message1"
+  | "interactableModals.plazaOrangeBook.message2"
+  | "interactableModals.beachGreenBook.message1"
+  | "interactableModals.beachGreenBook.message2"
+  | "interactableModals.beachBlueBook.message1"
+  | "interactableModals.beachBlueBook.message2"
+  | "interactableModals.beachBlueBook.message3"
+  | "interactableModals.beachOrangeBook.message1"
+  | "interactableModals.beachOrangeBook.message2"
+  | "interactableModals.plazaGreenBook.message1"
+  | "interactableModals.plazaGreenBook.message2"
+  | "interactableModals.fanArt1.message"
+  | "interactableModals.fanArt2.message"
+  | "interactableModals.fanArt2.linkLabel"
+  | "interactableModals.fanArt3.message"
+  | "interactableModals.clubhouseReward.message1"
+  | "interactableModals.clubhouseReward.message2"
+  | "interactableModals.plazaStatue.message"
+  | "interactableModals.dawnBook1.message1"
+  | "interactableModals.dawnBook1.message2"
+  | "interactableModals.dawnBook1.message3"
+  | "interactableModals.dawnBook2.message1"
+  | "interactableModals.dawnBook2.message2"
+  | "interactableModals.dawnBook3.message1"
+  | "interactableModals.dawnBook3.message2"
+  | "interactableModals.dawnBook3.message3"
+  | "interactableModals.dawnBook4.message1"
+  | "interactableModals.dawnBook4.message2"
+  | "interactableModals.dawnBook4.message3"
+  | "interactableModals.timmyHome.message"
+  | "interactableModals.windmill.message"
+  | "interactableModals.igorHome.message"
+  | "interactableModals.potionHouse.message1"
+  | "interactableModals.potionHouse.message2"
+  | "interactableModals.guildHouse.message"
+  | "interactableModals.guildHouse.readMore"
+  | "interactableModals.guildHouse.budsCollection"
+  | "interactableModals.bettyHome.message"
+  | "interactableModals.bertHome.message"
+  | "interactableModals.beach.message1"
+  | "interactableModals.beach.message2"
+  | "interactableModals.castle.message"
+  | "interactableModals.woodlands.message"
+  | "interactableModals.port.message";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1558,6 +1628,7 @@ export type TranslationKeys =
   | ConfirmationTerms
   | Conversations
   | CropFruitDescriptions
+  | PurchaseableBaitTranslation
   | DecorationDescriptions
   | DefaultDialogue
   | DiscordBonus
@@ -1577,6 +1648,7 @@ export type TranslationKeys =
   | HowToUpgrade
   | HowToFarm
   | HowToSync
+  | InteractableModals
   | Intro
   | IslandName
   | IslandNotFound
@@ -1594,6 +1666,7 @@ export type TranslationKeys =
   | SeasonTerms
   | SettingsMenu
   | SharkBumpkinDialogues
+  | ShellyDialogue
   | ShopItems
   | SnorklerDialogues
   | Statements

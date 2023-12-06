@@ -2,6 +2,7 @@ import Decimal from "decimal.js-light";
 import { Worm } from "./composters";
 import { Bumpkin, GameState, InventoryItemName } from "./game";
 import { Tool } from "./tools";
+import { translate } from "lib/i18n/translate";
 
 export type PurchaseableBait = "Fishing Lure";
 export type FishingBait = Worm | PurchaseableBait;
@@ -53,7 +54,7 @@ export const PURCHASEABLE_BAIT: Record<PurchaseableBait, Tool> = {
       "Block Buck": new Decimal(1),
     },
     sfl: new Decimal(0),
-    description: "Great for catching rare fish!",
+    description: translate("purchaseableBait.fishingLure.description"),
     name: "Fishing Lure",
   },
 };
