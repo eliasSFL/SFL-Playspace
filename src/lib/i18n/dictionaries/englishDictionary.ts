@@ -8,18 +8,23 @@ import {
   DiscordBonus,
   DefaultDialogue,
   ErrorTerms,
+  ExoticShopItems,
   GameTerms,
   GeneralTerms,
   GuideTerms,
   GOBLIN_MESSAGES,
   GoldPassModal,
+  GoldTooth,
   HayseedHankV2,
+  HeliosSunflower,
   HenHouseTerms,
   HowToUpgrade,
   HowToFarm,
   HowToSync,
   Intro,
+  IntroPage,
   InteractableModals,
+  LostSunflorian,
   NpcDialogues,
   Onboarding,
   PurchaseableBaitTranslation,
@@ -27,6 +32,7 @@ import {
   Questions,
   RetreatTerms,
   RewardTerms,
+  RulesGameStart,
   RulesTerms,
   SceneDialogueKey,
   SeasonTerms,
@@ -751,17 +757,6 @@ const statements: Record<Statements, string> = {
   "statements.ohNo": "Oh no! Something went wrong!",
   "statements.openGuide": "Open guide",
   "statements.patience": "Thank you for your patience.",
-  "statements.potionRule.one":
-    "Objective: Figure out the combination. You have 3 tries to get it right. The game will end if you have a perfect potion or if you run out of tries.",
-  "statements.potionRule.two":
-    "Choose a combination of potions and attempt to mix them.",
-  "statements.potionRule.three":
-    "Adjust your next combination based on the feedback given.",
-  "statements.potionRule.four":
-    "When the game is complete, the score for your last attempt will determine help to determine your reward.",
-  "statements.potionRule.five": "A perfect potion in the perfect position",
-  "statements.potionRule.six": "Correct potion but wrong position",
-  "statements.potionRule.seven": "Oops, wrong potion",
   "statements.sfl.rewards.received": "SFL rewards received: ",
   "statements.sflLim.one": "You have reached the daily SFL limit.",
   "statements.sflLim.two":
@@ -2232,7 +2227,7 @@ const shellyDialogue: Record<ShellyDialogue, string> = {
   "krakenIntro.gotIt": "Got it!",
   "krakenIntro.appetiteChanges":
     "The Kraken's appetite is constantly changing.",
-  "krakenIntro.currentHunger": `Right now it has a hunger for ${state.catchTheKraken.hunger}....Phew, that's better than Bumpkins.`,
+  "krakenIntro.currentHunger": `Right now it has a hunger for ....Phew, that's better than Bumpkins.`,
   "krakenIntro.catchInstruction":
     "Head to your fishing spot and try catch the beast!",
 };
@@ -2242,6 +2237,70 @@ const purchaseableBaitTranslation: Record<PurchaseableBaitTranslation, string> =
     "purchaseableBait.fishingLure.description": "Great for catching rare fish!",
   };
 
+const goldTooth: Record<GoldTooth, string> = {
+  "goldTooth.intro.part1":
+    "Arrr, me hearties! The treasure-diggin' area be teemin' with wealth and adventure, and it be openin' its gates soon for ye daring farmers!",
+  "goldTooth.intro.part2":
+    "Be ready to join me crew, for the hunt for riches begins shortly!",
+};
+
+const introPage: Record<IntroPage, string> = {
+  "introPage.welcome": "Welcome to the Potion Room, my curious apprentice!",
+  "introPage.description":
+    "I am Mad Scientist Bumpkin, here to assist you on this magical quest into the world of botanic sorcery. Get ready to uncover the secrets of Sunflower Land! Each attempt will cost 1 SFL.",
+  "introPage.mission":
+    "Your mission: decipher the right combination of potions within the enchanted grid.",
+  "introPage.tip":
+    "Remember, the more correct potions you select, the happier the plant will be, increasing your chances of rare drops!",
+  "introPage.feedbackIcons": "Pay attention to the feedback icons:",
+  "introPage.correctPosition": "A perfect potion in the perfect position",
+  "introPage.correctPotionWrongPosition": "Correct potion but wrong position",
+  "introPage.wrongPotion": "Oops, wrong potion",
+  "introPage.chaosPotion": "Beware the 'chaos' potion, it shakes things up!",
+  "introPage.playButton": "Let's play",
+};
+
+const rulesGameStart: Record<RulesGameStart, string> = {
+  "rules.gameStart":
+    "At the beginning of the game, the plant will randomly pick a combination of 4 potions and 1 'chaos' potion. The combination can be all different or all the same.",
+  "rules.potionRuleOne":
+    "Objective: Figure out the combination. You have 3 tries to get it right. The game will end if you have a perfect potion or if you run out of tries.",
+  "rules.potionRuleTwo":
+    "Choose a combination of potions and attempt to mix them.",
+  "rules.potionRuleThree":
+    "Adjust your next combination based on the feedback given.",
+  "rules.chaosPotionRule":
+    "If you add the 'chaos' potion your score for that attempt will be 0.",
+  "rules.potionRuleFour":
+    "When the game is complete, the score for your last attempt will determine help to determine your reward.",
+  "rules.feedbackIconsIntro": "Pay attention to the feedback icons:",
+  "rules.correctPotion": "A perfect potion in the perfect position",
+  "rules.almostCorrectPotion": "Correct potion but wrong position",
+  "rules.incorrectPotion": "Oops, wrong potion",
+  "rules.chaosPotionWarning": "Beware the 'chaos' potion, it shakes things up!",
+};
+
+const heliosSunflower: Record<HeliosSunflower, string> = {
+  "heliosSunflower.title": "Clytie the Sunflower",
+  "heliosSunflower.description":
+    "Only the true saviour can return and harvest this Sunflower.",
+};
+
+const lostSunflorian: Record<LostSunflorian, string> = {
+  "lostSunflorian.line1": "My father sent me here to rule over Helios.",
+  "lostSunflorian.line2":
+    "Unfortunately, these Bumpkins don't like me watching them.",
+  "lostSunflorian.line3": "I can't wait to return to Sunfloria.",
+};
+
+const exoticShopItems: Record<ExoticShopItems, string> = {
+  "exoticShopItems.line1":
+    "Our bean shop is closing as our beans embark on a new journey with a mad scientist.",
+  "exoticShopItems.line2":
+    "Thank you for being part of our legume-loving community.",
+  "exoticShopItems.line3": "Best regards,",
+  "exoticShopItems.line4": "The Bean Team",
+};
 const interactableModals: Record<InteractableModals, string> = {
   "interactableModals.fatChicken.message":
     "Why won't these Bumpkins leave me alone, I just want to relax.",
@@ -2339,6 +2398,7 @@ const interactableModals: Record<InteractableModals, string> = {
   "interactableModals.port.message":
     "Hold it there! The Goblin's are still building the port. It will be ready for travel and fishing soon.",
 };
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -2403,7 +2463,9 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...decorationDescriptions,
   ...discordBonus,
   ...defaultDialogue,
+  ...exoticShopItems,
   ...errorTerms,
+  ...rulesGameStart,
   ...fishDescriptions,
   ...fishingQuests,
   ...fishermanModal,
@@ -2414,15 +2476,19 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...guideTerms,
   ...goblin_messages,
   ...goldpassModal,
+  ...goldTooth,
   ...hayseedHankV2,
+  ...heliosSunflower,
   ...henHouseTerms,
   ...howToUpgrade,
   ...howToFarm,
   ...howToSync,
   ...interactableModals,
+  ...introPage,
   ...introTerms,
   ...islandName,
   ...islandNotFound,
+  ...lostSunflorian,
   ...landscapeTerms,
   ...letsGo,
   ...levelUpMessages,
@@ -2433,6 +2499,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...questions,
   ...retreatTerms,
   ...rewardTerms,
+  ...rulesGameStart,
   ...rulesTerms,
   ...sceneDialogueKey,
   ...seasonTerms,

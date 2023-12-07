@@ -521,13 +521,6 @@ export type Statements =
   | "statements.ohNo"
   | "statements.openGuide"
   | "statements.patience"
-  | "statements.potionRule.one"
-  | "statements.potionRule.two"
-  | "statements.potionRule.three"
-  | "statements.potionRule.four"
-  | "statements.potionRule.five"
-  | "statements.potionRule.six"
-  | "statements.potionRule.seven"
   | "statements.sfl.rewards.received"
   | "statements.sflLim.one"
   | "statements.sflLim.two"
@@ -1502,6 +1495,48 @@ export type ShellyDialogue =
 export type PurchaseableBaitTranslation =
   | "purchaseableBait.fishingLure.description";
 
+export type GoldTooth = "goldTooth.intro.part1" | "goldTooth.intro.part2";
+
+export type IntroPage =
+  | "introPage.welcome"
+  | "introPage.description"
+  | "introPage.mission"
+  | "introPage.tip"
+  | "introPage.feedbackIcons"
+  | "introPage.correctPosition"
+  | "introPage.correctPotionWrongPosition"
+  | "introPage.wrongPotion"
+  | "introPage.chaosPotion"
+  | "introPage.playButton";
+
+export type RulesGameStart =
+  | "rules.gameStart"
+  | "rules.potionRuleOne"
+  | "rules.potionRuleTwo"
+  | "rules.potionRuleThree"
+  | "rules.chaosPotionRule"
+  | "rules.potionRuleFour"
+  | "rules.feedbackIconsIntro"
+  | "rules.correctPotion"
+  | "rules.almostCorrectPotion"
+  | "rules.incorrectPotion"
+  | "rules.chaosPotionWarning";
+
+export type HeliosSunflower =
+  | "heliosSunflower.title"
+  | "heliosSunflower.description";
+
+export type LostSunflorian =
+  | "lostSunflorian.line1"
+  | "lostSunflorian.line2"
+  | "lostSunflorian.line3";
+
+export type ExoticShopItems =
+  | "exoticShopItems.line1"
+  | "exoticShopItems.line2"
+  | "exoticShopItems.line3"
+  | "exoticShopItems.line4";
+
 export type InteractableModals =
   | "interactableModals.fatChicken.message"
   | "interactableModals.lazyBud.message"
@@ -1631,6 +1666,7 @@ export type TranslationKeys =
   | DefaultDialogue
   | DiscordBonus
   | ErrorTerms
+  | ExoticShopItems
   | FishDescriptions
   | FishingQuests
   | FishermanModal
@@ -1641,24 +1677,29 @@ export type TranslationKeys =
   | GuideTerms
   | GOBLIN_MESSAGES
   | GoldPassModal
+  | GoldTooth
   | HayseedHankV2
+  | HeliosSunflower
   | HenHouseTerms
   | HowToUpgrade
   | HowToFarm
   | HowToSync
   | InteractableModals
   | Intro
+  | IntroPage
   | IslandName
   | IslandNotFound
   | LandscapeTerms
   | LevelUpMessages
   | LetsGo
+  | LostSunflorian
   | NpcDialogues
   | NPC_MESSAGE
   | Onboarding
   | Questions
   | RetreatTerms
   | RewardTerms
+  | RulesGameStart
   | RulesTerms
   | SceneDialogueKey
   | SeasonTerms
