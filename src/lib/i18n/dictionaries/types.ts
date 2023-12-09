@@ -376,7 +376,8 @@ export type RewardTerms =
   | "reward.streakBonus"
   | "reward.found"
   | "reward.spendWisely"
-  | "reward.wearable";
+  | "reward.wearable"
+  | "reward.woohoo";
 
 export type ErrorTerms =
   | "error.congestion.one"
@@ -1655,6 +1656,32 @@ export type DepositWallet =
   | "deposit.noSflOrCollectibles"
   | "deposit.farmAdresse";
 
+export type ChoresStart =
+  | "chores.harvestFields"
+  | "chores.earnSfl"
+  | "chores.harvestFieldsIntro"
+  | "chores.earnSflIntro"
+  | "chores.reachLevel"
+  | "chores.reachLevelIntro"
+  | "chores.chopTrees"
+  | "chores.helpWithTrees";
+
+export type WornDescription =
+  | "worm.earthworm"
+  | "worm.grub"
+  | "worm.redWiggler";
+
+export type ComportDescription =
+  | "compost.fruitfulBlend"
+  | "compost.sproutMix"
+  | "compost.sproutMixBoosted"
+  | "compost.rapidRoot";
+
+export type ComposterDescription =
+  | "composter.compostBin"
+  | "composter.turboComposter"
+  | "composter.premiumComposter";
+
 export type BumpkinItemBuff =
   | "bumpkinItemBuff.chef.apron.boost"
   | "bumpkinItemBuff.fruit.picker Apron.boost"
@@ -1751,6 +1778,9 @@ export type TranslationKeys =
   | BumpkinPartRequirements
   | BumpkinSkillsDescription
   | BumpkinTrade
+  | ChoresStart
+  | ComportDescription
+  | ComposterDescription
   | ConfirmationTerms
   | Conversations
   | CropFruitDescriptions
@@ -1809,4 +1839,5 @@ export type TranslationKeys =
   | VisitislandEnter
   | VisitislandNotFound
   | WarningTerms
+  | WornDescription
   | WelcomeTerms;

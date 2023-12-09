@@ -13,6 +13,7 @@ import { StopTheGoblins } from "features/island/common/chest-reward/StopTheGobli
 import { ChestCaptcha } from "features/island/common/chest-reward/ChestCaptcha";
 import { Loading } from "features/auth/components";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   collectedItem?: InventoryItemName;
@@ -77,7 +78,7 @@ export const ChestReward: React.FC<Props> = ({
           {opened ? (
             <>
               <span className="text-center my-2">
-                Woohoo! Here is your reward
+                {translate("reward.woohoo")},
               </span>
               {items &&
                 items.map((item) => {

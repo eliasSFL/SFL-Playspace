@@ -5,6 +5,9 @@ import {
   BumpkinItemBuff,
   BumpkinTrade,
   BoostEffectDescriptions,
+  ChoresStart,
+  ComportDescription,
+  ComposterDescription,
   ConfirmationTerms,
   Conversations,
   DiscordBonus,
@@ -68,6 +71,7 @@ import {
   BuildingDescriptions,
   ToolDescriptions,
   BountyDescription,
+  WornDescription,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -564,6 +568,7 @@ const rewardTerms: Record<RewardTerms, string> = {
   "reward.found": "You found",
   "reward.spendWisely": "Spend it wisely.",
   "reward.wearable": "A wearable for your Bumpkin",
+  "reward.woohoo": "Woohoo! Here is your reward",
 };
 
 const errorTerms: Record<ErrorTerms, string> = {
@@ -2547,6 +2552,40 @@ const bountyDescription: Record<BountyDescription, string> = {
   "description.seaweed": "Seaweed.",
 };
 
+const wornDescription: Record<WornDescription, string> = {
+  "worm.earthworm": "A wriggly worm that attracts small fish.",
+  "worm.grub": "A juicy grub - perfect for advanced fish.",
+  "worm.redWiggler": "An exotic worm that entices rare fish.",
+};
+
+const compostDescription: Record<ComportDescription, string> = {
+  "compost.fruitfulBlend": "Fruitful Blend boosts each fruit yield by +0.1",
+  "compost.sproutMix": "Sprout Mix increases your crop yield by +0.2",
+  "compost.sproutMixBoosted": "Sprout Mix increases your crop yield by +0.4",
+  "compost.rapidRoot": "Rapid Root reduces crop growth time by 50%",
+};
+
+const composterDescription: Record<ComposterDescription, string> = {
+  "composter.compostBin": "Compost Bin details...",
+  "composter.turboComposter": "Turbo Composter details...",
+  "composter.premiumComposter": "Premium Composter details...",
+};
+
+const choresStart: Record<ChoresStart, string> = {
+  "chores.harvestFields": "Harvest the fields",
+  "chores.earnSfl": "Earn {{amount}} SFL",
+  "chores.harvestFieldsIntro":
+    "These fields ain't gonna plow themselves. Harvest 3 Sunflowers.",
+  "chores.earnSflIntro":
+    "If you want to make it big in the farming business, you better start by sellin' sunflowers, buyin' seeds, and reaping the profit.",
+  "chores.reachLevel": "Reach Level 2",
+  "chores.reachLevelIntro":
+    "If you want to level up & unlock new abilities, you better start cookin' up food & chowin' it down.",
+  "chores.chopTrees": "Chop 3 Trees",
+  "chores.helpWithTrees":
+    "My old bones ain't what they used to be, reckon you could lend me a hand with these darn trees needin' choppin? Our local Blacksmith will help you craft some tools.",
+};
+
 const bumpkinItemBuff: Record<BumpkinItemBuff, string> = {
   "bumpkinItemBuff.chef.apron.boost": "+20% Cake Profit",
   "bumpkinItemBuff.fruit.picker Apron.boost": "+0.1 Fruit",
@@ -2583,7 +2622,10 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...bumpkinSkillsDescription,
   ...bumpkinPartRequirements,
   ...bumpkinTrade,
+  ...choresStart,
   ...confirmationTerms,
+  ...compostDescription,
+  ...composterDescription,
   ...conversations,
   ...cropFruitDescriptions,
   ...depositWallet,
@@ -2640,6 +2682,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...transactionTerms,
   ...visitislandEnter,
   ...visitislandNotFound,
+  ...wornDescription,
   ...warningTerms,
   ...welcomeTerms,
 };
