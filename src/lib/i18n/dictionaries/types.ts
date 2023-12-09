@@ -1655,6 +1655,31 @@ export type DepositWallet =
   | "deposit.noSflOrCollectibles"
   | "deposit.farmAdresse";
 
+export type BumpkinItemBuff =
+  | "bumpkinItemBuff.chef.apron.boost"
+  | "bumpkinItemBuff.fruit.picker Apron.boost"
+  | "bumpkinItemBuff.angel.wings.boost"
+  | "bumpkinItemBuff.devil.wings.boost"
+  | "bumpkinItemBuff.eggplant.onesie.boost"
+  | "bumpkinItemBuff.golden.spatula.boost"
+  | "bumpkinItemBuff.mushroom.hat.boost"
+  | "bumpkinItemBuff.parsnip.boost"
+  | "bumpkinItemBuff.sunflower.amulet.boost"
+  | "bumpkinItemBuff.carrot.amulet.boost"
+  | "bumpkinItemBuff.beetroot.amulet.boost"
+  | "bumpkinItemBuff.green.amulet.boost"
+  | "bumpkinItemBuff.Luna.s.hat.boost"
+  | "bumpkinItemBuff.infernal.pitchfork.boost"
+  | "bumpkinItemBuff.cattlegrim.boost"
+  | "bumpkinItemBuff.corn.onesie.boost"
+  | "bumpkinItemBuff.sunflower.rod.boost"
+  | "bumpkinItemBuff.trident.boost"
+  | "bumpkinItemBuff.bucket.o.worms.boost"
+  | "bumpkinItemBuff.luminous.anglerfish.topper.boost"
+  | "bumpkinItemBuff.angler.waders.boost"
+  | "bumpkinItemBuff.ancient.rod.boost"
+  | "bumpkinItemBuff.banana.amulet.boost";
+
 export type LevelUpMessages =
   | "levelUp.2"
   | "levelUp.3"
@@ -1722,6 +1747,7 @@ export type TranslationKeys =
   | BoostDescriptions
   | BountyDescription
   | BuildingDescriptions
+  | BumpkinItemBuff
   | BumpkinPartRequirements
   | BumpkinSkillsDescription
   | BumpkinTrade
