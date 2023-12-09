@@ -33,6 +33,7 @@ import { loadWardrobe } from "lib/blockchain/BumpkinItems";
 import { getBudsBalance } from "lib/blockchain/Buds";
 import { CONFIG } from "lib/config";
 import { Label } from "components/ui/Label";
+import { translate } from "lib/i18n/translate";
 
 const imageDomain = CONFIG.NETWORK === "mainnet" ? "buds" : "testnet-buds";
 
@@ -138,7 +139,7 @@ export const Deposit: React.FC<Props> = ({
 
   if (status === "error") {
     <div className="p-2">
-      <p>There was an error loading your balances.</p>
+      <p>{translate("deposit.errorLoadingBalances")},</p>
     </div>;
   }
 
@@ -266,9 +267,9 @@ export const Deposit: React.FC<Props> = ({
   if (!canDeposit) {
     return (
       <div className="p-2 space-y-2">
-        <p>To deposit items you must first level up</p>
+        <p>{translate("deposit.toDepositLevelUp")}</p>
         <Label icon={lockIcon} type="danger">
-          Level 3
+          {translate("deposit.level")}
         </Label>
       </div>
     );
@@ -278,9 +279,11 @@ export const Deposit: React.FC<Props> = ({
       {status === "loading" && <Loading />}
       {status === "loaded" && emptyWallet && (
         <div className="p-2 space-y-2">
-          <p>No SFL or Collectibles Found!</p>
+          <p>{translate("deposit.noSflOrCollectibles")}</p>
           <div className="flex text-[12px] sm:text-xs mb-3 space-x-1">
-            <span className="whitespace-nowrap">Farm address:</span>
+            <span className="whitespace-nowrap">
+              {translate("deposit.farmAdresse")}
+            </span>
             <CopyAddress address={farmAddress} />
           </div>
         </div>
@@ -288,7 +291,7 @@ export const Deposit: React.FC<Props> = ({
       {status === "loaded" && !emptyWallet && (
         <>
           <div className="p-2 mb-1">
-            <p className="mb-2">Your Personal Wallet</p>
+            <p className="mb-2">{translate("deposit.yourPersonalWallet")}</p>
             <div className="divide-y-2 divide-dashed divide-brown-600">
               <div className="space-y-3 mb-3">
                 {sflBalance.gt(0) && (
@@ -379,7 +382,7 @@ export const Deposit: React.FC<Props> = ({
                   </>
                 )}
                 <div className="pt-3">
-                  <p className="mb-1">Your farm will receive:</p>
+                  <p className="mb-1">{translate("deposit.farmWillReceive")}</p>
                   <div className="text-[11px] sm:text-xs mb-3">
                     <CopyAddress address={farmAddress} />
                   </div>
@@ -441,12 +444,12 @@ export const Deposit: React.FC<Props> = ({
                 href={`https://docs.sunflower-land.com/economy/depositing-and-custody#cant-see-the-items-you-deposited`}
                 rel="noreferrer"
               >
-                {`Deposit didn't arrive?`}
+                {translate("deposit.depositDidNotArrive")}
               </a>
             </div>
             {sflDepositAmount > 0 && (
               <div className="mb-1 mt-2 text-xxs">
-                When players withdraw any SFL, a{" "}
+                {translate("deposit.goblinTaxInfo")}{" "}
                 <a
                   target="_blank"
                   className="underline text-xxs hover:text-blue-500"
@@ -455,7 +458,7 @@ export const Deposit: React.FC<Props> = ({
                 >
                   {`Goblin Tax`}
                 </a>{" "}
-                is applied.
+                {translate("deposit.applied")}
               </div>
             )}
           </div>
@@ -470,7 +473,7 @@ export const Deposit: React.FC<Props> = ({
               amountGreaterThanBalance
             }
           >
-            Send to farm
+            {translate("deposit.sendToFarm")}
           </Button>
         </>
       )}

@@ -61,7 +61,7 @@ export const Rules: React.FC<Props> = ({ onDone }) => {
               src={FeedbackIcons["bomb"]}
               style={{
                 width: `${PIXEL_SCALE * 7}px`,
-                height: `${PIXEL_SCALE * 8}px,`,
+                height: `${PIXEL_SCALE * 8}px`,
               }}
             />
             <span>{t("rules.chaosPotionWarning")}</span>

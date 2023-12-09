@@ -3,12 +3,15 @@ import {
   AchievementsDialog,
   BumpkinPartRequirements,
   BumpkinTrade,
+  BoostEffectDescriptions,
   ConfirmationTerms,
   Conversations,
   DiscordBonus,
+  DepositWallet,
   DefaultDialogue,
   ErrorTerms,
   ExoticShopItems,
+  GarbageCollector,
   GameTerms,
   GeneralTerms,
   GuideTerms,
@@ -814,6 +817,7 @@ const statements: Record<Statements, string> = {
   "statements.inStock": "in stock",
   "statements.soldOutWearables": "View sold out wearables",
   "statements.craft.composter": "Craft at Composter",
+  "statements.wallet.to.inventory.transfer": "Deposit items from your wallet",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {
@@ -865,6 +869,35 @@ const retreatTerms: Record<RetreatTerms, string> = {
   "retreatTerms.resale.three": "View items on OpenSea",
 };
 
+const boostEffectDescriptions: Record<BoostEffectDescriptions, string> = {
+  "description.obie.boost": "25% faster eggplants",
+  "description.purple.trail.boost": "+0.2 Eggplant",
+  "description.freya.fox.boost": "+0.5 Pumpkin",
+  "description.sir.goldensnout.boost": "+0.5 Crops (AOE)",
+  "description.maximus.boost": "+1 Eggplant",
+  "description.basic.scarecrow.boost":
+    "20% faster Sunflowers, Potatoes and Pumpkins",
+  "description.scary.mike.boost":
+    "+0.2 yield on Carrots, Cabbages, Beetroots, Cauliflowers and Parsnips",
+  "description.laurie.chuckle.crow.boost":
+    "+0.2 yield on Eggplants, Corn, Radishes, Wheat and Kale",
+  "description.bale.boost": "Adjacent chickens produce +0.2 Eggs",
+  "description.immortal.pear.boost": "+1 Harvest",
+  "description.treasure.map.boost": "+20% SFL on Treasure Bounty",
+  "description.poppy.boost": "+0.1 Corn",
+  "description.kernaldo.boost": "+25% Corn Speed",
+  "description.grain.grinder.boost": "+20% Cake XP",
+  "description.nana.boost": "+10% Banana Speed",
+  "description.soil.krabby.boost": "+10% Composter Speed",
+  "description.skill.shrimpy.boost": "+20% Fish XP",
+  "description.iron.idol.boost": "+1 Iron",
+  "description.emerald.turtle.boost": "+0.5 AoE Any Minerals",
+  "description.tin.turtle.boost": "+0.1 AoE Stones",
+  "description.heart.of.davy.jones.boost": "Dig an extra 20 times per day",
+  "description.Karkinos.boost": "+0.1 Cabbage",
+  "description.mushroom.house.boost": "+0.2 Wild Mushroom",
+};
+
 const boostDescriptions: Record<BoostDescriptions, string> = {
   // Mutant Chickens
   "description.speed.chicken.one":
@@ -884,6 +917,34 @@ const boostDescriptions: Record<BoostDescriptions, string> = {
     "A chicken that boosts bananas. What a world we live in.",
 
   // Boosts
+  "description.lab.grow.pumpkin": "+0.3 Pumpkin Yield",
+  "description.lab.grown.radish": "+0.4 Radish Yield",
+  "description.lab.grown.carrot": "+0.2 Carrot Yield",
+  "description.purple.trail":
+    "Leave your opponents in a trail of envy with the mesmerizing and unique Purple Trail",
+  "description.obie": "A fierce eggplant soldier",
+  "description.maximus": "Squash the competition with plump Maximus",
+  "description.mushroom.house":
+    "A whimsical, fungi-abode where the walls sprout with charm and even the furniture has a 'spore-tacular' flair!",
+  "description.Karkinos":
+    "Pinchy but kind, the crabby cabbage-boosting addition to your farm!",
+  "description.heart.of.davy.jones":
+    "Whoever possesses it holds immense power over the seven seas, can dig for treasure without tiring",
+  "description.tin.turtle":
+    "The Tin Turtle gives +0.1 to Stones you mine within its Area of Effect.",
+  "description.emerald.turtle":
+    "The Emerald Turtle gives +0.5 to any minerals you mine within its Area of Effect.",
+  "description.iron.idol": "The Idol adds 1 iron every time you mine iron.",
+  "description.skill.shrimpy":
+    "Shrimpy's here to help! He'll ensure you get that extra XP from fish.",
+  "description.soil.krabby":
+    "Speedy sifting with a smile! Enjoy a 10% composter speed boost with this crustaceous champ.",
+  "description.nana":
+    "This rare beauty is a surefire way to boost your banana harvests.",
+  "description.grain.grinder":
+    "Grind your grain and experience a delectable surge in Cake XP.",
+  "description.kernaldo": "The magical corn whisperer.",
+  "description.poppy": "The mystical corn kernel.",
   "description.victoria.sisters": "The pumpkin loving sisters",
   "description.undead.rooster":
     "An unfortunate casualty of the war. 10% increased egg yield.",
@@ -1319,6 +1380,17 @@ const gameDescriptions: Record<GameDescriptions, string> = {
   "description.ancient.human.warhammer": "An Ancient Human Warhammer",
 
   // Coupons
+  "description.community.coin":
+    "A valued coin that can be exchanged for rewards",
+  "description.bud.seedling": "A seedling to be exchanged for a free Bud NFT",
+  "description.gold.pass":
+    "An exclusive pass that enables the holder to craft rare NFTs, trade, withdraw and access bonus content.",
+  "description.rapid.growth": "Apply to a crop to grow twice as fast",
+  "description.bud.ticket":
+    "A guaranteed spot to mint a Bud at the Sunflower Land Buds NFT drop.",
+  "description.potion.ticket":
+    "A reward from the Potion House. Use this to buy items from Garth.",
+  "description.trading.ticket": "Free Trades! Woohoo!",
   "description.block.buck": "A valuable token in Sunflower Land!",
   "description.beta.pass": "Gain early access to features for testing.",
   "description.war.bond": "A mark of a true warrior",
@@ -1356,6 +1428,7 @@ const fishingQuests: Record<FishingQuests, string> = {
   "quest.1500.fish": "Catch 1500 fish",
   "quest.marine.marvel": "Catch each Marine Marvel",
 };
+
 const islandName: Record<IslandName, string> = {
   "island.home": "Home",
   "island.pumpkin.plaza": "Pumpkin Plaza",
@@ -2301,7 +2374,9 @@ const exoticShopItems: Record<ExoticShopItems, string> = {
   "exoticShopItems.line3": "Best regards,",
   "exoticShopItems.line4": "The Bean Team",
 };
+
 const interactableModals: Record<InteractableModals, string> = {
+  "interactableModals.returnhome.message": "Would you like to return home?",
   "interactableModals.fatChicken.message":
     "Why won't these Bumpkins leave me alone, I just want to relax.",
   "interactableModals.lazyBud.message": "Eeeep! So tired.....",
@@ -2399,6 +2474,28 @@ const interactableModals: Record<InteractableModals, string> = {
     "Hold it there! The Goblin's are still building the port. It will be ready for travel and fishing soon.",
 };
 
+const garbageCollector: Record<GarbageCollector, string> = {
+  "garbageCollector.welcome": "Welcome to my humble shop.",
+  "garbageCollector.description":
+    "I'm the Garbage Trader, and I'll buy anything you've got - as long as it's garbage.",
+  "garbageCollector.continue": "Continue",
+};
+
+const depositWallet: Record<DepositWallet, string> = {
+  "deposit.errorLoadingBalances": "There was an error loading your balances.",
+  "deposit.yourPersonalWallet": "Your Personal Wallet",
+  "deposit.farmWillReceive": "Your farm will receive:",
+  "deposit.depositDidNotArrive": "Deposit didn't arrive?",
+  "deposit.goblinTaxInfo":
+    "When players withdraw any SFL, a Goblin Tax is applied.",
+  "deposit.applied": "is applied.",
+  "deposit.sendToFarm": "Send to farm",
+  "deposit.toDepositLevelUp": "To deposit items you must first level up",
+  "deposit.level": "Level 3",
+  "deposit.noSflOrCollectibles": "No SFL or Collectibles Found!",
+  "deposit.farmAdresse": "Farm address:",
+};
+
 const bumpkinSkillsDescription: Record<BumpkinSkillsDescription, string> = {
   // Crops
   "description.green.thumb": "Crops yield 5% more",
@@ -2452,6 +2549,7 @@ const bountyDescription: Record<BountyDescription, string> = {
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...achievementTerms,
   ...bountyDescription,
+  ...boostEffectDescriptions,
   ...boostDescriptions,
   ...buildingDescriptions,
   ...bumpkinSkillsDescription,
@@ -2460,16 +2558,17 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...confirmationTerms,
   ...conversations,
   ...cropFruitDescriptions,
+  ...depositWallet,
   ...decorationDescriptions,
   ...discordBonus,
   ...defaultDialogue,
   ...exoticShopItems,
   ...errorTerms,
-  ...rulesGameStart,
   ...fishDescriptions,
   ...fishingQuests,
   ...fishermanModal,
   ...foodDescriptions,
+  ...garbageCollector,
   ...gameDescriptions,
   ...gameTerms,
   ...generalTerms,

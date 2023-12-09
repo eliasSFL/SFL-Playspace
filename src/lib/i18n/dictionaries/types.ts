@@ -556,7 +556,8 @@ export type Statements =
   | "statements.water.well.needed.two"
   | "statements.soldOut"
   | "statements.inStock"
-  | "statements.soldOutWearables";
+  | "statements.soldOutWearables"
+  | "statements.wallet.to.inventory.transfer";
 
 export type LandscapeTerms =
   | "landscape.intro.one"
@@ -610,6 +611,24 @@ export type BoostDescriptions =
   | "description.banana.chicken"
 
   // Boosts
+  | "description.lab.grow.pumpkin"
+  | "description.lab.grown.radish"
+  | "description.lab.grown.carrot"
+  | "description.purple.trail"
+  | "description.obie"
+  | "description.maximus"
+  | "description.mushroom.house"
+  | "description.Karkinos"
+  | "description.heart.of.davy.jones"
+  | "description.tin.turtle"
+  | "description.emerald.turtle"
+  | "description.iron.idol"
+  | "description.skill.shrimpy"
+  | "description.soil.krabby"
+  | "description.nana"
+  | "description.grain.grinder"
+  | "description.kernaldo"
+  | "description.poppy"
   | "description.victoria.sisters"
   | "description.undead.rooster"
   | "description.observatory"
@@ -644,7 +663,30 @@ export type BoostDescriptions =
   | "description.immortal.pear"
   | "description.bale";
 
-// export type BoostEffectDescriptions = "";
+export type BoostEffectDescriptions =
+  | "description.obie.boost"
+  | "description.purple.trail.boost"
+  | "description.freya.fox.boost"
+  | "description.sir.goldensnout.boost"
+  | "description.maximus.boost"
+  | "description.basic.scarecrow.boost"
+  | "description.scary.mike.boost"
+  | "description.laurie.chuckle.crow.boost"
+  | "description.bale.boost"
+  | "description.immortal.pear.boost"
+  | "description.treasure.map.boost"
+  | "description.poppy.boost"
+  | "description.kernaldo.boost"
+  | "description.grain.grinder.boost"
+  | "description.nana.boost"
+  | "description.soil.krabby.boost"
+  | "description.skill.shrimpy.boost"
+  | "description.iron.idol.boost"
+  | "description.emerald.turtle.boost"
+  | "description.tin.turtle.boost"
+  | "description.heart.of.davy.jones.boost"
+  | "description.Karkinos.boost"
+  | "description.mushroom.house.boost";
 
 export type CropFruitDescriptions =
   // Crops
@@ -938,8 +980,14 @@ export type GameDescriptions =
   | "description.sunflower.key"
   | "description.ancient.goblin.sword"
   | "description.ancient.human.warhammer"
-
   // Coupons
+  | "description.community.coin"
+  | "description.bud.seedling"
+  | "description.gold.pass"
+  | "description.rapid.growth"
+  | "description.bud.ticket"
+  | "description.potion.ticket"
+  | "description.trading.ticket"
   | "description.block.buck"
   | "description.beta.pass"
   | "description.war.bond"
@@ -952,7 +1000,6 @@ export type GameDescriptions =
   | "description.crow.feather"
   | "description.mermaid.scale"
   | "description.sunflower.supporter"
-
   // Easter Items
   | "description.egg.basket"
   | "description.blue.egg"
@@ -1538,6 +1585,7 @@ export type ExoticShopItems =
   | "exoticShopItems.line4";
 
 export type InteractableModals =
+  | "interactableModals.returnhome.message"
   | "interactableModals.fatChicken.message"
   | "interactableModals.lazyBud.message"
   | "interactableModals.bud.message"
@@ -1588,6 +1636,24 @@ export type InteractableModals =
   | "interactableModals.castle.message"
   | "interactableModals.woodlands.message"
   | "interactableModals.port.message";
+
+export type GarbageCollector =
+  | "garbageCollector.welcome"
+  | "garbageCollector.description"
+  | "garbageCollector.continue";
+
+export type DepositWallet =
+  | "deposit.errorLoadingBalances"
+  | "deposit.yourPersonalWallet"
+  | "deposit.farmWillReceive"
+  | "deposit.depositDidNotArrive"
+  | "deposit.goblinTaxInfo"
+  | "deposit.applied"
+  | "deposit.sendToFarm"
+  | "deposit.toDepositLevelUp"
+  | "deposit.level"
+  | "deposit.noSflOrCollectibles"
+  | "deposit.farmAdresse";
 
 export type LevelUpMessages =
   | "levelUp.2"
@@ -1652,6 +1718,7 @@ export type LevelUpMessages =
 
 export type TranslationKeys =
   | AchievementsDialog
+  | BoostEffectDescriptions
   | BoostDescriptions
   | BountyDescription
   | BuildingDescriptions
@@ -1662,6 +1729,7 @@ export type TranslationKeys =
   | Conversations
   | CropFruitDescriptions
   | PurchaseableBaitTranslation
+  | DepositWallet
   | DecorationDescriptions
   | DefaultDialogue
   | DiscordBonus
@@ -1671,6 +1739,7 @@ export type TranslationKeys =
   | FishingQuests
   | FishermanModal
   | FoodDescriptions
+  | GarbageCollector
   | GameDescriptions
   | GameTerms
   | GeneralTerms

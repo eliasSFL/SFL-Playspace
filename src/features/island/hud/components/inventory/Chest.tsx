@@ -129,7 +129,7 @@ export const Chest: React.FC<Props> = ({
               closeModal();
             }}
           >
-            Deposit items from your wallet
+            {t("statements.wallet.to.inventory.transfer")}
           </p>
         )}
       </div>
@@ -240,7 +240,7 @@ export const Chest: React.FC<Props> = ({
                   closeModal();
                 }}
               >
-                Deposit items from your wallet
+                {t("statements.wallet.to.inventory.transfer")}
               </p>
             </div>
           )}
