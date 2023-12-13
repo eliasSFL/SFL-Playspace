@@ -58,7 +58,7 @@ const NonFertilePlotComponent = () => {
 
       <Modal centered show={showModal} onHide={() => setShowModal(false)}>
         <CloseButtonPanel
-          title="These crops need water!"
+          title={t("statements.crop.water")}
           onClose={() => setShowModal(false)}
         >
           <div className="p-2">

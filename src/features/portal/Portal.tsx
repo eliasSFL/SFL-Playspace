@@ -6,6 +6,7 @@ import { Panel } from "components/ui/Panel";
 import { Button } from "components/ui/Button";
 import { PortalPhaser } from "./PortalPhaser";
 import { PortalHud } from "./components/PortalHud";
+import { translate } from "lib/i18n/translate";
 
 export const Portal: React.FC = () => {
   const { portalService } = useContext(PortalContext);
@@ -16,7 +17,7 @@ export const Portal: React.FC = () => {
       {portalState.matches("error") && (
         <Modal centered show>
           <Panel>
-            <span>Something went wrong</span>
+            <span>{translate("portal.wrong")}</span>
           </Panel>
         </Modal>
       )}
@@ -24,21 +25,23 @@ export const Portal: React.FC = () => {
       {portalState.matches("loading") && (
         <Modal centered show>
           <Panel>
-            <span className="loading">Loading</span>
+            <span className="loading">{translate("portal.loading")}</span>
           </Panel>
         </Modal>
       )}
       {portalState.matches("unauthorised") && (
         <Modal centered show>
           <Panel>
-            <span>unauthorised</span>
+            <span>{translate("portal.unauthorised")}</span>
           </Panel>
         </Modal>
       )}
       {portalState.matches("idle") && (
         <Modal centered show>
           <Panel>
-            <Button onClick={() => portalService.send("START")}>Start</Button>
+            <Button onClick={() => portalService.send("START")}>
+              {translate("start")}
+            </Button>
           </Panel>
         </Modal>
       )}

@@ -93,11 +93,10 @@ export const Restock: React.FC<Props> = ({ onClose }) => {
               }}
             />
             <span className="text-sm text-start w-full mt-2">
-              You are going to use 1 Block Buck to restock all shop items in the
-              game.
+              {translate("restock.one.buck")}
             </span>
             <span className="text-sm text-start w-full mt-3">
-              Are you sure you want to Restock?
+              {translate("restock.sure")}
             </span>
           </div>
           <div className="flex justify-content-around mt-2 space-x-1">

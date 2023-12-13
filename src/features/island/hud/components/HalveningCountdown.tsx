@@ -28,12 +28,15 @@ export const HalveningCountdown: React.FC = () => {
           bumpkinParts={NPC_WEARABLES.grimbly}
         >
           <div className="p-2">
-            <p className="text-sm mb-2">The Halvening is Approaching!</p>
             <p className="text-sm mb-2">
-              At the Halvening, all prices of crops & certain resources are
-              halved. This makes it more difficult to attain SFL.
+              {t("halveningCountdown.approaching")}
             </p>
-            <p className="text-sm mb-2">Make sure you are prepared!</p>
+            <p className="text-sm mb-2">
+              {t("halveningCountdown.description")}
+            </p>
+            <p className="text-sm mb-2">
+              {t("halveningCountdown.preparation")}
+            </p>
             <a
               href="https://docs.sunflower-land.com/economy/economic-controls/dynamic-supply-and-demand"
               target="_blank"
@@ -53,7 +56,7 @@ export const HalveningCountdown: React.FC = () => {
         <div>
           <div className="flex -mb-1">
             <img src={sfl} className="h-5 mr-1" />
-            <p className="text-xs underline">Halvening</p>
+            <p className="text-xs underline">{t("halveningCountdown.title")}</p>
             <img src={sfl} className="h-5 ml-1" />
           </div>
           <TimerDisplay time={start} />

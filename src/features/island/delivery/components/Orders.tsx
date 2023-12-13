@@ -228,7 +228,7 @@ export const DeliveryOrders: React.FC<Props> = ({ selectedId, onSelect }) => {
           tasksAreClosing && (
             <div className="flex flex-col items-center">
               <p className="text-xs text-center">
-                A new season approaches, deliveries will temporarily close.
+                {translate("orderhelp.New.Season")}
               </p>
               <Label type="info" icon={SUNNYSIDE.icons.timer} className="mt-1">
                 {secondsToString((tasksCloseAt - Date.now()) / 1000, {
@@ -241,7 +241,7 @@ export const DeliveryOrders: React.FC<Props> = ({ selectedId, onSelect }) => {
         {tasksAreFrozen && (
           <div className="flex flex-col items-center">
             <p className="text-xs text-center">
-              New Seasonal Deliveries opening soon.
+              {translate("orderhelp.New.Season.arrival")}
             </p>
             <Label
               type="info"
@@ -480,13 +480,13 @@ export const DeliveryOrders: React.FC<Props> = ({ selectedId, onSelect }) => {
           {showSkipDialog && (
             <>
               <div className="flex-1 space-y-2 p-1">
-                <p className="text-xs">
-                  {"You're only able to skip an order after 24 hours!"}
-                </p>
-                {canSkip && <p className="text-xs">Choose wisely!</p>}
+                <p className="text-xs">{translate("orderhelp.Skip.hour")}</p>
+                {canSkip && (
+                  <p className="text-xs">{translate("orderhelp.Wisely")}</p>
+                )}
                 {!canSkip && (
                   <>
-                    <p className="text-xs">Skip in:</p>
+                    <p className="text-xs">{translate("orderhelp.SkipIn")}</p>
                     <div className="flex-1">
                       <RequirementLabel
                         type="time"
@@ -499,10 +499,10 @@ export const DeliveryOrders: React.FC<Props> = ({ selectedId, onSelect }) => {
               {canSkip && (
                 <>
                   <Button onClick={() => setShowSkipDialog(false)}>
-                    Not Right Now
+                    {translate("orderhelp.NoRight")}
                   </Button>
                   <Button onClick={skip} className="mt-1">
-                    Skip Order
+                    {translate("orderhelp.Skip.Order")}
                   </Button>
                 </>
               )}

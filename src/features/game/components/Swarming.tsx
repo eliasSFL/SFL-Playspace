@@ -54,11 +54,9 @@ export const Swarming: React.FC = () => {
           />
         </div>
         <p className="text-sm mb-3 mt-2 w-full">
-          {`Pay attention, you took too long to farm your crops!`}
+          {t("swarming.tooLongToFarm")}
         </p>
-        <p className="text-sm mb-3 w-full">
-          {`The Goblins have taken over your farm. You must wait for them to leave`}
-        </p>
+        <p className="text-sm mb-3 w-full">{t("swarming.goblinsTakenOver")}</p>
         {secondsLeft >= 0 && (
           <div className="flex mt-2">
             <CountdownLabel timeLeft={secondsLeft} />

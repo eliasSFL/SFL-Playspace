@@ -15,15 +15,10 @@ export const Tutorial: React.FC<Props> = ({ onClose }) => {
     return (
       <>
         <div className="space-y-3 text-sm p-2 my-2">
-          <p>
-            This menu will show you the levels required to unlock new buildings.
-          </p>
-          <p className="mb-2">
-            Some of these can be built multiple times once you reach a certain
-            level.
-          </p>
+          <p>{translate("tutorial.pageOne.text1")}</p>
+          <p className="mb-2">{translate("tutorial.pageOne.text2")}</p>
         </div>
-        <Button onClick={() => setPageNumber(1)}>Next</Button>
+        <Button onClick={() => setPageNumber(1)}>{translate("next")}</Button>
       </>
     );
   };
@@ -32,14 +27,8 @@ export const Tutorial: React.FC<Props> = ({ onClose }) => {
     return (
       <>
         <div className="space-y-3 text-sm p-2 mb-2">
-          <p>
-            Buildings are an important way to progress through the game as they
-            will help you to expand and evolve.
-          </p>
-          <p className="mb-2">
-            Lets start by leveling up our Bumpkin so we can get the Workbench to
-            learn about tools.
-          </p>
+          <p>{translate("tutorial.pageTwo.text1")}</p>
+          <p className="mb-2">{translate("tutorial.pageTwo.text2")}</p>
         </div>
         <div className="flex space-x-1">
           <Button onClick={() => setPageNumber(0)}>{translate("back")}</Button>

@@ -19,17 +19,21 @@ export const Blocked: React.FC = () => {
   return (
     <div className="flex flex-col text-center text-shadow items-center p-1">
       <div className="flex mb-3 items-center ml-8">
-        <img src={humanDeath} alt="Warning" className="w-full" />
+        <img
+          src={humanDeath}
+          alt={translate("errorAndAccess.warning")}
+          className="w-full"
+        />
       </div>
       <p className="text-center mb-3">
-        {translate("error.blocked.betaTestersOnly")}
+        {translate("errorAndAccess.blocked.betaTestersOnly")}
       </p>
 
       <p className="text-center mb-2 text-xs">
-        {`You don't have access to the game yet.`}
+        {`translate("errorAndAccess.denied.message")`}
       </p>
       <p className="text-center mb-4 text-xs">
-        Make sure you have joined the{" "}
+        {translate("errorAndAccess.instructions.part1")}
         <a
           className="underline hover:text-white"
           href="https://discord.gg/sunflowerland"
@@ -38,10 +42,10 @@ export const Blocked: React.FC = () => {
         >
           {translate("sflDiscord")}
         </a>
-        {`, go to the #verify channel and have the "farmer" role.`}
+        {translate("errorAndAccess.instructions.part2")}
       </p>
       <Button onClick={tryAgain} className="overflow-hidden mb-2">
-        <span>{translate("try.again")}</span>
+        <span>{translate("errorAndAccess.try.again")}</span>
       </Button>
     </div>
   );

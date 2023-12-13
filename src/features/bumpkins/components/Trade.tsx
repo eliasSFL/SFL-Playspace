@@ -58,7 +58,7 @@ const ListTrade: React.FC<{
 
   return (
     <div>
-      <p className="mb-1 p-1 text-sm">What would you like to list?</p>
+      <p className="mb-1 p-1 text-sm">{t("bumpkinTrade.like.list")}</p>
 
       <div className="flex flex-wrap">
         {getKeys(TRADE_LIMITS)

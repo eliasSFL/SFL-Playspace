@@ -196,7 +196,7 @@ const BaitSelection: React.FC<{
           </div>
 
           <Label icon={SUNNYSIDE.tools.fishing_rod} type="default">
-            Daily Limit: {dailyFishingCount}/{dailyFishingMax}
+            {t("statements.daily.limit")} {dailyFishingCount}/{dailyFishingMax}
           </Label>
         </div>
       </div>
@@ -225,14 +225,14 @@ const BaitSelection: React.FC<{
               )}
               {!state.inventory[bait] && bait === "Fishing Lure" && (
                 <Label className="mt-1" type="default">
-                  Craft at Beach
+                  {translate("fishermanModal.craft.beach")}
                 </Label>
               )}
             </div>
           </div>
           {!state.inventory[bait] && (
             <Label className="absolute -top-3 right-0" type={"danger"}>
-              0 available
+              {translate("fishermanModal.zero.available")}
             </Label>
           )}
         </OuterPanel>

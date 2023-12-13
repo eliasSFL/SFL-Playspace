@@ -16,6 +16,7 @@ import { SUNNYSIDE } from "assets/sunnyside";
 import { wallet } from "lib/blockchain/wallet";
 import { Context } from "features/game/GameProvider";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   isOpen: boolean;
@@ -68,8 +69,8 @@ export const TransferAccount: React.FC<Props> = ({ isOpen, onClose }) => {
           }}
           className="text-center mb-2"
         >
-          {`Your Account #${gameService.state.context.farmId} has been transferred to: ${receiver.address}`}
-          !
+          {translate("transfer.Account")} ${gameService.state.context.farmId}{" "}
+          {translate("transfer.Account.Trans")}${receiver.address}!
         </span>
         <Button onClick={handleContinue}>{t("continue")}</Button>
       </div>
@@ -83,10 +84,10 @@ export const TransferAccount: React.FC<Props> = ({ isOpen, onClose }) => {
   if (state === "loading") {
     return (
       <div className="flex flex-col text-center items-center p-2">
-        <span>Transferring your farm!</span>
+        <span>{translate("transfer.Farm")}</span>
         <img src={transferring} className="w-1/2 mt-2" />
         <span className="text-xs mt-4 underline mb-1">
-          Do not refresh this browser
+          {translate("transfer.Refresh")}
         </span>
       </div>
     );
@@ -96,8 +97,8 @@ export const TransferAccount: React.FC<Props> = ({ isOpen, onClose }) => {
     const { t } = useAppTranslation();
     return (
       <div className="p-2">
-        <p>Transfer your account</p>
-        <p className="text-xs mt-2">Wallet address:</p>
+        <p>{translate("transfer.Taccount")}</p>
+        <p className="text-xs mt-2">{translate("transfer.address")}</p>
         <input
           type="text"
           name="farmId"
@@ -111,9 +112,7 @@ export const TransferAccount: React.FC<Props> = ({ isOpen, onClose }) => {
             className="h-6 pt-2 pr-2"
           />
           <span className="text-xs mt-2">
-            Please ensure that the address you provided is on the Polygon
-            Blockchain, is correct and is owned by you. There is no recovery
-            from incorrect addresses.
+            {translate("transfer.sure.adress")}
           </span>
         </div>
         <Button
@@ -121,7 +120,7 @@ export const TransferAccount: React.FC<Props> = ({ isOpen, onClose }) => {
           onClick={transfer}
           disabled={!isAddress(receiver.address.toLowerCase())}
         >
-          Transfer
+          {t("transfer")}
         </Button>
         <a
           href="https://docs.sunflower-land.com/support/faq#how-can-i-send-my-account-to-a-new-wallet"

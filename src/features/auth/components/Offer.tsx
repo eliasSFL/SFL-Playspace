@@ -67,24 +67,21 @@ export const OfferItems: React.FC = () => {
 
 export const Offer: React.FC = () => {
   const { authService } = useContext(Context);
+  const { t } = useAppTranslation();
   const promo = getPromoCode();
   if (promo === "okx") {
     return (
       <>
         <div className="p-2">
+          <p className="mb-2">{t("offer.okxOffer")}</p>
           <p className="mb-2">
-            Howdy Farmer, I have an exclusive OKX offer for you!
+            {t("offer.beginWithNFT")}
+            <span className="underline">free</span> {t("offer.NFT.inclu")}
           </p>
-
-          <p className="mb-2">
-            To begin you will need to mint a{" "}
-            <span className="underline">free</span> Farm NFT. This will include:
-          </p>
-
           <OfferItems />
         </div>
         <Button onClick={() => authService.send("CONTINUE")}>
-          Get Starter Pack Now
+          {t("offer.getStarterPack")}
         </Button>
       </>
     );
@@ -92,17 +89,15 @@ export const Offer: React.FC = () => {
   return (
     <>
       <div className="p-2">
-        <p className="mb-2">Howdy Farmer, you look new here!</p>
-
+        <p className="mb-2">{t("offer.newHere")}</p>
         <p className="mb-3">
-          To begin you will need to mint a{" "}
-          <span className="underline">free</span> Farm NFT. This will include:
+          {t("offer.beginWithNFT")} <span className="underline">free</span>
+          {t("offer.NFT.inclu")}
         </p>
-
         <OfferItems />
       </div>
       <Button onClick={() => authService.send("CONTINUE")}>
-        Get Started Now
+        {t("offer.getStarted")}
       </Button>
     </>
   );

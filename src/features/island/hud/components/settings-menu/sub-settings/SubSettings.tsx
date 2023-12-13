@@ -11,6 +11,8 @@ import { TransferAccount } from "./TransferAccount";
 import { CloseButtonPanel } from "features/game/components/CloseablePanel";
 import { SUNNYSIDE } from "assets/sunnyside";
 import { useActor } from "@xstate/react";
+import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   isOpen: boolean;
@@ -18,6 +20,7 @@ interface Props {
 }
 
 export const SubSettings: React.FC<Props> = ({ isOpen, onClose }) => {
+  const { t } = useAppTranslation();
   const { authService } = useContext(Auth.Context);
   const { gameService, showAnimations, toggleAnimations } = useContext(Context);
   const [gameState] = useActor(gameService);
@@ -56,12 +59,17 @@ export const SubSettings: React.FC<Props> = ({ isOpen, onClose }) => {
     }
 
     return (
-      <CloseButtonPanel title="Settings" onClose={onClose}>
+      <CloseButtonPanel
+        title={translate("subSettings.title")}
+        onClose={onClose}
+      >
         <Button className="col p-1" onClick={onToggleAnimations}>
-          {showAnimations ? "Disable Animations" : "Enable Animations"}
+          {showAnimations
+            ? translate("subSettings.disableAnimations")
+            : translate("subSettings.enableAnimations")}
         </Button>
         <Button className="col p-1 mt-2" onClick={onLogout}>
-          Logout
+          {translate("subSettings.logout")}
         </Button>
         {isFullUser && (
           <>
@@ -69,11 +77,11 @@ export const SubSettings: React.FC<Props> = ({ isOpen, onClose }) => {
               className="col p-1 mt-2"
               onClick={() => setView("transfer")}
             >
-              Transfer Ownership
+              {translate("subSettings.transferOwnership")}
             </Button>
 
             <Button className="col p-1 mt-2" onClick={refreshSession}>
-              Refresh
+              {translate("subSettings.refresh")}
             </Button>
 
             <div className="flex items-start">
@@ -82,8 +90,7 @@ export const SubSettings: React.FC<Props> = ({ isOpen, onClose }) => {
                 className="w-12 pt-2 pr-2"
               />
               <span className="text-xs mt-2">
-                Refresh your session to grab the latest changes from the
-                Blockchain. This is useful if you deposited items to your farm.
+                {translate("subSettings.refreshDescription")}
               </span>
             </div>
           </>

@@ -22,7 +22,7 @@ export const RejectedSignTransaction: React.FC<Props> = ({ onTryAgain }) => {
         <p className="mb-3 text-center">{t("transaction.rejected")}</p>
 
         <p className="mb-4 text-xs">
-          {`You need to accept the transaction in the metamask popup to continue`}{" "}
+          {t("transaction.message0")}{" "}
           <a
             className="underline"
             href="https://docs.sunflower-land.com/support/terms-of-service"
