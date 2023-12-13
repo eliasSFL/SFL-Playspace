@@ -78,14 +78,16 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
   }
 
   if (isLoading) {
-    return <p className="loading">Loading</p>;
+    return <p className="loading">{translate("playerTrade.loading")}</p>;
   }
 
   if (!listing)
     return (
       <div className="p-2">
         <img src={SUNNYSIDE.icons.sad} className="mx-auto w-1/5 my-2" />
-        <p className="text-sm mb-2 text-center">No trades available.</p>
+        <p className="text-sm mb-2 text-center">
+          {translate("playerTrade.no.trade")}
+        </p>
       </div>
     );
 
@@ -94,10 +96,10 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
       <div className="p-1 flex flex-col items-center">
         <img src={lock} className="w-1/5 mb-2" />
         <p className="text-sm mb-1 text-center">
-          {`Oh no! You've reached your max items.`}
+          {translate("playerTrade.max.item")}
         </p>
         <p className="text-xs mb-1 text-center">
-          Please store your progress on chain before continuing.
+          {translate("playerTrade.Progress")}
         </p>
       </div>
     );
@@ -108,10 +110,10 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
       <div className="p-1 flex flex-col items-center">
         <img src={SUNNYSIDE.icons.timer} className="w-1/6 mb-2" />
         <p className="text-sm mb-1 text-center">
-          Oh oh! It looks like you have a transaction in progress.
+          {translate("playerTrade.transaction")}
         </p>
         <p className="text-xs mb-1 text-center">
-          Please allow 5 minutes before continuing.
+          {translate("playerTrade.Please")}
         </p>
       </div>
     );
@@ -157,7 +159,7 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
         <div className="flex items-center justify-end">
           <img src={SUNNYSIDE.icons.neutral} className="h-4 mr-1"></img>
 
-          <span className="text-xs">Sold</span>
+          <span className="text-xs">{translate("playerTrade.sold")}</span>
         </div>
       );
     }
@@ -199,7 +201,7 @@ export const PlayerTrade: React.FC<Props> = ({ farmId, onClose }) => {
   return (
     <div>
       <div className="flex justify-between items-center mb-1">
-        <p className="text-xs mb-1 ml-0.5">For sale:</p>
+        <p className="text-xs mb-1 ml-0.5">{translate("playerTrade.sale")}</p>
         <Label type="info">{t("beta")}</Label>
       </div>
       <OuterPanel>

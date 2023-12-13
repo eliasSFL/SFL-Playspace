@@ -16,6 +16,7 @@ export type GeneralTerms =
   | "build"
   | "buy"
   | "cancel"
+  | "craft"
   | "card.cash"
   | "chest"
   | "chores"
@@ -99,8 +100,10 @@ export type GeneralTerms =
   | "restock"
   | "retry"
   | "reward.discovered"
+  | "start"
   | "save"
   | "saving"
+  | "share"
   | "secs"
   | "seeds"
   | "select.resource"
@@ -124,6 +127,7 @@ export type GeneralTerms =
   | "trades"
   | "trading"
   | "trash.collection"
+  | "transfer"
   | "travel"
   | "try.again"
   | "uhOh"
@@ -136,6 +140,7 @@ export type GeneralTerms =
   | "wallet"
   | "welcome"
   | "wishing.well"
+  | "warning"
   | "withdraw"
   | "you.are.here";
 
@@ -399,7 +404,15 @@ export type ErrorTerms =
   | "error.diagnostic.info"
   | "error.Web3NotFound"
   | "error.noBumpkin"
-  | "error.clock.not.synced";
+  | "error.clock.not.synced"
+  | "error.composterNotExist"
+  | "error.composterNotProducing"
+  | "error.composterAlreadyDone"
+  | "error.composterAlreadyBoosted"
+  | "error.missingEggs"
+  | "error.noBumpkin1"
+  | "error.insufficientSFL"
+  | "error.insufficientSpaceForChickens";
 
 export type WarningTerms =
   | "warning.noAxe"
@@ -424,6 +437,7 @@ export type TransactionTerms =
   | "transaction.id"
   | "transaction.matic"
   | "transaction.maticAmount"
+  | "transaction.message0"
   | "transaction.message"
   | "transaction.minblockbucks"
   | "transaction.mintFarm.one"
@@ -477,7 +491,8 @@ export type Onboarding =
   | "onboarding.wallet.titleThree"
   | "onboarding.wallet.five"
   | "onboarding.wallet.six"
-  | "onboarding.wallet.final";
+  | "onboarding.wallet.final"
+  | "onboarding.wallet.already";
 
 export type Questions = "questions.obtain.MATIC" | "questions.lowCash";
 
@@ -517,7 +532,6 @@ export type Statements =
   | "statements.minting"
   | "statements.mutant.chicken"
   | "statements.new.wish"
-  | "statements.news"
   | "statements.no.reward"
   | "statements.ohNo"
   | "statements.openGuide"
@@ -558,7 +572,10 @@ export type Statements =
   | "statements.soldOut"
   | "statements.inStock"
   | "statements.soldOutWearables"
-  | "statements.wallet.to.inventory.transfer";
+  | "statements.wallet.to.inventory.transfer"
+  | "statements.crop.water"
+  | "statements.daily.limit"
+  | "statements.sure.buy";
 
 export type LandscapeTerms =
   | "landscape.intro.one"
@@ -577,7 +594,8 @@ export type BumpkinTrade =
   | "bumpkinTrade.lvl"
   | "bumpkinTrade.noTradeLs"
   | "bumpkinTrade.sell"
-  | "bumpkinTrade.list";
+  | "bumpkinTrade.list"
+  | "bumpkinTrade.like.list";
 
 export type BumpkinPartRequirements =
   | "part.hair"
@@ -1305,7 +1323,9 @@ export type FishermanModal =
   | "fishermanModal.crazyHappening"
   | "fishermanModal.bonusFish"
   | "fishermanModal.dailyLimitReached"
-  | "fishermanModal.needCraftRod";
+  | "fishermanModal.needCraftRod"
+  | "fishermanModal.craft.beach"
+  | "fishermanModal.zero.available";
 
 export type NpcDialogues =
   // Blacksmith Intro
@@ -1636,7 +1656,8 @@ export type InteractableModals =
   | "interactableModals.beach.message2"
   | "interactableModals.castle.message"
   | "interactableModals.woodlands.message"
-  | "interactableModals.port.message";
+  | "interactableModals.port.message"
+  | "interactableModals.like.home";
 
 export type GarbageCollector =
   | "garbageCollector.welcome"
@@ -1671,7 +1692,7 @@ export type WornDescription =
   | "worm.grub"
   | "worm.redWiggler";
 
-export type ComportDescription =
+export type CompostDescription =
   | "compost.fruitfulBlend"
   | "compost.sproutMix"
   | "compost.sproutMixBoosted"
@@ -1681,6 +1702,15 @@ export type ComposterDescription =
   | "composter.compostBin"
   | "composter.turboComposter"
   | "composter.premiumComposter";
+
+export type ErrorAndAccess =
+  | "errorAndAccess.warning"
+  | "errorAndAccess.blocked.betaTestersOnly"
+  | "errorAndAccess.denied.message"
+  | "errorAndAccess.instructions.part1"
+  | "errorAndAccess.sflDiscord"
+  | "errorAndAccess.instructions.part2"
+  | "errorAndAccess.try.again";
 
 export type BumpkinItemBuff =
   | "bumpkinItemBuff.chef.apron.boost"
@@ -1706,6 +1736,418 @@ export type BumpkinItemBuff =
   | "bumpkinItemBuff.angler.waders.boost"
   | "bumpkinItemBuff.ancient.rod.boost"
   | "bumpkinItemBuff.banana.amulet.boost";
+
+export type NotOnDiscordServer =
+  | "notOnDiscordServer.warning"
+  | "notOnDiscordServer.intro"
+  | "notOnDiscordServer.joinDiscord"
+  | "notOnDiscordServer.discordServer"
+  | "notOnDiscordServer.completeVerification"
+  | "notOnDiscordServer.acceptRules"
+  | "notOnDiscordServer.tryAgain"
+  | "notOnDiscordServer.close"
+  | "notOnDiscordServer.tryAgainButton";
+
+export type Offer =
+  | "offer.okxOffer"
+  | "offer.beginWithNFT"
+  | "offer.getStarterPack"
+  | "offer.newHere"
+  | "offer.getStarted"
+  | "offer.NFT.inclu";
+
+export type Session = "session.expired" | "session.expiredMessage";
+
+export type ConfirmSkill = "confirm.skillClaim";
+
+export type ChickenWinner = "chicken.winner.playagain";
+
+export type NoTownCenter =
+  | "noTownCenter.reward"
+  | "noTownCenter.news"
+  | "noTownCenter.townCenterPlacement";
+
+export type Swarming = "swarming.tooLongToFarm" | "swarming.goblinsTakenOver";
+
+export type Restock = "restock.one.buck" | "restock.sure" | "restock.seed.buy";
+
+export type ShowingFarm = "showing.farm" | "showing.wallet";
+
+export type TutorialPage =
+  | "tutorial.pageOne.text1"
+  | "tutorial.pageOne.text2"
+  | "tutorial.pageTwo.text1"
+  | "tutorial.pageTwo.text2";
+
+export type NoBumpkin =
+  | "noBumpkin.readyToFarm"
+  | "noBumpkin.play"
+  | "noBumpkin.missingBumpkin"
+  | "noBumpkin.bumpkinNFT"
+  | "noBumpkin.bumpkinHelp"
+  | "noBumpkin.mintBumpkin"
+  | "noBumpkin.allBumpkins"
+  | "noBumpkin.chooseBumpkin"
+  | "noBumpkin.deposit"
+  | "noBumpkin.loading";
+
+export type RemoveKuebiko =
+  | "removeKuebiko.title"
+  | "removeKuebiko.description"
+  | "removeKuebiko.removeSeeds";
+
+export type StopGoblin =
+  | "stopGoblin.stop.goblin"
+  | "stopGoblin.stop.moon"
+  | "stopGoblin.tap.one"
+  | "stopGoblin.tap.two"
+  | "stopGoblin.left";
+
+export type DeliveryHelp =
+  | "deliveryHelp.pumpkinSoup"
+  | "deliveryHelp.hammer"
+  | "deliveryHelp.axe"
+  | "deliveryHelp.chest";
+
+export type OrderHelp =
+  | "orderhelp.Skip.hour"
+  | "orderhelp.New.Season"
+  | "orderhelp.New.Season.arrival"
+  | "orderhelp.Wisely"
+  | "orderhelp.SkipIn"
+  | "orderhelp.NoRight"
+  | "orderhelp.Skip.Order";
+
+export type ModalDescription =
+  | "modalDescription.friend"
+  | "modalDescription.love.fruit"
+  | "modalDescription.gift"
+  | "modalDescription.limited.abilitie"
+  | "modalDescription.trail";
+
+export type Quest = "quest.mint.free";
+
+export type FishermanQuest = "fishermanQuest.Ohno" | "fishermanQuest.Newfish";
+
+export type FishingChallengeIntro =
+  | "fishingChallengeIntro.powerfulCatch"
+  | "fishingChallengeIntro.useStrength"
+  | "fishingChallengeIntro.stopGreenBar"
+  | "fishingChallengeIntro.beQuick";
+
+export type FishingGuide =
+  | "fishingGuide.catch.rod"
+  | "fishingGuide.bait.earn"
+  | "fishingGuide.eat.fish"
+  | "fishingGuide.discover.fish"
+  | "fishingGuide.condition"
+  | "fishingGuide.bait.chum"
+  | "fishingGuide.legendery.fish";
+
+export type Detail =
+  | "detail.how.item"
+  | "detail.Claim.Reward"
+  | "detail.basket.empty"
+  | "detail.view.item";
+
+export type SubSettings =
+  | "subSettings.title"
+  | "subSettings.disableAnimations"
+  | "subSettings.enableAnimations"
+  | "subSettings.logout"
+  | "subSettings.transferOwnership"
+  | "subSettings.refresh"
+  | "subSettings.refreshDescription";
+
+export type TransferAccount =
+  | "transferAccount.transferYourAccount"
+  | "transferAccount.walletAddress"
+  | "transferAccount.warning"
+  | "transferAccount.transfer"
+  | "transferAccount.readMore"
+  | "transferAccount.transferringFarm"
+  | "transferAccount.doNotRefresh"
+  | "transferAccount.successMessage"
+  | "transferAccount.continue";
+
+export type GetContent =
+  | "getContent.error"
+  | "getContent.joining"
+  | "getContent.congratulations"
+  | "getContent.accessGranted"
+  | "getContent.connectToDiscord"
+  | "getContent.connect"
+  | "getContent.getAccess"
+  | "getContent.requires"
+  | "getContent.join";
+
+export type PlazaSettings =
+  | "plazaSettings.title.main"
+  | "plazaSettings.title.mutedPlayers"
+  | "plazaSettings.title.keybinds"
+  | "plazaSettings.mutedPlayers.description"
+  | "plazaSettings.mutedPlayers.button"
+  | "plazaSettings.keybinds.description"
+  | "plazaSettings.keybinds.button"
+  | "plazaSettings.noMutedPlayers"
+  | "plazaSettings.unmute"
+  | "plazaSettings.back";
+
+export type Share =
+  | "share.TweetText"
+  | "share.ShareYourFarmLink"
+  | "share.ShowOffToFarmers"
+  | "share.FarmNFTImageAlt"
+  | "share.CopyFarmURL"
+  | "share.Tweet"
+  | "share.Visit";
+
+export type AddSFL =
+  | "addSFL.loading"
+  | "addSFL.swapDetails"
+  | "addSFL.referralFee"
+  | "addSFL.swapTitle"
+  | "addSFL.balance"
+  | "addSFL.for"
+  | "addSFL.minimumReceived"
+  | "addSFL.addSFL"
+  | "addSFL.title";
+
+export type HalveningCountdown =
+  | "halveningCountdown.approaching"
+  | "halveningCountdown.description"
+  | "halveningCountdown.preparation"
+  | "halveningCountdown.title"
+  | "halveningCountdown.readMore";
+
+export type Transfer =
+  | "transfer.sure.adress"
+  | "transfer.Account"
+  | "transfer.Account.Trans"
+  | "transfer.Farm"
+  | "transfer.Refresh"
+  | "transfer.Taccount"
+  | "transfer.address";
+
+export type OnCollectReward =
+  | "onCollectReward.Missing.Seed"
+  | "onCollectReward.Market"
+  | "onCollectReward.Missing.Shovel";
+
+export type AvailableSeeds =
+  | "availableSeeds.select"
+  | "availableSeeds.select.plant"
+  | "availableSeeds.plant";
+
+export type Portal = "portal.wrong" | "portal.loading" | "portal.unauthorised";
+
+export type Reaction =
+  | "reaction.bumpkin"
+  | "reaction.bumpkin.10"
+  | "reaction.bumpkin.30"
+  | "reaction.bumpkin.40"
+  | "reaction.sunflowers"
+  | "reaction.crops"
+  | "reaction.goblin"
+  | "reaction.crown";
+
+export type Action =
+  | "action.bid.message"
+  | "action.bid"
+  | "action.reveal"
+  | "action.time"
+  | "action.live"
+  | "action.requirement"
+  | "action.start"
+  | "action.period"
+  | "action.closed"
+  | "action.rank"
+  | "action.farm"
+  | "action.const"
+  | "action.const.soon";
+
+export type GetInputErrorMessage =
+  | "getInputErrorMessage.minimum"
+  | "getInputErrorMessage.sfl"
+  | "getInputErrorMessage.s"
+  | "getInputErrorMessage.no.sfl"
+  | "getInputErrorMessage.yes.sfl"
+  | "getInputErrorMessage.auction"
+  | "getInputErrorMessage.place.bid"
+  | "getInputErrorMessage.cannot.bid";
+
+export type Loser =
+  | "loser.unsuccess"
+  | "loser.refund"
+  | "loser.longer"
+  | "loser.refund.one";
+
+export type Pending = "pending.calcul" | "pending.comeback";
+
+export type Refunded = "refunded.itemsReturned" | "refunded.goodLuck";
+
+export type TieBreaker =
+  | "tieBreaker.label"
+  | "tieBreaker.tiebreaker"
+  | "tieBreaker.closeBid"
+  | "tieBreaker.betterLuck"
+  | "tieBreaker.readMore"
+  | "tieBreaker.refundResources"
+  | "tieBreaker.refund";
+
+export type Winner =
+  | "winner.congratulations"
+  | "winner.mintTime"
+  | "winner.mint"
+  | "winner.mintTime.one";
+
+export type PersonHood =
+  | "personHood.Details."
+  | "personHood.Identify"
+  | "personHood.Congrat";
+
+export type Resale = "resale.lookingForItems" | "resale.actionText";
+
+export type Beach = "beach.party" | "beach.ready";
+
+export type BeachLuck =
+  | "beachLuck.tryLuck"
+  | "beachLuck.uncleFound"
+  | "beachLuck.grabShovel"
+  | "beachLuck.refreshesIn";
+
+export type TreasureModal =
+  | "treasureModal.noShovelTitle"
+  | "treasureModal.needShovel"
+  | "treasureModal.purchaseShovel"
+  | "treasureModal.gotIt"
+  | "treasureModal.maxHolesTitle"
+  | "treasureModal.saveTreasure"
+  | "treasureModal.comeBackTomorrow"
+  | "treasureModal.drilling";
+
+export type Chat =
+  | "chat.Loading"
+  | "chat.Fail"
+  | "chat.mute"
+  | "chat.again"
+  | "chat.Kicked";
+
+export type Base = "base.missing" | "base.far.away";
+
+export type Community = "community.toast" | "community.url" | "comunity.Travel";
+
+export type Npc =
+  | "npc.Modal.Hammer"
+  | "npc.Modal.Marcus"
+  | "npc.Modal.Billy"
+  | "npc.Modal.Billy.one"
+  | "npc.Modal.Billy.two"
+  | "npc.Modal.Readmore"
+  | "npc.Modal.Gabi"
+  | "npc.Modal.Gabi.one"
+  | "npc.Modal.Craig"
+  | "npc.Modal.Craig.one";
+
+export type Parsnip =
+  | "parsnip.hat"
+  | "parsnip.miss"
+  | "parsnip.Bonus"
+  | "parsnip.found"
+  | "parsnip.gift";
+
+export type Pickserver =
+  | "pickserver.server"
+  | "pickserver.full"
+  | "pickserver.explore"
+  | "pickserver.event"
+  | "pickserver.built";
+
+export type PlayerTrade =
+  | "playerTrade.loading"
+  | "playerTrade.no.trade"
+  | "playerTrade.max.item"
+  | "playerTrade.Progress"
+  | "playerTrade.transaction"
+  | "playerTrade.Please"
+  | "playerTrade.sold"
+  | "playerTrade.sale"
+  | "playerTrade.title.congrat";
+
+export type World =
+  | "world.intro.one"
+  | "world.intro.two"
+  | "world.intro.three"
+  | "world.intro.visit"
+  | "world.intro.craft"
+  | "world.intro.carf.limited"
+  | "world.intro.trade"
+  | "world.intro.auction"
+  | "world.intro.four"
+  | "world.intro.five"
+  | "world.intro.six"
+  | "world.intro.seven";
+
+export type Delivery =
+  | "delivery.panel.one"
+  | "delivery.panel.two"
+  | "delivery.panel.three"
+  | "delivery.panel.four";
+
+export type Donation =
+  | "donation.one"
+  | "donation.amount"
+  | "donation.donate"
+  | "donation.donating"
+  | "donation.Ty"
+  | "donation.wrong";
+
+export type Kick =
+  | "kick.player"
+  | "kick.player.id"
+  | "kick.Reason"
+  | "kick.player.farm"
+  | "kick.player.kick"
+  | "kick.player.failed"
+  | "kick.player.kicking"
+  | "kick.please"
+  | "kick.Message";
+
+export type Kicked =
+  | "kicked.kicked"
+  | "kicked.Reason"
+  | "kicked.Message"
+  | "kicked.accept";
+
+export type Mute =
+  | "mute.playe"
+  | "mute.playe.id"
+  | "mute.duration"
+  | "mute.Reason"
+  | "mute.player.farm"
+  | "mute.player.mute"
+  | "mute.Reason"
+  | "mute.fail"
+  | "mute.player.muting"
+  | "mute.player.wait"
+  | "mute.you"
+  | "mute.until"
+  | "mute.discord"
+  | "mute.accept"
+  | "mute.unmute.farm"
+  | "mute.unmute.player"
+  | "mute.unmute.failed"
+  | "mute.unmuting.player"
+  | "mute.unmute.wait"
+  | "mute.online";
+
+export type Shelly =
+  | "shelly.Dialogue.one"
+  | "shelly.Dialogue.two"
+  | "shelly.Dialogue.three"
+  | "shelly.Dialogue.four"
+  | "shelly.Dialogue.five"
+  | "shelly.Dialogue.letsgo";
 
 export type LevelUpMessages =
   | "levelUp.2"
@@ -1769,7 +2211,13 @@ export type LevelUpMessages =
   | "levelUp.60";
 
 export type TranslationKeys =
+  | Action
+  | AddSFL
+  | AvailableSeeds
   | AchievementsDialog
+  | Base
+  | Beach
+  | BeachLuck
   | BoostEffectDescriptions
   | BoostDescriptions
   | BountyDescription
@@ -1778,31 +2226,46 @@ export type TranslationKeys =
   | BumpkinPartRequirements
   | BumpkinSkillsDescription
   | BumpkinTrade
+  | Chat
+  | ChickenWinner
   | ChoresStart
-  | ComportDescription
+  | Community
+  | CompostDescription
   | ComposterDescription
+  | ConfirmSkill
   | ConfirmationTerms
   | Conversations
   | CropFruitDescriptions
   | PurchaseableBaitTranslation
+  | Detail
+  | Delivery
   | DepositWallet
   | DecorationDescriptions
   | DefaultDialogue
+  | DeliveryHelp
+  | Donation
   | DiscordBonus
+  | ErrorAndAccess
   | ErrorTerms
   | ExoticShopItems
   | FishDescriptions
+  | FishingGuide
+  | FishermanQuest
+  | FishingChallengeIntro
   | FishingQuests
   | FishermanModal
   | FoodDescriptions
   | GarbageCollector
   | GameDescriptions
   | GameTerms
+  | GetInputErrorMessage
   | GeneralTerms
+  | GetContent
   | GuideTerms
   | GOBLIN_MESSAGES
   | GoldPassModal
   | GoldTooth
+  | HalveningCountdown
   | HayseedHankV2
   | HeliosSunflower
   | HenHouseTerms
@@ -1814,30 +2277,69 @@ export type TranslationKeys =
   | IntroPage
   | IslandName
   | IslandNotFound
+  | Kick
+  | Kicked
   | LandscapeTerms
   | LevelUpMessages
   | LetsGo
   | LostSunflorian
+  | Loser
+  | ModalDescription
+  | Mute
+  | NoBumpkin
+  | NotOnDiscordServer
+  | NoTownCenter
+  | Npc
   | NpcDialogues
   | NPC_MESSAGE
+  | PlayerTrade
+  | Parsnip
+  | Pending
+  | PersonHood
+  | Pickserver
+  | PlazaSettings
+  | Portal
+  | Offer
+  | OnCollectReward
   | Onboarding
+  | OrderHelp
+  | Quest
   | Questions
+  | Refunded
+  | Reaction
+  | RemoveKuebiko
+  | Resale
+  | Restock
   | RetreatTerms
   | RewardTerms
   | RulesGameStart
   | RulesTerms
   | SceneDialogueKey
+  | Share
+  | Session
   | SeasonTerms
   | SettingsMenu
   | SharkBumpkinDialogues
+  | Shelly
   | ShellyDialogue
   | ShopItems
+  | ShowingFarm
   | SnorklerDialogues
   | Statements
+  | StopGoblin
+  | SubSettings
+  | Swarming
+  | TieBreaker
   | ToolDescriptions
   | TransactionTerms
+  | Transfer
+  | TransferAccount
+  | TreasureModal
+  | TutorialPage
   | VisitislandEnter
   | VisitislandNotFound
   | WarningTerms
   | WornDescription
-  | WelcomeTerms;
+  | Winner
+  | WelcomeTerms
+  | World;

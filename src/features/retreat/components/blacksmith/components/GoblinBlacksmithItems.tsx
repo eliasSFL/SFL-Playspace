@@ -20,6 +20,7 @@ import { SplitScreenView } from "components/ui/SplitScreenView";
 import { CraftingRequirements } from "components/ui/layouts/CraftingRequirements";
 import { Loading } from "features/auth/components";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 const API_URL = CONFIG.API_URL;
 
@@ -75,7 +76,7 @@ export const GoblinBlacksmithItems: React.FC<Props> = ({ onClose }) => {
 
   if (itemNames.length === 0 || !selectedItem) {
     return (
-      <div className="p-1 min-h-[200px]">No items available to craft!</div>
+      <div className="p-1 min-h-[200px]">{translate("winner.mintTime")}</div>
     );
   }
 

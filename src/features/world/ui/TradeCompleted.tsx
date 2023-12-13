@@ -14,6 +14,7 @@ import token from "assets/icons/token_2.png";
 import { Button } from "components/ui/Button";
 import { OuterPanel } from "components/ui/Panel";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   farmId: number;
@@ -43,7 +44,7 @@ export const TradeCompleted: React.FC<Props> = ({ mmoService, farmId }) => {
     <Modal centered show={!!sold} onHide={() => setTrade(undefined)}>
       <CloseButtonPanel
         onClose={() => setTrade(undefined)}
-        title={"Congratulations, your listing was purchased"}
+        title={translate("playerTrade.title.congrat")}
       >
         {sold && (
           <OuterPanel>

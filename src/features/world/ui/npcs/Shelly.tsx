@@ -282,22 +282,22 @@ export const Shelly: React.FC<Props> = ({ onClose }) => {
         bumpkinParts={NPC_WEARABLES.shelly}
         message={[
           {
-            text: "Howdy, Bumpkin! Welcome to the beach!",
+            text: translate("shelly.Dialogue.one"),
           },
           {
-            text: "After a hard day's work on your farm, there's no better place to kick back and enjoy the waves.",
+            text: translate("shelly.Dialogue.two"),
           },
           {
-            text: "But we've got a bit of a situation. A massive kraken has emerged and taken control of our beloved beach.",
+            text: translate("shelly.Dialogue.three"),
           },
           {
-            text: "We could really use your help, dear. Grab your bait and fishing rods, and together, we'll tackle this colossal problem!",
+            text: translate("shelly.Dialogue.four"),
           },
           {
-            text: "For each tentacle you catch I will provide you with valuable mermaid scales!",
+            text: translate("shelly.Dialogue.five"),
             actions: [
               {
-                text: "Let's do it!",
+                text: translate("shelly.Dialogue.letsgo"),
                 cb: () => setShowBeachIntro(false),
               },
             ],

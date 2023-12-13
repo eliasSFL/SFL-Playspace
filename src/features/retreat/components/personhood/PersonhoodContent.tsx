@@ -14,6 +14,7 @@ import { Loading } from "features/auth/components";
 import { Context } from "features/game/GoblinProvider";
 import { Button } from "components/ui/Button";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 export const PersonhoodContent: React.FC = () => {
   const { authService } = useContext(AuthProvider.Context);
@@ -80,7 +81,7 @@ export const PersonhoodContent: React.FC = () => {
   if (personHoodDetails === undefined) {
     return (
       <>
-        <p className="text-sm p-1 m-1">Failed Loading Personhood Details</p>
+        <p className="text-sm p-1 m-1">{translate("personHood.Details.")}</p>
         <Button className="mr-1" onClick={onBack}>
           {t("back")}
         </Button>
@@ -91,7 +92,7 @@ export const PersonhoodContent: React.FC = () => {
   if (personHoodDetails.status === "REJECTED") {
     return (
       <>
-        <p className="text-sm p-1 m-1">Your identity could not be verified</p>
+        <p className="text-sm p-1 m-1">{translate("personHood.Identify")}</p>
         <Button className="mr-1" onClick={onBack}>
           {t("back")}
         </Button>
@@ -102,9 +103,7 @@ export const PersonhoodContent: React.FC = () => {
   if (personHoodDetails.status === "APPROVED") {
     return (
       <>
-        <p className="text-sm p-1 m-1">
-          Congratulations, your identity has been verified!
-        </p>
+        <p className="text-sm p-1 m-1">{translate("personHood.Congrat")}</p>
         <Button className="mr-1" onClick={onFinish}>
           {t("continue")}
         </Button>

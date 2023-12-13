@@ -159,7 +159,7 @@ export const AuctionDetails: React.FC<Props> = ({
       </div>
 
       <div className="mb-2 flex flex-col items-center">
-        <span className="text-xs mb-1">Requirements</span>
+        <span className="text-xs mb-1">{translate("action.requirement")}</span>
         <div className="flex items-center justify-center">
           {item.sfl > 0 && (
             <div className="flex items-center">
@@ -182,11 +182,11 @@ export const AuctionDetails: React.FC<Props> = ({
             rel="noopener noreferrer"
             className="text-xs  underline mb-0.5"
           >
-            Starting Time
+            {translate("action.start")}
           </a>
           {isMintStarted ? (
             <Label type="warning" className="mt-1">
-              Auction is live
+              {translate("action.live")}
             </Label>
           ) : (
             TimerDisplay({ time: start })
@@ -199,11 +199,11 @@ export const AuctionDetails: React.FC<Props> = ({
             rel="noopener noreferrer"
             className="text-xs  underline mb-0.5"
           >
-            Auction Period
+            {translate("action.period")}
           </a>
           {isMintComplete ? (
             <Label type="danger" className="mt-1">
-              Auction closed
+              {translate("action.closed")}
             </Label>
           ) : isMintStarted ? (
             TimerDisplay({ time: end })

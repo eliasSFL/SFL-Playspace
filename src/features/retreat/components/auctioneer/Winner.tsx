@@ -9,6 +9,7 @@ import { Label } from "components/ui/Label";
 import { useCountdown } from "lib/utils/hooks/useCountdown";
 import { TimerDisplay } from "./AuctionDetails";
 import { useAppTranslation } from "lib/i18n/useAppTranslations";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   onMint: (id: string) => void;
@@ -31,10 +32,10 @@ export const Winner: React.FC<Props> = ({ onMint, bid, farmId, results }) => {
       />
 
       <div className="my-2">
-        <Label type="success">Congratulations!</Label>
+        <Label type="success">{translate("winner.congratulations")}</Label>
       </div>
 
-      <p className="text-xs mb-2">You have 24 hours to mint your prize.</p>
+      <p className="text-xs mb-2">{translate("winner.mintTime")}</p>
       <TimerDisplay time={countdown} />
       <a
         href="https://docs.sunflower-land.com/player-guides/auctions#how-to-mint-an-items"
@@ -46,7 +47,7 @@ export const Winner: React.FC<Props> = ({ onMint, bid, farmId, results }) => {
       </a>
 
       <Button className="mt-2" onClick={() => onMint(bid.auctionId)}>
-        Mint
+        {translate("winner.mint")}
       </Button>
     </div>
   );

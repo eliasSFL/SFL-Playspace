@@ -63,7 +63,7 @@ export const WalletOnboarding: React.FC = () => {
             onClick={() => authService.send("SIGN_IN")}
             className="underline text-xxs pb-1 pt-2 hover:text-blue-500 cursor-pointer"
           >
-            I already have a wallet
+            {t("onboarding.wallet.already")}
           </a>
         </>
       ),

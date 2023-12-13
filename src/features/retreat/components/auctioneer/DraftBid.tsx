@@ -79,22 +79,31 @@ export const DraftBid: React.FC<Props> = ({
   const getInputErrorMessage = () => {
     if (tickets < minTickets) {
       if (isSFLAuction) {
-        return `Minimum bid is ${minTickets} SFL`;
+        return (
+          translate("getInputErrorMessage.minimum"),
+          translate("getInputErrorMessage.sfl")
+        );
       }
 
-      return `Minimum bid is ${minTickets} ${ingredient}'s`;
+      return (
+        translate("getInputErrorMessage.minimum"),
+        translate("getInputErrorMessage.s")
+      );
     }
 
     if (isSFLAuction && gameState.balance.lt(tickets)) {
-      return `You don't have enough SFL`;
+      return translate("getInputErrorMessage.no.sfl");
     }
 
     if (gameState.inventory[ingredient]?.lt(tickets)) {
-      return `You don't have enough ${ingredient}'s`;
+      return (
+        translate("getInputErrorMessage.yes.sfl"),
+        translate("getInputErrorMessage.s")
+      );
     }
 
     if (Date.now() > auction.endAt) {
-      return `Auction has ended`;
+      return translate("getInputErrorMessage.auction");
     }
 
     return null;
@@ -115,7 +124,7 @@ export const DraftBid: React.FC<Props> = ({
         </div>
         <div className="p-2 flex-1 flex flex-col items-center justify-center">
           <p className="text-sm text-center mb-2">
-            Are you sure you want to place this bid?
+            {translate("getInputErrorMessage.place.bid")}
           </p>
           <div className="flex items-center flex-wrap justify-center mb-4">
             {auction.sfl > 0 && (
@@ -141,7 +150,7 @@ export const DraftBid: React.FC<Props> = ({
           </div>
 
           <p className="text-xs mb-2">
-            Bids cannot be changed once they have been placed.
+            {translate("getInputErrorMessage.cannot.bid")}
           </p>
         </div>
         <div className="flex w-full">

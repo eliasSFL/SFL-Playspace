@@ -1,27 +1,49 @@
 import {
+  Action,
+  AddSFL,
+  AvailableSeeds,
   TranslationKeys,
   AchievementsDialog,
+  Base,
+  Beach,
+  BeachLuck,
   BumpkinPartRequirements,
   BumpkinItemBuff,
   BumpkinTrade,
   BoostEffectDescriptions,
+  Chat,
   ChoresStart,
-  ComportDescription,
+  ChickenWinner,
+  Community,
+  CompostDescription,
   ComposterDescription,
+  ConfirmSkill,
   ConfirmationTerms,
   Conversations,
+  Delivery,
   DiscordBonus,
+  DeliveryHelp,
   DepositWallet,
+  Donation,
   DefaultDialogue,
+  Detail,
+  ErrorAndAccess,
+  Quest,
   ErrorTerms,
   ExoticShopItems,
+  FishingGuide,
+  FishermanQuest,
+  FishingChallengeIntro,
   GarbageCollector,
   GameTerms,
+  GetInputErrorMessage,
   GeneralTerms,
+  GetContent,
   GuideTerms,
   GOBLIN_MESSAGES,
   GoldPassModal,
   GoldTooth,
+  HalveningCountdown,
   HayseedHankV2,
   HeliosSunflower,
   HenHouseTerms,
@@ -31,24 +53,60 @@ import {
   Intro,
   IntroPage,
   InteractableModals,
+  Kick,
+  Kicked,
   LostSunflorian,
+  Loser,
+  ModalDescription,
+  Mute,
+  PlayerTrade,
   NpcDialogues,
+  Offer,
   Onboarding,
+  OnCollectReward,
+  OrderHelp,
+  Pending,
+  PersonHood,
+  Parsnip,
+  Pickserver,
+  Portal,
   PurchaseableBaitTranslation,
+  NoBumpkin,
+  NotOnDiscordServer,
+  NoTownCenter,
+  Npc,
   NPC_MESSAGE,
+  PlazaSettings,
   Questions,
+  Refunded,
+  Reaction,
+  RemoveKuebiko,
+  Resale,
+  Restock,
   RetreatTerms,
   RewardTerms,
   RulesGameStart,
   RulesTerms,
+  Share,
+  Session,
   SceneDialogueKey,
   SeasonTerms,
   SettingsMenu,
   SharkBumpkinDialogues,
+  Shelly,
   ShellyDialogue,
   ShopItems,
   SnorklerDialogues,
+  SubSettings,
+  ShowingFarm,
+  Swarming,
   Statements,
+  StopGoblin,
+  TieBreaker,
+  Transfer,
+  TransferAccount,
+  TreasureModal,
+  TutorialPage,
   VisitislandEnter,
   VisitislandNotFound,
   WarningTerms,
@@ -72,6 +130,8 @@ import {
   ToolDescriptions,
   BountyDescription,
   WornDescription,
+  Winner,
+  World,
 } from "./types";
 
 const generalTerms: Record<GeneralTerms, string> = {
@@ -126,6 +186,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   bounty: "Bounty",
   build: "Build",
   buy: "Buy",
+  craft: "Craft",
   cancel: "Cancel",
   chest: "Chest",
   chores: "Chores",
@@ -140,7 +201,6 @@ const generalTerms: Record<GeneralTerms, string> = {
   continue: "Continue",
   cook: "Cook",
   coupons: "Coupons",
-  craft: "Craft",
   crafting: "Crafting",
   crops: "Crops",
   date: "Date",
@@ -188,8 +248,10 @@ const generalTerms: Record<GeneralTerms, string> = {
   resources: "Resources",
   restock: "Restock",
   retry: "Retry",
+  start: "Start",
   save: "Save",
   saving: "Saving",
+  share: "Share",
   secs: "secs",
   seeds: "Seeds",
   sell: "Sell",
@@ -204,12 +266,14 @@ const generalTerms: Record<GeneralTerms, string> = {
   total: "Total",
   trades: "Trades",
   trading: "Trading",
+  transfer: "Transfer",
   travel: "Travel",
   uhOh: "Uh oh!",
   unlocking: "Unlocking",
   verify: "Verify",
   version: "Version",
   viewAll: "View all",
+  warning: "Warning",
   wallet: "Wallet",
   welcome: "Welcome!",
   withdraw: "Withdraw",
@@ -600,6 +664,14 @@ const errorTerms: Record<ErrorTerms, string> = {
   "error.wentWrong": "Something went wrong!",
   "error.noBumpkin": "Bumpkin is not defined",
   "error.clock.not.synced": "Clock not in sync",
+  "error.composterNotExist": "Composter does not exist",
+  "error.composterNotProducing": "Composter is not producing",
+  "error.composterAlreadyDone": "Composter already done",
+  "error.composterAlreadyBoosted": "Already boosted",
+  "error.missingEggs": "Missing Eggs",
+  "error.noBumpkin1": "You do not have a Bumpkin",
+  "error.insufficientSFL": "Insufficient SFL",
+  "error.insufficientSpaceForChickens": "Insufficient space for more chickens",
 };
 
 const warningTerms: Record<WarningTerms, string> = {
@@ -628,6 +700,8 @@ const transactionTerms: Record<TransactionTerms, string> = {
   "transaction.pay": "Pay with Card/Cash",
   "transaction.creditCard": "*Credit card fees apply",
   "transaction.rejected": "Transaction Rejected!",
+  "transaction.message0":
+    "You need to accept the transaction in the metamask popup to continue.",
   "transaction.message":
     "This request will not trigger a blockchain transaction or cost any gas fees.",
   "transaction.maticAmount": "Amount in MATIC",
@@ -703,6 +777,7 @@ const onboarding: Record<Onboarding, string> = {
   "onboarding.wallet.six":
     "This NFT will securely store all your progress in Sunflower Land and allow you to keep coming back to tend to your farm.",
   "onboarding.wallet.final": "Let's do this!",
+  "onboarding.wallet.already": "I already have a wallet ",
 };
 
 const questions: Record<Questions, string> = {
@@ -759,8 +834,6 @@ const statements: Record<Statements, string> = {
     "Congratulations, your chicken has laid a very rare mutant chicken!",
   "statements.new.wish":
     "A new wish has been made for you based on your current balance of LP tokens!",
-  "statements.news":
-    "Recieve the latest news, complete chores & feed your Bumpkin.",
   "statements.no.reward":
     "You have no reward available! Liquidity needs to be held for 3 days to get a reward!",
   "statements.ohNo": "Oh no! Something went wrong!",
@@ -824,6 +897,9 @@ const statements: Record<Statements, string> = {
   "statements.soldOutWearables": "View sold out wearables",
   "statements.craft.composter": "Craft at Composter",
   "statements.wallet.to.inventory.transfer": "Deposit items from your wallet",
+  "statements.crop.water": "These crops need water!",
+  "statements.daily.limit": "Daily Limit:",
+  "statements.sure.buy": "Are you sure you want to buy ",
 };
 
 const bumpkinTrade: Record<BumpkinTrade, string> = {
@@ -834,6 +910,7 @@ const bumpkinTrade: Record<BumpkinTrade, string> = {
   "bumpkinTrade.noTradeLs": "You have no trades listed.",
   "bumpkinTrade.sell": "Sell your resources to other players for SFL.",
   "bumpkinTrade.list": "List trade",
+  "bumpkinTrade.like.list": "What would you like to list",
 };
 
 const landscapeTerms: Record<LandscapeTerms, string> = {
@@ -1896,6 +1973,8 @@ const fishermanModal: Record<FishermanModal, string> = {
   "fishermanModal.dailyLimitReached":
     "You have reached your daily fishing limit of {dailyFishingMax}.",
   "fishermanModal.needCraftRod": "You must first craft a rod.",
+  "fishermanModal.craft.beach": "Craft at Beach",
+  "fishermanModal.zero.available": "0 available",
 };
 
 const npcDialogues: Record<NpcDialogues, string> = {
@@ -2478,6 +2557,7 @@ const interactableModals: Record<InteractableModals, string> = {
     "Are you travelling to the woodlands? Make sure you pick up some delicious mushrooms!",
   "interactableModals.port.message":
     "Hold it there! The Goblin's are still building the port. It will be ready for travel and fishing soon.",
+  "interactableModals.like.home": "Would you like to return home?",
 };
 
 const garbageCollector: Record<GarbageCollector, string> = {
@@ -2558,7 +2638,7 @@ const wornDescription: Record<WornDescription, string> = {
   "worm.redWiggler": "An exotic worm that entices rare fish.",
 };
 
-const compostDescription: Record<ComportDescription, string> = {
+const compostDescription: Record<CompostDescription, string> = {
   "compost.fruitfulBlend": "Fruitful Blend boosts each fruit yield by +0.1",
   "compost.sproutMix": "Sprout Mix increases your crop yield by +0.2",
   "compost.sproutMixBoosted": "Sprout Mix increases your crop yield by +0.4",
@@ -2569,6 +2649,19 @@ const composterDescription: Record<ComposterDescription, string> = {
   "composter.compostBin": "Compost Bin details...",
   "composter.turboComposter": "Turbo Composter details...",
   "composter.premiumComposter": "Premium Composter details...",
+};
+
+const errorAndAccess: Record<ErrorAndAccess, string> = {
+  "errorAndAccess.warning": "Warning",
+  "errorAndAccess.blocked.betaTestersOnly":
+    "Texte spécifique à traduire pour 'error.blocked.betaTestersOnly'",
+  "errorAndAccess.denied.message": "You don't have access to the game yet.",
+  "errorAndAccess.instructions.part1": "Make sure you have joined the ",
+  "errorAndAccess.sflDiscord":
+    "Texte spécifique à traduire pour le lien Discord",
+  "errorAndAccess.instructions.part2":
+    ", go to the #verify channel and have the 'farmer' role.",
+  "errorAndAccess.try.again": "Try Again",
 };
 
 const choresStart: Record<ChoresStart, string> = {
@@ -2612,8 +2705,592 @@ const bumpkinItemBuff: Record<BumpkinItemBuff, string> = {
   "bumpkinItemBuff.banana.amulet.boost": "+0.5 Bananas",
 };
 
+const notOnDiscordServer: Record<NotOnDiscordServer, string> = {
+  "notOnDiscordServer.warning": "Warning",
+  "notOnDiscordServer.intro":
+    "Looks like you haven't joined the Sunflower Land Discord Server yet.",
+  "notOnDiscordServer.joinDiscord": "Join our ",
+  "notOnDiscordServer.discordServer": "Discord Server",
+  "notOnDiscordServer.completeVerification":
+    "2. Complete verification & get started",
+  "notOnDiscordServer.acceptRules": "3. Accept the rules in #rules",
+  "notOnDiscordServer.tryAgain": "4. Try Again",
+  "notOnDiscordServer.close": "Close",
+  "notOnDiscordServer.tryAgainButton": "Try Again",
+};
+
+const offer: Record<Offer, string> = {
+  "offer.okxOffer": "Howdy Farmer, I have an exclusive OKX offer for you!",
+  "offer.beginWithNFT":
+    "To begin you will need to mint a free Farm NFT. This will include:",
+  "offer.getStarterPack": "Get Starter Pack Now",
+  "offer.newHere": "Howdy Farmer, you look new here!",
+  "offer.getStarted": "Get Started Now",
+  "offer.NFT.inclu": "Farm NFT. This will include:",
+};
+
+const session: Record<Session, string> = {
+  "session.expired": "Session expired!",
+  "session.expiredMessage":
+    "It looks like your session has expired. Please refresh the page to continue playing.",
+};
+
+const confirmSkill: Record<ConfirmSkill, string> = {
+  "confirm.skillClaim": "Are you sure you want to claim the {{skill}} skill?",
+};
+
+const chickenWinner: Record<ChickenWinner, string> = {
+  "chicken.winner.playagain": "click here to play again",
+};
+
+const noTownCenter: Record<NoTownCenter, string> = {
+  "noTownCenter.reward": "Reward: 1 x Town Center!",
+  "noTownCenter.news": "Your latest news or statement here.",
+  "noTownCenter.townCenterPlacement":
+    "You can place the Town Center through the inventory > building section",
+};
+
+const swarming: Record<Swarming, string> = {
+  "swarming.tooLongToFarm":
+    "Pay attention, you took too long to farm your crops!",
+  "swarming.goblinsTakenOver":
+    "The Goblins have taken over your farm. You must wait for them to leave",
+};
+
+const restock: Record<Restock, string> = {
+  "restock.one.buck":
+    "You are going to use 1 Block Buck to restock all shop items in the game",
+  "restock.sure": "Are you sure you want to Restock?",
+  "restock.seed.buy": "You have too many seeds in your basket!",
+};
+
+const showingFarm: Record<ShowingFarm, string> = {
+  "showing.farm": "Showing on Farm",
+  "showing.wallet": "In Wallet",
+};
+
+const tutorialPage: Record<TutorialPage, string> = {
+  "tutorial.pageOne.text1":
+    "This menu will show you the levels required to unlock new buildings.",
+  "tutorial.pageOne.text2":
+    "Some of these can be built multiple times once you reach a certain level.",
+  "tutorial.pageTwo.text1":
+    "Buildings are an important way to progress through the game as they will help you to expand and evolve.",
+  "tutorial.pageTwo.text2":
+    "Lets start by leveling up our Bumpkin so we can get the Workbench to learn about tools.",
+};
+
+const noBumpkin: Record<NoBumpkin, string> = {
+  "noBumpkin.readyToFarm": "Awesome, your Bumpkin is ready to farm!",
+  "noBumpkin.play": "Play",
+  "noBumpkin.missingBumpkin": "You are missing your Bumpkin",
+  "noBumpkin.bumpkinNFT":
+    "A Bumpkin is an NFT that is minted on the Blockchain.",
+  "noBumpkin.bumpkinHelp":
+    "You need a Bumpkin to help you plant, harvest, chop, mine and expand your land.",
+  "noBumpkin.mintBumpkin":
+    "If you misplaced your Bumpkin, you can mint one below:",
+  "noBumpkin.allBumpkins": "Wow, look at all those Bumpkins!",
+  "noBumpkin.chooseBumpkin": "Which Bumpkin would you like to play with?",
+  "noBumpkin.deposit": "Deposit",
+  "noBumpkin.loading": "Loading",
+};
+
+const removeKuebiko: Record<RemoveKuebiko, string> = {
+  "removeKuebiko.title": "Remove Kuebiko",
+  "removeKuebiko.description":
+    "This action will remove all your seeds from your inventory.",
+  "removeKuebiko.removeSeeds": "Remove seeds",
+};
+
+const stopGoblin: Record<StopGoblin, string> = {
+  "stopGoblin.stop.goblin": "Stop the Goblins!",
+  "stopGoblin.stop.moon": "Stop the Moon Seekers!",
+  "stopGoblin.tap.one": "Tap the Moon Seekers before they steal your resources",
+  "stopGoblin.tap.two": "Tap the Goblins before they eat your food",
+  "stopGoblin.left": "Attempts left",
+};
+
+const deliveryHelp: Record<DeliveryHelp, string> = {
+  "deliveryHelp.pumpkinSoup":
+    "Gather ingredients and take a boat ride to Pumpkin Plaza to deliver orders to Bumpkins for a reward!",
+  "deliveryHelp.hammer":
+    "Expand your land to unlock more slots + quicker delivery orders",
+  "deliveryHelp.axe":
+    "Complete your chores and find Hank at the Plaza to claim your rewards.",
+  "deliveryHelp.chest":
+    "Build relationships with Bumpkins by completing multiple orders to unlock bonus rewards. (Coming soon)",
+};
+
+const orderhelp: Record<OrderHelp, string> = {
+  "orderhelp.Skip.hour": "You're only able to skip an order after 24 hours!",
+  "orderhelp.New.Season":
+    "A new season approaches, deliveries will temporarily close.",
+  "orderhelp.New.Season.arrival": "New Seasonal Deliveries opening soon.",
+  "orderhelp.Wisely": "Choose wisely!",
+  "orderhelp.SkipIn": "Skip in",
+  "orderhelp.NoRight": "Not Right Now",
+  "orderhelp.Skip.Order": "Skip Order",
+};
+
+const modalDescription: Record<ModalDescription, string> = {
+  "modalDescription.friend": "Hey there friend!",
+  "modalDescription.love.fruit":
+    "Wow, you really do love Fruits as much as I do!",
+  "modalDescription.gift":
+    "I have no more gifts for you. Don't forget to wear your new items!",
+  "modalDescription.limited.abilitie":
+    "I've been designing limited edition wearables that can enhance your fruit picking abilities",
+  "modalDescription.trail":
+    "I am looking for dedicated fruit pickers to trial this clothing....for FREE!",
+};
+
+const quest: Record<Quest, string> = {
+  "quest.mint.free": "Mint Free Wearable",
+};
+
+const fishermanQuest: Record<FishermanQuest, string> = {
+  "fishermanQuest.Ohno": "Oh no! It got away",
+  "fishermanQuest.Newfish": "New fish",
+};
+
+const fishingChallengeIntro: Record<FishingChallengeIntro, string> = {
+  "fishingChallengeIntro.powerfulCatch": "Une prise puissante vous attend !",
+  "fishingChallengeIntro.useStrength":
+    "Utilisez toute votre force pour la ramener.",
+  "fishingChallengeIntro.stopGreenBar":
+    "Arrêtez la barre verte sur le poisson pour réussir.",
+  "fishingChallengeIntro.beQuick":
+    "Soyez rapide - 3 essais ratés, et il s'échappe !",
+};
+
+const fishingGuide: Record<FishingGuide, string> = {
+  "fishingGuide.catch.rod": "Craft a rod and gather bait to catch fish.",
+  "fishingGuide.bait.earn":
+    "Bait can be earned through composting or crafting lures.",
+  "fishingGuide.eat.fish":
+    "Eat fish to level up your Bumpkin or perform fish deliveries for rewards.",
+  "fishingGuide.discover.fish":
+    "Explore the waters to discover rare fish, complete missions, and unlock unique rewards within the Codex.",
+  "fishingGuide.condition":
+    "Keep track of the changing tide patterns; specific fish species are only available during certain conditions.",
+  "fishingGuide.bait.chum":
+    "Experiment with different types of bait and chum combinations to maximize your chances of catching various fish species.",
+  "fishingGuide.legendery.fish":
+    "Beware of legendary fish; they require exceptional skill and strength to catch.",
+};
+
+const detail: Record<Detail, string> = {
+  "detail.how.item": "How to get this item?",
+  "detail.Claim.Reward": "Claim reward",
+  "detail.basket.empty": "Your basket is empty!",
+  "detail.view.item": "View item on",
+};
+
+const subSettings: Record<SubSettings, string> = {
+  "subSettings.title": "Settings",
+  "subSettings.disableAnimations": "Disable Animations",
+  "subSettings.enableAnimations": "Enable Animations",
+  "subSettings.logout": "Logout",
+  "subSettings.transferOwnership": "Transfer Ownership",
+  "subSettings.refresh": "Refresh",
+  "subSettings.refreshDescription":
+    "Refresh your session to grab the latest changes from the Blockchain. This is useful if you deposited items to your farm.",
+};
+
+const transferAccount: Record<TransferAccount, string> = {
+  "transferAccount.transferYourAccount": "Transfer your account",
+  "transferAccount.walletAddress": "Wallet address:",
+  "transferAccount.warning":
+    "Please ensure that the address you provided is on the Polygon Blockchain, is correct and is owned by you. There is no recovery from incorrect addresses.",
+  "transferAccount.transfer": "Transfer",
+  "transferAccount.readMore": "Read more",
+  "transferAccount.transferringFarm": "Transferring your farm!",
+  "transferAccount.doNotRefresh": "Do not refresh this browser",
+  "transferAccount.successMessage":
+    "Your Account #{{farmId}} has been transferred to: {{address}}",
+  "transferAccount.continue": "Continue",
+};
+
+const getContent: Record<GetContent, string> = {
+  "getContent.error": "Error!",
+  "getContent.joining": "Joining",
+  "getContent.congratulations": "Congratulations!",
+  "getContent.accessGranted":
+    "You now have access. Go check out the channel in Discord",
+  "getContent.connectToDiscord":
+    "You must be connected to Discord to join a restricted channel.",
+  "getContent.connect": "Connect",
+  "getContent.getAccess": "Get access to restricted groups on Discord",
+  "getContent.requires": "Requires a",
+  "getContent.join": "Join",
+};
+
+const plazaSettings: Record<PlazaSettings, string> = {
+  "plazaSettings.title.main": "Plaza Settings",
+  "plazaSettings.title.mutedPlayers": "Muted Players",
+  "plazaSettings.title.keybinds": "Keybinds",
+  "plazaSettings.mutedPlayers.description":
+    "In case you have muted some players using the /mute command, you can see them here and unmute them if you want.",
+  "plazaSettings.mutedPlayers.button": "Muted Players",
+  "plazaSettings.keybinds.description":
+    "Need to know what keybinds are available? Check them out here.",
+  "plazaSettings.keybinds.button": "Keybinds",
+  "plazaSettings.noMutedPlayers": "You have no muted players.",
+  "plazaSettings.unmute": "Unmute",
+  "plazaSettings.back": "Back",
+};
+
+const share: Record<Share, string> = {
+  "share.TweetText": "Visit My Sunflower Land Farm",
+  "share.ShareYourFarmLink": "Share Your Farm Link",
+  "share.ShowOffToFarmers":
+    "Show off to fellow farmers by sharing your farm link (URL), to directly visit your farm!",
+  "share.FarmNFTImageAlt": "Sunflower-Land Farm NFT Image",
+  "share.CopyFarmURL": "Copy farm URL",
+  "share.Tweet": "Tweet",
+  "share.Visit": "Visit",
+};
+
+const addSFL: Record<AddSFL, string> = {
+  "addSFL.loading": "Loading",
+  "addSFL.swapDetails":
+    "Sunflower Land provides a quick way to swap Matic for SFL via Quickswap.",
+  "addSFL.referralFee":
+    "Sunflower Land takes a 5% referral fee to complete this transaction.",
+  "addSFL.swapTitle": "Swap Details",
+  "addSFL.balance": "Balance: {{balance}}",
+  "addSFL.for": "for",
+  "addSFL.minimumReceived": "Minimum Received: {{amount}}",
+  "addSFL.addSFL": "Add SFL",
+  "addSFL.title": "Add SFL",
+};
+
+const halveningCountdown: Record<HalveningCountdown, string> = {
+  "halveningCountdown.approaching": "The Halvening is Approaching!",
+  "halveningCountdown.description":
+    "At the Halvening, all prices of crops & certain resources are halved. This makes it more difficult to attain SFL.",
+  "halveningCountdown.preparation": "Make sure you are prepared!",
+  "halveningCountdown.title": "Halvening",
+  "halveningCountdown.readMore": "Read more",
+};
+
+const transfer: Record<Transfer, string> = {
+  "transfer.sure.adress":
+    "Please ensure that the address you provided is on the Polygon Blockchain, is correct and is owned by you. There is no recovery from incorrect addresses.",
+  "transfer.Account": "Your Account #",
+  "transfer.Account.Trans": "has been transferred to:",
+  "transfer.Farm": "Transferring your farm!",
+  "transfer.Refresh": "Do not refresh this browser",
+  "transfer.Taccount": "Transfer your account",
+  "transfer.address": "Wallet address:",
+};
+
+const onCollectReward: Record<OnCollectReward, string> = {
+  "onCollectReward.Missing.Seed": "Missing Seeds",
+  "onCollectReward.Market": "Go to the Market to purchase seeds.",
+  "onCollectReward.Missing.Shovel": "Missing Shovel",
+};
+
+const availableSeeds: Record<AvailableSeeds, string> = {
+  "availableSeeds.select": "Seed not selected",
+  "availableSeeds.select.plant":
+    "What seed would you like to select and plant?",
+  "availableSeeds.plant": "Plant",
+};
+
+const portal: Record<Portal, string> = {
+  "portal.wrong": "Something went wrong",
+  "portal.loading": "Loading",
+  "portal.unauthorised": "unauthorised",
+};
+
+const reaction: Record<Reaction, string> = {
+  "reaction.bumpkin": "Lvl 3 Bumpkin",
+  "reaction.bumpkin.10": "Lvl 10 Bumpkin",
+  "reaction.bumpkin.30": "Lvl 30 Bumpkin",
+  "reaction.bumpkin.40": "Lvl 40 Bumpkin",
+  "reaction.sunflowers": "Harvest 100,000 Sunflowers",
+  "reaction.crops": "Harvest 10,000 crops",
+  "reaction.goblin": "Turn into a Goblin",
+  "reaction.crown": "Own a Goblin Crown",
+};
+
+const action: Record<Action, string> = {
+  "action.bid.message": "You have placed your bid.",
+  "action.bid": "Bid",
+  "action.reveal": "Reveal winners",
+  "action.time": "Auction:",
+  "action.live": "Auction is live!",
+  "action.requirement": "Requirements",
+  "action.start": "Starting Time",
+  "action.period": "Auction Period",
+  "action.closed": "Auction closed",
+  "action.rank": "Rank",
+  "action.farm": "Farm",
+  "action.const": "Under construction!",
+  "action.const.soon": "This feature is coming soon.",
+};
+
+const getInputErrorMessage: Record<GetInputErrorMessage, string> = {
+  "getInputErrorMessage.minimum": "Minimum bid is ",
+  "getInputErrorMessage.sfl": "SFL",
+  "getInputErrorMessage.s": "s",
+  "getInputErrorMessage.no.sfl": "You don't have enough SFL",
+  "getInputErrorMessage.yes.sfl": "You don't have enough",
+  "getInputErrorMessage.auction": "Auction has ended",
+  "getInputErrorMessage.place.bid": "Are you sure you want to place this bid?",
+  "getInputErrorMessage.cannot.bid":
+    "Bids cannot be changed once they have been placed.",
+};
+
+const loser: Record<Loser, string> = {
+  "loser.unsuccess": "You were unsuccessful",
+  "loser.refund": "Refund resources",
+  "loser.longer": "Auction no longer exists",
+  "loser.refund.one": "Refund",
+};
+
+const pending: Record<Pending, string> = {
+  "pending.calcul": "The results are being calculated.",
+  "pending.comeback": "Come back later.",
+};
+
+const refunded: Record<Refunded, string> = {
+  "refunded.itemsReturned": "Your items have been returned to your inventory",
+  "refunded.goodLuck": "Good luck next time!",
+};
+
+const tieBreaker: Record<TieBreaker, string> = {
+  "tieBreaker.label": "Tiebreaker",
+  "tieBreaker.tiebreaker": "Tiebreaker",
+  "tieBreaker.closeBid":
+    "So close! You bid the exact same resources as the {{supply}} bid. A tie breaker is chosen by whichever Bumpkin has more experience. Unfortunately you lost.",
+  "tieBreaker.betterLuck":
+    "Time to eat some more cakes! Better luck next time.",
+  "tieBreaker.readMore": "Read more",
+  "tieBreaker.refundResources": "Refund resources",
+  "tieBreaker.refund": "Refund resource",
+};
+
+const winner: Record<Winner, string> = {
+  "winner.congratulations": "Congratulations!",
+  "winner.mintTime": "You have 24 hours to mint your prize.",
+  "winner.mint": "Mint",
+  "winner.mintTime.one": "No items available to craft!",
+};
+
+const personHood: Record<PersonHood, string> = {
+  "personHood.Details.": "Failed Loading Personhood Details",
+  "personHood.Identify": "Your identity could not be verified",
+  "personHood.Congrat": "Congratulations, your identity has been verified!",
+};
+
+const resale: Record<Resale, string> = {
+  "resale.lookingForItems": "Looking for rare items?",
+  "resale.actionText": "Resale",
+};
+
+const beach: Record<Beach, string> = {
+  "beach.party": "We are working hard to prepare for a beach party.",
+  "beach.ready": "Get your sunscreen and umbrellas ready, Summer is coming!",
+};
+
+const beachLuck: Record<BeachLuck, string> = {
+  "beachLuck.tryLuck": "Wanna try your luck today?",
+  "beachLuck.uncleFound":
+    "My uncle found a diamond ring digging at this beach. All I keep finding is boring SFL coins.",
+  "beachLuck.grabShovel": "Just grab a shovel and start digging.",
+  "beachLuck.refreshesIn": "Treasures Refreshes in:",
+};
+
+const treasureModal: Record<TreasureModal, string> = {
+  "treasureModal.noShovelTitle": "No Sand Shovel!",
+  "treasureModal.needShovel":
+    "You need to have a Sand Shovel equipped to be able to dig for treasure!",
+  "treasureModal.purchaseShovel":
+    "If you need to purchase one, you can head to the Treasure Shop at the southern end of the island.",
+  "treasureModal.gotIt": "Got it",
+  "treasureModal.maxHolesTitle": "Max holes reached!",
+  "treasureModal.saveTreasure": "Save some treasure for the rest of us!",
+  "treasureModal.comeBackTomorrow":
+    "Come back tomorrow to search for more treasure.",
+  "treasureModal.drilling": "Drilling",
+};
+
+const chat: Record<Chat, string> = {
+  "chat.Loading": "Loading",
+  "chat.Fail": "Connection failed",
+  "chat.mute": "You are muted",
+  "chat.again": "You will be able to chat again in",
+  "chat.Kicked": "Kicked",
+};
+
+const base: Record<Base, string> = {
+  "base.missing": "Missing name in config",
+  "base.far.away": "You are too far away",
+};
+
+const community: Record<Community, string> = {
+  "community.toast": "Toast text is empty",
+  "community.url": "Enter your repo URL",
+  "comunity.Travel": "Travel to community built islands",
+};
+
+const npc: Record<Npc, string> = {
+  "npc.Modal.Hammer": "Gather round Bumpkins, an auction is about to begin.",
+  "npc.Modal.Marcus":
+    "Hey! You are not allowed to go in my house. Don't you dare touch my things!",
+  "npc.Modal.Billy": "Howdy, y'all! Name's Billy.",
+  "npc.Modal.Billy.one":
+    "I found these baby seedlings but for the life of me I cannot figure out what to do with them.",
+  "npc.Modal.Billy.two":
+    "I bet they have something to do with the worm buds that have been appearing around the plaza.",
+  "npc.Modal.Readmore": "Read more",
+  "npc.Modal.Gabi": "Oi Bumpkin!",
+  "npc.Modal.Gabi.one":
+    "You look creative, have you ever thought about contributing art to the game?",
+  "npc.Modal.Craig": "Why are you looking at me strange?",
+  "npc.Modal.Craig.one": "Is there something in my teeth...",
+};
+
+const parsnip: Record<Parsnip, string> = {
+  "parsnip.hat": "Wow, nice horns!",
+  "parsnip.miss": "Don't miss out on future events and giveaways!",
+  "parsnip.Bonus": "Bonus reward",
+  "parsnip.found": "Woohoo....you found me!",
+  "parsnip.gift": "Claim Gift",
+};
+
+const pickserver: Record<Pickserver, string> = {
+  "pickserver.server": "Choose a server to join",
+  "pickserver.full": "FULL",
+  "pickserver.explore": "Explore custom project islands.",
+  "pickserver.event": "Special Event",
+  "pickserver.built": "Do you want to build your own island?",
+};
+
+const playerTrade: Record<PlayerTrade, string> = {
+  "playerTrade.loading": "Loading",
+  "playerTrade.no.trade": "No trades available.",
+  "playerTrade.max.item": "Oh no! You've reached your max items.",
+  "playerTrade.Progress":
+    "Please store your progress on chain before continuing.",
+  "playerTrade.transaction":
+    "Oh oh! It looks like you have a transaction in progress.",
+  "playerTrade.Please": "Please allow 5 minutes before continuing.",
+  "playerTrade.sold": "Sold",
+  "playerTrade.sale": "For sale:",
+  "playerTrade.title.congrat": "Congratulations, your listing was purchased",
+};
+
+const world: Record<World, string> = {
+  "world.intro.one": "Howdy Traveller! Welcome to the Pumpkin Plaza.",
+  "world.intro.two":
+    "The plaza is home to a diverse group of hungry Bumpkins and Goblins that need your help!",
+  "world.intro.three": "A few quick hints before you begin your adventure:",
+  "world.intro.visit":
+    "Visit NPCs and complete deliveries to earn SFL and rare rewards.",
+  "world.intro.craft":
+    "Craft rare collectibles, wearables and decorations at the different shops.",
+  "world.intro.carf.limited":
+    "Hurry, items are only available for a limited time!",
+  "world.intro.trade":
+    "Trade resources with other players. To interact with a player, walk nearby and click on them.",
+  "world.intro.auction":
+    "Prepare your resources & visit the Auction House to compete with other players for rare collectibles!",
+  "world.intro.four": "To move your Bumpkin, use the keyboard arrow keys",
+  "world.intro.five": "On touch screen, use the joystick.",
+  "world.intro.six":
+    "To interact with a Bumpkin or an object, walk near it and click it",
+  "world.intro.seven":
+    "No harrasment, swearing or bullying. Thank you for respecting others.",
+};
+
+const delivery: Record<Delivery, string> = {
+  "delivery.panel.one":
+    "Hmm, it doesn't look like your farm will have the resources I need. Reach ",
+  "delivery.panel.two": "expansions and come back to me.",
+  "delivery.panel.three": "Delivery: No order selected",
+  "delivery.panel.four":
+    "I am waiting for the new season to start. Come back to me then!",
+};
+const donation: Record<Donation, string> = {
+  "donation.one":
+    "This was a community art initiative and donations are greatly appreciated!",
+  "donation.amount": "Amount in MATIC",
+  "donation.donate": "Donate",
+  "donation.donating": "Donating",
+  "donation.Ty": "Thank you!",
+  "donation.wrong": "Oh no! Something went wrong!",
+};
+
+const kick: Record<Kick, string> = {
+  "kick.player": "Kick a Player",
+  "kick.player.id": "Player Farm ID",
+  "kick.Message":
+    "Please note that you can still rejoin, but if you continue to break the rules we will take further actions.",
+  "kick.Reason": "Kick Reason (Please note that the player will see this)",
+  "kick.player.farm": "Kick Player of Farm ",
+  "kick.player.kick": "Player has been kicked.",
+  "kick.player.failed": "Failed to kick player",
+  "kick.player.kicking": "Kicking Player...",
+  "kick.please": "Please wait",
+};
+
+const kicked: Record<Kicked, string> = {
+  "kicked.kicked": "You have been kicked!",
+  "kicked.Reason": "Reason:",
+  "kicked.Message":
+    "Please note that you can still rejoin, but if you continue to break the rules we will take further actions.",
+  "kicked.accept": "Accept",
+};
+
+const mute: Record<Mute, string> = {
+  "mute.playe": "Mute a Player",
+  "mute.playe.id": "Player Farm ID",
+  "mute.duration": "Mute Duration (Please note that the player will see this)",
+  "mute.Reason": "Mute Reason (Please note that the player will see this)",
+  "mute.player.farm": "Mute Player of Farm ",
+  "mute.player.mute": "Player has been muted ",
+  "mute.fail": "Failed to mute player",
+  "mute.player.muting": "Muting Player...",
+  "mute.player.wait": "Please wait",
+  "mute.you": "You have been muted!",
+  "mute.until": "You are muted until",
+  "mute.discord":
+    "If you are against this decision, please contact us on Discord.",
+  "mute.accept": "Accept",
+  "mute.unmute.farm": "Unmute Player of Farm",
+  "mute.unmute.player": "Player has been unmuted",
+  "mute.unmute.failed": "Failed to unmute player",
+  "mute.unmuting.player": "Unmuting Player...",
+  "mute.unmute.wait": "Please wait",
+  "mute.online":
+    "In case you need to mute a player that is not online, you can do so here. On their next login, they will be muted.",
+};
+
+const shelly: Record<Shelly, string> = {
+  "shelly.Dialogue.one": "Howdy, Bumpkin! Welcome to the beach!",
+  "shelly.Dialogue.two":
+    "After a hard day's work on your farm, there's no better place to kick back and enjoy the waves.",
+  "shelly.Dialogue.three":
+    "But we've got a bit of a situation. A massive kraken has emerged and taken control of our beloved beach.",
+  "shelly.Dialogue.four":
+    "We could really use your help, dear. Grab your bait and fishing rods, and together, we'll tackle this colossal problem!",
+  "shelly.Dialogue.five":
+    "For each tentacle you catch I will provide you with valuable mermaid scales!",
+  "shelly.Dialogue.letsgo": "Let's do it!",
+};
+
 export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...achievementTerms,
+  ...action,
+  ...availableSeeds,
+  ...addSFL,
+  ...base,
+  ...beach,
+  ...beachLuck,
   ...bountyDescription,
   ...boostEffectDescriptions,
   ...boostDescriptions,
@@ -2622,30 +3299,45 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...bumpkinSkillsDescription,
   ...bumpkinPartRequirements,
   ...bumpkinTrade,
+  ...chat,
+  ...chickenWinner,
   ...choresStart,
+  ...community,
+  ...confirmSkill,
   ...confirmationTerms,
   ...compostDescription,
   ...composterDescription,
   ...conversations,
   ...cropFruitDescriptions,
+  ...detail,
   ...depositWallet,
+  ...delivery,
+  ...deliveryHelp,
   ...decorationDescriptions,
   ...discordBonus,
   ...defaultDialogue,
+  ...donation,
   ...exoticShopItems,
+  ...errorAndAccess,
   ...errorTerms,
   ...fishDescriptions,
+  ...fishingGuide,
+  ...fishermanQuest,
+  ...fishingChallengeIntro,
   ...fishingQuests,
   ...fishermanModal,
   ...foodDescriptions,
   ...garbageCollector,
   ...gameDescriptions,
   ...gameTerms,
+  ...getInputErrorMessage,
   ...generalTerms,
+  ...getContent,
   ...guideTerms,
   ...goblin_messages,
   ...goldpassModal,
   ...goldTooth,
+  ...halveningCountdown,
   ...hayseedHankV2,
   ...heliosSunflower,
   ...henHouseTerms,
@@ -2657,27 +3349,64 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...introTerms,
   ...islandName,
   ...islandNotFound,
+  ...kick,
+  ...kicked,
   ...lostSunflorian,
   ...landscapeTerms,
   ...letsGo,
   ...levelUpMessages,
+  ...loser,
+  ...modalDescription,
+  ...mute,
+  ...npc,
+  ...noBumpkin,
+  ...notOnDiscordServer,
+  ...noTownCenter,
   ...npcDialogues,
   ...npc_message,
+  ...orderhelp,
+  ...offer,
   ...onboarding,
+  ...onCollectReward,
+  ...parsnip,
+  ...plazaSettings,
+  ...playerTrade,
+  ...pending,
+  ...pickserver,
+  ...personHood,
+  ...portal,
   ...purchaseableBaitTranslation,
+  ...quest,
   ...questions,
+  ...refunded,
+  ...reaction,
+  ...removeKuebiko,
+  ...resale,
+  ...restock,
   ...retreatTerms,
   ...rewardTerms,
   ...rulesGameStart,
   ...rulesTerms,
+  ...session,
   ...sceneDialogueKey,
   ...seasonTerms,
   ...settingsMenu,
+  ...share,
   ...sharkBumpkinDialogues,
+  ...shelly,
   ...shellyDialogue,
   ...shopItems,
+  ...showingFarm,
   ...statements,
+  ...stopGoblin,
   ...snorklerDialogues,
+  ...subSettings,
+  ...swarming,
+  ...tieBreaker,
+  ...transfer,
+  ...transferAccount,
+  ...treasureModal,
+  ...tutorialPage,
   ...toolDescriptions,
   ...transactionTerms,
   ...visitislandEnter,
@@ -2685,4 +3414,6 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...wornDescription,
   ...warningTerms,
   ...welcomeTerms,
+  ...winner,
+  ...world,
 };

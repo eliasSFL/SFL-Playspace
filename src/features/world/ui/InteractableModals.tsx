@@ -129,7 +129,7 @@ export const InteractableModals: React.FC<Props> = ({ id }) => {
       >
         <CloseButtonPanel onClose={closeModal}>
           <div className="p-2">
-            <p className="mb-3">Would you like to return home?</p>
+            <p className="mb-3">{t("interactableModals.like.home")}</p>
           </div>
           <Button
             onClick={() => navigate(`/land/${id}`)}

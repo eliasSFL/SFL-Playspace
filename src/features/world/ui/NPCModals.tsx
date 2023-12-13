@@ -23,6 +23,7 @@ import { Shelly } from "./npcs/Shelly";
 import { Finn } from "./npcs/Finn";
 import { GoldTooth } from "./npcs/GoldTooth";
 import { Portals } from "./portals/Portals";
+import { translate } from "lib/i18n/translate";
 
 class NpcModalManager {
   private listener?: (npc: NPCName, isOpen: boolean) => void;
@@ -101,9 +102,7 @@ export const NPCModals: React.FC<Props> = ({ onNavigate, scene }) => {
           <SpeakingModal
             onClose={closeModal}
             bumpkinParts={NPC_WEARABLES["hammerin harry"]}
-            message={[
-              { text: "Gather round Bumpkins, an auction is about to begin." },
-            ]}
+            message={[{ text: translate("npc.Modal.Hammer") }]}
           />
         )}
         {npc === "marcus" && (
@@ -112,7 +111,7 @@ export const NPCModals: React.FC<Props> = ({ onNavigate, scene }) => {
             bumpkinParts={NPC_WEARABLES["marcus"]}
             message={[
               {
-                text: "Hey! You are not allowed to go in my house. Don't you dare touch my things!",
+                text: translate("npc.Modal.Marcus"),
               },
             ]}
           />
@@ -123,8 +122,8 @@ export const NPCModals: React.FC<Props> = ({ onNavigate, scene }) => {
             bumpkinParts={NPC_WEARABLES.craig}
           >
             <div className="p-2">
-              <p className="mb-2">Why are you looking at me strange?</p>
-              <p className="mb-2">Is there something in my teeth...</p>
+              <p className="mb-2">{translate("npc.Modal.Craig")}</p>
+              <p className="mb-2">{translate("npc.Modal.Craig.one")}</p>
             </div>
           </CloseButtonPanel>
         )}
@@ -134,16 +133,16 @@ export const NPCModals: React.FC<Props> = ({ onNavigate, scene }) => {
             onClose={closeModal}
             message={[
               {
-                text: "Howdy, y'all! Name's Billy.",
+                text: translate("npc.Modal.Billy"),
               },
               {
-                text: "I found these baby seedlings but for the life of me I cannot figure out what to do with them.",
+                text: translate("npc.Modal.Billy.one"),
               },
               {
-                text: "I bet they have something to do with the worm buds that have been appearing around the plaza.",
+                text: translate("npc.Modal.Billy.two"),
                 actions: [
                   {
-                    text: "Read more",
+                    text: translate("npc.Modal.Readmore"),
                     cb: () => {
                       window.open(
                         "https://docs.sunflower-land.com/player-guides/bud-nfts",
@@ -164,11 +163,8 @@ export const NPCModals: React.FC<Props> = ({ onNavigate, scene }) => {
             bumpkinParts={NPC_WEARABLES.gabi}
           >
             <div className="p-2">
-              <p className="mb-2">Oi Bumpkin!</p>
-              <p className="mb-2">
-                You look creative, have you ever thought about contributing art
-                to the game?
-              </p>
+              <p className="mb-2">{translate("npc.Modal.Gabi")}</p>
+              <p className="mb-2">{translate("npc.Modal.Gabi.one")}</p>
             </div>
           </CloseButtonPanel>
         )}

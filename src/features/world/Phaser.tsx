@@ -50,6 +50,7 @@ import { handleCommand } from "./lib/chatCommands";
 import { Moderation } from "features/game/lib/gameMachine";
 import { BeachScene } from "./scenes/BeachScene";
 import { Inventory } from "features/game/types/game";
+import { translate } from "lib/i18n/translate";
 
 const _roomState = (state: MachineState) => state.value;
 
@@ -427,13 +428,13 @@ export const PhaserComponent: React.FC<Props> = ({
         centered
       >
         <Panel>
-          <p className="loading">Loading</p>
+          <p className="loading">{translate("chat.Loading")}</p>
         </Panel>
       </Modal>
 
       <Modal show={mmoState === "joinRoom"} centered>
         <Panel>
-          <p className="loading">Loading</p>
+          <p className="loading">{translate("chat.Loading")}</p>
         </Panel>
       </Modal>
       {mmoState === "error" && (
@@ -443,7 +444,7 @@ export const PhaserComponent: React.FC<Props> = ({
         >
           <img src={SUNNYSIDE.icons.sad} className="h-4 mr-1" />
           <div className="mb-0.5">
-            <Label type="danger">Connection failed</Label>
+            <Label type="danger">{translate("chat.Fail")}</Label>
           </div>
         </InnerPanel>
       )}
@@ -452,9 +453,9 @@ export const PhaserComponent: React.FC<Props> = ({
         <InnerPanel className="fixed top-2 left-1/2 -translate-x-1/2 flex items-center cursor-pointer">
           <img src={SoundOffIcon} className="h-8 mr-2 ml-1" />
           <div className="flex flex-col p-1">
-            <span className="text-sm">You are muted</span>
+            <span className="text-sm">{translate("chat.mute")}</span>
             <span className="text-xxs">
-              You will be able to chat again in{" "}
+              {translate("chat.again")}{" "}
               {isMuted.mutedUntil
                 ? calculateMuteTime(isMuted.mutedUntil, "remaining")
                 : "Unknown"}

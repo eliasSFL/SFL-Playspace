@@ -35,7 +35,7 @@ export const Blacksmith: React.FC<Props> = ({ onClose }) => {
             text: intro,
             actions: [
               {
-                text: "Craft",
+                text: t("craft"),
                 cb: () => handleConfirm(0),
               },
               {

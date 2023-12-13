@@ -23,6 +23,7 @@ import { Player } from "../types/Room";
 import { playerModalManager } from "../ui/PlayerModals";
 import { hasFeatureAccess } from "lib/flags";
 import { GameState } from "features/game/types/game";
+import { translate } from "lib/i18n/translate";
 
 type SceneTransitionData = {
   previousSceneId: SceneId;
@@ -125,7 +126,7 @@ export abstract class BaseScene extends Phaser.Scene {
 
   constructor(options: BaseSceneOptions) {
     if (!options.name) {
-      throw new Error("Missing name in config");
+      throw new Error(translate("base.missing"));
     }
 
     const defaultedOptions: Required<BaseSceneOptions> = {
@@ -476,7 +477,7 @@ export abstract class BaseScene extends Phaser.Scene {
       );
 
       if (distance > 50) {
-        entity.speak("You are too far away");
+        entity.speak(translate("base.far.away"));
         return;
       }
 
@@ -873,7 +874,7 @@ export abstract class BaseScene extends Phaser.Scene {
         );
 
         if (distance > 50) {
-          container.speak("You are too far away");
+          container.speak(translate("base.far.away"));
           return;
         }
         npcModalManager.open(bumpkin.npc);
