@@ -1,3 +1,887 @@
+export type AchievementsTerms =
+  | "breadWinner.description"
+  | "breadWinner.one"
+  | "breadWinner.two"
+  | "breadWinner.three"
+  | "sunSeeker.description"
+  | "cabbageKing.description"
+  | "jackOLantern.description"
+  | "coolFlower.description"
+  | "farmHand.description"
+  | "beetrootBeast.description"
+  | "myLifeIsPotato.description"
+  | "rapidRadish.description"
+  | "twentyTwentyVision.description"
+  | "stapleCrop.description"
+  | "sunflowerSuperstar.description"
+  | "bumpkinBillionaire.description"
+  | "patientParsnips.description"
+  | "cropChampion.description"
+  | "busyBumpkin.description"
+  | "busyBumpkin.one"
+  | "busyBumpkin.two"
+  | "kissTheCook.description"
+  | "bakersDozen.description"
+  | "brilliantBumpkin.description"
+  | "chefDeCuisine.description"
+  | "scarecrowMaestro.description"
+  | "scarecrowMaestro.one"
+  | "scarecrowMaestro.two"
+  | "bigSpender.description"
+  | "museum.description"
+  | "highRoller.description"
+  | "timbeerrr.description"
+  | "craftmanship.description"
+  | "driller.description"
+  | "ironEyes.description"
+  | "elDorado.description"
+  | "timeToChop.description"
+  | "canary.description"
+  | "somethingShiny.description"
+  | "bumpkinChainsawAmateur.description"
+  | "goldFever.description"
+  | "explorer.description"
+  | "explorer.one"
+  | "expansion.description"
+  | "wellOfProsperity.description"
+  | "wellOfProsperity.one"
+  | "wellOfProsperity.two"
+  | "contractor.description"
+  | "fruitAficionado.description"
+  | "fruitAficionado.one"
+  | "fruitAficionado.two"
+  | "orangeSqueeze.description"
+  | "appleOfMyEye.description"
+  | "blueChip.description"
+  | "fruitPlatter.description"
+  | "crowdFavourite.description"
+  | "deliveryDynamo.description"
+  | "deliveryDynamo.one"
+  | "deliveryDynamo.two"
+  | "seasonedFarmer.description"
+  | "seasonedFarmer.one"
+  | "seasonedFarmer.two"
+  | "seasonedFarmer.three"
+  | "treasureHunter.description"
+  | "treasureHunter.one"
+  | "treasureHunter.two"
+  | "eggcellentCollection.description"
+  | "eggcellentCollection.one"
+  | "eggcellentCollection.two";
+
+export type Action =
+  | "action.bid.message"
+  | "action.bid"
+  | "action.reveal"
+  | "action.time"
+  | "action.live"
+  | "action.requirement"
+  | "action.start"
+  | "action.period"
+  | "action.closed"
+  | "action.rank"
+  | "action.farm"
+  | "action.const"
+  | "action.const.soon";
+
+export type AddSFL =
+  | "addSFL.loading"
+  | "addSFL.swapDetails"
+  | "addSFL.referralFee"
+  | "addSFL.swapTitle"
+  | "addSFL.balance"
+  | "addSFL.for"
+  | "addSFL.minimumReceived"
+  | "addSFL.addSFL"
+  | "addSFL.title";
+
+export type AvailableSeeds =
+  | "availableSeeds.select"
+  | "availableSeeds.select.plant"
+  | "availableSeeds.plant";
+
+export type Base = "base.missing" | "base.far.away";
+
+export type Beach = "beach.party" | "beach.ready";
+
+export type BeachLuck =
+  | "beachLuck.tryLuck"
+  | "beachLuck.uncleFound"
+  | "beachLuck.grabShovel"
+  | "beachLuck.refreshesIn";
+
+export type BoostDescriptions =
+  // Mutant Chickens
+  | "description.speed.chicken.one"
+  | "description.speed.chicken.two"
+  | "description.fat.chicken.one"
+  | "description.fat.chicken.two"
+  | "description.rich.chicken.one"
+  | "description.rich.chicken.two"
+  | "description.ayam.cemani"
+  | "description.el.pollo.veloz.one"
+  | "description.el.pollo.veloz.two"
+  | "description.banana.chicken"
+
+  // Boosts
+  | "description.lab.grow.pumpkin"
+  | "description.lab.grown.radish"
+  | "description.lab.grown.carrot"
+  | "description.purple.trail"
+  | "description.obie"
+  | "description.maximus"
+  | "description.mushroom.house"
+  | "description.Karkinos"
+  | "description.heart.of.davy.jones"
+  | "description.tin.turtle"
+  | "description.emerald.turtle"
+  | "description.iron.idol"
+  | "description.skill.shrimpy"
+  | "description.soil.krabby"
+  | "description.nana"
+  | "description.grain.grinder"
+  | "description.kernaldo"
+  | "description.poppy"
+  | "description.victoria.sisters"
+  | "description.undead.rooster"
+  | "description.observatory"
+  | "description.time.warp.totem"
+  | "description.cabbage.boy"
+  | "description.cabbage.girl"
+  | "description.wood.nymph.wendy"
+  | "description.peeled.potato"
+  | "description.potent.potato"
+  | "description.radical.radish"
+  | "description.stellar.sunflower"
+  | "description.lady.bug"
+  | "description.squirrel.monkey"
+  | "description.black.bearry"
+  | "description.maneki.neko"
+  | "description.easter.bunny"
+  | "description.pablo.bunny"
+  | "description.foliant"
+  | "description.tiki.totem"
+  | "description.lunar.calendar"
+  | "description.heart.davy.jones"
+  | "description.treasure.map"
+  | "description.genie.lamp"
+  | "description.sir.goldensnout"
+  | "description.freya.fox"
+  | "description.queen.cornelia"
+
+  // Blacksmith items
+  | "description.basic.scarecrow"
+  | "description.scary.mike"
+  | "description.laurie.chuckle.crow"
+  | "description.immortal.pear"
+  | "description.bale";
+
+export type BoostEffectDescriptions =
+  | "description.obie.boost"
+  | "description.purple.trail.boost"
+  | "description.freya.fox.boost"
+  | "description.sir.goldensnout.boost"
+  | "description.maximus.boost"
+  | "description.basic.scarecrow.boost"
+  | "description.scary.mike.boost"
+  | "description.laurie.chuckle.crow.boost"
+  | "description.bale.boost"
+  | "description.immortal.pear.boost"
+  | "description.treasure.map.boost"
+  | "description.poppy.boost"
+  | "description.kernaldo.boost"
+  | "description.grain.grinder.boost"
+  | "description.nana.boost"
+  | "description.soil.krabby.boost"
+  | "description.skill.shrimpy.boost"
+  | "description.iron.idol.boost"
+  | "description.emerald.turtle.boost"
+  | "description.tin.turtle.boost"
+  | "description.heart.of.davy.jones.boost"
+  | "description.Karkinos.boost"
+  | "description.mushroom.house.boost";
+
+export type BountyDescription =
+  | "description.clam.shell"
+  | "description.sea.cucumber"
+  | "description.coral"
+  | "description.crab"
+  | "description.starfish"
+  | "description.pirate.bounty"
+  | "description.wooden.compass"
+  | "description.iron.compass"
+  | "description.emerald.compass"
+  | "description.old.bottle"
+  | "description.pearl"
+  | "description.pipi"
+  | "description.seaweed";
+
+export type BuildingDescriptions =
+  // Buildings
+  | "description.water.well"
+  | "description.kitchen"
+  | "description.compost.bin"
+  | "description.hen.house"
+  | "description.bakery"
+  | "description.turbo.composter"
+  | "description.deli"
+  | "description.smoothie.shack"
+  | "description.warehouse"
+  | "description.toolshed"
+  | "description.premium.composter"
+  | "description.town.center"
+  | "description.market"
+  | "description.fire.pit"
+  | "description.workbench"
+  | "description.tent";
+
+export type BumpkinItemBuff =
+  | "bumpkinItemBuff.chef.apron.boost"
+  | "bumpkinItemBuff.fruit.picker Apron.boost"
+  | "bumpkinItemBuff.angel.wings.boost"
+  | "bumpkinItemBuff.devil.wings.boost"
+  | "bumpkinItemBuff.eggplant.onesie.boost"
+  | "bumpkinItemBuff.golden.spatula.boost"
+  | "bumpkinItemBuff.mushroom.hat.boost"
+  | "bumpkinItemBuff.parsnip.boost"
+  | "bumpkinItemBuff.sunflower.amulet.boost"
+  | "bumpkinItemBuff.carrot.amulet.boost"
+  | "bumpkinItemBuff.beetroot.amulet.boost"
+  | "bumpkinItemBuff.green.amulet.boost"
+  | "bumpkinItemBuff.Luna.s.hat.boost"
+  | "bumpkinItemBuff.infernal.pitchfork.boost"
+  | "bumpkinItemBuff.cattlegrim.boost"
+  | "bumpkinItemBuff.corn.onesie.boost"
+  | "bumpkinItemBuff.sunflower.rod.boost"
+  | "bumpkinItemBuff.trident.boost"
+  | "bumpkinItemBuff.bucket.o.worms.boost"
+  | "bumpkinItemBuff.luminous.anglerfish.topper.boost"
+  | "bumpkinItemBuff.angler.waders.boost"
+  | "bumpkinItemBuff.ancient.rod.boost"
+  | "bumpkinItemBuff.banana.amulet.boost";
+
+export type BumpkinPartRequirements =
+  | "part.hair"
+  | "part.body"
+  | "part.shoes"
+  | "part.shirt"
+  | "part.pants"
+  | "part.background";
+
+export type BumpkinSkillsDescription =
+  // Crops
+  | "description.green.thumb"
+  | "description.cultivator"
+  | "description.master.farmer"
+  | "description.golden.flowers"
+  | "description.happy.crop"
+
+  // Trees
+  | "description.lumberjack"
+  | "description.tree.hugger"
+  | "description.tough.tree"
+  | "description.money.tree"
+
+  // Rocks
+  | "description.digger"
+  | "description.coal.face"
+  | "description.seeker"
+  | "description.gold.rush"
+
+  // Cooking
+  | "description.rush.hour"
+  | "description.kitchen.hand"
+  | "description.michelin.stars"
+  | "description.curer"
+
+  // Animals
+  | "description.stable.hand"
+  | "description.free.range"
+  | "description.horse.whisperer"
+  | "description.buckaroo";
+
+export type BumpkinTrade =
+  | "bumpkinTrade.askPrice"
+  | "bumpkinTrade.purchased"
+  | "bumpkinTrade.plaza"
+  | "bumpkinTrade.lvl"
+  | "bumpkinTrade.noTradeLs"
+  | "bumpkinTrade.sell"
+  | "bumpkinTrade.list"
+  | "bumpkinTrade.like.list";
+
+export type Chat =
+  | "chat.Loading"
+  | "chat.Fail"
+  | "chat.mute"
+  | "chat.again"
+  | "chat.Kicked";
+
+export type ChickenWinner = "chicken.winner.playagain";
+
+export type ChoresStart =
+  | "chores.harvestFields"
+  | "chores.earnSfl"
+  | "chores.harvestFieldsIntro"
+  | "chores.earnSflIntro"
+  | "chores.reachLevel"
+  | "chores.reachLevelIntro"
+  | "chores.chopTrees"
+  | "chores.helpWithTrees";
+
+export type Community = "community.toast" | "community.url" | "comunity.Travel";
+
+export type CompostDescription =
+  | "compost.fruitfulBlend"
+  | "compost.sproutMix"
+  | "compost.sproutMixBoosted"
+  | "compost.rapidRoot";
+
+export type ComposterDescription =
+  | "composter.compostBin"
+  | "composter.turboComposter"
+  | "composter.premiumComposter";
+
+export type ConfirmSkill = "confirm.skillClaim";
+
+export type ConfirmationTerms = "confirmation.sellCrops";
+
+export type Conversations =
+  | "hank-intro.headline"
+  | "hank-intro.one"
+  | "hank-intro.two"
+  | "hank-intro.three"
+  | "hank-crafting.headline"
+  | "hank-crafting.one"
+  | "hank-crafting.two"
+  | "betty-intro.headline"
+  | "betty-intro.one"
+  | "betty-intro.two"
+  | "betty-intro.three"
+  | "betty.market-intro.one"
+  | "betty.market-intro.two"
+  | "betty.market-intro.three"
+  | "betty.market-intro.four"
+  | "bruce-intro.headline"
+  | "bruce-intro.one"
+  | "bruce-intro.two"
+  | "bruce-intro.three"
+  | "blacksmith-intro.headline"
+  | "blacksmith-intro.one"
+  | "pete.first-expansion.one"
+  | "pete.first-expansion.two"
+  | "pete.first-expansion.three"
+  | "pete.blacksmith.one"
+  | "pete.blacksmith.two"
+  | "pete.blacksmith.three"
+  | "pete.levelthree.one"
+  | "pete.levelthree.two"
+  | "pete.levelthree.three"
+  | "pete.levelthree.four"
+  | "pete.help.zero"
+  | "pete.help.one"
+  | "pete.help.two"
+  | "grimbly.expansion.one"
+  | "grimbly.expansion.two";
+
+export type CropFruitDescriptions =
+  // Crops
+  | "description.sunflower"
+  | "description.potato"
+  | "description.pumpkin"
+  | "description.carrot"
+  | "description.cabbage"
+  | "description.beetroot"
+  | "description.cauliflower"
+  | "description.parsnip"
+  | "description.eggplant"
+  | "description.corn"
+  | "description.radish"
+  | "description.wheat"
+  | "description.kale"
+
+  // Fruit
+  | "description.blueberry"
+  | "description.orange"
+  | "description.apple"
+  | "description.banana"
+
+  // Exotic Crops
+  | "description.white.carrot"
+  | "description.warty.goblin.pumpkin"
+  | "description.adirondack.potato"
+  | "description.purple.cauliflower"
+  | "description.chiogga"
+  | "description.golden.helios"
+  | "description.black.magic";
+
+export type DefaultDialogue =
+  | "defaultDialogue.intro"
+  | "defaultDialogue.positiveDelivery"
+  | "defaultDialogue.negativeDelivery"
+  | "defaultDialogue.noOrder";
+
+export type DecorationDescriptions =
+  // Decorations
+  | "description.wicker.man"
+  | "description.golden bonsai"
+  | "description.christmas.bear"
+  | "description.war.skull"
+  | "description.war.tombstone"
+  | "description.white.tulips"
+  | "description.potted.sunflower"
+  | "description.potted.potato"
+  | "description.potted.pumpkin"
+  | "description.cactus"
+  | "description.basic.bear"
+  | "description.bonnies.tombstone"
+  | "description.grubnashs.tombstone"
+  | "description.town.sign"
+  | "description.dirt.path"
+  | "description.bush"
+  | "description.fence"
+  | "description.stone.fence"
+  | "description.pine.tree"
+  | "description.shrub"
+  | "description.field.maple"
+  | "description.red.maple"
+  | "description.golden.maple"
+  | "description.crimson.cap"
+  | "description.toadstool.seat"
+  | "description.chestnut.fungi.stool"
+  | "description.mahogany.cap"
+  | "description.candles"
+  | "description.haunted.stump"
+  | "description.spooky.tree"
+  | "description.observer"
+  | "description.crow.rock"
+  | "description.mini.corn.maze"
+  | "description.lifeguard.ring"
+  | "description.surfboard"
+  | "description.hideaway.herman"
+  | "description.shifty.sheldon"
+  | "description.tiki.torch"
+  | "description.beach.umbrella"
+  | "description.magic.bean"
+  | "description.giant.potato"
+  | "description.giant.pumpkin"
+  | "description.giant.cabbage"
+  | "description.chef.bear"
+  | "description.construction.bear"
+  | "description.angel.bear"
+  | "description.badass.bear"
+  | "description.bear.trap"
+  | "description.brilliant.bear"
+  | "description.classy.bear"
+  | "description.farmer.bear"
+  | "description.rich.bear"
+  | "description.sunflower.bear"
+  | "description.christmas.bear"
+  | "description.beta.bear"
+  | "description.rainbow.artist.bear"
+  | "description.devil.bear"
+  | "description.collectible.bear"
+  | "description.cyborg.bear"
+  | "description.abandoned.bear"
+  | "description.turtle.bear"
+  | "description.christmas.snow.globe"
+  | "description.kraken.tentacle"
+  | "description.kraken.head"
+  | "description.trex.skull"
+  | "description.sunflower.coin"
+  | "description.skeleton.king.staff"
+  | "description.lifeguard.bear"
+  | "description.snorkel.bear"
+  | "description.parasaur.skull"
+  | "description.goblin.bear"
+  | "description.golden.bear.head"
+  | "description.pirate.bear"
+  | "description.galleon"
+  | "description.dinosaur.bone"
+  | "description.human.bear"
+  | "description.heart.balloons"
+  | "description.flamingo"
+  | "description.blossom.tree"
+  | "description.whale.bear"
+  | "description.valentine.bear"
+  | "description.easter.bear"
+  | "description.easter.bush"
+  | "description.giant.carrot"
+  | "description.beach.ball"
+  | "description.palm.tree"
+  | "description.sunflower.amulet"
+  | "description.carrot.amulet"
+  | "description.betroot.amulet"
+  | "description.green.amulet"
+  | "description.warrior.shirt"
+  | "description.warrior.pants"
+  | "description.warrior.helmet"
+  | "description.sunflower.shield"
+  | "description.skull.hat"
+  | "description.war.skull"
+  | "description.war.tombstone"
+  | "description.undead.rooster"
+  | "description.sunflower.statue"
+  | "description.potato.statue"
+  | "description.christmas.tree"
+  | "description.gnome"
+  | "description.homeless.tent"
+  | "description.sunflower.tombstone"
+  | "description.sunflower.rock"
+  | "description.goblin.crown"
+  | "description.fountain"
+  | "description.nyon.statue"
+  | "description.farmer.bath"
+  | "description.woody.Beaver"
+  | "description.apprentice.beaver"
+  | "description.foreman.beaver"
+  | "description.egg.basket"
+  | "description.mysterious.head"
+  | "description.tunnel.mole"
+  | "description.rocky.the.mole"
+  | "description.nugget"
+  | "description.rock.golem"
+  | "description.chef.apron"
+  | "description.nancy"
+  | "description.scarecrow"
+  | "description.kuebiko"
+  | "description.golden.cauliflower"
+  | "description.mysterious.parsnip"
+  | "description.carrot.sword"
+  | "description.chicken.coop"
+  | "description.farm.cat"
+  | "description.farm.dog"
+  | "description.gold.egg"
+  | "description.easter.bunny"
+  | "description.rooster"
+  | "description.chiken"
+  | "description.cow"
+  | "description.pig"
+  | "description.sheep"
+
+  // Banners
+  | "description.goblin.war.banner"
+  | "description.human.war.banner";
+
+export type Delivery =
+  | "delivery.panel.one"
+  | "delivery.panel.two"
+  | "delivery.panel.three"
+  | "delivery.panel.four";
+
+export type DeliveryHelp =
+  | "deliveryHelp.pumpkinSoup"
+  | "deliveryHelp.hammer"
+  | "deliveryHelp.axe"
+  | "deliveryHelp.chest";
+
+export type DepositWallet =
+  | "deposit.errorLoadingBalances"
+  | "deposit.yourPersonalWallet"
+  | "deposit.farmWillReceive"
+  | "deposit.depositDidNotArrive"
+  | "deposit.goblinTaxInfo"
+  | "deposit.applied"
+  | "deposit.sendToFarm"
+  | "deposit.toDepositLevelUp"
+  | "deposit.level"
+  | "deposit.noSflOrCollectibles"
+  | "deposit.farmAdresse";
+
+export type Detail =
+  | "detail.how.item"
+  | "detail.Claim.Reward"
+  | "detail.basket.empty"
+  | "detail.view.item";
+
+export type DiscordBonus =
+  | "discord.bonus.niceHat"
+  | "discord.bonus.attentionEvents"
+  | "discord.bonus.bonusReward"
+  | "discord.bonus.payAttention"
+  | "discord.bonus.enjoyCommunity"
+  | "discord.bonus.claimGift"
+  | "discord.bonus.communityInfo"
+  | "discord.bonus.farmingTips"
+  | "discord.bonus.freeGift"
+  | "discord.bonus.connect";
+
+export type Donation =
+  | "donation.one"
+  | "donation.amount"
+  | "donation.donate"
+  | "donation.donating"
+  | "donation.Ty"
+  | "donation.wrong";
+
+export type ErrorAndAccess =
+  | "errorAndAccess.warning"
+  | "errorAndAccess.blocked.betaTestersOnly"
+  | "errorAndAccess.denied.message"
+  | "errorAndAccess.instructions.part1"
+  | "errorAndAccess.sflDiscord"
+  | "errorAndAccess.instructions.part2"
+  | "errorAndAccess.try.again";
+
+export type ErrorTerms =
+  | "error.congestion.one"
+  | "error.congestion.two"
+  | "error.forbidden.goblinVillage"
+  | "error.multipleDevices.one"
+  | "error.multipleDevices.two"
+  | "error.multipleWallets.one"
+  | "error.multipleWallets.two"
+  | "error.toManyRequest.one"
+  | "error.toManyRequest.two"
+  | "error.blocked.betaTestersOnly"
+  | "error.wentWrong"
+  | "error.polygonRPC"
+  | "error.connection.one"
+  | "error.connection.two"
+  | "error.connection.three"
+  | "error.connection.four"
+  | "error.diagnostic.info"
+  | "error.Web3NotFound"
+  | "error.noBumpkin"
+  | "error.clock.not.synced"
+  | "error.composterNotExist"
+  | "error.composterNotProducing"
+  | "error.composterAlreadyDone"
+  | "error.composterAlreadyBoosted"
+  | "error.missingEggs"
+  | "error.noBumpkin1"
+  | "error.insufficientSFL"
+  | "error.insufficientSpaceForChickens";
+
+export type ExoticShopItems =
+  | "exoticShopItems.line1"
+  | "exoticShopItems.line2"
+  | "exoticShopItems.line3"
+  | "exoticShopItems.line4";
+
+export type FishDescriptions =
+  // Fish
+  | "description.anchovy.one"
+  | "description.anchovy.two"
+  | "description.butterflyfish.one"
+  | "description.butterflyfish.two"
+  | "description.blowfish.one"
+  | "description.blowfish.two"
+  | "description.clownfish.one"
+  | "description.clownfish.two"
+  | "description.seabass.one"
+  | "description.seabass.two"
+  | "description.seahorse.one"
+  | "description.seahorse.two"
+  | "description.horsemackerel.one"
+  | "description.horsemackerel.two"
+  | "description.squid.one"
+  | "description.squid.two"
+  | "description.redsnapper.one"
+  | "description.redsnapper.two"
+  | "description.morayeel.one"
+  | "description.morayeel.two"
+  | "description.oliveflounder.one"
+  | "description.oliveflounder.two"
+  | "description.napoleanfish.one"
+  | "description.napoleanfish.two"
+  | "description.surgeonfish.one"
+  | "description.surgeonfish.two"
+  | "description.zebraturkeyfish.one"
+  | "description.zebraturkeyfish.two"
+  | "description.ray.one"
+  | "description.ray.two"
+  | "description.hammerheadshark.one"
+  | "description.hammerheadshark.two"
+  | "description.tuna.one"
+  | "description.tuna.two"
+  | "description.mahimahi.one"
+  | "description.mahimahi.two"
+  | "description.bluemarlin.one"
+  | "description.bluemarlin.two"
+  | "description.oarfish.one"
+  | "description.oarfish.two"
+  | "description.footballfish.one"
+  | "description.footballfish.two"
+  | "description.sunfish.one"
+  | "description.sunfish.two"
+  | "description.coelacanth.one"
+  | "description.coelacanth.two"
+  | "description.whaleshark.one"
+  | "description.whaleshark.two"
+  | "description.barredknifejaw.one"
+  | "description.barredknifejaw.two"
+  | "description.sawshark.one"
+  | "description.sawshark.two"
+  | "description.whiteshark.one"
+  | "description.whiteshark.two"
+
+  // Marine Marvels
+  | "description.twilight.anglerfish"
+  | "description.starlight.tuna"
+  | "description.radiant.ray"
+  | "description.phantom.barracuda"
+  | "description.gilded.swordfish";
+
+export type FishermanModal =
+  | "fishermanModal.attractFish"
+  | "fishermanModal.royChallenge"
+  | "fishermanModal.fishBenefits"
+  | "fishermanModal.baitAndResources"
+  | "fishermanModal.crazyHappening"
+  | "fishermanModal.bonusFish"
+  | "fishermanModal.dailyLimitReached"
+  | "fishermanModal.needCraftRod"
+  | "fishermanModal.craft.beach"
+  | "fishermanModal.zero.available";
+
+export type FishermanQuest = "fishermanQuest.Ohno" | "fishermanQuest.Newfish";
+
+export type FishingChallengeIntro =
+  | "fishingChallengeIntro.powerfulCatch"
+  | "fishingChallengeIntro.useStrength"
+  | "fishingChallengeIntro.stopGreenBar"
+  | "fishingChallengeIntro.beQuick";
+
+export type FishingGuide =
+  | "fishingGuide.catch.rod"
+  | "fishingGuide.bait.earn"
+  | "fishingGuide.eat.fish"
+  | "fishingGuide.discover.fish"
+  | "fishingGuide.condition"
+  | "fishingGuide.bait.chum"
+  | "fishingGuide.legendery.fish";
+
+export type FishingQuests =
+  | "quest.basic.fish"
+  | "quest.advanced.fish"
+  | "quest.all.fish"
+  | "quest.300.fish"
+  | "quest.1500.fish"
+  | "quest.marine.marvel";
+
+export type FoodDescriptions =
+  // Fire Pit
+  | "description.pumpkin.soup"
+  | "description.mashed.potato"
+  | "description.bumpkin.broth"
+  | "description.boiled.eggs"
+  | "description.kale.stew"
+  | "description.mushroom.soup"
+  | "description.reindeer.carrot"
+  | "description.kale.omelette"
+  | "description.cabbers.mash"
+  | "description.popcorn"
+  | "description.gumbo"
+
+  // Kitchen
+  | "description.roast.veggies"
+  | "description.bumpkin.salad"
+  | "description.goblins.treat"
+  | "description.cauliflower.burger"
+  | "description.club.sandwich"
+  | "description.mushroom.jacket.potatoes"
+  | "description.sunflower.crunch"
+  | "description.bumpkin.roast"
+  | "description.goblin.brunch"
+  | "description.fruit.salad"
+  | "description.bumpkin.ganoush"
+  | "description.chowder"
+  | "description.pancakes"
+
+  // Bakery
+  | "description.apple.pie"
+  | "description.kale.mushroom.pie"
+  | "description.cornbread"
+  | "description.sunflower.cake"
+  | "description.potato.cake"
+  | "description.pumpkin.cake"
+  | "description.carrot.cake"
+  | "description.cabbage.cake"
+  | "description.beetroot.cake"
+  | "description.cauliflower.cake"
+  | "description.parsnip.cake"
+  | "description.radish.cake"
+  | "description.wheat.cake"
+  | "description.honey.cake"
+  | "description.eggplant.cake"
+  | "description.orange.cake"
+  | "description.pirate.cake"
+
+  // Deli
+  | "description.blueberry.jam"
+  | "description.fermented.carrots"
+  | "description.sauerkraut"
+  | "description.fancy.fries"
+  | "description.fermented.fish"
+
+  // Smoothie Shack
+  | "description.apple.juice"
+  | "description.orange.juice"
+  | "description.purple.smoothie"
+  | "description.power.smoothie"
+  | "description.bumpkin.detox"
+  | "description.banana.blast"
+
+  // Unused foods
+  | "description.roasted.cauliflower"
+  | "description.radish.pie";
+
+export type GameDescriptions =
+  // Quest Items
+  | "description.goblin.key"
+  | "description.sunflower.key"
+  | "description.ancient.goblin.sword"
+  | "description.ancient.human.warhammer"
+  // Coupons
+  | "description.community.coin"
+  | "description.bud.seedling"
+  | "description.gold.pass"
+  | "description.rapid.growth"
+  | "description.bud.ticket"
+  | "description.potion.ticket"
+  | "description.trading.ticket"
+  | "description.block.buck"
+  | "description.beta.pass"
+  | "description.war.bond"
+  | "description.jack.o.lantern"
+  | "description.golden.crop"
+  | "description.red.envelope"
+  | "description.love.letter"
+  | "description.solar.flare.ticket"
+  | "description.dawn.breaker.ticket"
+  | "description.crow.feather"
+  | "description.mermaid.scale"
+  | "description.sunflower.supporter"
+  // Easter Items
+  | "description.egg.basket"
+  | "description.blue.egg"
+  | "description.orange.egg"
+  | "description.green.egg"
+  | "description.yellow.egg"
+  | "description.red.egg"
+  | "description.pink.egg"
+  | "description.purple.egg";
+
+export type GameTerms =
+  | "dailyLim"
+  | "gobSwarm"
+  | "potions"
+  | "bumpkinLvl"
+  | "sflDiscord"
+  | "auction.winner"
+  | "farm.banned"
+  | "proof.of.humanity"
+  | "no.sfl"
+  | "granting.wish"
+  | "new.delivery.in"
+  | "bumpkinBuzz";
+
+export type GarbageCollector =
+  | "garbageCollector.welcome"
+  | "garbageCollector.description"
+  | "garbageCollector.continue";
+
 export type GeneralTerms =
   | "2x.sale"
   | "achievements"
@@ -144,140 +1028,53 @@ export type GeneralTerms =
   | "withdraw"
   | "you.are.here";
 
-export type GameTerms =
-  | "dailyLim"
-  | "gobSwarm"
-  | "potions"
-  | "bumpkinLvl"
-  | "sflDiscord"
-  | "auction.winner"
-  | "farm.banned"
-  | "proof.of.humanity"
-  | "no.sfl"
-  | "granting.wish"
-  | "new.delivery.in"
-  | "bumpkinBuzz";
+export type GetContent =
+  | "getContent.error"
+  | "getContent.joining"
+  | "getContent.congratulations"
+  | "getContent.accessGranted"
+  | "getContent.connectToDiscord"
+  | "getContent.connect"
+  | "getContent.getAccess"
+  | "getContent.requires"
+  | "getContent.join";
 
-export type ConfirmationTerms = "confirmation.sellCrops";
+export type GetInputErrorMessage =
+  | "getInputErrorMessage.minimum"
+  | "getInputErrorMessage.sfl"
+  | "getInputErrorMessage.s"
+  | "getInputErrorMessage.no.sfl"
+  | "getInputErrorMessage.yes.sfl"
+  | "getInputErrorMessage.auction"
+  | "getInputErrorMessage.place.bid"
+  | "getInputErrorMessage.cannot.bid";
 
-export type WelcomeTerms =
-  | "welcome.otherWallets"
-  | "welcome.needHelp"
-  | "welcome.createAccount"
-  | "welcome.creatingAccount"
-  | "welcome.login"
-  | "welcome.signingIn"
-  | "welcome.signInMessage"
-  | "welcome.email"
-  | "welcome.takeover"
-  | "welcome.promo";
+// Delivery NPC
+export type GOBLIN_MESSAGES =
+  | "goblinMessages.msg1"
+  | "goblinMessages.msg2"
+  | "goblinMessages.msg3"
+  | "goblinMessages.msg4"
+  | "goblinMessages.msg5"
+  | "goblinMessages.msg6"
+  | "goblinMessages.msg7"
+  | "goblinMessages.msg8"
+  | "goblinMessages.msg9"
+  | "goblinMessages.msg10";
 
-export type RulesTerms =
-  | "rules"
-  | "rules.accounts"
-  | "rules.noBots"
-  | "rules.game"
-  | "rules.termsOfService";
+export type GoldPassModal =
+  | "goldPass.unlockPower"
+  | "goldPass.craftNFTs"
+  | "goldPass.trade"
+  | "goldPass.participateAuction"
+  | "goldPass.withdrawTransferNFTs"
+  | "goldPass.accessRestrictedAreas"
+  | "goldPass.readMore"
+  | "common.noThanks"
+  | "goldPass.buyNow"
+  | "goldPass.priceInMatic";
 
-export type SeasonTerms =
-  | "season.goodLuck"
-  | "season.discount"
-  | "season.banner"
-  | "season.wearableAirdrop"
-  | "season.bonusTickets"
-  | "season.boostXP"
-  | "season.exclusiveOffer"
-  | "season.includes"
-  | "season.limitedOffer"
-  | "season.accessTo"
-  | "season.buyNow"
-  | "season.ctk";
-
-export type Intro =
-  | "intro.one"
-  | "intro.two"
-  | "intro.three"
-  | "intro.four"
-  | "intro.five";
-
-export type ShopItems =
-  | "shopItems.one"
-  | "shopItems.two"
-  | "shopItems.three"
-  | "betty.intro"
-  | "betty.buySeeds"
-  | "betty.sellCrops";
-
-export type AchievementsDialog =
-  | "breadWinner.description"
-  | "breadWinner.one"
-  | "breadWinner.two"
-  | "breadWinner.three"
-  | "sunSeeker.description"
-  | "cabbageKing.description"
-  | "jackOLantern.description"
-  | "coolFlower.description"
-  | "farmHand.description"
-  | "beetrootBeast.description"
-  | "myLifeIsPotato.description"
-  | "rapidRadish.description"
-  | "twentyTwentyVision.description"
-  | "stapleCrop.description"
-  | "sunflowerSuperstar.description"
-  | "bumpkinBillionaire.description"
-  | "patientParsnips.description"
-  | "cropChampion.description"
-  | "busyBumpkin.description"
-  | "busyBumpkin.one"
-  | "busyBumpkin.two"
-  | "kissTheCook.description"
-  | "bakersDozen.description"
-  | "brilliantBumpkin.description"
-  | "chefDeCuisine.description"
-  | "scarecrowMaestro.description"
-  | "scarecrowMaestro.one"
-  | "scarecrowMaestro.two"
-  | "bigSpender.description"
-  | "museum.description"
-  | "highRoller.description"
-  | "timbeerrr.description"
-  | "craftmanship.description"
-  | "driller.description"
-  | "ironEyes.description"
-  | "elDorado.description"
-  | "timeToChop.description"
-  | "canary.description"
-  | "somethingShiny.description"
-  | "bumpkinChainsawAmateur.description"
-  | "goldFever.description"
-  | "explorer.description"
-  | "explorer.one"
-  | "expansion.description"
-  | "wellOfProsperity.description"
-  | "wellOfProsperity.one"
-  | "wellOfProsperity.two"
-  | "contractor.description"
-  | "fruitAficionado.description"
-  | "fruitAficionado.one"
-  | "fruitAficionado.two"
-  | "orangeSqueeze.description"
-  | "appleOfMyEye.description"
-  | "blueChip.description"
-  | "fruitPlatter.description"
-  | "crowdFavourite.description"
-  | "deliveryDynamo.description"
-  | "deliveryDynamo.one"
-  | "deliveryDynamo.two"
-  | "seasonedFarmer.description"
-  | "seasonedFarmer.one"
-  | "seasonedFarmer.two"
-  | "seasonedFarmer.three"
-  | "treasureHunter.description"
-  | "treasureHunter.one"
-  | "treasureHunter.two"
-  | "eggcellentCollection.description"
-  | "eggcellentCollection.one"
-  | "eggcellentCollection.two";
+export type GoldTooth = "goldTooth.intro.part1" | "goldTooth.intro.part2";
 
 export type GuideTerms =
   | "guide.intro"
@@ -322,43 +1119,24 @@ export type GuideTerms =
   | "pete.teaser.seven"
   | "pete.teaser.eight";
 
-export type Conversations =
-  | "hank-intro.headline"
-  | "hank-intro.one"
-  | "hank-intro.two"
-  | "hank-intro.three"
-  | "hank-crafting.headline"
-  | "hank-crafting.one"
-  | "hank-crafting.two"
-  | "betty-intro.headline"
-  | "betty-intro.one"
-  | "betty-intro.two"
-  | "betty-intro.three"
-  | "betty.market-intro.one"
-  | "betty.market-intro.two"
-  | "betty.market-intro.three"
-  | "betty.market-intro.four"
-  | "bruce-intro.headline"
-  | "bruce-intro.one"
-  | "bruce-intro.two"
-  | "bruce-intro.three"
-  | "blacksmith-intro.headline"
-  | "blacksmith-intro.one"
-  | "pete.first-expansion.one"
-  | "pete.first-expansion.two"
-  | "pete.first-expansion.three"
-  | "pete.blacksmith.one"
-  | "pete.blacksmith.two"
-  | "pete.blacksmith.three"
-  | "pete.levelthree.one"
-  | "pete.levelthree.two"
-  | "pete.levelthree.three"
-  | "pete.levelthree.four"
-  | "pete.help.zero"
-  | "pete.help.one"
-  | "pete.help.two"
-  | "grimbly.expansion.one"
-  | "grimbly.expansion.two";
+export type HalveningCountdown =
+  | "halveningCountdown.approaching"
+  | "halveningCountdown.description"
+  | "halveningCountdown.preparation"
+  | "halveningCountdown.title"
+  | "halveningCountdown.readMore";
+
+export type HayseedHankV2 =
+  | "hayseedHankv2.dialog1"
+  | "hayseedHankv2.dialog2"
+  | "hayseedHankv2.action"
+  | "hayseedHankv2.title"
+  | "hayseedHankv2.newChoresAvailable"
+  | "hayseedHankv2.skipChores";
+
+export type HeliosSunflower =
+  | "heliosSunflower.title"
+  | "heliosSunflower.description";
 
 export type HenHouseTerms =
   | "henHouse.chickens"
@@ -369,213 +1147,128 @@ export type HenHouseTerms =
   | "henHouse.text.five"
   | "henHouse.text.six";
 
-export type RewardTerms =
-  | "reward.title"
-  | "reward.streak"
-  | "reward.comeBackLater"
-  | "reward.nextBonus"
-  | "reward.unlock"
-  | "reward.open"
-  | "reward.lvlRequirement"
-  | "reward.revealing"
-  | "reward.streakBonus"
-  | "reward.found"
-  | "reward.spendWisely"
-  | "reward.wearable"
-  | "reward.woohoo";
+export type HowToFarm =
+  | "howToFarm.title"
+  | "howToFarm.stepOne"
+  | "howToFarm.stepTwo"
+  | "howToFarm.stepThree"
+  | "howToFarm.stepFour"
+  | "howToFarm.stepFive";
 
-export type ErrorTerms =
-  | "error.congestion.one"
-  | "error.congestion.two"
-  | "error.forbidden.goblinVillage"
-  | "error.multipleDevices.one"
-  | "error.multipleDevices.two"
-  | "error.multipleWallets.one"
-  | "error.multipleWallets.two"
-  | "error.toManyRequest.one"
-  | "error.toManyRequest.two"
-  | "error.blocked.betaTestersOnly"
-  | "error.wentWrong"
-  | "error.polygonRPC"
-  | "error.connection.one"
-  | "error.connection.two"
-  | "error.connection.three"
-  | "error.connection.four"
-  | "error.diagnostic.info"
-  | "error.Web3NotFound"
-  | "error.noBumpkin"
-  | "error.clock.not.synced"
-  | "error.composterNotExist"
-  | "error.composterNotProducing"
-  | "error.composterAlreadyDone"
-  | "error.composterAlreadyBoosted"
-  | "error.missingEggs"
-  | "error.noBumpkin1"
-  | "error.insufficientSFL"
-  | "error.insufficientSpaceForChickens";
+export type HowToSync =
+  | "howToSync.title"
+  | "howToSync.description"
+  | "howToSync.stepOne"
+  | "howToSync.stepTwo";
 
-export type WarningTerms =
-  | "warning.noAxe"
-  | "warning.chat.maxCharacters"
-  | "warning.chat.noSpecialCharacters"
-  | "warning.level.required"
-  | "warning.hoarding.message"
-  | "warning.hoarding.one"
-  | "warning.hoarding.two";
+export type HowToUpgrade =
+  | "howToUpgrade.title"
+  | "howToUpgrade.stepOne"
+  | "howToUpgrade.stepTwo"
+  | "howToUpgrade.stepThree"
+  | "howToUpgrade.stepFour";
 
-export type TransactionTerms =
-  | "transaction.blockBucksFarm"
-  | "transaction.blockchain.one"
-  | "transaction.blockchain.two"
-  | "transaction.congrats"
-  | "transaction.creditCard"
-  | "transaction.donate"
-  | "transaction.donating"
-  | "transaction.doNotRefresh"
-  | "transaction.estimated.fee"
-  | "transaction.excludeFees"
-  | "transaction.id"
-  | "transaction.matic"
-  | "transaction.maticAmount"
-  | "transaction.message0"
-  | "transaction.message"
-  | "transaction.minblockbucks"
-  | "transaction.mintFarm.one"
-  | "transaction.mintFarm.two"
-  | "transaction.network"
-  | "transaction.openSea"
-  | "transaction.pay"
-  | "transaction.payCash"
-  | "transaction.payMatic"
-  | "transaction.progChain"
-  | "transaction.progress"
-  | "transaction.rejected"
-  | "transaction.success"
-  | "transaction.t&c.one"
-  | "transaction.t&c.two"
-  | "transaction.thankYou"
-  | "transaction.transacting.one"
-  | "transaction.transacting.two"
-  | "transaction.transacting.three"
-  | "transaction.withdraw.one"
-  | "transaction.withdraw.two"
-  | "transaction.withdraw.three"
-  | "transaction.withdraw.four"
-  | "transaction.withdraw.five"
-  | "transaction.withdraw.six"
-  | "transaction.withdraw.polygon";
+export type InteractableModals =
+  | "interactableModals.returnhome.message"
+  | "interactableModals.fatChicken.message"
+  | "interactableModals.lazyBud.message"
+  | "interactableModals.bud.message"
+  | "interactableModals.walrus.message"
+  | "interactableModals.plazaBlueBook.message1"
+  | "interactableModals.plazaBlueBook.message2"
+  | "interactableModals.plazaOrangeBook.message1"
+  | "interactableModals.plazaOrangeBook.message2"
+  | "interactableModals.beachGreenBook.message1"
+  | "interactableModals.beachGreenBook.message2"
+  | "interactableModals.beachBlueBook.message1"
+  | "interactableModals.beachBlueBook.message2"
+  | "interactableModals.beachBlueBook.message3"
+  | "interactableModals.beachOrangeBook.message1"
+  | "interactableModals.beachOrangeBook.message2"
+  | "interactableModals.plazaGreenBook.message1"
+  | "interactableModals.plazaGreenBook.message2"
+  | "interactableModals.fanArt1.message"
+  | "interactableModals.fanArt2.message"
+  | "interactableModals.fanArt2.linkLabel"
+  | "interactableModals.fanArt3.message"
+  | "interactableModals.clubhouseReward.message1"
+  | "interactableModals.clubhouseReward.message2"
+  | "interactableModals.plazaStatue.message"
+  | "interactableModals.dawnBook1.message1"
+  | "interactableModals.dawnBook1.message2"
+  | "interactableModals.dawnBook1.message3"
+  | "interactableModals.dawnBook2.message1"
+  | "interactableModals.dawnBook2.message2"
+  | "interactableModals.dawnBook3.message1"
+  | "interactableModals.dawnBook3.message2"
+  | "interactableModals.dawnBook3.message3"
+  | "interactableModals.dawnBook4.message1"
+  | "interactableModals.dawnBook4.message2"
+  | "interactableModals.dawnBook4.message3"
+  | "interactableModals.timmyHome.message"
+  | "interactableModals.windmill.message"
+  | "interactableModals.igorHome.message"
+  | "interactableModals.potionHouse.message1"
+  | "interactableModals.potionHouse.message2"
+  | "interactableModals.guildHouse.message"
+  | "interactableModals.guildHouse.readMore"
+  | "interactableModals.guildHouse.budsCollection"
+  | "interactableModals.bettyHome.message"
+  | "interactableModals.bertHome.message"
+  | "interactableModals.beach.message1"
+  | "interactableModals.beach.message2"
+  | "interactableModals.castle.message"
+  | "interactableModals.woodlands.message"
+  | "interactableModals.port.message"
+  | "interactableModals.like.home";
 
-export type Onboarding =
-  | "onboarding.welcome"
-  | "onboarding.step.one"
-  | "onboarding.step.two"
-  | "onboarding.step.three"
-  | "onboarding.intro.one"
-  | "onboarding.intro.two"
-  | "onboarding.cheer"
-  | "onboarding.form.one"
-  | "onboarding.form.two"
-  | "onboarding.duplicateUser.one"
-  | "onboarding.duplicateUser.two"
-  | "onboarding.starterPack"
-  | "onboarding.wallet.titleOne"
-  | "onboarding.wallet.one"
-  | "onboarding.wallet.two"
-  | "onboarding.wallet.haveWallet"
-  | "onboarding.wallet.createButton"
-  | "onboarding.wallet.titleTwo"
-  | "onboarding.wallet.three"
-  | "onboarding.wallet.four"
-  | "onboarding.wallet.acceptButton"
-  | "onboarding.wallet.acceptLoading"
-  | "onboarding.wallet.titleThree"
-  | "onboarding.wallet.five"
-  | "onboarding.wallet.six"
-  | "onboarding.wallet.final"
-  | "onboarding.wallet.already";
+export type Intro =
+  | "intro.one"
+  | "intro.two"
+  | "intro.three"
+  | "intro.four"
+  | "intro.five";
 
-export type Questions = "questions.obtain.MATIC" | "questions.lowCash";
+export type IntroPage =
+  | "introPage.welcome"
+  | "introPage.description"
+  | "introPage.mission"
+  | "introPage.tip"
+  | "introPage.feedbackIcons"
+  | "introPage.correctPosition"
+  | "introPage.correctPotionWrongPosition"
+  | "introPage.wrongPotion"
+  | "introPage.chaosPotion"
+  | "introPage.playButton";
 
-export type Statements =
-  | "statements.adventure"
-  | "statements.auctioneer.one"
-  | "statements.auctioneer.two"
-  | "statements.beta.one"
-  | "statements.beta.two"
-  | "statements.better.luck"
-  | "statements.blacklist.one"
-  | "statements.blacklist.two"
-  | "statements.clickBottle"
-  | "statements.clock.one"
-  | "statements.clock.two"
-  | "statements.conversation.one"
-  | "statements.cooldown"
-  | "statements.craft.composter"
-  | "statements.docs"
-  | "statements.dontRefresh"
-  | "statements.feed.bumpkin.one"
-  | "statements.feed.bumpkin.two"
-  | "statements.gold.pass.required"
-  | "statements.guide.one"
-  | "statements.guide.two"
-  | "statements.jigger.one"
-  | "statements.jigger.two"
-  | "statements.jigger.three"
-  | "statements.jigger.four"
-  | "statements.jigger.five"
-  | "statements.jigger.six"
-  | "statements.jigger.seven"
-  | "statements.lvlUp"
-  | "statements.maintenance"
-  | "statements.make.a.wish"
-  | "statements.minted"
-  | "statements.minting"
-  | "statements.mutant.chicken"
-  | "statements.new.wish"
-  | "statements.no.reward"
-  | "statements.ohNo"
-  | "statements.openGuide"
-  | "statements.patience"
-  | "statements.sfl.rewards.received"
-  | "statements.sflLim.one"
-  | "statements.sflLim.two"
-  | "statements.sniped"
-  | "statements.switchNetwork"
-  | "statements.sync"
-  | "statements.tapCont"
-  | "statements.thankYou"
-  | "statements.tutorial.one"
-  | "statements.tutorial.two"
-  | "statements.tutorial.three"
-  | "statements.visit.firePit"
-  | "statements.wish.granted.time"
-  | "statements.wish.granted"
-  | "statements.wish.made"
-  | "statements.wish.ready.in"
-  | "statements.wish.thanks"
-  | "statements.wish.time"
-  | "statements.wish.warning.one"
-  | "statements.wish.warning.two"
-  | "statements.wishing-well.info.one"
-  | "statements.wishing-well.info.two"
-  | "statements.wishing-well.info.three"
-  | "statements.wishing-well.not.providing.liquidity"
-  | "statements.wishing.well.amount"
-  | "statements.wishing.well.luck"
-  | "statements.wrongChain.one"
-  | "statements.empty.chest"
-  | "statements.chest.captcha"
-  | "statements.frankie.plaza"
-  | "statements.blacksmith.plaza"
-  | "statements.water.well.needed.one"
-  | "statements.water.well.needed.two"
-  | "statements.soldOut"
-  | "statements.inStock"
-  | "statements.soldOutWearables"
-  | "statements.wallet.to.inventory.transfer"
-  | "statements.crop.water"
-  | "statements.daily.limit"
-  | "statements.sure.buy";
+export type IslandName =
+  | "island.home"
+  | "island.pumpkin.plaza"
+  | "island.beach"
+  | "island.woodlands"
+  | "island.helios"
+  | "island.goblin.retreat";
+
+export type IslandNotFound =
+  | "islandNotFound.message"
+  | "islandNotFound.takeMeHome";
+
+export type Kick =
+  | "kick.player"
+  | "kick.player.id"
+  | "kick.Reason"
+  | "kick.player.farm"
+  | "kick.player.kick"
+  | "kick.player.failed"
+  | "kick.player.kicking"
+  | "kick.please"
+  | "kick.Message";
+
+export type Kicked =
+  | "kicked.kicked"
+  | "kicked.Reason"
+  | "kicked.Message"
+  | "kicked.accept";
 
 export type LandscapeTerms =
   | "landscape.intro.one"
@@ -587,579 +1280,141 @@ export type LandscapeTerms =
   | "landscape.timerPopover"
   | "landscape.dragMe";
 
-export type BumpkinTrade =
-  | "bumpkinTrade.askPrice"
-  | "bumpkinTrade.purchased"
-  | "bumpkinTrade.plaza"
-  | "bumpkinTrade.lvl"
-  | "bumpkinTrade.noTradeLs"
-  | "bumpkinTrade.sell"
-  | "bumpkinTrade.list"
-  | "bumpkinTrade.like.list";
-
-export type BumpkinPartRequirements =
-  | "part.hair"
-  | "part.body"
-  | "part.shoes"
-  | "part.shirt"
-  | "part.pants"
-  | "part.background";
-
-export type RetreatTerms =
-  | "retreatTerms.introTravel.zero"
-  | "retreatTerms.introTravel.one"
-  | "retreatTerms.introTravel.two"
-  | "retreatTerms.introTravel.three"
-  | "retreatTerms.introTravel.four"
-  | "retreatTerms.resale.title"
-  | "retreatTerms.resale.one"
-  | "retreatTerms.resale.two"
-  | "retreatTerms.resale.three";
-
-export type BoostDescriptions =
-  // Mutant Chickens
-  | "description.speed.chicken.one"
-  | "description.speed.chicken.two"
-  | "description.fat.chicken.one"
-  | "description.fat.chicken.two"
-  | "description.rich.chicken.one"
-  | "description.rich.chicken.two"
-  | "description.ayam.cemani"
-  | "description.el.pollo.veloz.one"
-  | "description.el.pollo.veloz.two"
-  | "description.banana.chicken"
-
-  // Boosts
-  | "description.lab.grow.pumpkin"
-  | "description.lab.grown.radish"
-  | "description.lab.grown.carrot"
-  | "description.purple.trail"
-  | "description.obie"
-  | "description.maximus"
-  | "description.mushroom.house"
-  | "description.Karkinos"
-  | "description.heart.of.davy.jones"
-  | "description.tin.turtle"
-  | "description.emerald.turtle"
-  | "description.iron.idol"
-  | "description.skill.shrimpy"
-  | "description.soil.krabby"
-  | "description.nana"
-  | "description.grain.grinder"
-  | "description.kernaldo"
-  | "description.poppy"
-  | "description.victoria.sisters"
-  | "description.undead.rooster"
-  | "description.observatory"
-  | "description.time.warp.totem"
-  | "description.cabbage.boy"
-  | "description.cabbage.girl"
-  | "description.wood.nymph.wendy"
-  | "description.peeled.potato"
-  | "description.potent.potato"
-  | "description.radical.radish"
-  | "description.stellar.sunflower"
-  | "description.lady.bug"
-  | "description.squirrel.monkey"
-  | "description.black.bearry"
-  | "description.maneki.neko"
-  | "description.easter.bunny"
-  | "description.pablo.bunny"
-  | "description.foliant"
-  | "description.tiki.totem"
-  | "description.lunar.calendar"
-  | "description.heart.davy.jones"
-  | "description.treasure.map"
-  | "description.genie.lamp"
-  | "description.sir.goldensnout"
-  | "description.freya.fox"
-  | "description.queen.cornelia"
-
-  // Blacksmith items
-  | "description.basic.scarecrow"
-  | "description.scary.mike"
-  | "description.laurie.chuckle.crow"
-  | "description.immortal.pear"
-  | "description.bale";
-
-export type BoostEffectDescriptions =
-  | "description.obie.boost"
-  | "description.purple.trail.boost"
-  | "description.freya.fox.boost"
-  | "description.sir.goldensnout.boost"
-  | "description.maximus.boost"
-  | "description.basic.scarecrow.boost"
-  | "description.scary.mike.boost"
-  | "description.laurie.chuckle.crow.boost"
-  | "description.bale.boost"
-  | "description.immortal.pear.boost"
-  | "description.treasure.map.boost"
-  | "description.poppy.boost"
-  | "description.kernaldo.boost"
-  | "description.grain.grinder.boost"
-  | "description.nana.boost"
-  | "description.soil.krabby.boost"
-  | "description.skill.shrimpy.boost"
-  | "description.iron.idol.boost"
-  | "description.emerald.turtle.boost"
-  | "description.tin.turtle.boost"
-  | "description.heart.of.davy.jones.boost"
-  | "description.Karkinos.boost"
-  | "description.mushroom.house.boost";
-
-export type CropFruitDescriptions =
-  // Crops
-  | "description.sunflower"
-  | "description.potato"
-  | "description.pumpkin"
-  | "description.carrot"
-  | "description.cabbage"
-  | "description.beetroot"
-  | "description.cauliflower"
-  | "description.parsnip"
-  | "description.eggplant"
-  | "description.corn"
-  | "description.radish"
-  | "description.wheat"
-  | "description.kale"
-
-  // Fruit
-  | "description.blueberry"
-  | "description.orange"
-  | "description.apple"
-  | "description.banana"
-
-  // Exotic Crops
-  | "description.white.carrot"
-  | "description.warty.goblin.pumpkin"
-  | "description.adirondack.potato"
-  | "description.purple.cauliflower"
-  | "description.chiogga"
-  | "description.golden.helios"
-  | "description.black.magic";
-
-export type FoodDescriptions =
-  // Fire Pit
-  | "description.pumpkin.soup"
-  | "description.mashed.potato"
-  | "description.bumpkin.broth"
-  | "description.boiled.eggs"
-  | "description.kale.stew"
-  | "description.mushroom.soup"
-  | "description.reindeer.carrot"
-  | "description.kale.omelette"
-  | "description.cabbers.mash"
-  | "description.popcorn"
-  | "description.gumbo"
-
-  // Kitchen
-  | "description.roast.veggies"
-  | "description.bumpkin.salad"
-  | "description.goblins.treat"
-  | "description.cauliflower.burger"
-  | "description.club.sandwich"
-  | "description.mushroom.jacket.potatoes"
-  | "description.sunflower.crunch"
-  | "description.bumpkin.roast"
-  | "description.goblin.brunch"
-  | "description.fruit.salad"
-  | "description.bumpkin.ganoush"
-  | "description.chowder"
-  | "description.pancakes"
-
-  // Bakery
-  | "description.apple.pie"
-  | "description.kale.mushroom.pie"
-  | "description.cornbread"
-  | "description.sunflower.cake"
-  | "description.potato.cake"
-  | "description.pumpkin.cake"
-  | "description.carrot.cake"
-  | "description.cabbage.cake"
-  | "description.beetroot.cake"
-  | "description.cauliflower.cake"
-  | "description.parsnip.cake"
-  | "description.radish.cake"
-  | "description.wheat.cake"
-  | "description.eggplant.cake"
-  | "description.orange.cake"
-  | "description.pirate.cake"
-
-  // Deli
-  | "description.blueberry.jam"
-  | "description.fermented.carrots"
-  | "description.sauerkraut"
-  | "description.fancy.fries"
-  | "description.fermented.fish"
-
-  // Smoothie Shack
-  | "description.apple.juice"
-  | "description.orange.juice"
-  | "description.purple.smoothie"
-  | "description.power.smoothie"
-  | "description.bumpkin.detox"
-  | "description.banana.blast"
-
-  // Unused foods
-  | "description.roasted.cauliflower"
-  | "description.radish.pie";
-
-export type DecorationDescriptions =
-  // Decorations
-  | "description.wicker.man"
-  | "description.golden bonsai"
-  | "description.christmas.bear"
-  | "description.war.skull"
-  | "description.war.tombstone"
-  | "description.white.tulips"
-  | "description.potted.sunflower"
-  | "description.potted.potato"
-  | "description.potted.pumpkin"
-  | "description.cactus"
-  | "description.basic.bear"
-  | "description.bonnies.tombstone"
-  | "description.grubnashs.tombstone"
-  | "description.town.sign"
-  | "description.dirt.path"
-  | "description.bush"
-  | "description.fence"
-  | "description.stone.fence"
-  | "description.pine.tree"
-  | "description.shrub"
-  | "description.field.maple"
-  | "description.red.maple"
-  | "description.golden.maple"
-  | "description.crimson.cap"
-  | "description.toadstool.seat"
-  | "description.chestnut.fungi.stool"
-  | "description.mahogany.cap"
-  | "description.candles"
-  | "description.haunted.stump"
-  | "description.spooky.tree"
-  | "description.observer"
-  | "description.crow.rock"
-  | "description.mini.corn.maze"
-  | "description.lifeguard.ring"
-  | "description.surfboard"
-  | "description.hideaway.herman"
-  | "description.shifty.sheldon"
-  | "description.tiki.torch"
-  | "description.beach.umbrella"
-  | "description.magic.bean"
-  | "description.giant.potato"
-  | "description.giant.pumpkin"
-  | "description.giant.cabbage"
-  | "description.chef.bear"
-  | "description.construction.bear"
-  | "description.angel.bear"
-  | "description.badass.bear"
-  | "description.bear.trap"
-  | "description.brilliant.bear"
-  | "description.classy.bear"
-  | "description.farmer.bear"
-  | "description.rich.bear"
-  | "description.sunflower.bear"
-  | "description.christmas.bear"
-  | "description.beta.bear"
-  | "description.rainbow.artist.bear"
-  | "description.devil.bear"
-  | "description.collectible.bear"
-  | "description.cyborg.bear"
-  | "description.abandoned.bear"
-  | "description.turtle.bear"
-  | "description.christmas.snow.globe"
-  | "description.kraken.tentacle"
-  | "description.kraken.head"
-  | "description.trex.skull"
-  | "description.sunflower.coin"
-  | "description.skeleton.king.staff"
-  | "description.lifeguard.bear"
-  | "description.snorkel.bear"
-  | "description.parasaur.skull"
-  | "description.goblin.bear"
-  | "description.golden.bear.head"
-  | "description.pirate.bear"
-  | "description.galleon"
-  | "description.dinosaur.bone"
-  | "description.human.bear"
-  | "description.heart.balloons"
-  | "description.flamingo"
-  | "description.blossom.tree"
-  | "description.whale.bear"
-  | "description.valentine.bear"
-  | "description.easter.bear"
-  | "description.easter.bush"
-  | "description.giant.carrot"
-  | "description.beach.ball"
-  | "description.palm.tree"
-
-  // Banners
-  | "description.goblin.war.banner"
-  | "description.human.war.banner";
-
-export type FishDescriptions =
-  // Fish
-  | "description.anchovy.one"
-  | "description.anchovy.two"
-  | "description.butterflyfish.one"
-  | "description.butterflyfish.two"
-  | "description.blowfish.one"
-  | "description.blowfish.two"
-  | "description.clownfish.one"
-  | "description.clownfish.two"
-  | "description.seabass.one"
-  | "description.seabass.two"
-  | "description.seahorse.one"
-  | "description.seahorse.two"
-  | "description.horsemackerel.one"
-  | "description.horsemackerel.two"
-  | "description.squid.one"
-  | "description.squid.two"
-  | "description.redsnapper.one"
-  | "description.redsnapper.two"
-  | "description.morayeel.one"
-  | "description.morayeel.two"
-  | "description.oliveflounder.one"
-  | "description.oliveflounder.two"
-  | "description.napoleanfish.one"
-  | "description.napoleanfish.two"
-  | "description.surgeonfish.one"
-  | "description.surgeonfish.two"
-  | "description.zebraturkeyfish.one"
-  | "description.zebraturkeyfish.two"
-  | "description.ray.one"
-  | "description.ray.two"
-  | "description.hammerheadshark.one"
-  | "description.hammerheadshark.two"
-  | "description.tuna.one"
-  | "description.tuna.two"
-  | "description.mahimahi.one"
-  | "description.mahimahi.two"
-  | "description.bluemarlin.one"
-  | "description.bluemarlin.two"
-  | "description.oarfish.one"
-  | "description.oarfish.two"
-  | "description.footballfish.one"
-  | "description.footballfish.two"
-  | "description.sunfish.one"
-  | "description.sunfish.two"
-  | "description.coelacanth.one"
-  | "description.coelacanth.two"
-  | "description.whaleshark.one"
-  | "description.whaleshark.two"
-  | "description.barredknifejaw.one"
-  | "description.barredknifejaw.two"
-  | "description.sawshark.one"
-  | "description.sawshark.two"
-  | "description.whiteshark.one"
-  | "description.whiteshark.two"
-
-  // Marine Marvels
-  | "description.twilight.anglerfish"
-  | "description.starlight.tuna"
-  | "description.radiant.ray"
-  | "description.phantom.barracuda"
-  | "description.gilded.swordfish";
-
-export type BuildingDescriptions =
-  // Buildings
-  | "description.water.well"
-  | "description.kitchen"
-  | "description.compost.bin"
-  | "description.hen.house"
-  | "description.bakery"
-  | "description.turbo.composter"
-  | "description.deli"
-  | "description.smoothie.shack"
-  | "description.warehouse"
-  | "description.toolshed"
-  | "description.premium.composter"
-  | "description.town.center"
-  | "description.market"
-  | "description.fire.pit"
-  | "description.workbench"
-  | "description.tent";
-
-export type ToolDescriptions =
-  // Tools
-  | "description.axe"
-  | "description.pickaxe"
-  | "description.stone.pickaxe"
-  | "description.iron.pickaxe"
-  | "description.hammer"
-  | "description.rod"
-  | "description.rusty.shovel"
-  | "description.shovel"
-  | "description.sand.shovel"
-  | "description.sand.drill";
-
-export type GameDescriptions =
-  // Quest Items
-  | "description.goblin.key"
-  | "description.sunflower.key"
-  | "description.ancient.goblin.sword"
-  | "description.ancient.human.warhammer"
-  // Coupons
-  | "description.community.coin"
-  | "description.bud.seedling"
-  | "description.gold.pass"
-  | "description.rapid.growth"
-  | "description.bud.ticket"
-  | "description.potion.ticket"
-  | "description.trading.ticket"
-  | "description.block.buck"
-  | "description.beta.pass"
-  | "description.war.bond"
-  | "description.jack.o.lantern"
-  | "description.golden.crop"
-  | "description.red.envelope"
-  | "description.love.letter"
-  | "description.solar.flare.ticket"
-  | "description.dawn.breaker.ticket"
-  | "description.crow.feather"
-  | "description.mermaid.scale"
-  | "description.sunflower.supporter"
-  // Easter Items
-  | "description.egg.basket"
-  | "description.blue.egg"
-  | "description.orange.egg"
-  | "description.green.egg"
-  | "description.yellow.egg"
-  | "description.red.egg"
-  | "description.pink.egg"
-  | "description.purple.egg";
-
-export type BumpkinSkillsDescription =
-  // Crops
-  | "description.green.thumb"
-  | "description.cultivator"
-  | "description.master.farmer"
-  | "description.golden.flowers"
-  | "description.happy.crop"
-
-  // Trees
-  | "description.lumberjack"
-  | "description.tree.hugger"
-  | "description.tough.tree"
-  | "description.money.tree"
-
-  // Rocks
-  | "description.digger"
-  | "description.coal.face"
-  | "description.seeker"
-  | "description.gold.rush"
-
-  // Cooking
-  | "description.rush.hour"
-  | "description.kitchen.hand"
-  | "description.michelin.stars"
-  | "description.curer"
-
-  // Animals
-  | "description.stable.hand"
-  | "description.free.range"
-  | "description.horse.whisperer"
-  | "description.buckaroo";
-
-export type BountyDescription =
-  | "description.clam.shell"
-  | "description.sea.cucumber"
-  | "description.coral"
-  | "description.crab"
-  | "description.starfish"
-  | "description.pirate.bounty"
-  | "description.wooden.compass"
-  | "description.iron.compass"
-  | "description.emerald.compass"
-  | "description.old.bottle"
-  | "description.pearl"
-  | "description.pipi"
-  | "description.seaweed";
-
-export type FishingQuests =
-  | "quest.basic.fish"
-  | "quest.advanced.fish"
-  | "quest.all.fish"
-  | "quest.300.fish"
-  | "quest.1500.fish"
-  | "quest.marine.marvel";
-
-export type IslandName =
-  | "island.home"
-  | "island.pumpkin.plaza"
-  | "island.beach"
-  | "island.woodlands"
-  | "island.helios"
-  | "island.goblin.retreat";
-
-export type DiscordBonus =
-  | "discord.bonus.niceHat"
-  | "discord.bonus.attentionEvents"
-  | "discord.bonus.bonusReward"
-  | "discord.bonus.payAttention"
-  | "discord.bonus.enjoyCommunity"
-  | "discord.bonus.claimGift"
-  | "discord.bonus.communityInfo"
-  | "discord.bonus.farmingTips"
-  | "discord.bonus.freeGift"
-  | "discord.bonus.connect";
-
-//How To Play
-export type HowToFarm =
-  // Page 1
-  | "howToFarm.title"
-  | "howToFarm.stepOne"
-  | "howToFarm.stepTwo"
-  | "howToFarm.stepThree"
-  | "howToFarm.stepFour"
-  | "howToFarm.stepFive";
-
-export type HowToUpgrade =
-  // Page 2
-  | "howToUpgrade.title"
-  | "howToUpgrade.stepOne"
-  | "howToUpgrade.stepTwo"
-  | "howToUpgrade.stepThree"
-  | "howToUpgrade.stepFour";
-
-export type HowToSync =
-  //Page 3
-  | "howToSync.title"
-  | "howToSync.description"
-  | "howToSync.stepOne"
-  | "howToSync.stepTwo";
-
 export type LetsGo =
-  //Page 4
   | "letsGo.title"
   | "letsGo.description"
   | "letsGo.readMore"
   | "letsGo.officialDocs"
   | "letsGo.officialDocsLink";
 
-export type SettingsMenu =
-  | "settingsMenu.timeMachine"
-  | "settingsMenu.storeOnChain"
-  | "settingsMenu.howToPlay"
-  | "settingsMenu.community"
-  | "settingsMenu.swapMaticForSFL"
-  | "settingsMenu.plazaSettings"
-  | "settingsMenu.settings"
-  | "settingsMenu.communityGarden"
-  | "settingsMenu.share";
+export type LevelUpMessages =
+  | "levelUp.2"
+  | "levelUp.3"
+  | "levelUp.4"
+  | "levelUp.5"
+  | "levelUp.6"
+  | "levelUp.7"
+  | "levelUp.8"
+  | "levelUp.9"
+  | "levelUp.10"
+  | "levelUp.11"
+  | "levelUp.12"
+  | "levelUp.13"
+  | "levelUp.14"
+  | "levelUp.15"
+  | "levelUp.16"
+  | "levelUp.17"
+  | "levelUp.18"
+  | "levelUp.19"
+  | "levelUp.20"
+  | "levelUp.21"
+  | "levelUp.22"
+  | "levelUp.23"
+  | "levelUp.24"
+  | "levelUp.25"
+  | "levelUp.26"
+  | "levelUp.27"
+  | "levelUp.28"
+  | "levelUp.29"
+  | "levelUp.30"
+  | "levelUp.31"
+  | "levelUp.32"
+  | "levelUp.33"
+  | "levelUp.34"
+  | "levelUp.35"
+  | "levelUp.36"
+  | "levelUp.37"
+  | "levelUp.38"
+  | "levelUp.39"
+  | "levelUp.40"
+  | "levelUp.41"
+  | "levelUp.42"
+  | "levelUp.43"
+  | "levelUp.44"
+  | "levelUp.45"
+  | "levelUp.46"
+  | "levelUp.47"
+  | "levelUp.48"
+  | "levelUp.49"
+  | "levelUp.50"
+  | "levelUp.51"
+  | "levelUp.52"
+  | "levelUp.53"
+  | "levelUp.54"
+  | "levelUp.55"
+  | "levelUp.56"
+  | "levelUp.57"
+  | "levelUp.58"
+  | "levelUp.59"
+  | "levelUp.60";
 
-// Delivery NPC
-export type GOBLIN_MESSAGES =
-  | "goblinMessages.msg1"
-  | "goblinMessages.msg2"
-  | "goblinMessages.msg3"
-  | "goblinMessages.msg4"
-  | "goblinMessages.msg5"
-  | "goblinMessages.msg6"
-  | "goblinMessages.msg7"
-  | "goblinMessages.msg8"
-  | "goblinMessages.msg9"
-  | "goblinMessages.msg10";
+export type Loser =
+  | "loser.unsuccess"
+  | "loser.refund"
+  | "loser.longer"
+  | "loser.refund.one";
+
+export type LostSunflorian =
+  | "lostSunflorian.line1"
+  | "lostSunflorian.line2"
+  | "lostSunflorian.line3";
+
+export type ModalDescription =
+  | "modalDescription.friend"
+  | "modalDescription.love.fruit"
+  | "modalDescription.gift"
+  | "modalDescription.limited.abilitie"
+  | "modalDescription.trail";
+
+export type Mute =
+  | "mute.playe"
+  | "mute.playe.id"
+  | "mute.duration"
+  | "mute.Reason"
+  | "mute.player.farm"
+  | "mute.player.mute"
+  | "mute.Reason"
+  | "mute.fail"
+  | "mute.player.muting"
+  | "mute.player.wait"
+  | "mute.you"
+  | "mute.until"
+  | "mute.discord"
+  | "mute.accept"
+  | "mute.unmute.farm"
+  | "mute.unmute.player"
+  | "mute.unmute.failed"
+  | "mute.unmuting.player"
+  | "mute.unmute.wait"
+  | "mute.online";
+
+export type NoBumpkin =
+  | "noBumpkin.readyToFarm"
+  | "noBumpkin.play"
+  | "noBumpkin.missingBumpkin"
+  | "noBumpkin.bumpkinNFT"
+  | "noBumpkin.bumpkinHelp"
+  | "noBumpkin.mintBumpkin"
+  | "noBumpkin.allBumpkins"
+  | "noBumpkin.chooseBumpkin"
+  | "noBumpkin.deposit"
+  | "noBumpkin.loading";
+
+export type NoTownCenter =
+  | "noTownCenter.reward"
+  | "noTownCenter.news"
+  | "noTownCenter.townCenterPlacement";
+
+export type NotOnDiscordServer =
+  | "notOnDiscordServer.warning"
+  | "notOnDiscordServer.intro"
+  | "notOnDiscordServer.joinDiscord"
+  | "notOnDiscordServer.discordServer"
+  | "notOnDiscordServer.completeVerification"
+  | "notOnDiscordServer.acceptRules"
+  | "notOnDiscordServer.tryAgain"
+  | "notOnDiscordServer.close"
+  | "notOnDiscordServer.tryAgainButton";
 
 export type NPC_MESSAGE =
   // Betty
@@ -1279,53 +1534,17 @@ export type NPC_MESSAGE =
   | "npcMessages.shelly.msg7"
   | "npcMessages.shelly.msg8";
 
-export type HayseedHankV2 =
-  | "hayseedHankv2.dialog1"
-  | "hayseedHankv2.dialog2"
-  | "hayseedHankv2.action"
-  | "hayseedHankv2.title"
-  | "hayseedHankv2.newChoresAvailable"
-  | "hayseedHankv2.skipChores";
-
-export type SnorklerDialogues = "snorkler.vastOcean" | "snorkler.goldBeneath";
-
-export type SharkBumpkinDialogues =
-  | "sharkBumpkin.dialogue.shhhh"
-  | "sharkBumpkin.dialogue.scareGoblins";
-
-export type IslandNotFound =
-  | "islandNotFound.message"
-  | "islandNotFound.takeMeHome";
-
-export type VisitislandNotFound = "visitislandNotFound.title";
-
-export type VisitislandEnter =
-  | "visitIsland.enterIslandId"
-  | "visitIsland.visit";
-
-export type GoldPassModal =
-  | "goldPass.unlockPower"
-  | "goldPass.craftNFTs"
-  | "goldPass.trade"
-  | "goldPass.participateAuction"
-  | "goldPass.withdrawTransferNFTs"
-  | "goldPass.accessRestrictedAreas"
-  | "goldPass.readMore"
-  | "common.noThanks"
-  | "goldPass.buyNow"
-  | "goldPass.priceInMatic";
-
-export type FishermanModal =
-  | "fishermanModal.attractFish"
-  | "fishermanModal.royChallenge"
-  | "fishermanModal.fishBenefits"
-  | "fishermanModal.baitAndResources"
-  | "fishermanModal.crazyHappening"
-  | "fishermanModal.bonusFish"
-  | "fishermanModal.dailyLimitReached"
-  | "fishermanModal.needCraftRod"
-  | "fishermanModal.craft.beach"
-  | "fishermanModal.zero.available";
+export type Npc =
+  | "npc.Modal.Hammer"
+  | "npc.Modal.Marcus"
+  | "npc.Modal.Billy"
+  | "npc.Modal.Billy.one"
+  | "npc.Modal.Billy.two"
+  | "npc.Modal.Readmore"
+  | "npc.Modal.Gabi"
+  | "npc.Modal.Gabi.one"
+  | "npc.Modal.Craig"
+  | "npc.Modal.Craig.one";
 
 export type NpcDialogues =
   // Blacksmith Intro
@@ -1539,43 +1758,156 @@ export type NpcDialogues =
   | "npcDialogues.pumpkinPete.noOrder1"
   | "npcDialogues.pumpkinPete.noOrder2";
 
-export type DefaultDialogue =
-  | "defaultDialogue.intro"
-  | "defaultDialogue.positiveDelivery"
-  | "defaultDialogue.negativeDelivery"
-  | "defaultDialogue.noOrder";
+export type Offer =
+  | "offer.okxOffer"
+  | "offer.beginWithNFT"
+  | "offer.getStarterPack"
+  | "offer.newHere"
+  | "offer.getStarted"
+  | "offer.NFT.inclu";
 
-export type SceneDialogueKey = "sceneDialogues.chefIsBusy";
+export type Onboarding =
+  | "onboarding.welcome"
+  | "onboarding.step.one"
+  | "onboarding.step.two"
+  | "onboarding.step.three"
+  | "onboarding.intro.one"
+  | "onboarding.intro.two"
+  | "onboarding.cheer"
+  | "onboarding.form.one"
+  | "onboarding.form.two"
+  | "onboarding.duplicateUser.one"
+  | "onboarding.duplicateUser.two"
+  | "onboarding.starterPack"
+  | "onboarding.wallet.titleOne"
+  | "onboarding.wallet.one"
+  | "onboarding.wallet.two"
+  | "onboarding.wallet.haveWallet"
+  | "onboarding.wallet.createButton"
+  | "onboarding.wallet.titleTwo"
+  | "onboarding.wallet.three"
+  | "onboarding.wallet.four"
+  | "onboarding.wallet.acceptButton"
+  | "onboarding.wallet.acceptLoading"
+  | "onboarding.wallet.titleThree"
+  | "onboarding.wallet.five"
+  | "onboarding.wallet.six"
+  | "onboarding.wallet.final"
+  | "onboarding.wallet.already";
 
-export type ShellyDialogue =
-  | "shellyPanelContent.tasksFrozen"
-  | "shellyPanelContent.canTrade"
-  | "shellyPanelContent.cannotTrade"
-  | "shellyPanelContent.swap"
-  | "shellyPanelContent.close"
-  | "krakenIntro.congrats"
-  | "krakenIntro.noMoreTentacles"
-  | "krakenIntro.gotIt"
-  | "krakenIntro.appetiteChanges"
-  | "krakenIntro.currentHunger"
-  | "krakenIntro.catchInstruction";
+export type OnCollectReward =
+  | "onCollectReward.Missing.Seed"
+  | "onCollectReward.Market"
+  | "onCollectReward.Missing.Shovel";
+
+export type OrderHelp =
+  | "orderhelp.Skip.hour"
+  | "orderhelp.New.Season"
+  | "orderhelp.New.Season.arrival"
+  | "orderhelp.Wisely"
+  | "orderhelp.SkipIn"
+  | "orderhelp.NoRight"
+  | "orderhelp.Skip.Order";
+
+export type Parsnip =
+  | "parsnip.hat"
+  | "parsnip.miss"
+  | "parsnip.Bonus"
+  | "parsnip.found"
+  | "parsnip.gift";
+
+export type Pending = "pending.calcul" | "pending.comeback";
+
+export type PersonHood =
+  | "personHood.Details."
+  | "personHood.Identify"
+  | "personHood.Congrat";
+
+export type Pickserver =
+  | "pickserver.server"
+  | "pickserver.full"
+  | "pickserver.explore"
+  | "pickserver.event"
+  | "pickserver.built";
+
+export type PlazaSettings =
+  | "plazaSettings.title.main"
+  | "plazaSettings.title.mutedPlayers"
+  | "plazaSettings.title.keybinds"
+  | "plazaSettings.mutedPlayers.description"
+  | "plazaSettings.mutedPlayers.button"
+  | "plazaSettings.keybinds.description"
+  | "plazaSettings.keybinds.button"
+  | "plazaSettings.noMutedPlayers"
+  | "plazaSettings.unmute"
+  | "plazaSettings.back";
+
+export type PlayerTrade =
+  | "playerTrade.loading"
+  | "playerTrade.no.trade"
+  | "playerTrade.max.item"
+  | "playerTrade.Progress"
+  | "playerTrade.transaction"
+  | "playerTrade.Please"
+  | "playerTrade.sold"
+  | "playerTrade.sale"
+  | "playerTrade.title.congrat";
+
+export type Portal = "portal.wrong" | "portal.loading" | "portal.unauthorised";
 
 export type PurchaseableBaitTranslation =
   | "purchaseableBait.fishingLure.description";
 
-export type GoldTooth = "goldTooth.intro.part1" | "goldTooth.intro.part2";
+export type Quest = "quest.mint.free";
 
-export type IntroPage =
-  | "introPage.welcome"
-  | "introPage.description"
-  | "introPage.mission"
-  | "introPage.tip"
-  | "introPage.feedbackIcons"
-  | "introPage.correctPosition"
-  | "introPage.correctPotionWrongPosition"
-  | "introPage.wrongPotion"
-  | "introPage.chaosPotion"
-  | "introPage.playButton";
+export type Questions = "questions.obtain.MATIC" | "questions.lowCash";
+
+export type Reaction =
+  | "reaction.bumpkin"
+  | "reaction.bumpkin.10"
+  | "reaction.bumpkin.30"
+  | "reaction.bumpkin.40"
+  | "reaction.sunflowers"
+  | "reaction.crops"
+  | "reaction.goblin"
+  | "reaction.crown";
+
+export type Refunded = "refunded.itemsReturned" | "refunded.goodLuck";
+
+export type RemoveKuebiko =
+  | "removeKuebiko.title"
+  | "removeKuebiko.description"
+  | "removeKuebiko.removeSeeds";
+
+export type Resale = "resale.lookingForItems" | "resale.actionText";
+
+export type Restock = "restock.one.buck" | "restock.sure" | "restock.seed.buy";
+
+export type RetreatTerms =
+  | "retreatTerms.introTravel.zero"
+  | "retreatTerms.introTravel.one"
+  | "retreatTerms.introTravel.two"
+  | "retreatTerms.introTravel.three"
+  | "retreatTerms.introTravel.four"
+  | "retreatTerms.resale.title"
+  | "retreatTerms.resale.one"
+  | "retreatTerms.resale.two"
+  | "retreatTerms.resale.three";
+
+export type RewardTerms =
+  | "reward.title"
+  | "reward.streak"
+  | "reward.comeBackLater"
+  | "reward.nextBonus"
+  | "reward.unlock"
+  | "reward.open"
+  | "reward.lvlRequirement"
+  | "reward.revealing"
+  | "reward.streakBonus"
+  | "reward.found"
+  | "reward.spendWisely"
+  | "reward.wearable"
+  | "reward.woohoo";
 
 export type RulesGameStart =
   | "rules.gameStart"
@@ -1590,211 +1922,168 @@ export type RulesGameStart =
   | "rules.incorrectPotion"
   | "rules.chaosPotionWarning";
 
-export type HeliosSunflower =
-  | "heliosSunflower.title"
-  | "heliosSunflower.description";
+export type RulesTerms =
+  | "rules"
+  | "rules.accounts"
+  | "rules.noBots"
+  | "rules.game"
+  | "rules.termsOfService";
 
-export type LostSunflorian =
-  | "lostSunflorian.line1"
-  | "lostSunflorian.line2"
-  | "lostSunflorian.line3";
+export type SceneDialogueKey = "sceneDialogues.chefIsBusy";
 
-export type ExoticShopItems =
-  | "exoticShopItems.line1"
-  | "exoticShopItems.line2"
-  | "exoticShopItems.line3"
-  | "exoticShopItems.line4";
-
-export type InteractableModals =
-  | "interactableModals.returnhome.message"
-  | "interactableModals.fatChicken.message"
-  | "interactableModals.lazyBud.message"
-  | "interactableModals.bud.message"
-  | "interactableModals.walrus.message"
-  | "interactableModals.plazaBlueBook.message1"
-  | "interactableModals.plazaBlueBook.message2"
-  | "interactableModals.plazaOrangeBook.message1"
-  | "interactableModals.plazaOrangeBook.message2"
-  | "interactableModals.beachGreenBook.message1"
-  | "interactableModals.beachGreenBook.message2"
-  | "interactableModals.beachBlueBook.message1"
-  | "interactableModals.beachBlueBook.message2"
-  | "interactableModals.beachBlueBook.message3"
-  | "interactableModals.beachOrangeBook.message1"
-  | "interactableModals.beachOrangeBook.message2"
-  | "interactableModals.plazaGreenBook.message1"
-  | "interactableModals.plazaGreenBook.message2"
-  | "interactableModals.fanArt1.message"
-  | "interactableModals.fanArt2.message"
-  | "interactableModals.fanArt2.linkLabel"
-  | "interactableModals.fanArt3.message"
-  | "interactableModals.clubhouseReward.message1"
-  | "interactableModals.clubhouseReward.message2"
-  | "interactableModals.plazaStatue.message"
-  | "interactableModals.dawnBook1.message1"
-  | "interactableModals.dawnBook1.message2"
-  | "interactableModals.dawnBook1.message3"
-  | "interactableModals.dawnBook2.message1"
-  | "interactableModals.dawnBook2.message2"
-  | "interactableModals.dawnBook3.message1"
-  | "interactableModals.dawnBook3.message2"
-  | "interactableModals.dawnBook3.message3"
-  | "interactableModals.dawnBook4.message1"
-  | "interactableModals.dawnBook4.message2"
-  | "interactableModals.dawnBook4.message3"
-  | "interactableModals.timmyHome.message"
-  | "interactableModals.windmill.message"
-  | "interactableModals.igorHome.message"
-  | "interactableModals.potionHouse.message1"
-  | "interactableModals.potionHouse.message2"
-  | "interactableModals.guildHouse.message"
-  | "interactableModals.guildHouse.readMore"
-  | "interactableModals.guildHouse.budsCollection"
-  | "interactableModals.bettyHome.message"
-  | "interactableModals.bertHome.message"
-  | "interactableModals.beach.message1"
-  | "interactableModals.beach.message2"
-  | "interactableModals.castle.message"
-  | "interactableModals.woodlands.message"
-  | "interactableModals.port.message"
-  | "interactableModals.like.home";
-
-export type GarbageCollector =
-  | "garbageCollector.welcome"
-  | "garbageCollector.description"
-  | "garbageCollector.continue";
-
-export type DepositWallet =
-  | "deposit.errorLoadingBalances"
-  | "deposit.yourPersonalWallet"
-  | "deposit.farmWillReceive"
-  | "deposit.depositDidNotArrive"
-  | "deposit.goblinTaxInfo"
-  | "deposit.applied"
-  | "deposit.sendToFarm"
-  | "deposit.toDepositLevelUp"
-  | "deposit.level"
-  | "deposit.noSflOrCollectibles"
-  | "deposit.farmAdresse";
-
-export type ChoresStart =
-  | "chores.harvestFields"
-  | "chores.earnSfl"
-  | "chores.harvestFieldsIntro"
-  | "chores.earnSflIntro"
-  | "chores.reachLevel"
-  | "chores.reachLevelIntro"
-  | "chores.chopTrees"
-  | "chores.helpWithTrees";
-
-export type WornDescription =
-  | "worm.earthworm"
-  | "worm.grub"
-  | "worm.redWiggler";
-
-export type CompostDescription =
-  | "compost.fruitfulBlend"
-  | "compost.sproutMix"
-  | "compost.sproutMixBoosted"
-  | "compost.rapidRoot";
-
-export type ComposterDescription =
-  | "composter.compostBin"
-  | "composter.turboComposter"
-  | "composter.premiumComposter";
-
-export type ErrorAndAccess =
-  | "errorAndAccess.warning"
-  | "errorAndAccess.blocked.betaTestersOnly"
-  | "errorAndAccess.denied.message"
-  | "errorAndAccess.instructions.part1"
-  | "errorAndAccess.sflDiscord"
-  | "errorAndAccess.instructions.part2"
-  | "errorAndAccess.try.again";
-
-export type BumpkinItemBuff =
-  | "bumpkinItemBuff.chef.apron.boost"
-  | "bumpkinItemBuff.fruit.picker Apron.boost"
-  | "bumpkinItemBuff.angel.wings.boost"
-  | "bumpkinItemBuff.devil.wings.boost"
-  | "bumpkinItemBuff.eggplant.onesie.boost"
-  | "bumpkinItemBuff.golden.spatula.boost"
-  | "bumpkinItemBuff.mushroom.hat.boost"
-  | "bumpkinItemBuff.parsnip.boost"
-  | "bumpkinItemBuff.sunflower.amulet.boost"
-  | "bumpkinItemBuff.carrot.amulet.boost"
-  | "bumpkinItemBuff.beetroot.amulet.boost"
-  | "bumpkinItemBuff.green.amulet.boost"
-  | "bumpkinItemBuff.Luna.s.hat.boost"
-  | "bumpkinItemBuff.infernal.pitchfork.boost"
-  | "bumpkinItemBuff.cattlegrim.boost"
-  | "bumpkinItemBuff.corn.onesie.boost"
-  | "bumpkinItemBuff.sunflower.rod.boost"
-  | "bumpkinItemBuff.trident.boost"
-  | "bumpkinItemBuff.bucket.o.worms.boost"
-  | "bumpkinItemBuff.luminous.anglerfish.topper.boost"
-  | "bumpkinItemBuff.angler.waders.boost"
-  | "bumpkinItemBuff.ancient.rod.boost"
-  | "bumpkinItemBuff.banana.amulet.boost";
-
-export type NotOnDiscordServer =
-  | "notOnDiscordServer.warning"
-  | "notOnDiscordServer.intro"
-  | "notOnDiscordServer.joinDiscord"
-  | "notOnDiscordServer.discordServer"
-  | "notOnDiscordServer.completeVerification"
-  | "notOnDiscordServer.acceptRules"
-  | "notOnDiscordServer.tryAgain"
-  | "notOnDiscordServer.close"
-  | "notOnDiscordServer.tryAgainButton";
-
-export type Offer =
-  | "offer.okxOffer"
-  | "offer.beginWithNFT"
-  | "offer.getStarterPack"
-  | "offer.newHere"
-  | "offer.getStarted"
-  | "offer.NFT.inclu";
+export type SeasonTerms =
+  | "season.goodLuck"
+  | "season.discount"
+  | "season.banner"
+  | "season.wearableAirdrop"
+  | "season.bonusTickets"
+  | "season.boostXP"
+  | "season.exclusiveOffer"
+  | "season.includes"
+  | "season.limitedOffer"
+  | "season.accessTo"
+  | "season.buyNow"
+  | "season.ctk";
 
 export type Session = "session.expired" | "session.expiredMessage";
 
-export type ConfirmSkill = "confirm.skillClaim";
+export type SettingsMenu =
+  | "settingsMenu.timeMachine"
+  | "settingsMenu.storeOnChain"
+  | "settingsMenu.howToPlay"
+  | "settingsMenu.community"
+  | "settingsMenu.swapMaticForSFL"
+  | "settingsMenu.plazaSettings"
+  | "settingsMenu.settings"
+  | "settingsMenu.communityGarden"
+  | "settingsMenu.share";
 
-export type ChickenWinner = "chicken.winner.playagain";
+export type Share =
+  | "share.TweetText"
+  | "share.ShareYourFarmLink"
+  | "share.ShowOffToFarmers"
+  | "share.FarmNFTImageAlt"
+  | "share.CopyFarmURL"
+  | "share.Tweet"
+  | "share.Visit";
 
-export type NoTownCenter =
-  | "noTownCenter.reward"
-  | "noTownCenter.news"
-  | "noTownCenter.townCenterPlacement";
+export type SharkBumpkinDialogues =
+  | "sharkBumpkin.dialogue.shhhh"
+  | "sharkBumpkin.dialogue.scareGoblins";
 
-export type Swarming = "swarming.tooLongToFarm" | "swarming.goblinsTakenOver";
+export type Shelly =
+  | "shelly.Dialogue.one"
+  | "shelly.Dialogue.two"
+  | "shelly.Dialogue.three"
+  | "shelly.Dialogue.four"
+  | "shelly.Dialogue.five"
+  | "shelly.Dialogue.letsgo";
 
-export type Restock = "restock.one.buck" | "restock.sure" | "restock.seed.buy";
+export type ShellyDialogue =
+  | "shellyPanelContent.tasksFrozen"
+  | "shellyPanelContent.canTrade"
+  | "shellyPanelContent.cannotTrade"
+  | "shellyPanelContent.swap"
+  | "shellyPanelContent.close"
+  | "krakenIntro.congrats"
+  | "krakenIntro.noMoreTentacles"
+  | "krakenIntro.gotIt"
+  | "krakenIntro.appetiteChanges"
+  | "krakenIntro.currentHunger"
+  | "krakenIntro.catchInstruction";
+
+export type ShopItems =
+  | "shopItems.one"
+  | "shopItems.two"
+  | "shopItems.three"
+  | "betty.intro"
+  | "betty.buySeeds"
+  | "betty.sellCrops";
 
 export type ShowingFarm = "showing.farm" | "showing.wallet";
 
-export type TutorialPage =
-  | "tutorial.pageOne.text1"
-  | "tutorial.pageOne.text2"
-  | "tutorial.pageTwo.text1"
-  | "tutorial.pageTwo.text2";
+export type SnorklerDialogues = "snorkler.vastOcean" | "snorkler.goldBeneath";
 
-export type NoBumpkin =
-  | "noBumpkin.readyToFarm"
-  | "noBumpkin.play"
-  | "noBumpkin.missingBumpkin"
-  | "noBumpkin.bumpkinNFT"
-  | "noBumpkin.bumpkinHelp"
-  | "noBumpkin.mintBumpkin"
-  | "noBumpkin.allBumpkins"
-  | "noBumpkin.chooseBumpkin"
-  | "noBumpkin.deposit"
-  | "noBumpkin.loading";
-
-export type RemoveKuebiko =
-  | "removeKuebiko.title"
-  | "removeKuebiko.description"
-  | "removeKuebiko.removeSeeds";
+export type Statements =
+  | "statements.adventure"
+  | "statements.auctioneer.one"
+  | "statements.auctioneer.two"
+  | "statements.beta.one"
+  | "statements.beta.two"
+  | "statements.better.luck"
+  | "statements.blacklist.one"
+  | "statements.blacklist.two"
+  | "statements.clickBottle"
+  | "statements.clock.one"
+  | "statements.clock.two"
+  | "statements.conversation.one"
+  | "statements.cooldown"
+  | "statements.craft.composter"
+  | "statements.docs"
+  | "statements.dontRefresh"
+  | "statements.feed.bumpkin.one"
+  | "statements.feed.bumpkin.two"
+  | "statements.gold.pass.required"
+  | "statements.guide.one"
+  | "statements.guide.two"
+  | "statements.jigger.one"
+  | "statements.jigger.two"
+  | "statements.jigger.three"
+  | "statements.jigger.four"
+  | "statements.jigger.five"
+  | "statements.jigger.six"
+  | "statements.jigger.seven"
+  | "statements.lvlUp"
+  | "statements.maintenance"
+  | "statements.make.a.wish"
+  | "statements.minted"
+  | "statements.minting"
+  | "statements.mutant.chicken"
+  | "statements.new.wish"
+  | "statements.no.reward"
+  | "statements.ohNo"
+  | "statements.openGuide"
+  | "statements.patience"
+  | "statements.sfl.rewards.received"
+  | "statements.sflLim.one"
+  | "statements.sflLim.two"
+  | "statements.sniped"
+  | "statements.switchNetwork"
+  | "statements.sync"
+  | "statements.tapCont"
+  | "statements.thankYou"
+  | "statements.tutorial.one"
+  | "statements.tutorial.two"
+  | "statements.tutorial.three"
+  | "statements.visit.firePit"
+  | "statements.wish.granted.time"
+  | "statements.wish.granted"
+  | "statements.wish.made"
+  | "statements.wish.ready.in"
+  | "statements.wish.thanks"
+  | "statements.wish.time"
+  | "statements.wish.warning.one"
+  | "statements.wish.warning.two"
+  | "statements.wishing-well.info.one"
+  | "statements.wishing-well.info.two"
+  | "statements.wishing-well.info.three"
+  | "statements.wishing-well.not.providing.liquidity"
+  | "statements.wishing.well.amount"
+  | "statements.wishing.well.luck"
+  | "statements.wrongChain.one"
+  | "statements.empty.chest"
+  | "statements.chest.captcha"
+  | "statements.frankie.plaza"
+  | "statements.blacksmith.plaza"
+  | "statements.water.well.needed.one"
+  | "statements.water.well.needed.two"
+  | "statements.soldOut"
+  | "statements.inStock"
+  | "statements.soldOutWearables"
+  | "statements.wallet.to.inventory.transfer"
+  | "statements.crop.water"
+  | "statements.daily.limit"
+  | "statements.sure.buy";
 
 export type StopGoblin =
   | "stopGoblin.stop.goblin"
@@ -1802,53 +2091,6 @@ export type StopGoblin =
   | "stopGoblin.tap.one"
   | "stopGoblin.tap.two"
   | "stopGoblin.left";
-
-export type DeliveryHelp =
-  | "deliveryHelp.pumpkinSoup"
-  | "deliveryHelp.hammer"
-  | "deliveryHelp.axe"
-  | "deliveryHelp.chest";
-
-export type OrderHelp =
-  | "orderhelp.Skip.hour"
-  | "orderhelp.New.Season"
-  | "orderhelp.New.Season.arrival"
-  | "orderhelp.Wisely"
-  | "orderhelp.SkipIn"
-  | "orderhelp.NoRight"
-  | "orderhelp.Skip.Order";
-
-export type ModalDescription =
-  | "modalDescription.friend"
-  | "modalDescription.love.fruit"
-  | "modalDescription.gift"
-  | "modalDescription.limited.abilitie"
-  | "modalDescription.trail";
-
-export type Quest = "quest.mint.free";
-
-export type FishermanQuest = "fishermanQuest.Ohno" | "fishermanQuest.Newfish";
-
-export type FishingChallengeIntro =
-  | "fishingChallengeIntro.powerfulCatch"
-  | "fishingChallengeIntro.useStrength"
-  | "fishingChallengeIntro.stopGreenBar"
-  | "fishingChallengeIntro.beQuick";
-
-export type FishingGuide =
-  | "fishingGuide.catch.rod"
-  | "fishingGuide.bait.earn"
-  | "fishingGuide.eat.fish"
-  | "fishingGuide.discover.fish"
-  | "fishingGuide.condition"
-  | "fishingGuide.bait.chum"
-  | "fishingGuide.legendery.fish";
-
-export type Detail =
-  | "detail.how.item"
-  | "detail.Claim.Reward"
-  | "detail.basket.empty"
-  | "detail.view.item";
 
 export type SubSettings =
   | "subSettings.title"
@@ -1858,6 +2100,81 @@ export type SubSettings =
   | "subSettings.transferOwnership"
   | "subSettings.refresh"
   | "subSettings.refreshDescription";
+
+export type Swarming = "swarming.tooLongToFarm" | "swarming.goblinsTakenOver";
+
+export type TieBreaker =
+  | "tieBreaker.label"
+  | "tieBreaker.tiebreaker"
+  | "tieBreaker.closeBid"
+  | "tieBreaker.betterLuck"
+  | "tieBreaker.readMore"
+  | "tieBreaker.refundResources"
+  | "tieBreaker.refund";
+
+export type ToolDescriptions =
+  // Tools
+  | "description.axe"
+  | "description.pickaxe"
+  | "description.stone.pickaxe"
+  | "description.iron.pickaxe"
+  | "description.hammer"
+  | "description.rod"
+  | "description.rusty.shovel"
+  | "description.shovel"
+  | "description.sand.shovel"
+  | "description.sand.drill";
+
+export type TransactionTerms =
+  | "transaction.blockBucksFarm"
+  | "transaction.blockchain.one"
+  | "transaction.blockchain.two"
+  | "transaction.congrats"
+  | "transaction.creditCard"
+  | "transaction.donate"
+  | "transaction.donating"
+  | "transaction.doNotRefresh"
+  | "transaction.estimated.fee"
+  | "transaction.excludeFees"
+  | "transaction.id"
+  | "transaction.matic"
+  | "transaction.maticAmount"
+  | "transaction.message0"
+  | "transaction.message"
+  | "transaction.minblockbucks"
+  | "transaction.mintFarm.one"
+  | "transaction.mintFarm.two"
+  | "transaction.network"
+  | "transaction.openSea"
+  | "transaction.pay"
+  | "transaction.payCash"
+  | "transaction.payMatic"
+  | "transaction.progChain"
+  | "transaction.progress"
+  | "transaction.rejected"
+  | "transaction.success"
+  | "transaction.t&c.one"
+  | "transaction.t&c.two"
+  | "transaction.thankYou"
+  | "transaction.transacting.one"
+  | "transaction.transacting.two"
+  | "transaction.transacting.three"
+  | "transaction.withdraw.one"
+  | "transaction.withdraw.two"
+  | "transaction.withdraw.three"
+  | "transaction.withdraw.four"
+  | "transaction.withdraw.five"
+  | "transaction.withdraw.six"
+  | "transaction.withdraw.polygon";
+
+export type Transfer =
+  | "transfer.sure.adress"
+  | "transfer.Account"
+  | "transfer.Account.Trans"
+  | "transfer.Farm"
+  | "transfer.Refresh"
+  | "transfer.Taccount"
+  | "transfer.address";
 
 export type TransferAccount =
   | "transferAccount.transferYourAccount"
@@ -1870,152 +2187,6 @@ export type TransferAccount =
   | "transferAccount.successMessage"
   | "transferAccount.continue";
 
-export type GetContent =
-  | "getContent.error"
-  | "getContent.joining"
-  | "getContent.congratulations"
-  | "getContent.accessGranted"
-  | "getContent.connectToDiscord"
-  | "getContent.connect"
-  | "getContent.getAccess"
-  | "getContent.requires"
-  | "getContent.join";
-
-export type PlazaSettings =
-  | "plazaSettings.title.main"
-  | "plazaSettings.title.mutedPlayers"
-  | "plazaSettings.title.keybinds"
-  | "plazaSettings.mutedPlayers.description"
-  | "plazaSettings.mutedPlayers.button"
-  | "plazaSettings.keybinds.description"
-  | "plazaSettings.keybinds.button"
-  | "plazaSettings.noMutedPlayers"
-  | "plazaSettings.unmute"
-  | "plazaSettings.back";
-
-export type Share =
-  | "share.TweetText"
-  | "share.ShareYourFarmLink"
-  | "share.ShowOffToFarmers"
-  | "share.FarmNFTImageAlt"
-  | "share.CopyFarmURL"
-  | "share.Tweet"
-  | "share.Visit";
-
-export type AddSFL =
-  | "addSFL.loading"
-  | "addSFL.swapDetails"
-  | "addSFL.referralFee"
-  | "addSFL.swapTitle"
-  | "addSFL.balance"
-  | "addSFL.for"
-  | "addSFL.minimumReceived"
-  | "addSFL.addSFL"
-  | "addSFL.title";
-
-export type HalveningCountdown =
-  | "halveningCountdown.approaching"
-  | "halveningCountdown.description"
-  | "halveningCountdown.preparation"
-  | "halveningCountdown.title"
-  | "halveningCountdown.readMore";
-
-export type Transfer =
-  | "transfer.sure.adress"
-  | "transfer.Account"
-  | "transfer.Account.Trans"
-  | "transfer.Farm"
-  | "transfer.Refresh"
-  | "transfer.Taccount"
-  | "transfer.address";
-
-export type OnCollectReward =
-  | "onCollectReward.Missing.Seed"
-  | "onCollectReward.Market"
-  | "onCollectReward.Missing.Shovel";
-
-export type AvailableSeeds =
-  | "availableSeeds.select"
-  | "availableSeeds.select.plant"
-  | "availableSeeds.plant";
-
-export type Portal = "portal.wrong" | "portal.loading" | "portal.unauthorised";
-
-export type Reaction =
-  | "reaction.bumpkin"
-  | "reaction.bumpkin.10"
-  | "reaction.bumpkin.30"
-  | "reaction.bumpkin.40"
-  | "reaction.sunflowers"
-  | "reaction.crops"
-  | "reaction.goblin"
-  | "reaction.crown";
-
-export type Action =
-  | "action.bid.message"
-  | "action.bid"
-  | "action.reveal"
-  | "action.time"
-  | "action.live"
-  | "action.requirement"
-  | "action.start"
-  | "action.period"
-  | "action.closed"
-  | "action.rank"
-  | "action.farm"
-  | "action.const"
-  | "action.const.soon";
-
-export type GetInputErrorMessage =
-  | "getInputErrorMessage.minimum"
-  | "getInputErrorMessage.sfl"
-  | "getInputErrorMessage.s"
-  | "getInputErrorMessage.no.sfl"
-  | "getInputErrorMessage.yes.sfl"
-  | "getInputErrorMessage.auction"
-  | "getInputErrorMessage.place.bid"
-  | "getInputErrorMessage.cannot.bid";
-
-export type Loser =
-  | "loser.unsuccess"
-  | "loser.refund"
-  | "loser.longer"
-  | "loser.refund.one";
-
-export type Pending = "pending.calcul" | "pending.comeback";
-
-export type Refunded = "refunded.itemsReturned" | "refunded.goodLuck";
-
-export type TieBreaker =
-  | "tieBreaker.label"
-  | "tieBreaker.tiebreaker"
-  | "tieBreaker.closeBid"
-  | "tieBreaker.betterLuck"
-  | "tieBreaker.readMore"
-  | "tieBreaker.refundResources"
-  | "tieBreaker.refund";
-
-export type Winner =
-  | "winner.congratulations"
-  | "winner.mintTime"
-  | "winner.mint"
-  | "winner.mintTime.one";
-
-export type PersonHood =
-  | "personHood.Details."
-  | "personHood.Identify"
-  | "personHood.Congrat";
-
-export type Resale = "resale.lookingForItems" | "resale.actionText";
-
-export type Beach = "beach.party" | "beach.ready";
-
-export type BeachLuck =
-  | "beachLuck.tryLuck"
-  | "beachLuck.uncleFound"
-  | "beachLuck.grabShovel"
-  | "beachLuck.refreshesIn";
-
 export type TreasureModal =
   | "treasureModal.noShovelTitle"
   | "treasureModal.needShovel"
@@ -2026,53 +2197,49 @@ export type TreasureModal =
   | "treasureModal.comeBackTomorrow"
   | "treasureModal.drilling";
 
-export type Chat =
-  | "chat.Loading"
-  | "chat.Fail"
-  | "chat.mute"
-  | "chat.again"
-  | "chat.Kicked";
+export type TutorialPage =
+  | "tutorial.pageOne.text1"
+  | "tutorial.pageOne.text2"
+  | "tutorial.pageTwo.text1"
+  | "tutorial.pageTwo.text2";
 
-export type Base = "base.missing" | "base.far.away";
+export type VisitislandEnter =
+  | "visitIsland.enterIslandId"
+  | "visitIsland.visit";
 
-export type Community = "community.toast" | "community.url" | "comunity.Travel";
+export type VisitislandNotFound = "visitislandNotFound.title";
 
-export type Npc =
-  | "npc.Modal.Hammer"
-  | "npc.Modal.Marcus"
-  | "npc.Modal.Billy"
-  | "npc.Modal.Billy.one"
-  | "npc.Modal.Billy.two"
-  | "npc.Modal.Readmore"
-  | "npc.Modal.Gabi"
-  | "npc.Modal.Gabi.one"
-  | "npc.Modal.Craig"
-  | "npc.Modal.Craig.one";
+export type WarningTerms =
+  | "warning.noAxe"
+  | "warning.chat.maxCharacters"
+  | "warning.chat.noSpecialCharacters"
+  | "warning.level.required"
+  | "warning.hoarding.message"
+  | "warning.hoarding.one"
+  | "warning.hoarding.two";
 
-export type Parsnip =
-  | "parsnip.hat"
-  | "parsnip.miss"
-  | "parsnip.Bonus"
-  | "parsnip.found"
-  | "parsnip.gift";
+export type WelcomeTerms =
+  | "welcome.otherWallets"
+  | "welcome.needHelp"
+  | "welcome.createAccount"
+  | "welcome.creatingAccount"
+  | "welcome.login"
+  | "welcome.signingIn"
+  | "welcome.signInMessage"
+  | "welcome.email"
+  | "welcome.takeover"
+  | "welcome.promo";
 
-export type Pickserver =
-  | "pickserver.server"
-  | "pickserver.full"
-  | "pickserver.explore"
-  | "pickserver.event"
-  | "pickserver.built";
+export type Winner =
+  | "winner.congratulations"
+  | "winner.mintTime"
+  | "winner.mint"
+  | "winner.mintTime.one";
 
-export type PlayerTrade =
-  | "playerTrade.loading"
-  | "playerTrade.no.trade"
-  | "playerTrade.max.item"
-  | "playerTrade.Progress"
-  | "playerTrade.transaction"
-  | "playerTrade.Please"
-  | "playerTrade.sold"
-  | "playerTrade.sale"
-  | "playerTrade.title.congrat";
+export type WornDescription =
+  | "worm.earthworm"
+  | "worm.grub"
+  | "worm.redWiggler";
 
 export type World =
   | "world.intro.one"
@@ -2088,138 +2255,16 @@ export type World =
   | "world.intro.six"
   | "world.intro.seven";
 
-export type Delivery =
-  | "delivery.panel.one"
-  | "delivery.panel.two"
-  | "delivery.panel.three"
-  | "delivery.panel.four";
-
-export type Donation =
-  | "donation.one"
-  | "donation.amount"
-  | "donation.donate"
-  | "donation.donating"
-  | "donation.Ty"
-  | "donation.wrong";
-
-export type Kick =
-  | "kick.player"
-  | "kick.player.id"
-  | "kick.Reason"
-  | "kick.player.farm"
-  | "kick.player.kick"
-  | "kick.player.failed"
-  | "kick.player.kicking"
-  | "kick.please"
-  | "kick.Message";
-
-export type Kicked =
-  | "kicked.kicked"
-  | "kicked.Reason"
-  | "kicked.Message"
-  | "kicked.accept";
-
-export type Mute =
-  | "mute.playe"
-  | "mute.playe.id"
-  | "mute.duration"
-  | "mute.Reason"
-  | "mute.player.farm"
-  | "mute.player.mute"
-  | "mute.Reason"
-  | "mute.fail"
-  | "mute.player.muting"
-  | "mute.player.wait"
-  | "mute.you"
-  | "mute.until"
-  | "mute.discord"
-  | "mute.accept"
-  | "mute.unmute.farm"
-  | "mute.unmute.player"
-  | "mute.unmute.failed"
-  | "mute.unmuting.player"
-  | "mute.unmute.wait"
-  | "mute.online";
-
-export type Shelly =
-  | "shelly.Dialogue.one"
-  | "shelly.Dialogue.two"
-  | "shelly.Dialogue.three"
-  | "shelly.Dialogue.four"
-  | "shelly.Dialogue.five"
-  | "shelly.Dialogue.letsgo";
-
-export type LevelUpMessages =
-  | "levelUp.2"
-  | "levelUp.3"
-  | "levelUp.4"
-  | "levelUp.5"
-  | "levelUp.6"
-  | "levelUp.7"
-  | "levelUp.8"
-  | "levelUp.9"
-  | "levelUp.10"
-  | "levelUp.11"
-  | "levelUp.12"
-  | "levelUp.13"
-  | "levelUp.14"
-  | "levelUp.15"
-  | "levelUp.16"
-  | "levelUp.17"
-  | "levelUp.18"
-  | "levelUp.19"
-  | "levelUp.20"
-  | "levelUp.21"
-  | "levelUp.22"
-  | "levelUp.23"
-  | "levelUp.24"
-  | "levelUp.25"
-  | "levelUp.26"
-  | "levelUp.27"
-  | "levelUp.28"
-  | "levelUp.29"
-  | "levelUp.30"
-  | "levelUp.31"
-  | "levelUp.32"
-  | "levelUp.33"
-  | "levelUp.34"
-  | "levelUp.35"
-  | "levelUp.36"
-  | "levelUp.37"
-  | "levelUp.38"
-  | "levelUp.39"
-  | "levelUp.40"
-  | "levelUp.41"
-  | "levelUp.42"
-  | "levelUp.43"
-  | "levelUp.44"
-  | "levelUp.45"
-  | "levelUp.46"
-  | "levelUp.47"
-  | "levelUp.48"
-  | "levelUp.49"
-  | "levelUp.50"
-  | "levelUp.51"
-  | "levelUp.52"
-  | "levelUp.53"
-  | "levelUp.54"
-  | "levelUp.55"
-  | "levelUp.56"
-  | "levelUp.57"
-  | "levelUp.58"
-  | "levelUp.59"
-  | "levelUp.60";
-
 export type TranslationKeys =
+  | AchievementsTerms
   | Action
   | AddSFL
   | AvailableSeeds
-  | AchievementsDialog
   | Base
   | Beach
   | BeachLuck
-  | BoostEffectDescriptions
   | BoostDescriptions
+  | BoostEffectDescriptions
   | BountyDescription
   | BuildingDescriptions
   | BumpkinItemBuff
@@ -2236,42 +2281,41 @@ export type TranslationKeys =
   | ConfirmationTerms
   | Conversations
   | CropFruitDescriptions
-  | PurchaseableBaitTranslation
-  | Detail
-  | Delivery
-  | DepositWallet
-  | DecorationDescriptions
   | DefaultDialogue
+  | DecorationDescriptions
+  | Delivery
   | DeliveryHelp
-  | Donation
+  | DepositWallet
+  | Detail
   | DiscordBonus
+  | Donation
   | ErrorAndAccess
   | ErrorTerms
   | ExoticShopItems
   | FishDescriptions
-  | FishingGuide
+  | FishermanModal
   | FishermanQuest
   | FishingChallengeIntro
+  | FishingGuide
   | FishingQuests
-  | FishermanModal
   | FoodDescriptions
-  | GarbageCollector
   | GameDescriptions
   | GameTerms
-  | GetInputErrorMessage
+  | GarbageCollector
   | GeneralTerms
   | GetContent
-  | GuideTerms
+  | GetInputErrorMessage
   | GOBLIN_MESSAGES
   | GoldPassModal
   | GoldTooth
+  | GuideTerms
   | HalveningCountdown
   | HayseedHankV2
   | HeliosSunflower
   | HenHouseTerms
-  | HowToUpgrade
   | HowToFarm
   | HowToSync
+  | HowToUpgrade
   | InteractableModals
   | Intro
   | IntroPage
@@ -2280,33 +2324,34 @@ export type TranslationKeys =
   | Kick
   | Kicked
   | LandscapeTerms
-  | LevelUpMessages
   | LetsGo
-  | LostSunflorian
+  | LevelUpMessages
   | Loser
+  | LostSunflorian
   | ModalDescription
   | Mute
   | NoBumpkin
-  | NotOnDiscordServer
   | NoTownCenter
+  | NotOnDiscordServer
+  | NPC_MESSAGE
   | Npc
   | NpcDialogues
-  | NPC_MESSAGE
-  | PlayerTrade
+  | Offer
+  | Onboarding
+  | OnCollectReward
+  | OrderHelp
   | Parsnip
   | Pending
   | PersonHood
   | Pickserver
   | PlazaSettings
+  | PlayerTrade
   | Portal
-  | Offer
-  | OnCollectReward
-  | Onboarding
-  | OrderHelp
+  | PurchaseableBaitTranslation
   | Quest
   | Questions
-  | Refunded
   | Reaction
+  | Refunded
   | RemoveKuebiko
   | Resale
   | Restock
@@ -2315,10 +2360,10 @@ export type TranslationKeys =
   | RulesGameStart
   | RulesTerms
   | SceneDialogueKey
-  | Share
-  | Session
   | SeasonTerms
+  | Session
   | SettingsMenu
+  | Share
   | SharkBumpkinDialogues
   | Shelly
   | ShellyDialogue
@@ -2339,7 +2384,7 @@ export type TranslationKeys =
   | VisitislandEnter
   | VisitislandNotFound
   | WarningTerms
-  | WornDescription
-  | Winner
   | WelcomeTerms
+  | Winner
+  | WornDescription
   | World;
