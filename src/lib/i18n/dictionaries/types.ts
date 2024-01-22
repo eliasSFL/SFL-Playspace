@@ -981,6 +981,10 @@ export type Flowerbedguide =
   | "flowerbedguide.experimentBait"
   | "flowerbedguide.legendaryFish";
 
+export type FlowerBedContent =
+  | "flowerBedContent.pickSeed"
+  | "flowerBedContent.crossbreedWith";
+
 export type FoodDescriptions =
   //Fire Pit
   | "description.pumpkin.soup"
@@ -1690,6 +1694,23 @@ export type LostSunflorian =
   | "lostSunflorian.line1"
   | "lostSunflorian.line2"
   | "lostSunflorian.line3";
+
+export type Milestone =
+  | "milestone.caught"
+  | "milestone.harvested"
+  | "milestone.discoverSunpetal"
+  | "milestone.discoverBloom"
+  | "milestone.discoverLily"
+  | "milestone.noviceAngler"
+  | "milestone.advancedAngler"
+  | "milestone.expertAngler"
+  | "milestone.fishEncyclopedia"
+  | "milestone.masterAngler"
+  | "milestone.marineMarvelMaster"
+  | "milestone.deepSeaDiver"
+  | "milestone.sunpetalSavant"
+  | "milestone.bloomBigShot"
+  | "milestone.lilyLuminary";
 
 export type ModalDescription =
   | "modalDescription.friend"
@@ -2735,6 +2756,7 @@ export type TranslationKeys =
   | FishingGuide
   | FishingQuests
   | Flowerbedguide
+  | FlowerBedContent
   | FoodDescriptions
   | GameDescriptions
   | GameTerms
@@ -2771,6 +2793,7 @@ export type TranslationKeys =
   | LevelUpMessages
   | Loser
   | LostSunflorian
+  | Milestone
   | ModalDescription
   | Mute
   | Noaccount

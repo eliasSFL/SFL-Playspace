@@ -50,6 +50,7 @@ import {
   FishingGuide,
   FishingQuests,
   Flowerbedguide,
+  FlowerBedContent,
   FoodDescriptions,
   GameDescriptions,
   GameTerms,
@@ -86,6 +87,7 @@ import {
   LevelUpMessages,
   Loser,
   LostSunflorian,
+  Milestone,
   ModalDescription,
   Mute,
   Noaccount,
@@ -1678,6 +1680,11 @@ const flowerbedguide: Record<Flowerbedguide, string> = {
     "Beware of legendary fish; they require exceptional skill and strength to catch.",
 };
 
+const flowerBedContent: Record<FlowerBedContent, string> = {
+  "flowerBedContent.pickSeed": "Pick a seed",
+  "flowerBedContent.crossbreedWith": "Crossbreed with",
+};
+
 const foodDescriptions: Record<FoodDescriptions, string> = {
   // Fire Pit
   "description.pumpkin.soup": "A creamy soup that goblins love",
@@ -2406,6 +2413,34 @@ const lostSunflorian: Record<LostSunflorian, string> = {
   "lostSunflorian.line2":
     "Unfortunately, these Bumpkins don't like me watching them.",
   "lostSunflorian.line3": "I can't wait to return to Sunfloria.",
+};
+
+const milestone: Record<Milestone, string> = {
+  "milestone.caught": "Caught",
+  "milestone.harvested": "Harvested",
+  "milestone.discoverSunpetal": "Discover 12 Sunpetal variants",
+  "milestone.discoverBloom": "Discover 12 Bloom variants",
+  "milestone.discoverLily": "Discover 12 Lily variants",
+  "milestone.noviceAngler":
+    "Congratulations, you've just reached the Novice Angler milestone! You're well on your way to becoming a fishing pro by catching each basic fish.",
+  "milestone.advancedAngler":
+    "Impressive, you've just reached the Advanced Angler milestone! You've mastered the art of catching each advanced fish. Keep it up!",
+  "milestone.expertAngler":
+    "Wow, you've just reached the Expert Angler milestone! You're a true fishing expert now! Catching 300 fish is no small feat.",
+  "milestone.fishEncyclopedia":
+    "Congratulations, you've just reached the Fish Encyclopedia milestone! You've become a true fish connoisseur! Discovering each basic, advanced, and expert fish is a remarkable achievement.",
+  "milestone.masterAngler":
+    "Wow, you've just reached the Master Angler milestone! Catching 1500 fish is a testament to your fishing skills.",
+  "milestone.marineMarvelMaster":
+    "Congratulations, you've just reached the Marine Marvel Master milestone! You're the undisputed champion of the seas! Catching each Marvel proves your fishing prowess like no other.",
+  "milestone.deepSeaDiver":
+    "Congratulations, you've just reached the Deep Sea Diver milestone! You have earnt the Deep Sea Helm - a mysterious Crown that attracts Marine Marvels to your hook.",
+  "milestone.sunpetalSavant":
+    "Congratulations, you've just reached the Sunpetal Savant milestone! You've discovered each Sunpetal variant. You're a true Sunpetal expert!",
+  "milestone.bloomBigShot":
+    "Congratulations, you've just reached the Bloom Big Shot milestone! You've discovered each Bloom variant. You're a true Bloom expert!",
+  "milestone.lilyLuminary":
+    "Congratulations, you've just reached the Lily Luminary milestone! You've discovered each Lily variant. You're a true Lily expert!",
 };
 
 const modalDescription: Record<ModalDescription, string> = {
@@ -3974,6 +4009,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...fishingGuide,
   ...fishingQuests,
   ...flowerbedguide,
+  ...flowerBedContent,
   ...foodDescriptions,
   ...garbageCollector,
   ...gameDescriptions,
@@ -4010,6 +4046,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...levelUpMessages,
   ...loser,
   ...lostSunflorian,
+  ...milestone,
   ...modalDescription,
   ...mute,
   ...noaccount,

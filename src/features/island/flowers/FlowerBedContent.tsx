@@ -17,6 +17,7 @@ import {
 import { getKeys } from "features/game/types/craftables";
 import { Context } from "features/game/GameProvider";
 import { useActor } from "@xstate/react";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   id: string;
@@ -139,7 +140,9 @@ export const FlowerBedContent: React.FC<Props> = ({ id, onClose }) => {
               invisible: !(selecting === "seed"),
             })}
           >
-            <Label type="default">Pick a seed</Label>
+            <Label type="default">
+              {translate("flowerBedContent.pickSeed")}
+            </Label>
             <div className="flex flex-wrap">
               {getKeys(FLOWER_SEEDS()).map((name) => (
                 <Box
@@ -158,7 +161,9 @@ export const FlowerBedContent: React.FC<Props> = ({ id, onClose }) => {
               invisible: !(selecting === "crossbreed"),
             })}
           >
-            <Label type="default">Crossbreed with</Label>
+            <Label type="default">
+              {translate("flowerBedContent.crossbreedWith")}
+            </Label>
             <div className="flex flex-wrap">
               {getKeys(FLOWER_CROSS_BREED_AMOUNTS)
                 // .filter((name) => !!inventory[name]?.gte(1))
