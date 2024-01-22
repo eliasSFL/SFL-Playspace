@@ -10,6 +10,7 @@ import { getSeasonChangeover } from "lib/utils/getSeasonWeek";
 import { SUNNYSIDE } from "assets/sunnyside";
 import { secondsToString } from "lib/utils/time";
 import { Label } from "components/ui/Label";
+import { translate } from "lib/i18n/translate";
 
 interface Props {
   isReadOnly?: boolean;
@@ -27,7 +28,7 @@ export const ChoreV2: React.FC<Props> = ({ isReadOnly = false }) => {
   if (!chores) {
     return (
       <div className="p-2 text-sm">
-        <p>{`Sorry, I don't have any chores that need doing right now.`}</p>
+        <p>{`${translate("chores.noChores")}`}</p>
       </div>
     );
   }
@@ -41,7 +42,7 @@ export const ChoreV2: React.FC<Props> = ({ isReadOnly = false }) => {
         tasksAreClosing && (
           <div className="flex flex-col items-center mb-2">
             <p className="text-xs text-center">
-              A new season approaches, chores will temporarily close.
+              {translate("chores.newSeasonApproaches")}
             </p>
             <Label type="info" icon={SUNNYSIDE.icons.timer} className="mt-1">
               {secondsToString((tasksCloseAt - Date.now()) / 1000, {
@@ -54,8 +55,7 @@ export const ChoreV2: React.FC<Props> = ({ isReadOnly = false }) => {
       {tasksAreFrozen && (
         <div className="flex flex-col items-center mb-2">
           <p className="text-xs text-center">
-            New Seasonal Chores opening soon. Previous season chores & progress
-            will be reset.
+            {translate("chores.newSeasonalChoresOpening")}
           </p>
           <Label
             type="danger"

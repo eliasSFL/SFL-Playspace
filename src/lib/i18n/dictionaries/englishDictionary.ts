@@ -21,6 +21,7 @@ import {
   ClaimAchievement,
   Chat,
   ChickenWinner,
+  Chores,
   ChoresStart,
   ChumDetails,
   Community,
@@ -268,6 +269,7 @@ const generalTerms: Record<GeneralTerms, string> = {
   exotics: "Exotics",
   expand: "Expand",
   explore: "Explore",
+  exit: "Exit",
   farm: "Farm",
   featured: "Featured",
   fertilisers: "Fertilisers",
@@ -845,6 +847,15 @@ const chat: Record<Chat, string> = {
 
 const chickenWinner: Record<ChickenWinner, string> = {
   "chicken.winner.playagain": "click here to play again",
+};
+
+const chores: Record<Chores, string> = {
+  "chores.noChores":
+    "Sorry, I don't have any chores that need doing right now.",
+  "chores.newSeasonApproaches":
+    "A new season approaches, chores will temporarily close.",
+  "chores.newSeasonalChoresOpening":
+    "New Seasonal Chores opening soon. Previous season chores & progress will be reset.",
 };
 
 const choresStart: Record<ChoresStart, string> = {
@@ -3980,6 +3991,7 @@ export const ENGLISH_TERMS: Record<TranslationKeys, string> = {
   ...claimAchievement,
   ...chat,
   ...chickenWinner,
+  ...chores,
   ...choresStart,
   ...chumDetails,
   ...community,

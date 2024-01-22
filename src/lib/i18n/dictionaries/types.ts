@@ -380,6 +380,11 @@ export type Chat =
 
 export type ChickenWinner = "chicken.winner.playagain";
 
+export type Chores =
+  | "chores.noChores"
+  | "chores.newSeasonApproaches"
+  | "chores.newSeasonalChoresOpening";
+
 export type ChoresStart =
   | "chores.harvestFields"
   | "chores.earnSfl"
@@ -1181,6 +1186,7 @@ export type GeneralTerms =
   | "exotics"
   | "expand"
   | "explore"
+  | "exit"
   | "farm"
   | "farm.storage"
   | "featured"
@@ -2727,6 +2733,7 @@ export type TranslationKeys =
   | ClaimAchievement
   | Chat
   | ChickenWinner
+  | Chores
   | ChoresStart
   | ChumDetails
   | Community
