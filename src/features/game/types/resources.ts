@@ -5,13 +5,14 @@ export type CommodityName =
   | "Stone"
   | "Iron"
   | "Gold"
-  | "Ruby"
+  | "Crimstone"
   | "Diamond"
   | "Egg"
   | "Honey"
   | "Chicken"
   | "Wild Mushroom"
-  | "Magic Mushroom";
+  | "Magic Mushroom"
+  | "Sunstone";
 
 export type MushroomName = Extract<
   CommodityName,
@@ -35,7 +36,7 @@ export const COMMODITIES: Record<CommodityName, Commodity> = {
   Gold: {
     description: "Used to craft items",
   },
-  Ruby: {
+  Crimstone: {
     description: "Used to craft items",
   },
   Diamond: {
@@ -56,6 +57,9 @@ export const COMMODITIES: Record<CommodityName, Commodity> = {
   "Magic Mushroom": {
     description: "Used to cook advanced recipes",
   },
+  Sunstone: {
+    description: "Used to craft items",
+  },
 };
 
 export type ResourceName =
@@ -63,11 +67,12 @@ export type ResourceName =
   | "Stone Rock"
   | "Iron Rock"
   | "Gold Rock"
-  | "Ruby Rock"
+  | "Crimstone Rock"
   | "Crop Plot"
   | "Fruit Patch"
   | "Boulder"
   | "Beehive"
+  | "Sunstone Rock"
   | "Flower Bed";
 
 export const RESOURCES: Record<ResourceName, string> = {
@@ -76,11 +81,12 @@ export const RESOURCES: Record<ResourceName, string> = {
   "Gold Rock": "Mine gold",
   "Iron Rock": "Mine iron",
   "Stone Rock": "Mine stone",
-  "Ruby Rock": "Mine ruby",
+  "Crimstone Rock": "Mine crimstone",
   Boulder: "Mine rare minerals",
   Tree: "Chop Wood",
   Beehive: "Collect honey",
   "Flower Bed": "Plant flowers",
+  "Sunstone Rock": "Mine sunstone",
 };
 
 export const RESOURCE_DIMENSIONS: Record<ResourceName, Dimensions> = {
@@ -100,9 +106,9 @@ export const RESOURCE_DIMENSIONS: Record<ResourceName, Dimensions> = {
     width: 1,
     height: 1,
   },
-  "Ruby Rock": {
-    width: 1,
-    height: 1,
+  "Crimstone Rock": {
+    width: 2,
+    height: 2,
   },
   Tree: {
     width: 2,
@@ -123,6 +129,10 @@ export const RESOURCE_DIMENSIONS: Record<ResourceName, Dimensions> = {
   "Flower Bed": {
     width: 3,
     height: 1,
+  },
+  "Sunstone Rock": {
+    width: 2,
+    height: 2,
   },
 };
 

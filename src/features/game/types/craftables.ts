@@ -12,12 +12,12 @@ import {
   GoblinPirateItemName,
   HeliosBlacksmithItem,
   PotionHouseItemName,
-  SeasonPassName,
   SoldOutCollectibleName,
 } from "./collectibles";
 import { BoostTreasure } from "./treasure";
 import { MarineMarvelName } from "./fishing";
 import { translate } from "lib/i18n/translate";
+import { SeasonalBanner } from "./seasons";
 
 export { FLAGS };
 
@@ -194,9 +194,7 @@ export type CollectibleName =
   | GoblinBlacksmithItemName
   | SoldOutCollectibleName
   | GoblinPirateItemName
-  | SeasonPassName
-  | "Dawn Breaker Banner"
-  | "Solar Flare Banner"
+  | SeasonalBanner
   | BoostTreasure
   | WarBanner
   | LanternName
@@ -537,7 +535,7 @@ export const TOOLS: Record<ToolName, CraftableItem> = {
   },
   "Gold Pickaxe": {
     name: "Gold Pickaxe",
-    description: "Used to collect rubies",
+    description: "Used to collect crimstones",
     tokenAmount: new Decimal(7),
     ingredients: [
       {
@@ -1180,6 +1178,8 @@ export const COLLECTIBLES_DIMENSIONS: Record<CollectibleName, Dimensions> = {
   "Human War Banner": { width: 1, height: 2 },
   "Goblin War Banner": { width: 1, height: 2 },
   "Catch the Kraken Banner": { width: 1, height: 2 },
+  "Spring Blossom Banner": { width: 1, height: 2 },
+
   // Dawn Breaker SFTs
   "Mushroom House": { height: 3, width: 2 },
   "Luminous Lantern": { height: 2, width: 1 },

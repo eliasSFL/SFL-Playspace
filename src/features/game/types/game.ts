@@ -227,6 +227,9 @@ export const COUPONS: Record<Coupons, { description: string }> = {
   Farmhand: {
     description: "An adopted Bumpkin on your farm",
   },
+  "Tulip Bulb": {
+    description: "A ticket used during the Spring Blossom",
+  },
 };
 
 export type Points = "Human War Point" | "Goblin War Point";
@@ -396,6 +399,10 @@ export type Stone = {
   // Epoch time in milliseconds
   minedAt: number;
 };
+
+export type FiniteResource = {
+  minesLeft: number;
+} & Rock;
 
 export type Rock = {
   stone: Stone;
@@ -806,6 +813,7 @@ export interface GameState {
   island: {
     type: IslandType;
     upgradedAt?: number;
+    previousExpansions?: number;
   };
 
   username?: string;
@@ -842,7 +850,9 @@ export interface GameState {
   stones: Record<string, Rock>;
   gold: Record<string, Rock>;
   iron: Record<string, Rock>;
-  rubies: Record<string, Rock>;
+  crimstones: Record<string, FiniteResource>;
+  sunstones: Record<string, FiniteResource>;
+
   crops: Record<string, CropPlot>;
   fruitPatches: Record<string, FruitPatch>;
   beehives: Beehives;
