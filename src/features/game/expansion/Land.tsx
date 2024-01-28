@@ -2,6 +2,10 @@ import React, { useContext, useLayoutEffect, useMemo } from "react";
 import { useSelector } from "@xstate/react";
 import classNames from "classnames";
 
+import cloudedMap from "src/assets/land/main_clouds.png";
+import movingClouds from "src/assets/land/moving_clouds.png";
+import backgroundIslands from "src/assets/land/background_islands.png";
+
 import { Section, useScrollIntoView } from "lib/utils/hooks/useScrollIntoView";
 import { Coordinates, MapPlacement } from "./components/MapPlacement";
 import { Context } from "../GameProvider";
@@ -55,7 +59,8 @@ const getIslandElements = ({
   stones,
   iron,
   gold,
-  rubies,
+  crimstones,
+  sunstones,
   fruitPatches,
   flowerBeds,
   crops,
@@ -76,7 +81,8 @@ const getIslandElements = ({
   stones: GameState["stones"];
   iron: GameState["iron"];
   gold: GameState["gold"];
-  rubies: GameState["rubies"];
+  crimstones: GameState["crimstones"];
+  sunstones: GameState["sunstones"];
   crops: GameState["crops"];
   fruitPatches: GameState["fruitPatches"];
   flowerBeds: GameState["flowers"]["flowerBeds"];
@@ -130,6 +136,7 @@ const getIslandElements = ({
       .filter((name) => collectibles[name])
       .flatMap((name, nameIndex) => {
         const items = collectibles[name]!;
+
         return items.map((collectible, itemIndex) => {
           const { readyAt, createdAt, coordinates, id } = collectible;
           const { x, y } = coordinates;
@@ -292,8 +299,35 @@ const getIslandElements = ({
   );
 
   mapPlacements.push(
-    ...getKeys(rubies).map((id, index) => {
-      const { x, y, width, height } = rubies[id];
+    ...getKeys(crimstones).map((id, index) => {
+      const { x, y, width, height } = crimstones[id];
+
+      return (
+        <MapPlacement
+          key={`crimstone-${id}`}
+          x={x}
+          y={y}
+          height={height}
+          width={width}
+        >
+          <Resource
+            key={`crimstone-${id}`}
+            name="Crimstone Rock"
+            createdAt={0}
+            readyAt={0}
+            id={id}
+            index={index}
+            x={x}
+            y={y}
+          />
+        </MapPlacement>
+      );
+    })
+  );
+
+  mapPlacements.push(
+    ...getKeys(sunstones).map((id, index) => {
+      const { x, y, width, height } = sunstones[id];
 
       return (
         <MapPlacement
@@ -305,7 +339,7 @@ const getIslandElements = ({
         >
           <Resource
             key={`ruby-${id}`}
-            name="Ruby Rock"
+            name="Sunstone Rock"
             createdAt={0}
             readyAt={0}
             id={id}
@@ -516,7 +550,8 @@ export const Land: React.FC = () => {
     stones,
     iron,
     gold,
-    rubies,
+    crimstones,
+    sunstones,
     crops,
     fruitPatches,
     flowers: { flowerBeds },
@@ -568,6 +603,27 @@ export const Land: React.FC = () => {
           imageRendering: "pixelated",
         }}
       >
+        <img
+          src={cloudedMap}
+          alt="land"
+          className="z-30 absolute pointer-events-none clouds w-full h-full"
+          style={{
+            scale: "1.01", // Fix bleeding issues
+          }}
+        />
+
+        <img
+          src={movingClouds}
+          alt="land"
+          className="z-20 absolute pointer-events-none w-full h-full animate-float"
+        />
+
+        <img
+          src={backgroundIslands}
+          alt="land"
+          className="z-10 absolute pointer-events-none w-full h-full"
+        />
+
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <div
             className={classNames("relative w-full h-full", {
@@ -614,7 +670,8 @@ export const Land: React.FC = () => {
                 stones,
                 iron,
                 gold,
-                rubies,
+                crimstones,
+                sunstones,
                 fruitPatches,
                 flowerBeds,
                 crops,
