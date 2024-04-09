@@ -13,6 +13,7 @@ import brazilFlag from "assets/sfts/flags/brazil_flag.gif";
 import portugalFlag from "assets/sfts/flags/portugal_flag.gif";
 import franceFlag from "assets/sfts/flags/france_flag.gif";
 import turkeyFlag from "assets/sfts/flags/turkey_flag.gif";
+import italianFlag from "assets/sfts/flags/italy_flag.gif";
 
 interface Props {
   isOpen: boolean;
@@ -72,6 +73,17 @@ export const LanguageSwitcher: React.FC<Props> = ({ isOpen, onClose }) => {
               alt="French Flag"
             />
             {"Français"}
+          </Button>
+          <Button
+            onClick={() => handleChangeLanguage("it")}
+            disabled={language === "it"}
+          >
+            <img
+              style={{ display: "inline-block", marginRight: "5px" }}
+              src={italianFlag}
+              alt="Italian Flag"
+            />
+            {"Italiano"}
           </Button>
           <Button
             onClick={() => handleChangeLanguage("pt")}
